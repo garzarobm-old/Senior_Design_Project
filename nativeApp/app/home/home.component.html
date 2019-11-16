@@ -1,0 +1,120 @@
+<ActionBar title="Social Bit- How you do this?">
+</ActionBar>
+
+<GridLayout>
+
+    <ScrollView>
+        <StackLayout class="home-panel">
+            <StackLayout>
+                <Tabs height="400px">
+                    <TabStrip>
+                        <TabStripItem>
+                            <Label text="Today"></Label>
+                            <!--<Image src="res://home"></Image> -->
+                        </TabStripItem>
+                        <TabStripItem>
+                            <Label text="This Week"></Label>
+                            <!-- <Image src="res://settings"></Image> -->
+                        </TabStripItem>
+                        <TabStripItem>
+                            <Label text="Settings"></Label>
+                            <!-- <Image src="res://search"></Image> -->
+                        </TabStripItem>
+                    </TabStrip>
+                    <TabContentItem>
+                        <GridLayout class="today">
+                            <!-- <Label text="Home Page" class="h2 text-center">
+                            </Label> -->
+                            <GridLayout rows="auto, *" height="1000px">
+                                <Label row="0"
+                                    text="Monthly sales revenue, 2017"
+                                    textWrap="true"></Label>
+                                <RadCartesianChart row="1"
+                                    style="font-size: 12;">
+                                    <CategoricalAxis lineColor="#b0b0b0"
+                                        lineThickness="1"
+                                        tkCartesianHorizontalAxis>
+                                    </CategoricalAxis>
+                                    <LinearAxis lineColor="#b0b0b0"
+                                        lineThickness="1"
+                                        tkCartesianVerticalAxis></LinearAxis>
+                                    <AreaSeries tkCartesianSeries
+                                        seriesName="Area"
+                                        categoryProperty="Category"
+                                        [items]="areaSource" stackMode="Stack"
+                                        valueProperty="Amount"
+                                        selectionMode="Series"></AreaSeries>
+                                    <AreaSeries tkCartesianSeries
+                                        seriesName="Area"
+                                        categoryProperty="Category"
+                                        [items]="areaSource2"
+                                        stackMode="Stack"
+                                        valueProperty="Amount"
+                                        selectionMode="Series"></AreaSeries>
+                                    <RadCartesianChartGrid tkCartesianGrid
+                                        horizontalLinesVisible="true"
+                                        verticalLinesVisible="false"
+                                        verticalStripLinesVisible="false"
+                                        horizontalStripLinesVisible="false"
+                                        horizontalStrokeColor="#e5e5e5">
+                                    </RadCartesianChartGrid>
+                                    <Palette tkCartesianPalette
+                                        seriesName="Area">
+                                        <PaletteEntry tkCartesianPaletteEntry
+                                            android:fillColor="#b2efe6"
+                                            ios:fillColor="#7fe5faf6"
+                                            strokeColor="#08caab"
+                                            strokeWidth="2"></PaletteEntry>
+                                        <PaletteEntry tkCartesianPaletteEntry
+                                            android:fillColor="#b2d2d1"
+                                            ios:fillColor="#7fe5f0f0"
+                                            strokeColor="#026968"
+                                            strokeWidth="2"></PaletteEntry>
+                                    </Palette>
+                                    <Palette tkCartesianPalette
+                                        seriesName="Area"
+                                        seriesState="Selected">
+                                        <PaletteEntry tkCartesianPaletteEntry
+                                            android:fillColor="#b2efe6"
+                                            ios:fillColor="#7fe5faf6"
+                                            strokeColor="#026555"
+                                            strokeWidth="2"></PaletteEntry>
+                                        <PaletteEntry tkCartesianPaletteEntry
+                                            android:fillColor="#b2d2d1"
+                                            ios:fillColor="#7fe5f0f0"
+                                            strokeColor="#003434"
+                                            strokeWidth="2"></PaletteEntry>
+                                    </Palette>
+                                </RadCartesianChart>
+                            </GridLayout>
+                        </GridLayout>
+                    </TabContentItem>
+                    <TabContentItem>
+                        <GridLayout>
+                            <Label text="Settings Page"
+                                class="h2 text-center">
+                            </Label>
+                        </GridLayout>
+                    </TabContentItem>
+                    <TabContentItem>
+                        <GridLayout>
+                            <Label text="Search Page" class="h2 text-center">
+                            </Label>
+                        </GridLayout>
+                    </TabContentItem>
+                </Tabs>
+            </StackLayout>
+            <!--Add your page content here-->
+            <!--
+            <Label textWrap="true" text="Play with NativeScript!"
+                class="h2 description-label"></Label>
+            <Label textWrap="true"
+                text="Write code in the editor or drag and drop components to build a NativeScript mobile application."
+                class="h2 description-label"></Label>
+            <Label textWrap="true"
+                text="Scan the QR code with your mobile device and watch the changes sync live while you play with the code."
+                class="h2 description-label"></Label>
+                -->
+        </StackLayout>
+    </ScrollView>
+</GridLayout>
