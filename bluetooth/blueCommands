@@ -1,0 +1,7 @@
+sudo rfkill unblock all
+sudo hciconfig hci0 reset
+sudo invoke-rc.d bluetooth restart 
+sudo bluetoothctl
+sudo hciconfig hci0 piscan
+
+&****** In bluetooth  module/interface ******
