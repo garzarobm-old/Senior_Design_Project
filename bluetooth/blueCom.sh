@@ -1,6 +1,6 @@
 
-sudo rfkill unblock all  &&
+sudo rfkill unblock 1  &&
 sudo hciconfig hci0 reset &&
 sudo invoke-rc.d bluetooth restart &&
 sleep 1 &&
-sudo hciconfig hi0 piscan
+sudo bt-adapter --set Discoverable 1
