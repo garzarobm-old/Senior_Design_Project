@@ -1,6 +1,8 @@
 # Senior_Design_Project
 
-![Social Bit Video](etc/videoProject/socialBitVideo.mp4)
+[![Watch the video](https://img.youtube.com/vi/5Q_H5OtDwIw/maxresdefault.jpg)](https://youtu.be/5Q_H5OtDwIw)
+
+
 
 
 In this repository, you will find our 2019-2020 Senior Design project. 
