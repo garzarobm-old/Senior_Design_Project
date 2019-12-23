@@ -1,5 +1,8 @@
 # Senior_Design_Project
 
+![Social Bit Video](etc/videoProject/socialBitVideo.mp4)
+
+
 In this repository, you will find our 2019-2020 Senior Design project. 
 
 The structure of this repository is as follows (updated December 21, 2019)
@@ -100,6 +103,8 @@ More specifically, our system uses a MEMS microphone with an appropriate baud ra
 
 ##### Figure 1. SocialBit Hardware Subsystem Block Diagram
 
+![block diagram](/etc/images/hardwareBlockDiagram.png)
+
 For the aesthetic of the Socialbit, our team decided that our physical design would be watch-like. We did this based off of two sources: a patent listing a device that was similar to what we are aiming to do, and another source indicating social constructs associated with a watch. The patent gives us a general template to follow because it answers questions we would have from creating a watch such as the common components needed, and where to place the components [9]. Some of the components the patent addresses includes the band, case structure, and dimensions of the watch. However, our design would be different because the patent does not use machine learning or real-time processing. The patent lists that the processing method they use analyzes 60 seconds of audio [9, pp. 2]. Our structure would also be different because we would have an opening on the side to allow us to provide updates via USB, and charge the device if needed.  In regards to placement of different components within the structure, we would place the microphones on top to reduce size and increase recording capabilities. We would also enclose the Ambiq Micro chip and Bluetooth/Wi-fi chip in the center because these parts do externally connect to other components like a charger. This will allow us to save space for our structure, and would protect the Ambiq Micro chip from being exposed. 
 
 From the social construct article, we found that using a watch-like structure is useful because it allows a user to be comfortable wearing the device [10, pp. 277-278]. A smart-watch is seen as a fashion item because it is visible for others to see and it will not attract negative perceptions. It will appear normal to others. A user will also be more comfortable wearing the device because of its usefulness to them. They will be able to use the device with little effort, and continue about their daily tasks. From the article, they found a positive correlation to acceptance of smart-watches when visibility and usefulness were factors they considered, and we believe these two features will drive users to wear our device and use it throughout the day [10, pp. 280]. By being on a user’s wrist, we will be able to collect more data from their conversations.
@@ -122,59 +127,60 @@ The overall hardware team’s risk reduction was to capture audio on the Raspber
 Filipe’s risk reduction was to design a PCB file of the prototype SocialBit system. The PCB is shown in Figure 2 below. It consists of 4 separate routing layers, and its length and width are 39.00mm by 34.52mm respectively. Filipe decided that designing the PCB would be a major milestone towards the completion of the SocialBit as it would allow all of the circuits required for the SocialBit system to be implemented into a very small form factor. The dimensions of the board are small enough to fit the criteria of our SocialBit such that it must be a wearable device. Virtually, we performed testing of the board by having computer-assisted drawing software analyze the PCB for unrouted connections and overlapping wires. Once the software confirmed that no unrouted connections or overlapping wires existed, we were able to say that our board was functional. By having the PCB designed with a small operating area, our team is able to create a prototype of the SocialBit device that will be able to fit into a wearable device, which is one of our design requirements described above in section 3.1. In addition, our team will be capable of designing a full casing for the board with the previously described 3D-printed casing to create an aesthetically pleasing design for the wearer of the SocialBit. 
 
 ##### Figure 2. SocialBit Prototype PCB
-![socialbit Board](/etc/images/stlFile.png)
-Format: ![NO Alt Text](url)
+![ambiq board](/etc/images/Microboard.png)
 
 Miguel’s risk reduction was to create the STL file as shown in Figure 3 and to 3D print the encasing that would hold our prototype. Here, we created the STL file with SolidWorks and based the structure similar to an Apple Watch casing. We did this because we wanted our casing to match common smartwatches on the market. Our design was a rectangular box where there was one opening on the side to allow for us to upload code to the Ambiq Micro development board. We tested our casing by checking if the Ambiq Micro development board fit within it, which it did. Once we create our PCB, we will change the STL file to encase a smaller structure that will still be in the shape of our choosing. This will be our final STL design. Again we will confirm by ensuring the PCB can fit within the casing.
 
-#####Figure 3 STL Case Structure for Ambiq Micro Development Board
+##### Figure 3 STL Case Structure for Ambiq Micro Development Board
+![socialbit Board](/etc/images/stlFile.png)
+
 Michael’s risk reduction was to build upon the team risk reduction for hardware by being able to send processed audio results to the Android application. We completed this goal by setting up a web server API that accepted HTTP requests such as POST and GET. We sent the results of the data to the web app using POST commands which allowed the application to collect the information using GET commands. We tested if our system worked by setting up a display that would list the results on a website to see if we were posting from the microcontroller. We visually confirmed that our website was being updated with the results by slowing down the rate of posts to five seconds. We used this testing method over forty times to determine that our risk reduction activity was successful. Out of the forty tests, we were able to get twenty-two successful and twenty of them occurred in a row to complete our testing. With this risk reduction, we were able to fulfill all the requirements of the SocialBit as described in section 2.0. However, for our final design, we will move to Bluetooth to send results because it is more secure. Bluetooth works within close proximity between devices (our watch and a user’s phone) and keeps the user’s data private since it will not be on display or stored on a website.
 
-#####3.2.2 Software Risk Reductions
+##### 3.2.2 Software Risk Reductions
 The software team’s risk reduction was to create a basic Android application with 3 pages that display placeholder text. This risk reduction was done to provide a basis for the software team to build on as more components got added to the application. We developed the application on Android Studio and tested it by debugging on both the built-in emulator and our own Android devices.
 Mircea’s risk reduction was to successfully receive data from the device and display it on the app. He made a separate activity in the Android app where he successfully sent the GET request to the web server API. This returned a simple JSON string that was then displayed on the app. This was done twenty times to make sure that it was bug free. For now, this serves as the only form of communication between hardware and software. This risk reduction activity ensured that we are capable of communicating in some form between the device and the app.
 Rebecca’s risk reduction was to improve the UI of the Android application from the basic one created in the software team’s risk reduction, as seen in Figure 4. She added a tabular interface, so users can easily navigate between the different features they want more information about. She also added an area graph and a bar graph to display randomly generated data to represent the number of social interactions in a day and in a week. To make the UI more intuitive and easy to gain information at a glance, she also added in different colors to represent how much social interaction was had within that day. This risk reduction will provide a foundation for future real-time display of data from the hardware.
 
-#####Figure 4. SocialBit Application UI
-
-#####3.2.3 Machine Learning Risk Reductions
+##### Figure 4. SocialBit Application UI
+![Application picture](/etc/images/appa.png)
+##### 3.2.3 Machine Learning Risk Reductions
 The machine learning team’s risk reduction activity was to show basic training capability using a known dataset and platform. We used 9 different audio files, each about five minutes long, and segmented them into 5 second intervals and labelled each segment as speech, noise, or music. Using a Python notebook, we extracted some basic features from our labelled audio using LibROSA and used an XGBoost classification algorithm to determine if audio could be labelled as speech, noise, or music. With this basic initial model, we were able to classify training audio with roughly 91% accuracy, though this high score was due partially to some overfitting as a result of our small dataset.
 Alexander’s individual risk reduction activity was to expand both the training dataset and the amount of features we use to train the model. The expanded dataset will help prevent overfitting, allowing us to more accurately classify real-world audio.  To expand the training dataset, we used the Freesound audio dataset, which contains 19,000 labelled audio files with lengths between 15 and 30 seconds. These files were labelled using Google’s AudioSet Ontology, a set of 80 labels for audio files. By converting their large variety of labels to match our labels of speech, noise, and music, we can use this more diverse dataset to train our model. To expand the features, we now extract the first 13 Mel Frequency Cepstral Coefficients (MFCC) coefficients, as these are commonly used in machine learning to identify properties of human speech in audio. Using this expanded dataset and new features, we are able to classify audio from our dataset with about 82% accuracy, which while lower than before, is expected considering the major differences between our current and initial dataset.
 Errol’s risk reduction was to implement the audio classification model on our Raspberry Pi. This involved installing both LibROSA and XGBoost on the pi, ensuring that the pi captured and formatted audio correctly, and developing a system to save and later load models created in our Python notebook. The implementation involved writing a Python script that loads the specified model. Once the model is loaded, the script connects to the audio capture device on the pi, and continuously record 5 seconds of audio and then extract features from the audio using LibROSA. The Python script then passes the features into the classifier, and outputs results that can be communicated to the application. This risk reduction showed that we were able to fully perform our model analysis on a platform other than our Python notebook with real inputs. 
 
-#####3.3 Test Plan
+##### 3.3 Test Plan
 The following sections describe the new activities that will be taking place over the Spring semester to ensure that the design selections for our SocialBit system will be successful in the requirements we have set forth above. Under the hardware test plan, we will test 3 parameters for the Ambiq Micro, we will test pins on our PCB, and we will run durability and resistance testing for our casing. Under the software test, we will test the communication with the hardware through Bluetooth and test the results display. Lastly, under machine learning, we will test the machine learning models on a Python notebook and on the Ambiq Micro.
 
-#####3.3.1 Hardware Test Plan
+##### 3.3.1 Hardware Test Plan
 For the hardware test plan, the team will focus on the Ambiq Micro, our designed PCB, and our 3D-printed casing. For the Ambiq Micro, our team will test its functionality under different noise settings (low, medium, and high) and then measure the classification accuracy and power consumption of the system. For each setting, we are aiming for the accuracy of our classifiers to be above 80% and for the power consumption of the system to be under 1.4 Wh. We selected these numbers based off of the specifications in sections 2.1.1 and 2.1.3. To test the PCB, our team will confirm our design by ensuring we have no errors related to unrouted connections or overlapping wires. We will then physically check the board by testing the different pins to ensure we have made the proper connections to each component. For the 3D-printed casing, our team will test the durability of the casing by repeatedly dropping it and identifying any scratches, chips, or marks. With the damage documented, our team will be able to assess which parts of the casing are most susceptible to damage and redesign the casing as necessary. Our final test to check our overall hardware system will be to compare it against the development board. Here, the development board include all proper connections, and runs with a constant power supply. When we compare the two systems, we are looking to see if our system can output the same results as the developmental board, and we will only be able to say we are successful when we can output the same result from both devices with 95% accuracy.
 
-#####3.3.2 Software Test Plan 
+##### 3.3.2 Software Test Plan 
 The testing of software components will focus on two main areas: communicating with the hardware through Bluetooth and displaying real-time social interaction analysis from the audio processing. The communication with the hardware through Bluetooth will be tested with different types of information. We will send both properly and improperly formatted data to ensure the application is robust enough to handle anything the hardware sends. We will also test sending data from various distances to see how far apart the hardware and Android phone can be while still maintaining Bluetooth connection. Lastly, we will also test that in the case of lost Bluetooth connection during data transfer, we will still be able to access any of the information that was being sent.
 The other phase of testing is displaying real-time social interaction data on the application. This phase will be broken down into testing with dummy data and testing with real data. We will first periodically generate random data and send it to the application. We want to ensure that we can update the UI to display new data whenever it is received. After we ensure we can display consistent data, we will start testing with data from the hardware, which may not be as consistent due to factors such as the hardware losing connection with the application or the hardware being turned off to not record any more audio.
 
-#####3.3.3 Machine Learning Test Plan 
+##### 3.3.3 Machine Learning Test Plan 
 Our machine learning models will be tested in two different environments. Firstly, we will perform testing in a Python notebook. Here we test the accuracy of our models on a portion of the dataset that was not used to train the model. We do this to ensure that our accuracy is not due to overfitting on the training data and that our model will sufficiently be able to classify audio outside of our dataset. Our second testing environment will be on the development board. We will use the Ambiq Micro to record short audio segments and perform feature extraction on those segments. We will then test if the feature measurements extracted from these segments are comparable to those used to train the classifiers in the notebook environment. Furthermore, we will input the feature measurements into our models and test their accuracy. This second method of testing presents some challenges as the microphone quality on the board can introduce noise into our feature measurements. Most noticeably, the full-band and low-band energy calculations on the board are much different from the calculations in the Python notebook. Ultimately, we can likely account for this problem by normalizing the data in such a way that the feature calculations are similar both on and off the board.
 
-####4.0 PROJECT MANAGEMENT
+#### 4.0 PROJECT MANAGEMENT
 Under project management, we list out the project activities we need to complete our project.  The goal of doing this is to make a plan that we can follow next semester to get our SocialBit developed and working as quickly as possible. It helps us look at what tasks we have to achieve, who has to complete these tasks, the amount of time we spend on these tasks, and the potential costs of our project. We have twelve tasks to complete within our project and we define them across the hardware, software, and machine learning teams. We then go on within section 4.2 to describe the task assignments for each task in terms of who will be responsible for the task, and who will assist in completing those tasks. Then within section 4.3, we describe the project schedule we have in place for ten key tasks, and how we plan on moving from task to task. We list four phases and each phase builds upon the previous phase. Lastly, within section 4.4, we describe the project budget by listing what we have paid for, and items we plan on paying for in the Spring. We also go on to say that we are within our project budget and expected to stay under costs.
 
-#####4.1 Project Activities
+##### 4.1 Project Activities
 For the coming semester, we have identified our next steps in our work breakdown structure in Appendix B. Each team will be responsible for various tasks that must be completed before our SocialBit is finalized. The hardware team will need to build the PCB and the prototype device, then improve the power efficiency and prototype appearance if necessary. The hardware team will also need to work with the software team to connect the device with the app via Bluetooth. The Software team will need to be able to display data on the app and improve the app UI and appearance in a way that compliments the method for displaying data. Finally, the machine learning team will need to improve our current model’s accuracy on-board and begin training additional models to perform speaker diarization and determine emotional information.
 
-#####4.2 Task Assignments
+##### 4.2 Task Assignments
 We break down the tasks in the work breakdown structure based on three factors: the individual with the most knowledge on the task, the team the task relates to, and if it is a cross-functional task. 
 Hardware tasks have been broken down as follows. Michael will take charge of sending data to the app via Bluetooth and building the prototype device. He has the most experience with device driver communications and he has built multiple embedded systems in the past. For sending data to the app via Bluetooth, he will be assisted by members from all teams because it is a cross-functional task. For building the prototype, he will be assisted by the entire hardware team since it is a large task that falls under hardware development. Filipe will take charge of building the PCB and optimizing power efficiency because he designed the schematics for the PCB and he has the most knowledge in power electronics. For the PCB, Miguel will assist him, and for power efficiency, the entire hardware team will assist him. Miguel will take charge of selecting hardware components and improving the prototype appearance. He has the most knowledge in building breadboards, and he is tasked with the watch casing design which a large portion of our prototype’s appearance. For both of his tasks, the hardware team will assist him as needed and for the prototype appearance Rebecca will confirm if the appearance is acceptable. 
 The software team has split their tasks as such. Mircea will take charge of integrating Bluetooth with the app since he integrated the web server results to the app. He will be assisted by Rebecca, Errol, and Michael since it is a cross-functional task. Rebecca will take charge of displaying data on the app and improving the app UI because she has the most experience in designing web applications. For displaying data on the app, Mircea will assist her from the software team, and Alexander will check the final design. Lastly, for improving the app UI, Rebecca will be assisted by Mircea since it is primarily a software task. 
 With respect to machine learning tasks, Alexander will take charge of improving the model accuracy on-board and extracting basic emotional information since he focused on finding the features and classifiers for the model. He will be assisted by Errol on all his tasks and Michael will assist with improving the on-board accuracy. Errol will take charge of determining the number of people in a conversation since he focused on finding the diarization of audio and he will be assisted by Alexander.
 
-#####4.3 Project Schedule
+##### 4.3 Project Schedule
 From our Gantt chart, we have planned our project to include 10 major tasks to complete. We break down these 10 major tasks across four phases. We begin in the first phase by starting where we ended with our risk reductions. In this phase, we want to connect our android application via Bluetooth, build our PCB, and increase on-board model accuracy. Once we are able to achieve these three tasks, we can move on to the second phase where we will build our prototype device, display real-time data on the app, and determine the number of people in a conversation. We can move on to those tasks because the first phase tasks are smaller parts within the second phase. We can build our prototype once we have a PCB to build around, we can display real-time data on the application once we make a Bluetooth connection, and we can move towards determining the number of people in a conversation once we improve our model accuracy. Once we complete phase two, we can move towards phase three, where we would optimize for power efficiency and extract basic emotional intelligence. Here, we can test our prototype device for power consumption and we can extract more information from the data we receive. Lastly, in phase four, we would focus on optimizing the prototype appearance, and move closer towards real-time analysis. The goal in the fourth phase, is that we are cleaning up our prototype, so that we can create a version of our device that we can showcase.  The overall goal of our schedule is to build from the ground up until we complete our project. Furthermore, we can break down the chart into four phases where each will take approximately three weeks. 
 
 
-#####4.4 Project Budget
+##### 4.4 Project Budget
 The bill of materials in Appendix E summarizes materials utilized for the development of the SocialBit. It includes quantity, item price and description for each purchased component of our device. We included the microcontrollers we have tested on and the microcontrollers we expect to test on such as the Raspberry Pi W Zero, the Raspberry Pi W, and the Sparkfun Edge Development Board. We plan on using these development boards to determine if we can use their specific chips for our prototype before we go on and create our PCB. We also included costs for extension parts to the Apollo 3 board, so that we could run the device. We included the 3D printed material casing used for our casing, even though it was free. Lastly, we have included the PCB even though we have not received a final cost for this item. We have not ordered our PCB and we cannot be certain as to the cost yet. The total costs we have spent on our system to-date is $90.83 which is manageable for our project at this point. The end goal of our project is not to exceed the industry budget of $1000 even though we have an honors project, and we do believe we will stay within budget.
  
-####5.0 CONCLUSION
+#### 5.0 CONCLUSION
 In this report we detailed how we plan to design the SocialBit to accurately quantify social interactions and the steps we will take to fully realize the device by the end of Spring. We discussed how we split the design into three subsystems; one for hardware, another for software, and the final for machine learning. For each subsystem, we detailed the requirements our design must meet for success, our current design of the subsystem, the design work completed this semester, the design work that needs to be completed next semester, and the methods we will use to test whether the subsystem meets the requirements. We also communicate how we will breakdown project work for the upcoming semester using a work breakdown structure, linear breakdown chart, and Gantt chart. 
 The hardware team is responsible for building the wearable device that will capture and process audio. The final design of their subsystem must be fast, power efficient, and resemble an Apple Watch. The current design utilizes an Ambiq Micro with several MEMS microphones and transmits data to the user through a Bluetooth module. Currently, the hardware team has completed work in implementing the audio capture and data communication functions on a Raspberry Pi, and created a PCB and 3D-printed casing design for the SocialBit device. Next semester, the hardware team will work to implement the audio capture and data communication features on the Ambiq Micro development board, selecting the hardware components that will be used in our PCB, and optimize our 3D-printed case structure to mitigate potential damage. They will test that their design is complete by ensuring that the prototype SocialBit device is capable of performing the audio sampling and analysis features we want within a certain operation time and power consumption. 
 The software team is responsible for developing the application that will connect to the device and display the results. The requirements guiding the design of the application are that it must communicate with the hardware device via Bluetooth and be easy to navigate. The application is currently designed as three pages that display randomly generated data that will later be replaced with real data received from the hardware. The software team has completed a basic application that can communicate with the hardware through web API calls. In Spring, the software team will focus on integrating Bluetooth communication and displaying the data in real-time. To ensure that the final design is complete, the software team will send data and analysis from the hardware to the device and ensure the correct information is displayed on the device.
@@ -191,7 +197,7 @@ Finally, we elaborate on how we will manage the project and what the work breakd
 
 
 
-####REFERENCES
+#### REFERENCES
 [1]    Apple Watch Battery, Apple Inc., Cupertino, CA, 2019 [Online]. Available: https://www.apple.com/watch/battery/
 [2]    Apple Product Information Sheet, Apple Inc., Cupertino, CA, Nov. 2019, pp. 5-8 [Online]. Available: https://www.apple.com/legal/more-resources/docs/apple-product-information-sheet.pdf
 [3]    Apple Watch Series 4 - Technical Specifications, Apple Inc., Cupertino, CA, Sept. 2019 [Online]. Available: https://support.apple.com/kb/SP778?locale=en_US
@@ -206,7 +212,7 @@ Finally, we elaborate on how we will manage the project and what the work breakd
 [12]  LII / Legal Information Institute. (2000). 47 U.S. Code § 302a - Devices which interfere with radio reception. [online] Available at: https://www.law.cornell.edu/uscode/text/47/302a [Accessed 4 Oct. 2019].
 [13]  Bluetooth.org. (2019). Bluetooth Core Specifications. [online] Available at: https://www.bluetooth.org/docman/handlers/downloaddoc.ashx?doc_id=457080 [Accessed 4 Oct. 2019]
 
-#####APPENDIX A – APPLICABLE STANDARDS
+##### APPENDIX A – APPLICABLE STANDARDS
 
 Complying with the Electronic Code of Federal Regulations and the Federal Communications Commission, our SocialBit device shall comply with the regulations set forth by docket § 15.19 Labeling requirements [11]:
 
@@ -217,45 +223,26 @@ In addition, our SocialBit device shall also comply with 47 U.S. Code § 302a.
 Since our device shall communicate with other devices through the use of Bluetooth, we shall ensure to follow the core protocols set forth  by Bluetooth to ensure secure data communication [13]. 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#####APPENDIX B - WORK BREAKDOWN STRUCTURE
+##### APPENDIX B - WORK BREAKDOWN STRUCTURE
 
 Table 1. Work Breakdown Structure of SocialBit
 
+![Work Breakdown Structure](/etc/images/workBreakdown.png)
 
-
-
-
-
-#####APPENDIX C - LINEAR RESPONSIBILITY CHART
+##### APPENDIX C - LINEAR RESPONSIBILITY CHART
 
 Table 2. Linear Responsibility Chart of SocialBit
 
+![LRC](/etc/images/LRC.png)
 
-
-#####APPENDIX D - GANTT CHART
+##### APPENDIX D - GANTT CHART
 
 Table 3. Project Schedule of SocialBit
 
+![GANTT Chart](/etc/images/ganttChart.png)
 
 
-#####APPENDIX E  – BILL OF MATERIALS
+##### APPENDIX E  – BILL OF MATERIALS
 Table 4. Bill of Materials for SocialBit
 
+![Bill Of Materials](/etc/images/billOfMaterials.png)
