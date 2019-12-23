@@ -54,7 +54,8 @@ December 6th, 2019
 #### TO:             
 Edison Thomaz 
 Rebecca Kurlak
-FROM:       	Miguel Garza Robledo
+#### FROM:
+Miguel Garza Robledo
 Filipe Rubinstein
 Rebecca Phung
 Mircea Antonescu
