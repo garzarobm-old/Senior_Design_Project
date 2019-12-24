@@ -1,6 +1,8 @@
 # Senior_Design_Project
 
-[![Watch the video](/etc/images/iDidNotSeeYouThere.gif)](https://youtu.be/5Q_H5OtDwIw)
+![gif](/etc/images/iDidNotSeeYouThere.gif)
+
+![[Watch the video](/etc/images/iDidNotSeeYouThere.gif)](https://youtu.be/5Q_H5OtDwIw)
 
 
 
