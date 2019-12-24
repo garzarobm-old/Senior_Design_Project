@@ -2,7 +2,7 @@
 
 ![Filipe gif](etc/images/demo.gif)
 
-![[Watch the video](/etc/images/iDidNotSeeYouThere.gif)](https://youtu.be/5Q_H5OtDwIw)
+![Click to Watch the video!](https://youtu.be/5Q_H5OtDwIw)
 
 
 
