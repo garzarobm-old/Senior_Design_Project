@@ -1,6 +1,6 @@
 # Senior_Design_Project
 
-[![Watch the video](https://img.youtube.com/vi/5Q_H5OtDwIw/maxresdefault.jpg)](https://youtu.be/5Q_H5OtDwIw)
+[![Watch the video](/etc/images/iDidNotSeeYouThere.gif)](https://youtu.be/5Q_H5OtDwIw)
 
 
 
