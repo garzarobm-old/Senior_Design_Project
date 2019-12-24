@@ -1,9 +1,8 @@
 # Senior_Design_Project
 
-![Filipe gif](https://media.giphy.com/media/ftlITEdmppcRSPS1IX/giphy.gif)
 
-![[Watch the video](/etc/images/iDidNotSeeYouThere.gif)](https://youtu.be/5Q_H5OtDwIw)
-
+![[Watch the video](https://media.giphy.com/media/ftlITEdmppcRSPS1IX/giphy.gif)](https://youtu.be/5Q_H5OtDwIw)
+Click gif to watch video!
 
 
 
