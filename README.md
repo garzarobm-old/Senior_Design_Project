@@ -2,8 +2,6 @@
 
 ![Filipe gif](etc/images/demo.gif)
 
-![Click to Watch the video!](https://youtu.be/5Q_H5OtDwIw)
-
 
 
 In this repository, you will find our 2019-2020 Senior Design project. 
@@ -44,6 +42,7 @@ The structure of this repository is as follows (updated December 21, 2019)
 -README.md- 
 #the contents of this paper
 
+[![Everything Is AWESOME](etc/images/jumping.png)](https://youtu.be/StTqXEQ2l-Y?t=35s "Everything Is AWESOME")
 
 Here lies our system design report that has a overview of our project as a whole below...
 
