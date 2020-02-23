@@ -16,3 +16,5 @@ exec 3</dev/ttyUSB0                     #REDIRECT SERIAL OUTPUT TO FD 3
 
 exec 3<&-                               #FREE FD 3
 cat /tmp/ttyDump.dat                    #DUMP CAPTURED DATA
+
+5. then check if the example project example1_edge_test works, if it does, then you should be good
