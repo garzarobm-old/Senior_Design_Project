@@ -101,11 +101,64 @@ INCLUDES+= -I../../../../../devices
 INCLUDES+= -I../src/tf_adc
 INCLUDES+= -I../src/tf_accelerometer
 
+#MIGUEL ADDED THIS INCLUDES
+
+INCLUDES+= -I../../../../../third_party/exactle/sw/profiles/bas
+INCLUDES+= -I../../../../../third_party/exactle/sw/profiles/hid
+INCLUDES+= -I../../../../../third_party/exactle/sw/profiles/hrps
+INCLUDES+= -I../../../../../third_party/exactle/sw/hci/include
+INCLUDES+= -I../../../../../third_party/exactle/sw/apps/fit
+INCLUDES+= -I../../../../../third_party/exactle/sw/profiles/rscp
+INCLUDES+= -I../../../../../third_party/exactle/ws-core/sw/wsf/include
+INCLUDES+= -I../../../../../third_party/exactle/ws-core/sw/wsf/ambiq
+INCLUDES+= -I../../../../../third_party/exactle/sw/hci/ambiq/apollo3
+INCLUDES+= -I../../../../../third_party/exactle/sw/stack/include
+INCLUDES+= -I../../../../../third_party/exactle/sw/stack/cfg
+INCLUDES+= -I../../../../../third_party/exactle/sw/services
+INCLUDES+= -I../../../../../third_party/exactle/sw/stack/hci
+INCLUDES+= -I../../../../../third_party/exactle/apollo-host/projects/common
+INCLUDES+= -I../../../../../third_party/FreeRTOSv10.1.1/Source/portable/GCC/AMapollo2
+INCLUDES+= -I../../../../../third_party/exactle/sw/profiles/uribeacon
+INCLUDES+= -I../../../../../third_party/exactle/sw/hci/ambiq
+INCLUDES+= -I../../../../../third_party/exactle/sw/sec/common
+INCLUDES+= -I../../../../../third_party/exactle/ws-core/include
+INCLUDES+= -I../../../../../third_party/exactle/sw/sec/include
+INCLUDES+= -I../../../../../third_party/exactle/sw/apps/app/include
+INCLUDES+= -I../../../../../third_party/exactle/sw/apps/app
+INCLUDES+= -I../../../../../third_party/FreeRTOSv10.1.1/Source/include
+INCLUDES+= -I../../../../../third_party/uecc/micro-ecc
+INCLUDES+= -I../../../../../third_party/exactle/ws-core/sw/util
+#END OF MIGUEL ADDING
+
+
 VPATH = ../src
 VPATH+= ../src/tf_adc
 VPATH+= ../src/tf_accelerometer
 VPATH+=:../../../../../devices
 VPATH+=:../../../../../utils
+#Miguel add to VPATH
+VPATH+= ../../../../../third_party/exactle/sw/profiles/bas
+VPATH+=:../../../../../third_party/exactle/sw/profiles/hid
+VPATH+=:../../../../../third_party/exactle/sw/profiles/hrps
+VPATH+=:../../../../../third_party/FreeRTOSv10.1.1/Source/portable/GCC/AMapollo2
+VPATH+=:../../../../../third_party/FreeRTOSv10.1.1/Source
+VPATH+=:../../../../../third_party/exactle/ws-core/sw/util
+VPATH+=:../../../../../third_party/exactle/sw/hci/ambiq
+VPATH+=:../../../../../third_party/exactle/sw/apps/hidapp
+VPATH+=:../../../../../third_party/exactle/sw/apps/fit
+VPATH+=:../../../../../third_party/exactle/sw/profiles/rscp
+VPATH+=:../../../../../third_party/exactle/sw/sec/common
+VPATH+=:../../../../../third_party/exactle/ws-core/sw/wsf/ambiq
+VPATH+=:../../../../../third_party/exactle/sw/hci/ambiq/apollo3
+VPATH+=:../../../../../third_party/exactle/sw/apps/app
+VPATH+=:../../../../../third_party/exactle/sw/apps/app/generic
+VPATH+=:../../../../../third_party/exactle/sw/stack/cfg
+VPATH+=:../../../../../third_party/exactle/ws-core/sw/wsf/common
+VPATH+=:../../../../../third_party/exactle/sw/services
+VPATH+=:../../../../../third_party/uecc/micro-ecc
+VPATH+=:../../../../../third_party/exactle/sw/stack/hci
+VPATH+=:../../../../../third_party/FreeRTOSv10.1.1/Source/portable/MemMang
+#end of miguel adding to VPATH
 
 SRC = main.c
 SRC += am_devices_led.c
@@ -116,7 +169,10 @@ SRC += startup_gcc.c
 SRC += tf_adc.c
 SRC += tf_accelerometer.c
 SRC += lis2dh12_reg.c
-
+#miguel include
+#SRC += hci_drv_apollo3.c
+#SRC += rtos.c
+#end of include
 CSRC = $(filter %.c,$(SRC))
 ASRC = $(filter %.s,$(SRC))
 

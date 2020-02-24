@@ -7,21 +7,50 @@
 //! SWO is configured in 2M baud, 8-n-1 mode.
 //
 //*****************************************************************************
-
+//#include "hci_drv_apollo3.h"
 #include "am_mcu_apollo.h"
 #include "am_bsp.h"
 #include "am_util.h"
 #include "tf_adc.h"
 #include "tf_accelerometer.h"
-
+//#include "hci_drv.h"
 static int  boardSetup(void);
 static void boardTeardown(void);
 static int  testADC(void);
+//axis3bit16_t data_raw_acceleration;
+//axis1bit16_t data_raw_temperature;
+//float acceleration_mg[3];
+//float temperature_degC;
 
-axis3bit16_t data_raw_acceleration;
-axis1bit16_t data_raw_temperature;
-float acceleration_mg[3];
-float temperature_degC;
+//typedef void (*function)(uint8_t *pui8Data, uint32_t ui32Length, void *pvContext);
+static void *BLE;
+//miguel includes
+void runtask(void);
+void initializeNVIC(void);
+
+//our queues
+/* buffer for holding outgoing hci packets 
+we redefiined the function from the hci file
+*/
+typedef struct {
+	uint32_t ui32Length;
+	uint32_t pui32Data[256/ 4]; // max packet
+}
+write_t;
+write_t writeBuffers[8];
+
+//this is our queue for 
+
+am_hal_queue_t writeQueue;
+
+//our counter for counting the read data
+volatile uint32_t interruptCounter = 0;
+
+
+/* adc interrupting */
+
+
+
 
 //*****************************************************************************
 //
@@ -31,7 +60,6 @@ float temperature_degC;
 int main(void)
 {
     boardSetup();
-
     am_util_stdio_terminal_clear();
 
     am_util_stdio_printf("SparkFun Edge Board Test\n");
@@ -39,14 +67,62 @@ int main(void)
     am_util_stdio_printf("SparkFun Tensorflow Debug Output (UART)\r\n");
     am_bsp_uart_string_print("Hello, UART!\r\n");
 
-    int accInitRes = initAccelerometer();
-    am_util_stdio_printf("Accelerometer init returned %8x\r\n", accInitRes);
+	uint32_t debug = -1;
+	uint32_t powerDebug = -1;
+	uint32_t configDebug = -1;
+	uint32_t bootDebug = -1;
+	uint32_t powerSetDebug = -1;
+  	 //initialize
+	debug = am_hal_ble_initialize(0, &BLE);
 
-    testADC();
-    
 
+	//step 2:power cycle 
+	powerDebug = am_hal_ble_power_control(BLE, AM_HAL_BLE_POWER_ACTIVE);
+	
+	//step 3: ble config gets called
+        am_hal_ble_config_t sBleConfig =
+        {
+            // Configure the HCI interface clock for 6 MHz
+            .ui32SpiClkCfg = AM_HAL_BLE_HCI_CLK_DIV8,
+
+            // Set HCI read and write thresholds to 32 bytes each.
+            .ui32ReadThreshold = 32,
+            .ui32WriteThreshold = 32,
+
+            // The MCU will supply the clock to the BLE core.
+            .ui32BleClockConfig = AM_HAL_BLE_CORE_MCU_CLK,
+
+            // Default settings for expected BLE clock drift (measured in PPM).
+            .ui32ClockDrift = 0,
+            .ui32SleepClockDrift = 50,
+
+            // Default setting - AGC Enabled
+            .bAgcEnabled = true,
+
+            // Default setting - Sleep Algo enabled
+            .bSleepEnabled = true,
+
+            // Apply the default patches when am_hal_ble_boot() is called.
+            .bUseDefaultPatches = true,
+        };
+	configDebug = am_hal_ble_config(BLE, &sBleConfig);
+        
+	//step 4: ble boot gets called
+	bootDebug = am_hal_ble_boot(BLE);	
+
+	//step 5: ble power gets set
+	powerSetDebug = am_hal_ble_tx_power_set(BLE,0x8);
+
+
+	//step 6: initialize interrupts for bluetooth module
+	initializeNVIC();	
+
+	//step 7: set up some debugging variables
+	
+  	am_hal_queue_from_array(&writeQueue, writeBuffers);
+	interruptCounter = 0;	
     /*
-    * Read samples in polling mode (no int)
+		look at debugging values continuously till pin14 is pressed
     */
     while(1)
     {
@@ -54,8 +130,9 @@ int main(void)
         uint32_t pin14Val = 1; 
         am_hal_gpio_state_read( AM_BSP_GPIO_14, AM_HAL_GPIO_INPUT_READ, &pin14Val);
         if( pin14Val == 0 ){ break; }
-    	am_util_stdio_printf("MICHEAL SUCKS!!!\r\n");
+    	am_util_stdio_printf("debug = %d powerdebug = %d configDebug = %d bootDebug = %d powerset = %d \r\n", debug, powerDebug, configDebug, bootDebug, powerSetDebug);
 
+    	am_util_stdio_printf("interruptCounter = %d\r\n", interruptCounter);
     }
 
     // Turn off leds
@@ -118,4 +195,22 @@ static int testADC(void)
     //triggerAdc();
 
     return 0;
+}
+/*miguel functions*/
+void initializeNVIC(void){
+    am_hal_ble_int_clear(BLE, (AM_HAL_BLE_INT_CMDCMP |
+                               AM_HAL_BLE_INT_DCMP |
+                               AM_HAL_BLE_INT_BLECIRQ |
+                               AM_HAL_BLE_INT_BLECSSTAT));
+
+    am_hal_ble_int_enable(BLE, (AM_HAL_BLE_INT_CMDCMP |
+                                AM_HAL_BLE_INT_DCMP |
+                                AM_HAL_BLE_INT_BLECIRQ |
+                                AM_HAL_BLE_INT_BLECSSTAT));
+	NVIC_EnableIRQ(BLE_IRQn);	
+	am_hal_interrupt_master_enable();
+}
+void initialize(void){
+   
+
 }

@@ -42,6 +42,9 @@ COMPILERNAME := gcc
 PROJECT := ble_freertos_amota_gcc
 CONFIG := bin
 
+COM_PORT = '/dev/ttyUSB1'
+SDKPATH				 = # Note that if you copy/paste a windows file path here you need to change backslashes to forward slashes
+BOARDPATH			 = ${SDKPATH}/boards/apollo3_evb# Set this as the path to the SparkFun Edge BSP (Board Support Package) directory. Initially assumes that you put the BSP under the 'boards' directory in the SDK
 SHELL:=/bin/bash
 #### Setup ####
 
