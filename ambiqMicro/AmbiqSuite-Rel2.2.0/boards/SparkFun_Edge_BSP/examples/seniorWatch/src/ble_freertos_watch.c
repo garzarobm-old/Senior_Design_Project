@@ -163,9 +163,9 @@ main(void)
     //
     // Enable printing to the console.
     //
-#ifdef AM_DEBUG_PRINTF
+//#ifdef AM_DEBUG_PRINTF
     enable_print_interface();
-#endif
+//#endif
 
     //
     // Initialize plotting interface.

@@ -78,23 +78,15 @@
 void
 enable_print_interface(void)
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 	// this is for uart miguel
 	am_bsp_uart_printf_enable();
 
 
-=======
->>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
-=======
->>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
     //
     // Initialize a debug printing interface.
     //
     am_bsp_itm_printf_enable();
-<<<<<<< HEAD
-<<<<<<< HEAD
 	
 
 	//print the banner  miguel

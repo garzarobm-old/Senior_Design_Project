@@ -34671,10 +34671,10 @@ main(void)
     //
     // Enable printing to the console.
     //
-#ifdef AM_DEBUG_PRINTF
+//#ifdef AM_DEBUG_PRINTF
     enable_print_interface();
    1b018:	f7ff ffe6 	bl	1afe8 <enable_print_interface>
-#endif
+//#endif
 
     //
     // Initialize plotting interface.
