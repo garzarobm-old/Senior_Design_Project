@@ -21,9 +21,21 @@ I (../../../../../mcu/apollo3/regs/am_reg_jedec.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_status.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_sysctrl.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_adc.h)(0x5DCCBCFC)
+<<<<<<< HEAD
+<<<<<<< HEAD
+I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E536FFA)
+I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
+I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5E534DF1)
+=======
 I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E53239E)
 I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5DCCBCFC)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E53239E)
+I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
+I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5DCCBCFC)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
 I (../../../../../mcu/apollo3/hal/am_hal_burst.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_cachectrl.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_clkgen.h)(0x5DCCBCFC)
@@ -196,9 +208,21 @@ I (../../../../../mcu/apollo3/regs/am_reg_jedec.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_status.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_sysctrl.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_adc.h)(0x5DCCBCFC)
+<<<<<<< HEAD
+<<<<<<< HEAD
+I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E536FFA)
+I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
+I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5E534DF1)
+=======
 I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E53239E)
 I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5DCCBCFC)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E53239E)
+I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
+I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5DCCBCFC)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
 I (../../../../../mcu/apollo3/hal/am_hal_burst.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_cachectrl.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_clkgen.h)(0x5DCCBCFC)
@@ -439,7 +463,15 @@ I (../../../../../third_party/exactle/sw/stack/include/att_defs.h)(0x5DCCBCFC)
 I (../../../../../third_party/exactle/sw/stack/include/att_uuid.h)(0x5DCCBCFC)
 I (../../../../../third_party/exactle/sw/stack/include/smp_api.h)(0x5DCCBCFC)
 I (../../../../../third_party/exactle/ws-core/include/ll_defs.h)(0x5DCCBCFC)
+<<<<<<< HEAD
+<<<<<<< HEAD
+F (../../../../../third_party/exactle/sw/hci/ambiq/apollo3/hci_drv_apollo3.c)(0x5E538540)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -g -O0 -Otime --apcs=interwork --split_sections -I ../../../../../utils -I ../../../../../third_party/exactle/sw/services -I ../../../../../third_party/exactle/sw/profiles/fmpl -I ../../../../../third_party/exactle/sw/stack/hci -I ../../../../.. -I ../../../../../third_party/exactle/ws-core/sw/util -I ../../../../../third_party/exactle/sw/profiles/hid -I ../../../../../third_party/exactle/sw/profiles/gatt -I ../../../../../third_party/uecc/micro-ecc -I ../../../../../mcu/apollo3 -I ../../../bsp -I ../../../../../third_party/exactle/ws-core/include -I ../../../../../third_party/exactle/sw/profiles/uribeacon -I ../../../../../third_party/exactle/apollo-host/projects/common -I ../../../../../third_party/exactle/sw/sec/common -I ../../../../../devices -I ../../../../../third_party/exactle/sw/hci/include -I ../../../../../third_party/exactle/sw/apps/app/include -I ../../../../../third_party/exactle/sw/profiles/wdxs -I ../../../../../third_party/exactle/sw/profiles/gap -I ../../../../../third_party/exactle/sw/profiles/bas -I ../../../../../third_party/exactle/sw/apps/tag -I ../../../../../third_party/exactle/sw/stack/cfg -I ../../../../../third_party/exactle/sw/hci/ambiq/apollo3 -I ../../../../../third_party/exactle/sw/apps/app -I ../../../../../third_party/exactle/sw/sec/include -I ../../../../../third_party/exactle/sw/hci/ambiq -I ../src -I ../../../../../CMSIS/AmbiqMicro/Include -I ../../../../../third_party/exactle/sw/stack/include -I ../../../../../third_party/exactle/ws-core/sw/wsf/include -I ../../../../../CMSIS/ARM/Include -I ../../../../../third_party/exactle/ws-core/sw/wsf/ambiq-I.\RTE\_ble_cordio_power_cycle-I"C:\users\miguel\Local Settings\Application Data\Arm\Packs\AmbiqMicro\Apollo_DFP\1.2.0\Device\Include"-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DAPOLLO3_1024 -DWSF_TRACE_ENABLED -DAM_PACKAGE_BGA -DAM_PART_APOLLO3 -DAM_DEBUG_PRINTF -DAM_CUSTOM_BDADDR -Dkeil-o .\bin\hci_drv_apollo3.o --omf_browse .\bin\hci_drv_apollo3.crf --depend .\bin\hci_drv_apollo3.d)
+=======
 F (../../../../../third_party/exactle/sw/hci/ambiq/apollo3/hci_drv_apollo3.c)(0x5E531C57)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -g -O0 -Otime --apcs=interwork --split_sections -I ../../../../../utils -I ../../../../../third_party/exactle/sw/services -I ../../../../../third_party/exactle/sw/profiles/fmpl -I ../../../../../third_party/exactle/sw/stack/hci -I ../../../../.. -I ../../../../../third_party/exactle/ws-core/sw/util -I ../../../../../third_party/exactle/sw/profiles/hid -I ../../../../../third_party/exactle/sw/profiles/gatt -I ../../../../../third_party/uecc/micro-ecc -I ../../../../../mcu/apollo3 -I ../../../bsp -I ../../../../../third_party/exactle/ws-core/include -I ../../../../../third_party/exactle/sw/profiles/uribeacon -I ../../../../../third_party/exactle/apollo-host/projects/common -I ../../../../../third_party/exactle/sw/sec/common -I ../../../../../devices -I ../../../../../third_party/exactle/sw/hci/include -I ../../../../../third_party/exactle/sw/apps/app/include -I ../../../../../third_party/exactle/sw/profiles/wdxs -I ../../../../../third_party/exactle/sw/profiles/gap -I ../../../../../third_party/exactle/sw/profiles/bas -I ../../../../../third_party/exactle/sw/apps/tag -I ../../../../../third_party/exactle/sw/stack/cfg -I ../../../../../third_party/exactle/sw/hci/ambiq/apollo3 -I ../../../../../third_party/exactle/sw/apps/app -I ../../../../../third_party/exactle/sw/sec/include -I ../../../../../third_party/exactle/sw/hci/ambiq -I ../src -I ../../../../../CMSIS/AmbiqMicro/Include -I ../../../../../third_party/exactle/sw/stack/include -I ../../../../../third_party/exactle/ws-core/sw/wsf/include -I ../../../../../CMSIS/ARM/Include -I ../../../../../third_party/exactle/ws-core/sw/wsf/ambiq-I.\RTE\_ble_cordio_power_cycle-I"C:\users\miguel\Local Settings\Application Data\Arm\Packs\AmbiqMicro\Apollo_DFP\1.2.0\Device\Include"-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DAPOLLO3_1024 -DWSF_TRACE_ENABLED -DAM_PACKAGE_BGA -DAM_PART_APOLLO3 -DAM_DEBUG_PRINTF -DAM_CUSTOM_BDADDR -Dkeil-o .\bin\hci_drv_apollo3.o --omf_browse .\bin\hci_drv_apollo3.crf --depend .\bin\hci_drv_apollo3.d)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+F (../../../../../third_party/exactle/sw/hci/ambiq/apollo3/hci_drv_apollo3.c)(0x5E531C57)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -g -O0 -Otime --apcs=interwork --split_sections -I ../../../../../utils -I ../../../../../third_party/exactle/sw/services -I ../../../../../third_party/exactle/sw/profiles/fmpl -I ../../../../../third_party/exactle/sw/stack/hci -I ../../../../.. -I ../../../../../third_party/exactle/ws-core/sw/util -I ../../../../../third_party/exactle/sw/profiles/hid -I ../../../../../third_party/exactle/sw/profiles/gatt -I ../../../../../third_party/uecc/micro-ecc -I ../../../../../mcu/apollo3 -I ../../../bsp -I ../../../../../third_party/exactle/ws-core/include -I ../../../../../third_party/exactle/sw/profiles/uribeacon -I ../../../../../third_party/exactle/apollo-host/projects/common -I ../../../../../third_party/exactle/sw/sec/common -I ../../../../../devices -I ../../../../../third_party/exactle/sw/hci/include -I ../../../../../third_party/exactle/sw/apps/app/include -I ../../../../../third_party/exactle/sw/profiles/wdxs -I ../../../../../third_party/exactle/sw/profiles/gap -I ../../../../../third_party/exactle/sw/profiles/bas -I ../../../../../third_party/exactle/sw/apps/tag -I ../../../../../third_party/exactle/sw/stack/cfg -I ../../../../../third_party/exactle/sw/hci/ambiq/apollo3 -I ../../../../../third_party/exactle/sw/apps/app -I ../../../../../third_party/exactle/sw/sec/include -I ../../../../../third_party/exactle/sw/hci/ambiq -I ../src -I ../../../../../CMSIS/AmbiqMicro/Include -I ../../../../../third_party/exactle/sw/stack/include -I ../../../../../third_party/exactle/ws-core/sw/wsf/include -I ../../../../../CMSIS/ARM/Include -I ../../../../../third_party/exactle/ws-core/sw/wsf/ambiq-I.\RTE\_ble_cordio_power_cycle-I"C:\users\miguel\Local Settings\Application Data\Arm\Packs\AmbiqMicro\Apollo_DFP\1.2.0\Device\Include"-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DAPOLLO3_1024 -DWSF_TRACE_ENABLED -DAM_PACKAGE_BGA -DAM_PART_APOLLO3 -DAM_DEBUG_PRINTF -DAM_CUSTOM_BDADDR -Dkeil-o .\bin\hci_drv_apollo3.o --omf_browse .\bin\hci_drv_apollo3.crf --depend .\bin\hci_drv_apollo3.d)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEC30B2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEC30AE)
 I (../../../../../third_party/exactle/ws-core/sw/wsf/ambiq/wsf_types.h)(0x5DCCBCFC)
@@ -480,9 +512,21 @@ I (../../../../../mcu/apollo3/regs/am_reg_jedec.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_status.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_sysctrl.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_adc.h)(0x5DCCBCFC)
+<<<<<<< HEAD
+<<<<<<< HEAD
+I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E536FFA)
+I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
+I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5E534DF1)
+=======
 I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E53239E)
 I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5DCCBCFC)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E53239E)
+I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
+I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5DCCBCFC)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
 I (../../../../../mcu/apollo3/hal/am_hal_burst.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_cachectrl.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_clkgen.h)(0x5DCCBCFC)
@@ -615,9 +659,21 @@ I (../../../../../mcu/apollo3/regs/am_reg_jedec.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_status.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_sysctrl.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_adc.h)(0x5DCCBCFC)
+<<<<<<< HEAD
+<<<<<<< HEAD
+I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E536FFA)
+I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
+I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5E534DF1)
+=======
 I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E53239E)
 I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5DCCBCFC)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E53239E)
+I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
+I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5DCCBCFC)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
 I (../../../../../mcu/apollo3/hal/am_hal_burst.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_cachectrl.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_clkgen.h)(0x5DCCBCFC)
@@ -743,9 +799,21 @@ I (../../../../../mcu/apollo3/regs/am_reg_jedec.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_status.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_sysctrl.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_adc.h)(0x5DCCBCFC)
+<<<<<<< HEAD
+<<<<<<< HEAD
+I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E536FFA)
+I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
+I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5E534DF1)
+=======
 I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E53239E)
 I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5DCCBCFC)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E53239E)
+I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
+I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5DCCBCFC)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
 I (../../../../../mcu/apollo3/hal/am_hal_burst.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_cachectrl.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_clkgen.h)(0x5DCCBCFC)
@@ -814,9 +882,21 @@ I (../../../../../mcu/apollo3/regs/am_reg_jedec.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_status.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_sysctrl.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_adc.h)(0x5DCCBCFC)
+<<<<<<< HEAD
+<<<<<<< HEAD
+I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E536FFA)
+I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
+I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5E534DF1)
+=======
 I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E53239E)
 I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5DCCBCFC)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E53239E)
+I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
+I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5DCCBCFC)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
 I (../../../../../mcu/apollo3/hal/am_hal_burst.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_cachectrl.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_clkgen.h)(0x5DCCBCFC)
@@ -849,7 +929,15 @@ I (../../../../../mcu/apollo3/hal/am_hal_wdt.h)(0x5DCCBCFC)
 I (../../../bsp/am_bsp_pins.h)(0x5DCCBCFB)
 I (../../../../../devices/am_devices_led.h)(0x5DCCBCFC)
 I (../../../../../devices/am_devices_button.h)(0x5DCCBCFC)
+<<<<<<< HEAD
+<<<<<<< HEAD
+F (../src/ble_cordio_power_cycle.c)(0x5E53675D)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -g -O0 -Otime --apcs=interwork --split_sections -I ../../../../../utils -I ../../../../../third_party/exactle/sw/services -I ../../../../../third_party/exactle/sw/profiles/fmpl -I ../../../../../third_party/exactle/sw/stack/hci -I ../../../../.. -I ../../../../../third_party/exactle/ws-core/sw/util -I ../../../../../third_party/exactle/sw/profiles/hid -I ../../../../../third_party/exactle/sw/profiles/gatt -I ../../../../../third_party/uecc/micro-ecc -I ../../../../../mcu/apollo3 -I ../../../bsp -I ../../../../../third_party/exactle/ws-core/include -I ../../../../../third_party/exactle/sw/profiles/uribeacon -I ../../../../../third_party/exactle/apollo-host/projects/common -I ../../../../../third_party/exactle/sw/sec/common -I ../../../../../devices -I ../../../../../third_party/exactle/sw/hci/include -I ../../../../../third_party/exactle/sw/apps/app/include -I ../../../../../third_party/exactle/sw/profiles/wdxs -I ../../../../../third_party/exactle/sw/profiles/gap -I ../../../../../third_party/exactle/sw/profiles/bas -I ../../../../../third_party/exactle/sw/apps/tag -I ../../../../../third_party/exactle/sw/stack/cfg -I ../../../../../third_party/exactle/sw/hci/ambiq/apollo3 -I ../../../../../third_party/exactle/sw/apps/app -I ../../../../../third_party/exactle/sw/sec/include -I ../../../../../third_party/exactle/sw/hci/ambiq -I ../src -I ../../../../../CMSIS/AmbiqMicro/Include -I ../../../../../third_party/exactle/sw/stack/include -I ../../../../../third_party/exactle/ws-core/sw/wsf/include -I ../../../../../CMSIS/ARM/Include -I ../../../../../third_party/exactle/ws-core/sw/wsf/ambiq-I.\RTE\_ble_cordio_power_cycle-I"C:\users\miguel\Local Settings\Application Data\Arm\Packs\AmbiqMicro\Apollo_DFP\1.2.0\Device\Include"-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DAPOLLO3_1024 -DWSF_TRACE_ENABLED -DAM_PACKAGE_BGA -DAM_PART_APOLLO3 -DAM_DEBUG_PRINTF -DAM_CUSTOM_BDADDR -Dkeil-o .\bin\ble_cordio_power_cycle.o --omf_browse .\bin\ble_cordio_power_cycle.crf --depend .\bin\ble_cordio_power_cycle.d)
+=======
 F (../src/ble_cordio_power_cycle.c)(0x5E48669B)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -g -O0 -Otime --apcs=interwork --split_sections -I ../../../../../utils -I ../../../../../third_party/exactle/sw/services -I ../../../../../third_party/exactle/sw/profiles/fmpl -I ../../../../../third_party/exactle/sw/stack/hci -I ../../../../.. -I ../../../../../third_party/exactle/ws-core/sw/util -I ../../../../../third_party/exactle/sw/profiles/hid -I ../../../../../third_party/exactle/sw/profiles/gatt -I ../../../../../third_party/uecc/micro-ecc -I ../../../../../mcu/apollo3 -I ../../../bsp -I ../../../../../third_party/exactle/ws-core/include -I ../../../../../third_party/exactle/sw/profiles/uribeacon -I ../../../../../third_party/exactle/apollo-host/projects/common -I ../../../../../third_party/exactle/sw/sec/common -I ../../../../../devices -I ../../../../../third_party/exactle/sw/hci/include -I ../../../../../third_party/exactle/sw/apps/app/include -I ../../../../../third_party/exactle/sw/profiles/wdxs -I ../../../../../third_party/exactle/sw/profiles/gap -I ../../../../../third_party/exactle/sw/profiles/bas -I ../../../../../third_party/exactle/sw/apps/tag -I ../../../../../third_party/exactle/sw/stack/cfg -I ../../../../../third_party/exactle/sw/hci/ambiq/apollo3 -I ../../../../../third_party/exactle/sw/apps/app -I ../../../../../third_party/exactle/sw/sec/include -I ../../../../../third_party/exactle/sw/hci/ambiq -I ../src -I ../../../../../CMSIS/AmbiqMicro/Include -I ../../../../../third_party/exactle/sw/stack/include -I ../../../../../third_party/exactle/ws-core/sw/wsf/include -I ../../../../../CMSIS/ARM/Include -I ../../../../../third_party/exactle/ws-core/sw/wsf/ambiq-I.\RTE\_ble_cordio_power_cycle-I"C:\users\miguel\Local Settings\Application Data\Arm\Packs\AmbiqMicro\Apollo_DFP\1.2.0\Device\Include"-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DAPOLLO3_1024 -DWSF_TRACE_ENABLED -DAM_PACKAGE_BGA -DAM_PART_APOLLO3 -DAM_DEBUG_PRINTF -DAM_CUSTOM_BDADDR -Dkeil-o .\bin\ble_cordio_power_cycle.o --omf_browse .\bin\ble_cordio_power_cycle.crf --depend .\bin\ble_cordio_power_cycle.d)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+F (../src/ble_cordio_power_cycle.c)(0x5E48669B)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -g -O0 -Otime --apcs=interwork --split_sections -I ../../../../../utils -I ../../../../../third_party/exactle/sw/services -I ../../../../../third_party/exactle/sw/profiles/fmpl -I ../../../../../third_party/exactle/sw/stack/hci -I ../../../../.. -I ../../../../../third_party/exactle/ws-core/sw/util -I ../../../../../third_party/exactle/sw/profiles/hid -I ../../../../../third_party/exactle/sw/profiles/gatt -I ../../../../../third_party/uecc/micro-ecc -I ../../../../../mcu/apollo3 -I ../../../bsp -I ../../../../../third_party/exactle/ws-core/include -I ../../../../../third_party/exactle/sw/profiles/uribeacon -I ../../../../../third_party/exactle/apollo-host/projects/common -I ../../../../../third_party/exactle/sw/sec/common -I ../../../../../devices -I ../../../../../third_party/exactle/sw/hci/include -I ../../../../../third_party/exactle/sw/apps/app/include -I ../../../../../third_party/exactle/sw/profiles/wdxs -I ../../../../../third_party/exactle/sw/profiles/gap -I ../../../../../third_party/exactle/sw/profiles/bas -I ../../../../../third_party/exactle/sw/apps/tag -I ../../../../../third_party/exactle/sw/stack/cfg -I ../../../../../third_party/exactle/sw/hci/ambiq/apollo3 -I ../../../../../third_party/exactle/sw/apps/app -I ../../../../../third_party/exactle/sw/sec/include -I ../../../../../third_party/exactle/sw/hci/ambiq -I ../src -I ../../../../../CMSIS/AmbiqMicro/Include -I ../../../../../third_party/exactle/sw/stack/include -I ../../../../../third_party/exactle/ws-core/sw/wsf/include -I ../../../../../CMSIS/ARM/Include -I ../../../../../third_party/exactle/ws-core/sw/wsf/ambiq-I.\RTE\_ble_cordio_power_cycle-I"C:\users\miguel\Local Settings\Application Data\Arm\Packs\AmbiqMicro\Apollo_DFP\1.2.0\Device\Include"-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DAPOLLO3_1024 -DWSF_TRACE_ENABLED -DAM_PACKAGE_BGA -DAM_PART_APOLLO3 -DAM_DEBUG_PRINTF -DAM_CUSTOM_BDADDR -Dkeil-o .\bin\ble_cordio_power_cycle.o --omf_browse .\bin\ble_cordio_power_cycle.crf --depend .\bin\ble_cordio_power_cycle.d)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEC30B2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEC30AE)
 I (../../../../../third_party/exactle/ws-core/sw/wsf/ambiq/wsf_types.h)(0x5DCCBCFC)
@@ -902,9 +990,21 @@ I (../../../../../mcu/apollo3/regs/am_reg_jedec.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_status.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_sysctrl.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_adc.h)(0x5DCCBCFC)
+<<<<<<< HEAD
+<<<<<<< HEAD
+I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E536FFA)
+I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
+I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5E534DF1)
+=======
 I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E53239E)
 I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5DCCBCFC)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E53239E)
+I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
+I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5DCCBCFC)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
 I (../../../../../mcu/apollo3/hal/am_hal_burst.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_cachectrl.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_clkgen.h)(0x5DCCBCFC)
@@ -1047,9 +1147,21 @@ I (../../../../../mcu/apollo3/regs/am_reg_jedec.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_status.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_sysctrl.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_adc.h)(0x5DCCBCFC)
+<<<<<<< HEAD
+<<<<<<< HEAD
+I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E536FFA)
+I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
+I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5E534DF1)
+=======
 I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E53239E)
 I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5DCCBCFC)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E53239E)
+I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
+I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5DCCBCFC)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
 I (../../../../../mcu/apollo3/hal/am_hal_burst.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_cachectrl.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_clkgen.h)(0x5DCCBCFC)
@@ -1100,9 +1212,21 @@ I (../../../../../mcu/apollo3/regs/am_reg_jedec.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_status.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_sysctrl.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_adc.h)(0x5DCCBCFC)
+<<<<<<< HEAD
+<<<<<<< HEAD
+I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E536FFA)
+I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
+I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5E534DF1)
+=======
 I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E53239E)
 I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5DCCBCFC)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E53239E)
+I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
+I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5DCCBCFC)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
 I (../../../../../mcu/apollo3/hal/am_hal_burst.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_cachectrl.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_clkgen.h)(0x5DCCBCFC)
@@ -1154,9 +1278,21 @@ I (../../../../../mcu/apollo3/regs/am_reg_jedec.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_status.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_sysctrl.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_adc.h)(0x5DCCBCFC)
+<<<<<<< HEAD
+<<<<<<< HEAD
+I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E536FFA)
+I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
+I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5E534DF1)
+=======
 I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E53239E)
 I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5DCCBCFC)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E53239E)
+I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
+I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5DCCBCFC)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
 I (../../../../../mcu/apollo3/hal/am_hal_burst.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_cachectrl.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_clkgen.h)(0x5DCCBCFC)
@@ -1871,9 +2007,21 @@ I (../../../../../mcu/apollo3/regs/am_reg_jedec.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_status.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_sysctrl.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_adc.h)(0x5DCCBCFC)
+<<<<<<< HEAD
+<<<<<<< HEAD
+I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E536FFA)
+I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
+I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5E534DF1)
+=======
 I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E53239E)
 I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5DCCBCFC)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+I (../../../../../mcu/apollo3/hal/am_hal_ble.h)(0x5E53239E)
+I (../../../../../mcu/apollo3/hal/am_hal_global.h)(0x5DCCBCFC)
+I (../../../../../mcu/apollo3/hal/am_hal_ble_patch.h)(0x5DCCBCFC)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
 I (../../../../../mcu/apollo3/hal/am_hal_burst.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_cachectrl.h)(0x5DCCBCFC)
 I (../../../../../mcu/apollo3/hal/am_hal_clkgen.h)(0x5DCCBCFC)

@@ -318,10 +318,10 @@ static void fitSendRunningSpeedMeasurement(dmConnId_t connId)
 
     /* TODO: Set Running Speed and Cadence Measurement Parameters */
 
-    RscpsSetParameter(RSCP_SM_PARAM_SPEED, 1);
-    RscpsSetParameter(RSCP_SM_PARAM_CADENCE, 2);
-    RscpsSetParameter(RSCP_SM_PARAM_STRIDE_LENGTH, 3);
-    RscpsSetParameter(RSCP_SM_PARAM_TOTAL_DISTANCE, 4);
+    RscpsSetParameter(RSCP_SM_PARAM_SPEED, 100);
+    RscpsSetParameter(RSCP_SM_PARAM_CADENCE, 100);
+    RscpsSetParameter(RSCP_SM_PARAM_STRIDE_LENGTH, 100);
+    RscpsSetParameter(RSCP_SM_PARAM_TOTAL_DISTANCE, 100);
     
     /* Toggle running/walking */
     walk_run = walk_run? 0 : 1;

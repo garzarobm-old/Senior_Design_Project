@@ -1,1 +1,1 @@
-sudo screen /dev/ttyUSB1 115200
+sudo screen /dev/ttyUSB0 115200

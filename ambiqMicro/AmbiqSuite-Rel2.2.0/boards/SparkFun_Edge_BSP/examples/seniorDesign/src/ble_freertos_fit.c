@@ -78,10 +78,89 @@
 void
 enable_print_interface(void)
 {
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+	// this is for uart miguel
+	am_bsp_uart_printf_enable();
+
+
+=======
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
     //
     // Initialize a debug printing interface.
     //
     am_bsp_itm_printf_enable();
+<<<<<<< HEAD
+<<<<<<< HEAD
+	
+
+	//print the banner  miguel
+}
+
+//*****************************************************************************
+//
+// UART configuration settings.
+//
+//*****************************************************************************
+void
+setup_serial(int32_t i32Module)
+{
+    //
+    // Enable a UART to use for the menu.
+    //
+    const am_hal_uart_config_t sUartConfig =
+    {
+        //
+        // Standard UART settings: 115200-8-N-1
+        //
+        .ui32BaudRate = 115200,
+        .ui32DataBits = AM_HAL_UART_DATA_BITS_8,
+        .ui32Parity = AM_HAL_UART_PARITY_NONE,
+        .ui32StopBits = AM_HAL_UART_ONE_STOP_BIT,
+        .ui32FlowControl = AM_HAL_UART_FLOW_CTRL_NONE,
+
+        //
+        // Set TX and RX FIFOs to interrupt at half-full.
+        //
+        .ui32FifoLevels = (AM_HAL_UART_TX_FIFO_1_2 |
+                           AM_HAL_UART_RX_FIFO_1_2),
+
+        //
+        // Buffers
+        //
+        .pui8TxBuffer = 0,
+        .ui32TxBufferSize = 0,
+        .pui8RxBuffer = 0,
+        .ui32RxBufferSize = 0,
+    };
+
+    am_hal_uart_initialize(0, &UART);
+    am_hal_uart_power_control(UART, AM_HAL_SYSCTRL_WAKE, false);
+    am_hal_uart_configure(UART, &sUartConfig);
+
+    //
+    // Make sure the UART interrupt priority is set low enough to allow
+    // FreeRTOS API calls.
+    //
+    NVIC_SetPriority(UART0_IRQn, NVIC_configMAX_SYSCALL_INTERRUPT_PRIORITY);
+
+
+    am_hal_gpio_pinconfig(AM_BSP_GPIO_COM_UART_TX, g_AM_BSP_GPIO_COM_UART_TX);
+    am_hal_gpio_pinconfig(AM_BSP_GPIO_COM_UART_RX, g_AM_BSP_GPIO_COM_UART_RX);
+
+    //
+    // Enable UART RX interrupts manually.
+    //
+    am_hal_uart_interrupt_clear(UART, AM_HAL_UART_INT_RX | AM_HAL_UART_INT_RX_TMOUT);
+    am_hal_uart_interrupt_enable(UART, AM_HAL_UART_INT_RX | AM_HAL_UART_INT_RX_TMOUT);
+    NVIC_EnableIRQ(UART0_IRQn);
+=======
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
 }
 
 //*****************************************************************************
@@ -155,9 +234,22 @@ main(void)
     //
     // Enable printing to the console.
     //
+<<<<<<< HEAD
+<<<<<<< HEAD
+//#ifdef AM_DEBUG_PRINTF
+    enable_print_interface();
+	setup_serial(0);
+//#endif
+=======
 #ifdef AM_DEBUG_PRINTF
     enable_print_interface();
 #endif
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+#ifdef AM_DEBUG_PRINTF
+    enable_print_interface();
+#endif
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
 
     //
     // Initialize plotting interface.

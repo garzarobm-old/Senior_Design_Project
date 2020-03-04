@@ -11,8 +11,6 @@
 #include "am_mcu_apollo.h"
 #include "am_bsp.h"
 #include "am_util.h"
-#include "tf_adc.h"
-#include "tf_accelerometer.h"
 //#include "hci_drv.h"
 static int  boardSetup(void);
 static void boardTeardown(void);
@@ -113,6 +111,13 @@ int main(void)
 	//step 5: ble power gets set
 	powerSetDebug = am_hal_ble_tx_power_set(BLE,0x8);
 
+	//step 6: initialize interrupts for bluetooth module
+	//initializeNVIC();	
+
+	//step 7: set up some debugging variables
+
+	
+  	//am_hal_queue_from_array(&writeQueue, writeBuffers);
 
 	//step 6: initialize interrupts for bluetooth module
 	initializeNVIC();	
@@ -126,12 +131,17 @@ int main(void)
     */
     while(1)
     {
+	uint32_t data = 0x0001;
+	
+	uint32_t debugWrite = -1;	
+	debugWrite = am_hal_ble_blocking_hci_write(BLE, 0x01, &data, 1);
         // Use Button 14 to break the loop and shut down
         uint32_t pin14Val = 1; 
         am_hal_gpio_state_read( AM_BSP_GPIO_14, AM_HAL_GPIO_INPUT_READ, &pin14Val);
         if( pin14Val == 0 ){ break; }
     	am_util_stdio_printf("debug = %d powerdebug = %d configDebug = %d bootDebug = %d powerset = %d \r\n", debug, powerDebug, configDebug, bootDebug, powerSetDebug);
 
+    	am_util_stdio_printf("debugWrite = %d\r\n", debugWrite);
     	am_util_stdio_printf("interruptCounter = %d\r\n", interruptCounter);
     }
 
