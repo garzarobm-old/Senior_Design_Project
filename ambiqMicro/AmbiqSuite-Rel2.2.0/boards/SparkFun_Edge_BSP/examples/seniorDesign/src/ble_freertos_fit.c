@@ -149,10 +149,6 @@ setup_serial(int32_t i32Module)
     am_hal_uart_interrupt_clear(UART, AM_HAL_UART_INT_RX | AM_HAL_UART_INT_RX_TMOUT);
     am_hal_uart_interrupt_enable(UART, AM_HAL_UART_INT_RX | AM_HAL_UART_INT_RX_TMOUT);
     NVIC_EnableIRQ(UART0_IRQn);
-=======
->>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
-=======
->>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
 }
 
 //*****************************************************************************
@@ -226,22 +222,16 @@ main(void)
     //
     // Enable printing to the console.
     //
-<<<<<<< HEAD
-<<<<<<< HEAD
 //#ifdef AM_DEBUG_PRINTF
     enable_print_interface();
 	setup_serial(0);
 //#endif
-=======
 #ifdef AM_DEBUG_PRINTF
     enable_print_interface();
 #endif
->>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
-=======
 #ifdef AM_DEBUG_PRINTF
     enable_print_interface();
 #endif
->>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
 
     //
     // Initialize plotting interface.

@@ -77,9 +77,11 @@ rscpSmData_t rscpSmData;
 *  \return none
 */
 /*************************************************************************************************/
+static uint8_t myTime = 0x01;
 void RscpsSetSensorLocation(uint8_t location)
 {
-  AttsSetAttr(RSCS_SL_HDL, sizeof(uint8_t), &location);
+	am_util_stdio_printf("sending Sensor location\r\n");
+  AttsSetAttr(RSCS_SL_HDL, sizeof(uint8_t), &myTime);
 }
 
 /*************************************************************************************************/
@@ -116,21 +118,22 @@ void RscpsSetParameter(uint8_t type, uint32_t value)
   switch (type)
   {
   case RSCP_SM_PARAM_SPEED:
-    rscpSmData.speed = (uint16_t) value;
+	
+    rscpSmData.speed = 1;
     break;
 
   case RSCP_SM_PARAM_CADENCE:
-    rscpSmData.cadence = (uint8_t) value;
+    rscpSmData.cadence =  1;
     break;
 
   case RSCP_SM_PARAM_STRIDE_LENGTH:
     rscpSmData.flags |= (1 << RSCPS_ISLP_FLAG_INDEX);
-    rscpSmData.stride = (uint16_t) value;
+    rscpSmData.stride = 1;
     break;
 
   case RSCP_SM_PARAM_TOTAL_DISTANCE:
     rscpSmData.flags |= (1 << RSCPS_TDP_FLAG_INDEX);
-    rscpSmData.distance = value;
+    rscpSmData.distance = 1;
     break;
 
   case RSCP_SM_PARAM_STATUS:

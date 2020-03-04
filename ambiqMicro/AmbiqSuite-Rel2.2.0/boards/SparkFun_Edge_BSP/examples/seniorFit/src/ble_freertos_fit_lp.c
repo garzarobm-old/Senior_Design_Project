@@ -73,7 +73,7 @@
 //miguel definitions
 
 static int  boardSetup(void);
- #define AM_DEBUG_PRINTF
+ #define AM_DEBUG_PRINTF  1
  #define WSF_TRACE_ENABLED   1
 //*****************************************************************************
 //

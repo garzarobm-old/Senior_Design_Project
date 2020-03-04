@@ -182,6 +182,9 @@ static wsfBufPoolDesc_t g_psPoolDescriptors[WSF_BUF_POOLS] =
     {  64,  6 },
     { 280,  6 }
 };
+//Miguel Defines
+
+#define WSF_TRACE_ENABLED  1
 
 //*****************************************************************************
 //
@@ -281,6 +284,7 @@ update_scheduler_timers(void)
 void
 set_next_wakeup(void)
 {
+   	am_util_stdio_printf("inside next_wakeup()\r\n");//miguel call 2
     bool_t bTimerRunning;
     wsfTimerTicks_t xNextExpiration;
 
@@ -326,6 +330,7 @@ radio_timer_handler(void)
 {
     // Signal radio task to run
 
+   	am_util_stdio_printf("radiotimer handler\r\n");//miguel call 2
     WsfTaskSetReady(0, 0);
 }
 #endif
@@ -754,6 +759,7 @@ RadioTask(void *pvParameters)
     //
     FitStart();
 
+   	am_util_stdio_printf("started OS\r\n");//miguel call 2
     while (1)
     {
         //

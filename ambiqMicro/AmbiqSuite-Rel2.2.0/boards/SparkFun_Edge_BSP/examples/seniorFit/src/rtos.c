@@ -139,6 +139,7 @@ vApplicationStackOverflowHook(TaskHandle_t pxTask, char *pcTaskName)
     (void) pcTaskName;
     (void) pxTask;
 
+   	am_util_stdio_printf("stack overflow\r\n");//miguel call 2
     //
     // Run time stack overflow checking is performed if
     // configconfigCHECK_FOR_STACK_OVERFLOW is defined to 1 or 2.  This hook
@@ -169,11 +170,13 @@ setup_task(void *pvParameters)
     //
     am_util_debug_printf("Running setup tasks...\r\n");
 
+   	am_util_stdio_printf("before RadioTaskSetup\r\n");//miguel call 2
     //
     // Run setup functions.
     //
     RadioTaskSetup();
 
+   	am_util_stdio_printf("after RadioTaskSetup()\r\n");//miguel call 2
     //
     // Create the functional tasks
     //

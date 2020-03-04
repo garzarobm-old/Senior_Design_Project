@@ -317,11 +317,11 @@ static void fitSendRunningSpeedMeasurement(dmConnId_t connId)
     static uint8_t walk_run = 1;
 
     /* TODO: Set Running Speed and Cadence Measurement Parameters */
-
-    RscpsSetParameter(RSCP_SM_PARAM_SPEED, 100);
-    RscpsSetParameter(RSCP_SM_PARAM_CADENCE, 100);
-    RscpsSetParameter(RSCP_SM_PARAM_STRIDE_LENGTH, 100);
-    RscpsSetParameter(RSCP_SM_PARAM_TOTAL_DISTANCE, 100);
+	am_util_stdio_printf("helllo am_util \r\n");
+    RscpsSetParameter(RSCP_SM_PARAM_SPEED, 1);
+    RscpsSetParameter(RSCP_SM_PARAM_CADENCE, 2);
+    RscpsSetParameter(RSCP_SM_PARAM_STRIDE_LENGTH, 3);
+    RscpsSetParameter(RSCP_SM_PARAM_TOTAL_DISTANCE, 4);
     
     /* Toggle running/walking */
     walk_run = walk_run? 0 : 1;
@@ -735,6 +735,8 @@ void FitHandler(wsfEventMask_t event, wsfMsgHdr_t *pMsg)
 /*************************************************************************************************/
 void FitStart(void)
 {
+
+	am_util_stdio_printf("fit start \r\n");  //miguel debug
   /* Register for stack callbacks */
   DmRegister(fitDmCback);
   DmConnRegister(DM_CLIENT_ID_APP, fitDmCback);
@@ -757,6 +759,8 @@ void FitStart(void)
   /* Set running speed and cadence features */
   RscpsSetFeatures(RSCS_ALL_FEATURES);
 
+	am_util_stdio_printf("fit end before reset \r\n"); //miguel debug
   /* Reset the device */
   DmDevReset();
+	am_util_stdio_printf("fit end after reset \r\n"); //miguel debug
 }
