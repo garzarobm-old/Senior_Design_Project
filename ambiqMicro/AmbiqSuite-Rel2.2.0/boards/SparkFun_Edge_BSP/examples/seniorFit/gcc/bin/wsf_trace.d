@@ -1,29 +1,28 @@
 bin/wsf_trace.o: \
- ../../../../../third_party/exactle/ws-core/sw/wsf/ambiq/wsf_trace.c \
- ../../../../../third_party/exactle/ws-core/sw/wsf/ambiq/wsf_types.h \
- ../../../../../third_party/exactle/ws-core/sw/wsf/ambiq/wsf_trace.h \
- ../../../../../third_party/exactle/ws-core/sw/wsf/ambiq/wsf_assert.h \
- ../../../../../third_party/exactle/ws-core/sw/wsf/ambiq/wsf_cs.h \
- ../../../../../third_party/exactle/ws-core/sw/wsf/include/wsf_os.h \
- ../../../../../third_party/exactle/ws-core/sw/wsf/ambiq/wsf_os_int.h \
- ../../../../../third_party/exactle/ws-core/sw/wsf/include/wsf_queue.h \
- ../../../../../utils/am_util_debug.h \
- ../../../../../utils/am_util_stdio.h
+ ../src/third_party/exactle/ws-core/sw/wsf/ambiq/wsf_trace.c \
+ ../src/third_party/exactle/ws-core/sw/wsf/ambiq/wsf_types.h \
+ ../src/third_party/exactle/ws-core/sw/wsf/ambiq/wsf_trace.h \
+ ../src/third_party/exactle/ws-core/sw/wsf/ambiq/wsf_assert.h \
+ ../src/third_party/exactle/ws-core/sw/wsf/ambiq/wsf_cs.h \
+ ../src/third_party/exactle/ws-core/sw/wsf/include/wsf_os.h \
+ ../src/third_party/exactle/ws-core/sw/wsf/ambiq/wsf_os_int.h \
+ ../src/third_party/exactle/ws-core/sw/wsf/include/wsf_queue.h \
+ ../src/utils/am_util_debug.h ../src/utils/am_util_stdio.h
 
-../../../../../third_party/exactle/ws-core/sw/wsf/ambiq/wsf_types.h:
+../src/third_party/exactle/ws-core/sw/wsf/ambiq/wsf_types.h:
 
-../../../../../third_party/exactle/ws-core/sw/wsf/ambiq/wsf_trace.h:
+../src/third_party/exactle/ws-core/sw/wsf/ambiq/wsf_trace.h:
 
-../../../../../third_party/exactle/ws-core/sw/wsf/ambiq/wsf_assert.h:
+../src/third_party/exactle/ws-core/sw/wsf/ambiq/wsf_assert.h:
 
-../../../../../third_party/exactle/ws-core/sw/wsf/ambiq/wsf_cs.h:
+../src/third_party/exactle/ws-core/sw/wsf/ambiq/wsf_cs.h:
 
-../../../../../third_party/exactle/ws-core/sw/wsf/include/wsf_os.h:
+../src/third_party/exactle/ws-core/sw/wsf/include/wsf_os.h:
 
-../../../../../third_party/exactle/ws-core/sw/wsf/ambiq/wsf_os_int.h:
+../src/third_party/exactle/ws-core/sw/wsf/ambiq/wsf_os_int.h:
 
-../../../../../third_party/exactle/ws-core/sw/wsf/include/wsf_queue.h:
+../src/third_party/exactle/ws-core/sw/wsf/include/wsf_queue.h:
 
-../../../../../utils/am_util_debug.h:
+../src/utils/am_util_debug.h:
 
-../../../../../utils/am_util_stdio.h:
+../src/utils/am_util_stdio.h:

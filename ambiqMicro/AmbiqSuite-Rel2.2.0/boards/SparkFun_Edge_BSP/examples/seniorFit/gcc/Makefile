@@ -37,7 +37,7 @@
 # This is part of revision v2.2.0-7-g63f7c2ba1 of the AmbiqSuite Development Package.
 #
 #******************************************************************************
-TARGET := ble_freertos_fit_lp
+TARGET := seniorFit
 COMPILERNAME := gcc
 PROJECT := ble_freertos_fit_lp_gcc
 CONFIG := bin
@@ -88,63 +88,63 @@ DEFINES+= -DAM_PART_APOLLO3
 DEFINES+= -DAM_FREERTOS
 
 INCLUDES = -I../src
-INCLUDES+= -I../../../../../utils
-INCLUDES+= -I../../../../../third_party/exactle/sw/stack/hci
-INCLUDES+= -I../../../../../third_party/exactle/sw/profiles/rscp
-INCLUDES+= -I../../../../../third_party/exactle/sw/hci/include
+INCLUDES+= -I../src/utils
+INCLUDES+= -I../src/third_party/exactle/sw/stack/hci
+INCLUDES+= -I../src/third_party/exactle/sw/profiles/rscp
+INCLUDES+= -I../src/third_party/exactle/sw/hci/include
 INCLUDES+= -I../../../bsp
-INCLUDES+= -I../../../../../third_party/exactle/sw/profiles/hrps
-INCLUDES+= -I../../../../../devices
-INCLUDES+= -I../../../../../third_party/exactle/sw/apps/app/include
-INCLUDES+= -I../../../../../third_party/exactle/sw/services
-INCLUDES+= -I../../../../../third_party/exactle/sw/apps/fit
-INCLUDES+= -I../../../../../third_party/exactle/sw/profiles/bas
-INCLUDES+= -I../../../../../third_party/exactle/sw/hci/ambiq
-INCLUDES+= -I../../../../../third_party/exactle/sw/apps/app
-INCLUDES+= -I../../../../../third_party/FreeRTOSv10.1.1/Source/include
-INCLUDES+= -I../../../../../third_party/exactle/ws-core/include
-INCLUDES+= -I../../../../../third_party/exactle/sw/profiles/hid
-INCLUDES+= -I../../../../../third_party/exactle/sw/stack/cfg
-INCLUDES+= -I../../../../../CMSIS/AmbiqMicro/Include
-INCLUDES+= -I../../../../../third_party/uecc/micro-ecc
-INCLUDES+= -I../../../../../third_party/exactle/sw/sec/include
-INCLUDES+= -I../../../../../mcu/apollo3
-INCLUDES+= -I../../../../../third_party/exactle/sw/hci/ambiq/apollo3
-INCLUDES+= -I../../../../../third_party/exactle/sw/profiles/uribeacon
-INCLUDES+= -I../../../../../third_party/exactle/sw/stack/include
-INCLUDES+= -I../../../../../third_party/exactle/ws-core/sw/util
-INCLUDES+= -I../../../../..
-INCLUDES+= -I../../../../../third_party/exactle/sw/sec/common
-INCLUDES+= -I../../../../../third_party/FreeRTOSv10.1.1/Source/portable/GCC/AMapollo2
-INCLUDES+= -I../../../../../CMSIS/ARM/Include
-INCLUDES+= -I../../../../../third_party/exactle/apollo-host/projects/common
-INCLUDES+= -I../../../../../third_party/exactle/ws-core/sw/wsf/include
-INCLUDES+= -I../../../../../third_party/exactle/ws-core/sw/wsf/ambiq
+INCLUDES+= -I../src/third_party/exactle/sw/profiles/hrps
+INCLUDES+= -I../src/devices
+INCLUDES+= -I../src/third_party/exactle/sw/apps/app/include
+INCLUDES+= -I../src/third_party/exactle/sw/services
+INCLUDES+= -I../src/third_party/exactle/sw/apps/fit
+INCLUDES+= -I../src/third_party/exactle/sw/profiles/bas
+INCLUDES+= -I../src/third_party/exactle/sw/hci/ambiq
+INCLUDES+= -I../src/third_party/exactle/sw/apps/app
+INCLUDES+= -I../src/third_party/FreeRTOSv10.1.1/Source/include
+INCLUDES+= -I../src/third_party/exactle/ws-core/include
+INCLUDES+= -I../src/third_party/exactle/sw/profiles/hid
+INCLUDES+= -I../src/third_party/exactle/sw/stack/cfg
+INCLUDES+= -I../src/CMSIS/AmbiqMicro/Include
+INCLUDES+= -I../src/third_party/uecc/micro-ecc
+INCLUDES+= -I../src/third_party/exactle/sw/sec/include
+INCLUDES+= -I../src/mcu/apollo3
+INCLUDES+= -I../src/third_party/exactle/sw/hci/ambiq/apollo3
+INCLUDES+= -I../src/third_party/exactle/sw/profiles/uribeacon
+INCLUDES+= -I../src/third_party/exactle/sw/stack/include
+INCLUDES+= -I../src/third_party/exactle/ws-core/sw/util
+INCLUDES+= -I../src
+INCLUDES+= -I../src/third_party/exactle/sw/sec/common
+INCLUDES+= -I../src/third_party/FreeRTOSv10.1.1/Source/portable/GCC/AMapollo2
+INCLUDES+= -I../src/CMSIS/ARM/Include
+INCLUDES+= -I../src/third_party/exactle/apollo-host/projects/common
+INCLUDES+= -I../src/third_party/exactle/ws-core/sw/wsf/include
+INCLUDES+= -I../src/third_party/exactle/ws-core/sw/wsf/ambiq
 
-VPATH = ../../../../../third_party/exactle/sw/services
+VPATH = ../src/third_party/exactle/sw/services
 VPATH+=:../src
-VPATH+=:../../../../../third_party/FreeRTOSv10.1.1/Source
-VPATH+=:../../../../../third_party/exactle/sw/apps/fit
-VPATH+=:../../../../../third_party/exactle/sw/profiles/bas
-VPATH+=:../../../../../third_party/exactle/sw/hci/ambiq
-VPATH+=:../../../../../utils
-VPATH+=:../../../../../third_party/exactle/sw/apps/app
-VPATH+=:../../../../../third_party/exactle/sw/stack/hci
-VPATH+=:../../../../../third_party/uecc/micro-ecc
-VPATH+=:../../../../../third_party/exactle/sw/profiles/hid
-VPATH+=:../../../../../third_party/exactle/ws-core/sw/wsf/common
-VPATH+=:../../../../../third_party/exactle/sw/stack/cfg
-VPATH+=:../../../../../third_party/exactle/sw/hci/ambiq/apollo3
-VPATH+=:../../../../../third_party/exactle/sw/profiles/rscp
-VPATH+=:../../../../../third_party/exactle/ws-core/sw/util
-VPATH+=:../../../../../third_party/exactle/sw/sec/common
-VPATH+=:../../../../../third_party/exactle/sw/profiles/hrps
-VPATH+=:../../../../../third_party/exactle/sw/apps/hidapp
-VPATH+=:../../../../../devices
-VPATH+=:../../../../../third_party/FreeRTOSv10.1.1/Source/portable/GCC/AMapollo2
-VPATH+=:../../../../../third_party/FreeRTOSv10.1.1/Source/portable/MemMang
-VPATH+=:../../../../../third_party/exactle/sw/apps/app/generic
-VPATH+=:../../../../../third_party/exactle/ws-core/sw/wsf/ambiq
+VPATH+=:../src/third_party/FreeRTOSv10.1.1/Source
+VPATH+=:../src/third_party/exactle/sw/apps/fit
+VPATH+=:../src/third_party/exactle/sw/profiles/bas
+VPATH+=:../src/third_party/exactle/sw/hci/ambiq
+VPATH+=:../src/utils
+VPATH+=:../src/third_party/exactle/sw/apps/app
+VPATH+=:../src/third_party/exactle/sw/stack/hci
+VPATH+=:../src/third_party/uecc/micro-ecc
+VPATH+=:../src/third_party/exactle/sw/profiles/hid
+VPATH+=:../src/third_party/exactle/ws-core/sw/wsf/common
+VPATH+=:../src/third_party/exactle/sw/stack/cfg
+VPATH+=:../src/third_party/exactle/sw/hci/ambiq/apollo3
+VPATH+=:../src/third_party/exactle/sw/profiles/rscp
+VPATH+=:../src/third_party/exactle/ws-core/sw/util
+VPATH+=:../src/third_party/exactle/sw/sec/common
+VPATH+=:../src/third_party/exactle/sw/profiles/hrps
+VPATH+=:../src/third_party/exactle/sw/apps/hidapp
+VPATH+=:../src/devices
+VPATH+=:../src/third_party/FreeRTOSv10.1.1/Source/portable/GCC/AMapollo2
+VPATH+=:../src/third_party/FreeRTOSv10.1.1/Source/portable/MemMang
+VPATH+=:../src/third_party/exactle/sw/apps/app/generic
+VPATH+=:../src/third_party/exactle/ws-core/sw/wsf/ambiq
 
 SRC = ble_freertos_fit_lp.c
 SRC += radio_task.c
@@ -242,10 +242,10 @@ OBJS+= $(ASRC:%.s=$(CONFIG)/%.o)
 DEPS = $(CSRC:%.c=$(CONFIG)/%.d)
 DEPS+= $(ASRC:%.s=$(CONFIG)/%.d)
 
-LIBS = ../../../../../third_party/exactle/projects/generic/stacklib/gcc/bin-cortex-m4/libstacklib.a
-LIBS += ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a
+LIBS = ../src/third_party/exactle/projects/generic/stacklib/gcc/bin-cortex-m4/libstacklib.a
+LIBS += ../src/mcu/apollo3/hal/gcc/bin/libam_hal.a
 LIBS += ../../../bsp/gcc/bin/libam_bsp.a
-LIBS += ../../../../../third_party/uecc/gcc/bin/lib_uecc.a
+LIBS += ../src/third_party/uecc/gcc/bin/lib_uecc.a
 
 CFLAGS = -mthumb -mcpu=$(CPU) -mfpu=$(FPU) -mfloat-abi=$(FABI)
 CFLAGS+= -ffunction-sections -fdata-sections
@@ -301,18 +301,18 @@ clean:
 
 $(CONFIG)/%.d: ;
 
-../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a:
-	$(MAKE) -C ../../../../../mcu/apollo3/hal
+../src/mcu/apollo3/hal/gcc/bin/libam_hal.a:
+	$(MAKE) -C ../src/mcu/apollo3/hal
 
 ../../../bsp/gcc/bin/libam_bsp.a:
 	$(MAKE) -C ../../../bsp
 
-../../../../../third_party/uecc/gcc/bin/lib_uecc.a:
-	$(MAKE) -C ../../../../../third_party/uecc
+../src/third_party/uecc/gcc/bin/lib_uecc.a:
+	$(MAKE) -C ../src/third_party/uecc
 
 wired_update: all
-	../../../../../tools/apollo3_scripts/create_cust_image_blob.py --bin $(CONFIG)/$(TARGET).bin --load-address 0xC000 --magic-num 0xCB -o $(CONFIG)/main_nonsecure_ota --version 0x0
-	../../../../../tools/apollo3_scripts/create_cust_wireupdate_blob.py --load-address 0x20000 --bin $(CONFIG)/main_nonsecure_ota.bin -i 6 -o $(CONFIG)/main_nonsecure_wire --options 0x1
+	../src/tools/apollo3_scripts/create_cust_image_blob.py --bin $(CONFIG)/$(TARGET).bin --load-address 0xC000 --magic-num 0xCB -o $(CONFIG)/main_nonsecure_ota --version 0x0
+	../src/tools/apollo3_scripts/create_cust_wireupdate_blob.py --load-address 0x20000 --bin $(CONFIG)/main_nonsecure_ota.bin -i 6 -o $(CONFIG)/main_nonsecure_wire --options 0x1
 
 bootload: wired_update
 	../../../bsp/tools/uart_wired_update_sparkfun.py -b 921600 $(SERIAL_PORT) -r 1 -f $(CONFIG)/main_nonsecure_wire.bin -i 6

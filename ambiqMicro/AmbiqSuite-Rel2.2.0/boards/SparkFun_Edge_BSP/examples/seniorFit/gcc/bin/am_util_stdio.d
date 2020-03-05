@@ -1,4 +1,4 @@
-bin/am_util_stdio.o: ../../../../../utils/am_util_stdio.c \
- ../../../../../utils/am_util_stdio.h
+bin/am_util_stdio.o: ../src/utils/am_util_stdio.c \
+ ../src/utils/am_util_stdio.h
 
-../../../../../utils/am_util_stdio.h:
+../src/utils/am_util_stdio.h:

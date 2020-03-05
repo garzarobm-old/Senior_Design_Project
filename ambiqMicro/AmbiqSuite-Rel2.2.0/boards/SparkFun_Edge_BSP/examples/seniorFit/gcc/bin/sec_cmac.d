@@ -1,50 +1,49 @@
-bin/sec_cmac.o: \
- ../../../../../third_party/exactle/sw/sec/common/sec_cmac.c \
- ../../../../../third_party/exactle/ws-core/sw/wsf/ambiq/wsf_types.h \
- ../../../../../third_party/exactle/ws-core/sw/wsf/include/wsf_queue.h \
- ../../../../../third_party/exactle/ws-core/sw/wsf/include/wsf_msg.h \
- ../../../../../third_party/exactle/ws-core/sw/wsf/include/wsf_queue.h \
- ../../../../../third_party/exactle/ws-core/sw/wsf/include/wsf_os.h \
- ../../../../../third_party/exactle/ws-core/sw/wsf/ambiq/wsf_os_int.h \
- ../../../../../third_party/exactle/ws-core/sw/wsf/ambiq/wsf_trace.h \
- ../../../../../third_party/exactle/sw/sec/include/sec_api.h \
- ../../../../../third_party/exactle/sw/sec/common/sec_main.h \
- ../../../../../third_party/exactle/sw/stack/include/hci_api.h \
- ../../../../../third_party/exactle/ws-core/include/hci_defs.h \
- ../../../../../third_party/exactle/ws-core/sw/wsf/include/wsf_os.h \
- ../../../../../third_party/exactle/ws-core/sw/util/bda.h \
- ../../../../../third_party/exactle/ws-core/sw/wsf/include/wsf_buf.h \
- ../../../../../third_party/exactle/ws-core/sw/util/calc128.h \
- ../../../../../third_party/exactle/ws-core/sw/util/wstr.h
+bin/sec_cmac.o: ../src/third_party/exactle/sw/sec/common/sec_cmac.c \
+ ../src/third_party/exactle/ws-core/sw/wsf/ambiq/wsf_types.h \
+ ../src/third_party/exactle/ws-core/sw/wsf/include/wsf_queue.h \
+ ../src/third_party/exactle/ws-core/sw/wsf/include/wsf_msg.h \
+ ../src/third_party/exactle/ws-core/sw/wsf/include/wsf_queue.h \
+ ../src/third_party/exactle/ws-core/sw/wsf/include/wsf_os.h \
+ ../src/third_party/exactle/ws-core/sw/wsf/ambiq/wsf_os_int.h \
+ ../src/third_party/exactle/ws-core/sw/wsf/ambiq/wsf_trace.h \
+ ../src/third_party/exactle/sw/sec/include/sec_api.h \
+ ../src/third_party/exactle/sw/sec/common/sec_main.h \
+ ../src/third_party/exactle/sw/stack/include/hci_api.h \
+ ../src/third_party/exactle/ws-core/include/hci_defs.h \
+ ../src/third_party/exactle/ws-core/sw/wsf/include/wsf_os.h \
+ ../src/third_party/exactle/ws-core/sw/util/bda.h \
+ ../src/third_party/exactle/ws-core/sw/wsf/include/wsf_buf.h \
+ ../src/third_party/exactle/ws-core/sw/util/calc128.h \
+ ../src/third_party/exactle/ws-core/sw/util/wstr.h
 
-../../../../../third_party/exactle/ws-core/sw/wsf/ambiq/wsf_types.h:
+../src/third_party/exactle/ws-core/sw/wsf/ambiq/wsf_types.h:
 
-../../../../../third_party/exactle/ws-core/sw/wsf/include/wsf_queue.h:
+../src/third_party/exactle/ws-core/sw/wsf/include/wsf_queue.h:
 
-../../../../../third_party/exactle/ws-core/sw/wsf/include/wsf_msg.h:
+../src/third_party/exactle/ws-core/sw/wsf/include/wsf_msg.h:
 
-../../../../../third_party/exactle/ws-core/sw/wsf/include/wsf_queue.h:
+../src/third_party/exactle/ws-core/sw/wsf/include/wsf_queue.h:
 
-../../../../../third_party/exactle/ws-core/sw/wsf/include/wsf_os.h:
+../src/third_party/exactle/ws-core/sw/wsf/include/wsf_os.h:
 
-../../../../../third_party/exactle/ws-core/sw/wsf/ambiq/wsf_os_int.h:
+../src/third_party/exactle/ws-core/sw/wsf/ambiq/wsf_os_int.h:
 
-../../../../../third_party/exactle/ws-core/sw/wsf/ambiq/wsf_trace.h:
+../src/third_party/exactle/ws-core/sw/wsf/ambiq/wsf_trace.h:
 
-../../../../../third_party/exactle/sw/sec/include/sec_api.h:
+../src/third_party/exactle/sw/sec/include/sec_api.h:
 
-../../../../../third_party/exactle/sw/sec/common/sec_main.h:
+../src/third_party/exactle/sw/sec/common/sec_main.h:
 
-../../../../../third_party/exactle/sw/stack/include/hci_api.h:
+../src/third_party/exactle/sw/stack/include/hci_api.h:
 
-../../../../../third_party/exactle/ws-core/include/hci_defs.h:
+../src/third_party/exactle/ws-core/include/hci_defs.h:
 
-../../../../../third_party/exactle/ws-core/sw/wsf/include/wsf_os.h:
+../src/third_party/exactle/ws-core/sw/wsf/include/wsf_os.h:
 
-../../../../../third_party/exactle/ws-core/sw/util/bda.h:
+../src/third_party/exactle/ws-core/sw/util/bda.h:
 
-../../../../../third_party/exactle/ws-core/sw/wsf/include/wsf_buf.h:
+../src/third_party/exactle/ws-core/sw/wsf/include/wsf_buf.h:
 
-../../../../../third_party/exactle/ws-core/sw/util/calc128.h:
+../src/third_party/exactle/ws-core/sw/util/calc128.h:
 
-../../../../../third_party/exactle/ws-core/sw/util/wstr.h:
+../src/third_party/exactle/ws-core/sw/util/wstr.h:

@@ -182,9 +182,8 @@ static wsfBufPoolDesc_t g_psPoolDescriptors[WSF_BUF_POOLS] =
     {  64,  6 },
     { 280,  6 }
 };
-//Miguel Defines
 
-#define WSF_TRACE_ENABLED  1
+#define WSF_TRACE_ENABLED  1 //miguel define
 
 //*****************************************************************************
 //
@@ -233,6 +232,7 @@ scheduler_timer_init(void)
     //
     // Enable the timer interrupt.
     //
+	//MIGUEL LOOKS LIKE THE CTIMER (WHICH COULD BE KERNEL) IS SET TO PRIORITY 7 
     am_hal_ctimer_int_register(WSF_CTIMER_INT, radio_timer_handler);
     NVIC_SetPriority(CTIMER_IRQn, NVIC_configKERNEL_INTERRUPT_PRIORITY);
     am_hal_ctimer_int_enable(WSF_CTIMER_INT);
