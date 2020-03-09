@@ -768,7 +768,12 @@ RadioTask(void *pvParameters)
         //
         update_scheduler_timers();
         wsfOsDispatcher();
-
+		uint32_t pin14Val=1;
+		if (am_hal_gpio_state_read(AM_BSP_GPIO_14,AM_HAL_GPIO_INPUT_READ, &pin14Val))
+			{
+				
+    			am_hal_gpio_output_clear(AM_BSP_GPIO_LED_YELLOW);
+			}
         //
         // Enable an interrupt to wake us up next time we have a scheduled
         // event.

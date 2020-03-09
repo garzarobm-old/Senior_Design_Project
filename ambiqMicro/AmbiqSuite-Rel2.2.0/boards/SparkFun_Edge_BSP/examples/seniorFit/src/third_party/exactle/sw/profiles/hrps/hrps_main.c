@@ -261,6 +261,7 @@ static void hrpsHandleValueCnf(attEvt_t *pMsg)
  *  \return None.
  */
 /*************************************************************************************************/
+static uint8_t filipeHW = 2;
 void hrpsMeasTimerExp(wsfMsgHdr_t *pMsg)
 {
   hrpsConn_t  *pConn;
@@ -273,8 +274,8 @@ void hrpsMeasTimerExp(wsfMsgHdr_t *pMsg)
     hrpsSetupToSend();
 
     /* read heart rate measurement sensor data */
-    AppHwHrmRead(&hrpsCb.hrm);
-  
+    //AppHwHrmRead(&hrpsCb.hrm);
+  	hrpsCb.hrm.heartRate= filipeHW;
     /* if ready to send measurements */
     if (hrpsCb.txReady)
     {
@@ -291,7 +292,7 @@ void hrpsMeasTimerExp(wsfMsgHdr_t *pMsg)
     WsfTimerStartMs(&hrpsCb.measTimer, hrpsCb.cfg.period);
     
     /* increment energy expended for test/demonstration purposes */
-    hrpsCb.hrm.energyExp++;
+    //hrpsCb.hrm.energyExp++; //miguel commented it out
   }
 }
 

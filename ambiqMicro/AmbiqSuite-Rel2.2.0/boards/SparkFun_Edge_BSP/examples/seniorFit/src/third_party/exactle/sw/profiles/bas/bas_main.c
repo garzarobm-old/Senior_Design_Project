@@ -37,7 +37,7 @@
 **************************************************************************************************/
 
 /* battery level initialization value */
-#define BAS_BATT_LEVEL_INIT           0xFF
+#define BAS_BATT_LEVEL_INIT           0x7D
 
 /**************************************************************************************************
   Local Variables
@@ -283,13 +283,14 @@ void BasInit(wsfHandlerId_t handlerId, basCfg_t *pCfg)
 /*************************************************************************************************/
 void BasMeasBattStart(dmConnId_t connId, uint8_t timerEvt, uint8_t battCccIdx)
 {
+    // miguel am_hal_gpio_output_clear(AM_BSP_GPIO_LED_RED);
   /* if this is first connection */
   if (basNoConnActive())
   {   
     /* initialize control block */
     basCb.measTimer.msg.event = timerEvt;
     basCb.measTimer.msg.status = battCccIdx;  
-    basCb.measBattLevel = BAS_BATT_LEVEL_INIT;
+    basCb.measBattLevel = 0x7D;
     basCb.currCount = basCb.cfg.count;
     
     /* start timer */
@@ -298,7 +299,7 @@ void BasMeasBattStart(dmConnId_t connId, uint8_t timerEvt, uint8_t battCccIdx)
   
   /* set conn id and last sent battery level */
   basCb.conn[connId - 1].connId = connId;  
-  basCb.conn[connId - 1].sentBattLevel = BAS_BATT_LEVEL_INIT;
+  basCb.conn[connId - 1].sentBattLevel = 0xFF;
 }
 
 /*************************************************************************************************/

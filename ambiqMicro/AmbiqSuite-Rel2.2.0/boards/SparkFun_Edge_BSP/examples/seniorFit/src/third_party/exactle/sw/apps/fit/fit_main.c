@@ -127,7 +127,7 @@ static const hrpsCfg_t fitHrpsCfg =
 /*! battery measurement configuration */
 static const basCfg_t fitBasCfg =
 {
-  30,       /*! Battery measurement timer expiration period in seconds */
+  10,       /*! Battery measurement timer expiration period in seconds */
   1,        /*! Perform battery measurement after this many timer periods */
   100       /*! Send battery level notification to peer when below this level. */
 };
@@ -312,8 +312,8 @@ static void fitCccCback(attsCccEvt_t *pEvt)
 /*************************************************************************************************/
 static void fitSendRunningSpeedMeasurement(dmConnId_t connId)
 {
-  if (AttsCccEnabled(connId, FIT_RSCS_SM_CCC_IDX))
-  {
+  //if (AttsCccEnabled(connId, FIT_RSCS_SM_CCC_IDX))
+  //{
     static uint8_t walk_run = 1;
 
     /* TODO: Set Running Speed and Cadence Measurement Parameters */
@@ -327,7 +327,7 @@ static void fitSendRunningSpeedMeasurement(dmConnId_t connId)
     RscpsSetParameter(RSCP_SM_PARAM_STATUS, walk_run);
 
     RscpsSendSpeedMeasurement(connId);
-  }
+  //}
 
   /* Configure and start timer to send the next measurement */
   fitRscmTimer.msg.event = FIT_RUNNING_TIMER_IND;
@@ -356,6 +356,7 @@ static void fitProcCccState(fitMsg_t *pMsg)
   /* handle heart rate measurement CCC */
   if (pMsg->ccc.idx == FIT_HRS_HRM_CCC_IDX)
   {
+   	am_util_stdio_printf("heart rate measurement ccc\r\n");//miguel call 2
     if (pMsg->ccc.value == ATT_CLIENT_CFG_NOTIFY)
     {
       HrpsMeasStart((dmConnId_t) pMsg->ccc.hdr.param, FIT_HR_TIMER_IND, FIT_HRS_HRM_CCC_IDX);
@@ -370,6 +371,7 @@ static void fitProcCccState(fitMsg_t *pMsg)
   /* handle running speed and cadence measurement CCC */
   if (pMsg->ccc.idx == FIT_RSCS_SM_CCC_IDX)
   {
+   	am_util_stdio_printf("running speed and cadence measurement ccc\r\n");//miguel call 2
     if (pMsg->ccc.value == ATT_CLIENT_CFG_NOTIFY)
     {
       fitSendRunningSpeedMeasurement((dmConnId_t)pMsg->ccc.hdr.param);
@@ -384,6 +386,7 @@ static void fitProcCccState(fitMsg_t *pMsg)
   /* handle battery level CCC */
   if (pMsg->ccc.idx == FIT_BATT_LVL_CCC_IDX)
   {
+   	am_util_stdio_printf("battery level ccc\r\n");//miguel call 2
     if (pMsg->ccc.value == ATT_CLIENT_CFG_NOTIFY)
     {
       BasMeasBattStart((dmConnId_t) pMsg->ccc.hdr.param, FIT_BATT_TIMER_IND, FIT_BATT_LVL_CCC_IDX);
@@ -459,7 +462,7 @@ static void fitSetup(fitMsg_t *pMsg)
 static void fitBtnCback(uint8_t btn)
 {
   dmConnId_t      connId;
-  static uint8_t  heartRate = 78;    /* for testing/demonstration */
+  static uint8_t  heartRate = 0;    /* for testing/demonstration */
 
   /* button actions when connected */
   if ((connId = AppConnIsOpen()) != DM_CONN_ID_NONE)
@@ -712,6 +715,7 @@ void FitHandler(wsfEventMask_t event, wsfMsgHdr_t *pMsg)
    	am_util_stdio_printf("fit got evt %d,\r\n", pMsg->event);//miguel call 2
     if (pMsg->event >= DM_CBACK_START && pMsg->event <= DM_CBACK_END)
     {
+   		am_util_stdio_printf("advertising process %d,\r\n", pMsg->event);//miguel call 2
       /* process advertising and connection-related messages */
       AppSlaveProcDmMsg((dmEvt_t *) pMsg);
 
@@ -719,6 +723,7 @@ void FitHandler(wsfEventMask_t event, wsfMsgHdr_t *pMsg)
       AppSlaveSecProcDmMsg((dmEvt_t *) pMsg);
     }
 
+   		am_util_stdio_printf("profile interface process %d,\r\n", pMsg->event);//miguel call 2
     /* perform profile and user interface-related operations */
     fitProcMsg((fitMsg_t *) pMsg);
   }
