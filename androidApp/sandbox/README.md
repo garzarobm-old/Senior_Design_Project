@@ -1,4 +1,4 @@
-# Summary (pulled from Android Studio forum)
+# Summary of GATT (pulled from Android Studio forum)
 
 # Generic Attribute Profile (GATT)
 	The profile we are concerned with.
@@ -18,4 +18,16 @@
 		-Example:
 				Heart rate profile		 -> service
 				Heart rate measurement   -> characteristic
-				
+
+# TODO
+	1. make a connection (CENTRAL VS. PERIPHERAL)
+	2. talk to each other (GATT server vs. GATT client)
+
+
+# Android Studio project I made
+	1. made a starter project with a basic activity
+		A. Main activity that controls a floating action bar and toolbar
+		B. First Fragment that has a text and a button (uses nav_graph.xml) to move to the second fragment
+		C. Second Fragment that mimics First Fragment
+	2. researched some basic GATT protocol data transfers
+	3. I stopped here. 
