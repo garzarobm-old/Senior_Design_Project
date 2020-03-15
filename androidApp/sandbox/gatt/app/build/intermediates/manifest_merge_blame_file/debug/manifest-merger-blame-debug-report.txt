@@ -1,0 +1,69 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.gattbluetoothsandbox"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/src/main/AndroidManifest.xml
+10
+11    <!-- miguel add ons -->
+12    <uses-permission android:name="android.permission.BLUETOOTH" />
+12-->/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/src/main/AndroidManifest.xml:6:5-67
+12-->/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/src/main/AndroidManifest.xml:6:22-65
+13    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+13-->/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/src/main/AndroidManifest.xml:7:5-73
+13-->/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/src/main/AndroidManifest.xml:7:22-71
+14
+15    <!-- for ble -->
+16    <uses-feature
+16-->/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/src/main/AndroidManifest.xml:10:5-89
+17        android:name="android.hardware.bluetooth_le"
+17-->/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/src/main/AndroidManifest.xml:10:19-63
+18        android:required="true" />
+18-->/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/src/main/AndroidManifest.xml:10:64-87
+19
+20    <!-- end of miguel add ons -->
+21    <application
+21-->/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/src/main/AndroidManifest.xml:14:5-31:19
+22        android:allowBackup="true"
+22-->/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/src/main/AndroidManifest.xml:15:9-35
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.1.0] /home/miguel/.gradle/caches/transforms-2/files-2.1/1cd7eff88f5e86d0249af2958bf465f0/core-1.1.0/AndroidManifest.xml:24:18-86
+24        android:debuggable="true"
+25        android:icon="@mipmap/ic_launcher"
+25-->/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/src/main/AndroidManifest.xml:16:9-43
+26        android:label="@string/app_name"
+26-->/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/src/main/AndroidManifest.xml:17:9-41
+27        android:roundIcon="@mipmap/ic_launcher_round"
+27-->/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/src/main/AndroidManifest.xml:18:9-54
+28        android:supportsRtl="true"
+28-->/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/src/main/AndroidManifest.xml:19:9-35
+29        android:testOnly="true"
+30        android:theme="@style/AppTheme" >
+30-->/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/src/main/AndroidManifest.xml:20:9-40
+31        <activity
+31-->/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/src/main/AndroidManifest.xml:21:9-30:20
+32            android:name="com.example.gattbluetoothsandbox.MainActivity"
+32-->/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/src/main/AndroidManifest.xml:22:13-41
+33            android:label="@string/app_name"
+33-->/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/src/main/AndroidManifest.xml:23:13-45
+34            android:theme="@style/AppTheme.NoActionBar" >
+34-->/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/src/main/AndroidManifest.xml:24:13-56
+35            <intent-filter>
+35-->/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/src/main/AndroidManifest.xml:25:13-29:29
+36                <action android:name="android.intent.action.MAIN" />
+36-->/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/src/main/AndroidManifest.xml:26:17-69
+36-->/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/src/main/AndroidManifest.xml:26:25-66
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/src/main/AndroidManifest.xml:28:17-77
+38-->/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/src/main/AndroidManifest.xml:28:27-74
+39            </intent-filter>
+40        </activity>
+41    </application>
+42
+43</manifest>

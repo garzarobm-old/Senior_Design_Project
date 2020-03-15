@@ -1,0 +1,4 @@
+#Sun Mar 15 15:26:33 CDT 2020
+base.0=/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/gatt/app/build/intermediates/dex/debug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
