@@ -1,4 +1,5 @@
 # Summary of GATT (pulled from Android Studio forum)
+	-given by link https://developer.android.com/guide/topics/connectivity/bluetooth-le#java
 
 # Generic Attribute Profile (GATT)
 	The profile we are concerned with.
