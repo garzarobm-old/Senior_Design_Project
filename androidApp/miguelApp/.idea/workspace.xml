@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="795555b4-c937-485d-80a7-f45433427805" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../ambiqMicro/AmbiqSuite-Rel2.2.0/boards/SparkFun_Edge_BSP/examples/seniorFit/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../ambiqMicro/AmbiqSuite-Rel2.2.0/boards/SparkFun_Edge_BSP/examples/seniorFit/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ambiqMicro/AmbiqSuite-Rel2.2.0/boards/SparkFun_Edge_BSP/examples/seniorFit/src/.ble_freertos_fit_lp.c.swo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ambiqMicro/AmbiqSuite-Rel2.2.0/boards/SparkFun_Edge_BSP/examples/seniorFit/src/.ble_freertos_fit_lp.c.swp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ambiqMicro/AmbiqSuite-Rel2.2.0/boards/SparkFun_Edge_BSP/examples/seniorFit/src/.radio_task.c.swp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android-Simple-Bluetooth-Example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../settings.gradle" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1ZASNeVJXLdquLOWIJREKPUqI7X" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="795555b4-c937-485d-80a7-f45433427805" name="Default Changelist" comment="" />
+      <created>1584280367467</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584280367467</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

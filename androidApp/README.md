@@ -1,0 +1,41 @@
+Our bluetooth app uses either gatt/att to communicate messages from peripheral (ambiq) to central (phone).
+
+
+
+what we get after connecting in bluetooth (in light blue):
+
+
+
+
+UUID =	(8B709EE9-0FC7-7E5A-CD49-96C991FCEACF) 
+
+
+# NOTE GATT service protocol = 0x2AXX (last byte changes)
+
+HEART RATE Measurement with time stamps
+
+Heart Rate Measurement					(2A37)	notify		0x08010000, 0x08020000, or 0x08030000
+Body Sensor Location					(2A38)	Read		0x02
+Heart Rate Control Point				(2A39)	Write		manually write bytes
+
+
+1. Manufacturer name					(2A29)		String, 	8  bytes	(0x41524D204C74642E)			
+3. model number							(2A24)		String		16 bytes	(0x436F7264696F206D6F64656C206E756D)
+4. serial number						(2A25)		String 		17 bytes 	(0x436F7264696F2073657269616C206E756D)	
+5. Firmware Revision String				(2A26)		String		13 bytes	(0x436F7264696F20667720726576)
+5. Hardware Revision String				(2A27)		String		13 bytes	(0x436F7264696F20687720726576)
+6. Software Revision String				(2A28)		String		13 bytes	(0x436F7264696F20737720726576)
+7. Regulatory Certification Data List	(2A2A)		Number		6  bytes	(0x0000000000000)
+
+8. Battery level						(2A19)		Number		1 byte		(0x64)
+
+
+
+
+
+Questions/Assumptions
+	for #2, it also sends the length, but I'm not sure if this is put on the numbers, or if it is a seperate number, where does it go? does the light blue app count the length?
+
+
+
+What we need to do is read the (2A37) number through android studio and start making some charts depicting the information according to it
