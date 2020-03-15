@@ -15,9 +15,9 @@
 
 # Steps
 
-1. catch up with what machine learning team currently has
-2. see if you can load the old code into the ambiq
-3. see if you can train some data into model yourself
+1. catch up with what machine learning team currently has;;;; MOSTLY DONE
+2. see if you can load the old code into the ambiq;;;;; DONE
+3. see if you can train some data into model yourself;;;; DOING NOW
 4. research how it could be integrated into os
 5. decide whether you have to create your own model or use their model
 
