@@ -1,0 +1,39 @@
+http://neuralnetworksanddeeplearning.com/chap1.html
+# intro
+our brains can look at the sequence 
+504192 
+and make something out of it through neurons in our brain
+
+# what computers do
+to be able to do visual pattern like us, computers instead use neural networks
+
+1. take a large number of training samples
+2. develop a system where we can infer rules for recognizing handwritten digits
+
+# Perceptron
+	Fact:Frank Rosenblatt created this
+	takes several binary inputs and produces a single binary output
+		Example: wanting to go to party and are given
+				x1: is the weather good?
+				x2: does your boyfriend or girlfriend want to accompany you?
+				x3: is the festival near public transit?
+				
+				you make the weights	
+
+				w1: 6
+				w2: 2
+				w3: 2
+			Conclusion: the only thing determining whether you go or not is the weather if you make the threshold 5
+
+		you can stack all these perceptrons into the same layer and into the second layer to get a single output
+
+
+Moving on, you can add bias which is just the (-threshold)
+	
+
+
+# sigmoid neuron
+	Same idea with perceptrons except now we have values between 0 and 1.
+
+
+# scholastic gradient descent

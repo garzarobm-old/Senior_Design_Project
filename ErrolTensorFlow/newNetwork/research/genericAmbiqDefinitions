@@ -1,0 +1,5 @@
+#CMSIS
+	definition: just the hardware abstraction layer, (valvanoWare basically, allows basic interfaces from the processor and its peripherals).
+
+#flatbuffers
+	definition: some cross platform serialization library (maybe have to investigate later)
