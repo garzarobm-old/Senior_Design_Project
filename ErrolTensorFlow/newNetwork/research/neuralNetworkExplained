@@ -37,3 +37,14 @@ Moving on, you can add bias which is just the (-threshold)
 
 
 # scholastic gradient descent
+	NOTE: this is associated with learning rate somehow...
+	
+Definition: optimization algorithm that estimates the error gradient for the current state of the model using examples from the training dataset, then updates the weights of the model using the back-propagation of errors algorithm. 
+	ME: i only know what weights are ( how much influence something has to model), 
+
+Definitions to get familiar with
+	batch:
+	epoch:
+	scholastic gradient descent:
+	training epoch: 
+	step (associated with learning rate):

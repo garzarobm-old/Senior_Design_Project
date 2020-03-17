@@ -7,3 +7,6 @@
 #once loading
 	1. (optional) if you have conda running your python scripts, activate this. (Example: conda activate)
 	2. run the scriptToLoad.sh file
+
+
+
