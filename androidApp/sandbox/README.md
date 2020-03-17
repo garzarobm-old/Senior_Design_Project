@@ -21,8 +21,8 @@
 				Heart rate measurement   -> characteristic
 
 # TODO
-	1. make a connection (CENTRAL VS. PERIPHERAL)
-	2. talk to each other (GATT server vs. GATT client)
+	1. make a connection (CENTRAL VS. PERIPHERAL)		;; DONE
+	2. talk to each other (GATT server vs. GATT client) ;; DONE
 
 
 # Android Studio project I made
