@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/BluetoothActivity">
 
     <fragment
         android:id="@+id/FirstFragment"
@@ -14,7 +14,14 @@
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+        <!-- Miguel add on -->
+
+        <action
+            android:id="@+id/action_FirstFragment_to_BluetoothActivity"
+            app:destination="@id/BluetoothActivity" />
+
     </fragment>
+
     <fragment
         android:id="@+id/SecondFragment"
         android:name="com.example.gattbluetoothsandbox.SecondFragment"
@@ -25,4 +32,14 @@
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
+
+    <activity
+        android:id="@+id/BluetoothActivity"
+        android:name="com.example.gattbluetoothsandbox.BluetoothActivity"
+        android:label="Bluetooth Activity"
+        tools:layout="@layout/activity_bluetooth">
+
+    </activity>
+
+
 </navigation>

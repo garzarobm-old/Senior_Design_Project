@@ -16,5 +16,7 @@
     <string name="more">More (not implemented yet) </string>
     <string name="ble_not_supported">Sorry! ble devices are not supported</string>
 
+    <string name="unknown_device">Not known device!</string>
+
 
 </resources>
