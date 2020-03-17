@@ -20,9 +20,9 @@
 3. see if you can train some data into model yourself;;;; DOING NOW
 4. look at how micro_speech works in MICRO ;; almost done -> stopped at train your own model 
 5. https://github.com/tensorflow/docs/blob/master/site/en/r1/tutorials/sequences/audio_recognition.md speech_commands ;; almost done -> stopped at Training Finished
-6. research the os
-7. decide whether you have to create your own model or use their model
-
+6. research the os  ;; started
+7. decide whether you have to create your own model or use their model	;; decided!
+8. Find out if you can actually start importing you c code onto the project. Tutorial -> stopped at getting Started
 
 # attempt at retracing Errols steps
 
