@@ -1,0 +1,2735 @@
+Archive member included to satisfy reference by file (symbol)
+
+/usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_truncdfsf2.o)
+                              bin/am_util_stdio.o (__aeabi_d2f)
+../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+                              bin/main.o (am_bsp_uart_string_print)
+../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+                              ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o) (g_AM_BSP_GPIO_ITM_SWO)
+../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                              bin/tf_adc.o (am_hal_adc_initialize)
+../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                              bin/main.o (am_hal_ble_initialize)
+../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch.o)
+                              ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o) (am_hal_ble_num_default_patches)
+../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch_b0.o)
+                              ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o) (am_hal_ble_num_default_patches_b0)
+../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cachectrl.o)
+                              bin/main.o (am_hal_cachectrl_config)
+../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_clkgen.o)
+                              bin/main.o (am_hal_clkgen_control)
+../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+                              bin/tf_adc.o (am_hal_ctimer_config_single)
+../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_debug.o)
+                              ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o) (am_hal_debug_error)
+../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+                              bin/am_util_delay.o (am_hal_flash_delay)
+../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+                              bin/main.o (am_hal_gpio_pinconfig)
+../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_interrupt.o)
+                              bin/main.o (am_hal_interrupt_master_enable)
+../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+                              bin/tf_accelerometer.o (am_hal_iom_initialize)
+../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_itm.o)
+                              ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o) (am_hal_itm_enable)
+../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_mcuctrl.o)
+                              bin/am_util_faultisr.o (am_hal_mcuctrl_info_get)
+../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_pwrctrl.o)
+                              ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o) (am_hal_pwrctrl_periph_enable)
+../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_queue.o)
+                              bin/main.o (am_hal_queue_init)
+../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_reset.o)
+                              ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_clkgen.o) (gAmHalResetStatus)
+../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_rtc.o)
+                              ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o) (am_hal_rtc_osc_select)
+../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_sysctrl.o)
+                              bin/main.o (am_hal_sysctrl_sleep)
+../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_tpiu.o)
+                              ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o) (am_hal_tpiu_enable)
+../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+                              ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o) (am_hal_uart_initialize)
+../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cmdq.o)
+                              ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o) (am_hal_cmdq_init)
+<<<<<<< HEAD
+<<<<<<< HEAD
+../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_queue.o)
+                              ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o) (am_hal_queue_init)
+=======
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+/usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memcpy.o)
+                              ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o) (memcpy)
+
+Allocating common symbols
+Common symbol       size              file
+
+g_ADCSlotsConfigured
+                    0x4               ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+dev_ctx             0xc               bin/tf_accelerometer.o
+g_sBLEState         0x48              ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+am_bsp_uart_pwrsave
+                    0x18              ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+g_pfnCharPrint      0x4               bin/am_util_stdio.o
+i2cTX               0x200             bin/tf_accelerometer.o
+g_psPatchBuffer     0x84              ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+writeBuffers        0x820             bin/main.o
+iomHandle           0x4               bin/tf_accelerometer.o
+writeQueue          0x18              bin/main.o
+g_ADCState          0x40              ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+i2cRX               0x200             bin/tf_accelerometer.o
+g_am_hal_uart_states
+                    0xc8              ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+g_IOMhandles        0x33a8            ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 bin/main.o
+ .data          0x0000000000000000        0x0 bin/main.o
+ .bss           0x0000000000000000        0x0 bin/main.o
+<<<<<<< HEAD
+<<<<<<< HEAD
+ .text.initializeNVIC
+                0x0000000000000000       0x30 bin/main.o
+ .text.initialize
+                0x0000000000000000        0x4 bin/main.o
+ COMMON         0x0000000000000000      0x838 bin/main.o
+=======
+ .text.initialize
+                0x0000000000000000        0x4 bin/main.o
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+ .text.initialize
+                0x0000000000000000        0x4 bin/main.o
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+ .text          0x0000000000000000        0x0 bin/am_devices_led.o
+ .data          0x0000000000000000        0x0 bin/am_devices_led.o
+ .bss           0x0000000000000000        0x0 bin/am_devices_led.o
+ .text.am_devices_led_init
+                0x0000000000000000       0x40 bin/am_devices_led.o
+ .text.am_devices_led_array_disable
+                0x0000000000000000       0x38 bin/am_devices_led.o
+ .text.am_devices_led_array_init
+                0x0000000000000000       0x68 bin/am_devices_led.o
+ .text.am_devices_led_on
+                0x0000000000000000       0x2c bin/am_devices_led.o
+ .text.am_devices_led_off
+                0x0000000000000000       0x30 bin/am_devices_led.o
+ .text.am_devices_led_toggle
+                0x0000000000000000       0x54 bin/am_devices_led.o
+ .text.am_devices_led_get
+                0x0000000000000000       0x48 bin/am_devices_led.o
+ .text.am_devices_led_array_out
+                0x0000000000000000       0x78 bin/am_devices_led.o
+ .debug_info    0x0000000000000000      0xc94 bin/am_devices_led.o
+ .debug_abbrev  0x0000000000000000      0x325 bin/am_devices_led.o
+ .debug_loc     0x0000000000000000      0x506 bin/am_devices_led.o
+ .debug_aranges
+                0x0000000000000000       0x58 bin/am_devices_led.o
+ .debug_ranges  0x0000000000000000       0x78 bin/am_devices_led.o
+ .debug_line    0x0000000000000000      0x390 bin/am_devices_led.o
+ .debug_str     0x0000000000000000      0xddf bin/am_devices_led.o
+ .comment       0x0000000000000000       0x32 bin/am_devices_led.o
+ .debug_frame   0x0000000000000000      0x138 bin/am_devices_led.o
+ .ARM.attributes
+                0x0000000000000000       0x39 bin/am_devices_led.o
+ .text          0x0000000000000000        0x0 bin/am_util_delay.o
+ .data          0x0000000000000000        0x0 bin/am_util_delay.o
+ .bss           0x0000000000000000        0x0 bin/am_util_delay.o
+ .text.am_util_delay_cycles
+                0x0000000000000000        0x4 bin/am_util_delay.o
+ .text.am_util_delay_ms
+                0x0000000000000000       0x28 bin/am_util_delay.o
+ .text.am_util_delay_us
+                0x0000000000000000       0x28 bin/am_util_delay.o
+ .debug_info    0x0000000000000000      0x8b5 bin/am_util_delay.o
+ .debug_abbrev  0x0000000000000000      0x1fd bin/am_util_delay.o
+ .debug_loc     0x0000000000000000       0xe9 bin/am_util_delay.o
+ .debug_aranges
+                0x0000000000000000       0x30 bin/am_util_delay.o
+ .debug_ranges  0x0000000000000000       0x20 bin/am_util_delay.o
+ .debug_line    0x0000000000000000      0x216 bin/am_util_delay.o
+ .debug_str     0x0000000000000000      0xb40 bin/am_util_delay.o
+ .comment       0x0000000000000000       0x32 bin/am_util_delay.o
+ .debug_frame   0x0000000000000000       0x60 bin/am_util_delay.o
+ .ARM.attributes
+                0x0000000000000000       0x39 bin/am_util_delay.o
+ .text          0x0000000000000000        0x0 bin/am_util_faultisr.o
+ .data          0x0000000000000000        0x0 bin/am_util_faultisr.o
+ .bss           0x0000000000000000        0x0 bin/am_util_faultisr.o
+ .text          0x0000000000000000        0x0 bin/am_util_stdio.o
+ .data          0x0000000000000000        0x0 bin/am_util_stdio.o
+ .bss           0x0000000000000000        0x0 bin/am_util_stdio.o
+ .text.am_util_stdio_strtoul
+                0x0000000000000000       0x90 bin/am_util_stdio.o
+ .text.am_util_stdio_textmode_set
+                0x0000000000000000       0x10 bin/am_util_stdio.o
+ .text.am_util_stdio_sprintf
+                0x0000000000000000       0x1c bin/am_util_stdio.o
+ .text          0x0000000000000000        0x0 bin/startup_gcc.o
+ .data          0x0000000000000000        0x0 bin/startup_gcc.o
+ .bss           0x0000000000000000        0x0 bin/startup_gcc.o
+ .text.HardFault_Handler
+                0x0000000000000000        0x4 bin/startup_gcc.o
+ .text          0x0000000000000000        0x0 bin/tf_adc.o
+ .data          0x0000000000000000        0x0 bin/tf_adc.o
+ .bss           0x0000000000000000        0x0 bin/tf_adc.o
+ .text.initADC  0x0000000000000000       0x40 bin/tf_adc.o
+ .text.triggerAdc
+                0x0000000000000000        0xc bin/tf_adc.o
+ .text.enableAdcInterrupts
+                0x0000000000000000       0x18 bin/tf_adc.o
+ .rodata.g_AM_PIN_11_ADCSE2
+                0x0000000000000000        0x4 bin/tf_adc.o
+ .text          0x0000000000000000        0x0 bin/tf_accelerometer.o
+ .data          0x0000000000000000        0x0 bin/tf_accelerometer.o
+ .bss           0x0000000000000000        0x0 bin/tf_accelerometer.o
+ .text.platform_read
+                0x0000000000000000       0xc0 bin/tf_accelerometer.o
+ .text.platform_write
+                0x0000000000000000       0xb8 bin/tf_accelerometer.o
+ .text.initAccelerometer
+                0x0000000000000000       0xd8 bin/tf_accelerometer.o
+ .bss.whoamI.22251
+                0x0000000000000000        0x1 bin/tf_accelerometer.o
+ .data.iomTransferDefault
+                0x0000000000000000       0x28 bin/tf_accelerometer.o
+ .rodata.initAccelerometer.str1.4
+                0x0000000000000000       0x20 bin/tf_accelerometer.o
+ .rodata.platform_read.str1.4
+                0x0000000000000000       0x39 bin/tf_accelerometer.o
+ .rodata.platform_write.str1.4
+                0x0000000000000000       0x30 bin/tf_accelerometer.o
+ .debug_info    0x0000000000000000     0x1e31 bin/tf_accelerometer.o
+ .debug_abbrev  0x0000000000000000      0x369 bin/tf_accelerometer.o
+ .debug_loc     0x0000000000000000      0x3f2 bin/tf_accelerometer.o
+ .debug_aranges
+                0x0000000000000000       0x30 bin/tf_accelerometer.o
+ .debug_ranges  0x0000000000000000       0x90 bin/tf_accelerometer.o
+ .debug_line    0x0000000000000000      0x418 bin/tf_accelerometer.o
+ .debug_str     0x0000000000000000     0x2294 bin/tf_accelerometer.o
+ .comment       0x0000000000000000       0x32 bin/tf_accelerometer.o
+ .debug_frame   0x0000000000000000       0xb8 bin/tf_accelerometer.o
+ .ARM.attributes
+                0x0000000000000000       0x39 bin/tf_accelerometer.o
+ COMMON         0x0000000000000000      0x410 bin/tf_accelerometer.o
+ .text          0x0000000000000000        0x0 bin/lis2dh12_reg.o
+ .data          0x0000000000000000        0x0 bin/lis2dh12_reg.o
+ .bss           0x0000000000000000        0x0 bin/lis2dh12_reg.o
+ .text.lis2dh12_read_reg
+                0x0000000000000000       0x10 bin/lis2dh12_reg.o
+ .text.lis2dh12_write_reg
+                0x0000000000000000       0x10 bin/lis2dh12_reg.o
+ .text.lis2dh12_from_fs2_hr_to_mg
+                0x0000000000000000        0xc bin/lis2dh12_reg.o
+ .text.lis2dh12_from_fs4_hr_to_mg
+                0x0000000000000000       0x10 bin/lis2dh12_reg.o
+ .text.lis2dh12_from_fs8_hr_to_mg
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_from_fs16_hr_to_mg
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_from_lsb_hr_to_celsius
+                0x0000000000000000       0x1c bin/lis2dh12_reg.o
+ .text.lis2dh12_from_fs2_nm_to_mg
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_from_fs4_nm_to_mg
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_from_fs8_nm_to_mg
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_from_fs16_nm_to_mg
+                0x0000000000000000       0x18 bin/lis2dh12_reg.o
+ .text.lis2dh12_from_lsb_nm_to_celsius
+                0x0000000000000000       0x1c bin/lis2dh12_reg.o
+ .text.lis2dh12_from_fs2_lp_to_mg
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_from_fs4_lp_to_mg
+                0x0000000000000000       0x18 bin/lis2dh12_reg.o
+ .text.lis2dh12_from_fs8_lp_to_mg
+                0x0000000000000000       0x18 bin/lis2dh12_reg.o
+ .text.lis2dh12_from_fs16_lp_to_mg
+                0x0000000000000000       0x18 bin/lis2dh12_reg.o
+ .text.lis2dh12_from_lsb_lp_to_celsius
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_temp_status_reg_get
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_temp_data_ready_get
+                0x0000000000000000       0x20 bin/lis2dh12_reg.o
+ .text.lis2dh12_temp_data_ovr_get
+                0x0000000000000000       0x20 bin/lis2dh12_reg.o
+ .text.lis2dh12_temperature_raw_get
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_temperature_meas_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_temperature_meas_get
+                0x0000000000000000       0x2c bin/lis2dh12_reg.o
+ .text.lis2dh12_operating_mode_set
+                0x0000000000000000       0xa0 bin/lis2dh12_reg.o
+ .text.lis2dh12_operating_mode_get
+                0x0000000000000000       0x40 bin/lis2dh12_reg.o
+ .text.lis2dh12_data_rate_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_data_rate_get
+                0x0000000000000000       0x68 bin/lis2dh12_reg.o
+ .text.lis2dh12_high_pass_on_outputs_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_high_pass_on_outputs_get
+                0x0000000000000000       0x20 bin/lis2dh12_reg.o
+ .text.lis2dh12_high_pass_bandwidth_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_high_pass_bandwidth_get
+                0x0000000000000000       0x48 bin/lis2dh12_reg.o
+ .text.lis2dh12_high_pass_mode_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_high_pass_mode_get
+                0x0000000000000000       0x44 bin/lis2dh12_reg.o
+ .text.lis2dh12_full_scale_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_full_scale_get
+                0x0000000000000000       0x48 bin/lis2dh12_reg.o
+ .text.lis2dh12_block_data_update_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_block_data_update_get
+                0x0000000000000000       0x20 bin/lis2dh12_reg.o
+ .text.lis2dh12_filter_reference_set
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_filter_reference_get
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_xl_data_ready_get
+                0x0000000000000000       0x20 bin/lis2dh12_reg.o
+ .text.lis2dh12_xl_data_ovr_get
+                0x0000000000000000       0x20 bin/lis2dh12_reg.o
+ .text.lis2dh12_acceleration_raw_get
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_device_id_get
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_self_test_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_self_test_get
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_data_format_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_data_format_get
+                0x0000000000000000       0x30 bin/lis2dh12_reg.o
+ .text.lis2dh12_boot_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_boot_get
+                0x0000000000000000       0x20 bin/lis2dh12_reg.o
+ .text.lis2dh12_status_get
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_int1_gen_conf_set
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_int1_gen_conf_get
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_int1_gen_source_get
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_int1_gen_threshold_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_int1_gen_threshold_get
+                0x0000000000000000       0x20 bin/lis2dh12_reg.o
+ .text.lis2dh12_int1_gen_duration_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_int1_gen_duration_get
+                0x0000000000000000       0x20 bin/lis2dh12_reg.o
+ .text.lis2dh12_int2_gen_conf_set
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_int2_gen_conf_get
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_int2_gen_source_get
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_int2_gen_threshold_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_int2_gen_threshold_get
+                0x0000000000000000       0x20 bin/lis2dh12_reg.o
+ .text.lis2dh12_int2_gen_duration_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_int2_gen_duration_get
+                0x0000000000000000       0x20 bin/lis2dh12_reg.o
+ .text.lis2dh12_high_pass_int_conf_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_high_pass_int_conf_get
+                0x0000000000000000       0x6c bin/lis2dh12_reg.o
+ .text.lis2dh12_pin_int1_config_set
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_pin_int1_config_get
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_int2_pin_detect_4d_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_int2_pin_detect_4d_get
+                0x0000000000000000       0x20 bin/lis2dh12_reg.o
+ .text.lis2dh12_int2_pin_notification_mode_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_int2_pin_notification_mode_get
+                0x0000000000000000       0x30 bin/lis2dh12_reg.o
+ .text.lis2dh12_int1_pin_detect_4d_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_int1_pin_detect_4d_get
+                0x0000000000000000       0x20 bin/lis2dh12_reg.o
+ .text.lis2dh12_int1_pin_notification_mode_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_int1_pin_notification_mode_get
+                0x0000000000000000       0x30 bin/lis2dh12_reg.o
+ .text.lis2dh12_pin_int2_config_set
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_pin_int2_config_get
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_fifo_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_fifo_get
+                0x0000000000000000       0x20 bin/lis2dh12_reg.o
+ .text.lis2dh12_fifo_watermark_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_fifo_watermark_get
+                0x0000000000000000       0x20 bin/lis2dh12_reg.o
+ .text.lis2dh12_fifo_trigger_event_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_fifo_trigger_event_get
+                0x0000000000000000       0x30 bin/lis2dh12_reg.o
+ .text.lis2dh12_fifo_mode_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_fifo_mode_get
+                0x0000000000000000       0x44 bin/lis2dh12_reg.o
+ .text.lis2dh12_fifo_status_get
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_fifo_data_level_get
+                0x0000000000000000       0x20 bin/lis2dh12_reg.o
+ .text.lis2dh12_fifo_empty_flag_get
+                0x0000000000000000       0x20 bin/lis2dh12_reg.o
+ .text.lis2dh12_fifo_ovr_flag_get
+                0x0000000000000000       0x20 bin/lis2dh12_reg.o
+ .text.lis2dh12_fifo_fth_flag_get
+                0x0000000000000000       0x20 bin/lis2dh12_reg.o
+ .text.lis2dh12_tap_conf_set
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_tap_conf_get
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_tap_source_get
+                0x0000000000000000       0x14 bin/lis2dh12_reg.o
+ .text.lis2dh12_tap_threshold_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_tap_threshold_get
+                0x0000000000000000       0x20 bin/lis2dh12_reg.o
+ .text.lis2dh12_tap_notification_mode_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_tap_notification_mode_get
+                0x0000000000000000       0x30 bin/lis2dh12_reg.o
+ .text.lis2dh12_shock_dur_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_shock_dur_get
+                0x0000000000000000       0x20 bin/lis2dh12_reg.o
+ .text.lis2dh12_quiet_dur_set
+                0x0000000000000000       0x2c bin/lis2dh12_reg.o
+ .text.lis2dh12_quiet_dur_get
+                0x0000000000000000       0x1c bin/lis2dh12_reg.o
+ .text.lis2dh12_double_tap_timeout_set
+                0x0000000000000000       0x2c bin/lis2dh12_reg.o
+ .text.lis2dh12_double_tap_timeout_get
+                0x0000000000000000       0x1c bin/lis2dh12_reg.o
+ .text.lis2dh12_act_threshold_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_act_threshold_get
+                0x0000000000000000       0x20 bin/lis2dh12_reg.o
+ .text.lis2dh12_act_timeout_set
+                0x0000000000000000       0x2c bin/lis2dh12_reg.o
+ .text.lis2dh12_act_timeout_get
+                0x0000000000000000       0x1c bin/lis2dh12_reg.o
+ .text.lis2dh12_pin_sdo_sa0_mode_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_pin_sdo_sa0_mode_get
+                0x0000000000000000       0x30 bin/lis2dh12_reg.o
+ .text.lis2dh12_spi_mode_set
+                0x0000000000000000       0x34 bin/lis2dh12_reg.o
+ .text.lis2dh12_spi_mode_get
+                0x0000000000000000       0x30 bin/lis2dh12_reg.o
+ .debug_info    0x0000000000000000     0x6897 bin/lis2dh12_reg.o
+ .debug_abbrev  0x0000000000000000      0x3bb bin/lis2dh12_reg.o
+ .debug_loc     0x0000000000000000     0x5074 bin/lis2dh12_reg.o
+ .debug_aranges
+                0x0000000000000000      0x390 bin/lis2dh12_reg.o
+ .debug_ranges  0x0000000000000000      0x998 bin/lis2dh12_reg.o
+ .debug_line    0x0000000000000000      0xf30 bin/lis2dh12_reg.o
+ .debug_str     0x0000000000000000     0x1cc6 bin/lis2dh12_reg.o
+ .comment       0x0000000000000000       0x32 bin/lis2dh12_reg.o
+ .debug_frame   0x0000000000000000      0xe14 bin/lis2dh12_reg.o
+ .ARM.attributes
+                0x0000000000000000       0x39 bin/lis2dh12_reg.o
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_truncdfsf2.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_truncdfsf2.o)
+ .text          0x0000000000000000        0x0 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+ .data          0x0000000000000000        0x0 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+ .bss           0x0000000000000000        0x0 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+ .text.am_bsp_debug_printf_enable
+                0x0000000000000000       0xe8 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+ .text.am_bsp_itm_printf_enable
+                0x0000000000000000       0x40 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+ .text.am_bsp_itm_printf_disable
+                0x0000000000000000       0x20 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+ .text.am_bsp_iom_pins_enable
+                0x0000000000000000      0x26c ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+ .text.am_bsp_iom_pins_disable
+                0x0000000000000000      0x1b4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+ .text.am_bsp_mspi_pins_enable
+                0x0000000000000000      0x12c ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+ .text.am_bsp_mspi_pins_disable
+                0x0000000000000000      0x100 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+ .text.am_bsp_com_uart_transfer
+                0x0000000000000000       0x10 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+ .text.am_bsp_uart_printf_disable
+                0x0000000000000000       0x40 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+ .text.am_bsp_buffered_uart_printf_enable
+                0x0000000000000000       0x64 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+ .text.am_bsp_buffered_uart_service
+                0x0000000000000000       0x2c ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+ .bss.pui8UartRxBuffer
+                0x0000000000000000      0x400 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+ .bss.pui8UartTxBuffer
+                0x0000000000000000      0x400 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+ .data.am_bsp_psButtons
+                0x0000000000000000       0x10 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+ .data.g_sBspUartBufferedConfig
+                0x0000000000000000       0x28 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+ COMMON         0x0000000000000000       0x18 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+ .text          0x0000000000000000        0x0 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .data          0x0000000000000000        0x0 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .bss           0x0000000000000000        0x0 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_CAM_HREF
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_CAM_PCLK
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_CAM_VSYNC
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_CAM_XCLK
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_CAM_Y0
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_CAM_Y1
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_CAM_Y2
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_CAM_Y3
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_CAM_Y4
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_CAM_Y5
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_CAM_Y6
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_CAM_Y7
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_BUTTON0
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM0_CS
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM0_CS3
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM0_MISO
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM0_MOSI
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM0_SCK
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM0_SCL
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM0_SDA
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM1_CS
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM1_MISO
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM1_MOSI
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM1_SCK
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM1_SCL
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM1_SDA
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM2_CS
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM2_MISO
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM2_MOSI
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM2_SCK
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM2_SCL
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM2_SDA
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM3_CS
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM3_MISO
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM3_MOSI
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM3_SCK
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM3_SCL
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM3_SDA
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM4_CS
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM4_MISO
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM4_MOSI
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM4_SCK
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM4_SCL
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM4_SDA
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM5_CS
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM5_MISO
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM5_MOSI
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM5_SCK
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM5_SCL
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_IOM5_SDA
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_ITM_SWO
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_LED0
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_LED1
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_LED2
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_LED3
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_MSPI_CE0
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_MSPI_CE1
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_MSPI_D0
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_MSPI_D1
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_MSPI_D2
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_MSPI_D3
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_MSPI_D4
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_MSPI_D5
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_MSPI_D6
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_MSPI_D7
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_MSPI_SCK
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_SWDCK
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_SWDIO
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .rodata.g_AM_BSP_GPIO_UART_RX
+                0x0000000000000000        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .text          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+ .data          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+ .bss           0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+ .text.am_hal_adc_configure_dma
+                0x0000000000000000       0x70 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+ .text.am_hal_adc_control
+                0x0000000000000000       0xd4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+ .text.am_hal_adc_status_get
+                0x0000000000000000       0x54 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+ .text.am_hal_adc_interrupt_disable
+                0x0000000000000000       0x2c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+ .text          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .data          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .bss           0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .text.am_hal_ble_cmd_write.part.4
+                0x0000000000000000       0x68 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .text.am_hal_ble_nonblocking_transfer.part.9
+                0x0000000000000000      0x220 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .text.am_hal_ble_wakeup_set
+                0x0000000000000000       0x44 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .text.am_hal_ble_deinitialize
+                0x0000000000000000       0x58 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .text.am_hal_ble_default_trim_set_ramcode
+                0x0000000000000000       0x50 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .text.am_hal_ble_vs_command_build
+                0x0000000000000000       0x9c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .text.am_hal_ble_blocking_hci_read
+                0x0000000000000000       0xbc ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .text.am_hal_ble_nonblocking_hci_write
+                0x0000000000000000       0x5c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .text.am_hal_ble_nonblocking_hci_read
+                0x0000000000000000       0x94 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .text.am_hal_ble_default_patch_apply
+                0x0000000000000000       0x8c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .text.am_hal_ble_default_copy_patch_apply
+                0x0000000000000000       0x4c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .text.am_hal_ble_nonblocking_transfer
+                0x0000000000000000      0x1d8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .text.am_hal_ble_int_service
+                0x0000000000000000       0xec ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+<<<<<<< HEAD
+<<<<<<< HEAD
+ .text.am_hal_ble_int_enable
+                0x0000000000000000       0x40 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+=======
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+ .text.am_hal_ble_int_disable
+                0x0000000000000000       0x40 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .text.am_hal_ble_int_status
+                0x0000000000000000       0x1c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+<<<<<<< HEAD
+<<<<<<< HEAD
+ .text.am_hal_ble_int_clear
+                0x0000000000000000       0x24 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+=======
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+ .text.am_hal_ble_check_32k_clock
+                0x0000000000000000       0x40 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .text.am_hal_ble_trim_set
+                0x0000000000000000       0x68 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .text.am_hal_ble_patch_complete
+                0x0000000000000000       0x1c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .text.am_hal_ble_sleep_set
+                0x0000000000000000       0x5c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .text.am_hal_ble_sleep_get
+                0x0000000000000000       0x38 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .rodata.am_hal_ble_default_config
+                0x0000000000000000       0x1c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .text          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch.o)
+ .data          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch.o)
+ .bss           0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch.o)
+ .text          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch_b0.o)
+ .data          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch_b0.o)
+ .bss           0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch_b0.o)
+ .text          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cachectrl.o)
+ .data          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cachectrl.o)
+ .bss           0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cachectrl.o)
+ .text.am_hal_cachectrl_disable
+                0x0000000000000000       0x30 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cachectrl.o)
+ .text.am_hal_cachectrl_status_get
+                0x0000000000000000       0x24 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cachectrl.o)
+ .text          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_clkgen.o)
+ .data          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_clkgen.o)
+ .bss           0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_clkgen.o)
+ .text.am_hal_clkgen_status_get
+                0x0000000000000000       0x3c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_clkgen.o)
+ .text.am_hal_clkgen_clkout_enable
+                0x0000000000000000       0x48 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_clkgen.o)
+ .text.am_hal_clkgen_interrupt_enable
+                0x0000000000000000       0x1c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_clkgen.o)
+ .text.am_hal_clkgen_interrupt_disable
+                0x0000000000000000       0x20 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_clkgen.o)
+ .text.am_hal_clkgen_interrupt_clear
+                0x0000000000000000       0x18 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_clkgen.o)
+ .text.am_hal_clkgen_interrupt_status_get
+                0x0000000000000000       0x1c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_clkgen.o)
+ .text.am_hal_clkgen_interrupt_set
+                0x0000000000000000       0x18 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_clkgen.o)
+ .text          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .data          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .bss           0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .text.am_hal_triple_read
+                0x0000000000000000       0x1c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .text.am_hal_ctimer_int_service
+                0x0000000000000000       0x30 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .text.am_hal_ctimer_int_register
+                0x0000000000000000      0x174 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .text.am_hal_ctimer_globen
+                0x0000000000000000       0x20 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .text.am_hal_ctimer_config
+                0x0000000000000000       0x60 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .text.am_hal_ctimer_config_single
+                0x0000000000000000       0x80 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .text.am_hal_ctimer_config_trigger
+                0x0000000000000000       0x34 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .text.am_hal_ctimer_start
+                0x0000000000000000       0x54 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .text.am_hal_ctimer_stop
+                0x0000000000000000       0x2c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .text.am_hal_ctimer_clear
+                0x0000000000000000       0x28 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .text.am_hal_ctimer_read
+                0x0000000000000000       0x8c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .text.am_hal_ctimer_output_config
+                0x0000000000000000      0x294 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .text.am_hal_ctimer_input_config
+                0x0000000000000000       0x18 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .text.am_hal_ctimer_compare_set
+                0x0000000000000000       0x88 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .text.am_hal_ctimer_aux_compare_set
+                0x0000000000000000       0x88 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .text.am_hal_ctimer_period_set
+                0x0000000000000000       0xac ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .text.am_hal_ctimer_aux_period_set
+                0x0000000000000000       0xac ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .text.am_hal_ctimer_adc_trigger_enable
+                0x0000000000000000       0x24 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .text.am_hal_ctimer_adc_trigger_disable
+                0x0000000000000000       0x24 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .text.am_hal_ctimer_int_enable
+                0x0000000000000000       0x28 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .text.am_hal_ctimer_int_enable_get
+                0x0000000000000000        0xc ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .text.am_hal_ctimer_int_disable
+                0x0000000000000000       0x28 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .text.am_hal_ctimer_int_set
+                0x0000000000000000       0x20 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .text.am_hal_ctimer_int_status_get
+                0x0000000000000000       0x30 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .data.g_ui8ClkSrc
+                0x0000000000000000       0x10 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .rodata.g_ui8TmrClkSrcMask
+                0x0000000000000000       0x20 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .bss.g_am_hal_ctimer_ppfnHandlers
+                0x0000000000000000       0x80 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .rodata.str1.4
+                0x0000000000000000       0x3b ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .rodata.outcfg_tbl
+                0x0000000000000000       0x80 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .rodata.g_ui32TMRAddrTbl
+                0x0000000000000000       0x20 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .rodata.CTx_tbl
+                0x0000000000000000       0x40 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .text          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_debug.o)
+ .data          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_debug.o)
+ .bss           0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_debug.o)
+ .text.am_hal_debug_error
+                0x0000000000000000        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_debug.o)
+ .comment       0x0000000000000000       0x6f ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_debug.o)
+ .ARM.attributes
+                0x0000000000000000       0x39 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_debug.o)
+ .text          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .data          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .bss           0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_mass_erase
+                0x0000000000000000        0x8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_page_erase
+                0x0000000000000000        0x8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_program_main
+                0x0000000000000000       0x5c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_clear_bits
+                0x0000000000000000       0x24 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_program_info
+                0x0000000000000000       0x60 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_erase_info
+                0x0000000000000000        0x8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_erase_main_plus_info
+                0x0000000000000000        0x8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_erase_main_plus_info_both_instances
+                0x0000000000000000        0x8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_recovery
+                0x0000000000000000        0x8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_delay_status_change
+                0x0000000000000000       0x4c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_customer_info_signature_check
+                0x0000000000000000       0x54 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_info_signature_set
+                0x0000000000000000       0xac ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_info_erase_disable
+                0x0000000000000000       0xc4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_info_erase_disable_check
+                0x0000000000000000       0x64 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_info_program_disable
+                0x0000000000000000       0xd0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_info_program_disable_get
+                0x0000000000000000       0x64 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_wipe_flash_enable
+                0x0000000000000000       0xc4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_wipe_flash_enable_check
+                0x0000000000000000       0x64 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_wipe_sram_enable
+                0x0000000000000000       0xc4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_wipe_sram_enable_check
+                0x0000000000000000       0x64 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_swo_disable
+                0x0000000000000000       0xc4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_swo_disable_check
+                0x0000000000000000       0x64 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_debugger_disable
+                0x0000000000000000       0xc4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_debugger_disable_check
+                0x0000000000000000       0x64 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_copy_protect_set
+                0x0000000000000000      0x118 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_copy_protect_check
+                0x0000000000000000       0x9c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_write_protect_set
+                0x0000000000000000      0x118 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text.am_hal_flash_write_protect_check
+                0x0000000000000000       0x9c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .rodata.ui32SramMaxAddr
+                0x0000000000000000        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .rodata.g_am_hal_flash
+                0x0000000000000000       0x60 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .text          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ .data          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ .bss           0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ .text.am_hal_gpio_fast_pinconfig
+                0x0000000000000000      0x3a0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ .text.am_hal_gpio_interrupt_enable
+                0x0000000000000000       0x48 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ .text.am_hal_gpio_interrupt_disable
+                0x0000000000000000       0x4c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ .text.am_hal_gpio_interrupt_clear
+                0x0000000000000000       0x3c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ .text.am_hal_gpio_interrupt_status_get
+                0x0000000000000000       0x5c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ .text.am_hal_gpio_interrupt_register
+                0x0000000000000000       0x20 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ .text.am_hal_gpio_interrupt_service
+                0x0000000000000000       0x98 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ .rodata.g_AM_HAL_GPIO_INPUT_PULLUP_6
+                0x0000000000000000        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ .rodata.g_AM_HAL_GPIO_TRISTATE
+                0x0000000000000000        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ .rodata.g_AM_HAL_GPIO_OUTPUT_8
+                0x0000000000000000        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ .rodata.g_AM_HAL_GPIO_INPUT_PULLUP
+                0x0000000000000000        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ .rodata.g_AM_HAL_GPIO_INPUT_PULLUP_1_5
+                0x0000000000000000        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ .rodata.g_AM_HAL_GPIO_INPUT_PULLUP_24
+                0x0000000000000000        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ .rodata.g_AM_HAL_GPIO_OUTPUT_WITH_READ
+                0x0000000000000000        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ .rodata.g_AM_HAL_GPIO_OUTPUT_4
+                0x0000000000000000        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ .bss.gpio_ppfnHandlers
+                0x0000000000000000       0xc8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ .rodata.g_AM_HAL_GPIO_INPUT_PULLUP_12
+                0x0000000000000000        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ .text          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_interrupt.o)
+ .data          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_interrupt.o)
+ .bss           0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_interrupt.o)
+ .text.am_hal_interrupt_master_enable
+                0x0000000000000000        0x8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_interrupt.o)
+ .text          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .data          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .bss           0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.iom_seq_loopback
+                0x0000000000000000       0x2c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.internal_iom_reset_on_error
+                0x0000000000000000       0xf0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.sched_hiprio
+                0x0000000000000000      0x11c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.internal_iom_get_int_err
+                0x0000000000000000       0x40 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.am_hal_iom_CQInit
+                0x0000000000000000       0x34 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.am_hal_IOM_CQReset
+                0x0000000000000000       0x20 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.am_hal_iom_CQAddTransaction
+                0x0000000000000000      0x188 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.am_hal_iom_CQEnable
+                0x0000000000000000       0x24 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.am_hal_iom_CQDisable
+                0x0000000000000000        0x8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.validate_transaction
+                0x0000000000000000       0x80 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.am_hal_iom_uninitialize
+                0x0000000000000000       0x7c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.am_hal_iom_initialize
+                0x0000000000000000       0x50 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.am_hal_iom_enable
+                0x0000000000000000       0xe0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.am_hal_iom_disable
+                0x0000000000000000       0x78 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.am_hal_iom_status_get
+                0x0000000000000000       0x64 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.am_hal_iom_interrupt_enable
+                0x0000000000000000       0x38 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.am_hal_iom_interrupt_disable
+                0x0000000000000000       0x30 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.am_hal_iom_interrupt_status_get
+                0x0000000000000000       0x44 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.am_hal_iom_interrupt_clear
+                0x0000000000000000       0x28 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.am_hal_iom_interrupt_service
+                0x0000000000000000      0x2dc ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.am_hal_iom_power_ctrl
+                0x0000000000000000      0x220 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.am_hal_iom_configure
+                0x0000000000000000      0x25c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.am_hal_iom_blocking_transfer
+                0x0000000000000000      0x378 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.am_hal_iom_nonblocking_transfer
+                0x0000000000000000      0x2a4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.am_hal_iom_spi_blocking_fullduplex
+                0x0000000000000000      0x288 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.am_hal_iom_control
+                0x0000000000000000      0x62c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text.am_hal_iom_highprio_transfer
+                0x0000000000000000      0x1d0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .comment       0x0000000000000000       0x6f ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .ARM.attributes
+                0x0000000000000000       0x39 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ COMMON         0x0000000000000000     0x33a8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_iom.o)
+ .text          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_itm.o)
+ .data          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_itm.o)
+ .bss           0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_itm.o)
+ .text.am_hal_itm_enable
+                0x0000000000000000       0x3c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_itm.o)
+ .text.am_hal_itm_not_busy
+                0x0000000000000000       0x14 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_itm.o)
+ .text.am_hal_itm_trace_port_enable
+                0x0000000000000000       0x18 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_itm.o)
+ .text.am_hal_itm_trace_port_disable
+                0x0000000000000000       0x1c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_itm.o)
+ .text.am_hal_itm_stimulus_not_busy
+                0x0000000000000000       0x10 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_itm.o)
+ .text.am_hal_itm_stimulus_reg_word_write
+                0x0000000000000000       0x10 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_itm.o)
+ .text.am_hal_itm_stimulus_reg_short_write
+                0x0000000000000000       0x10 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_itm.o)
+ .text.am_hal_itm_stimulus_reg_byte_write
+                0x0000000000000000       0x10 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_itm.o)
+ .text.am_hal_itm_sync_send
+                0x0000000000000000       0x18 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_itm.o)
+ .text.am_hal_itm_print_not_busy
+                0x0000000000000000       0x10 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_itm.o)
+ .text.am_hal_itm_print
+                0x0000000000000000       0x30 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_itm.o)
+ .text          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_mcuctrl.o)
+ .data          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_mcuctrl.o)
+ .bss           0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_mcuctrl.o)
+ .text.am_hal_mcuctrl_control
+                0x0000000000000000      0x1d0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_mcuctrl.o)
+ .text.am_hal_mcuctrl_status_get
+                0x0000000000000000       0x48 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_mcuctrl.o)
+ .text          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_pwrctrl.o)
+ .data          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_pwrctrl.o)
+ .bss           0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_pwrctrl.o)
+ .text.am_hal_pwrctrl_periph_enabled
+                0x0000000000000000       0x58 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_pwrctrl.o)
+ .text.am_hal_pwrctrl_memory_enable
+                0x0000000000000000       0x90 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_pwrctrl.o)
+ .rodata.am_hal_pwrctrl_memory_control
+                0x0000000000000000      0x168 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_pwrctrl.o)
+ .text          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_queue.o)
+ .data          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_queue.o)
+ .bss           0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_queue.o)
+ .text          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_reset.o)
+ .data          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_reset.o)
+ .bss           0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_reset.o)
+ .text.am_hal_reset_configure
+                0x0000000000000000       0x54 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_reset.o)
+ .text.am_hal_reset_control
+                0x0000000000000000       0x40 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_reset.o)
+ .text.am_hal_reset_status_get
+                0x0000000000000000       0x70 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_reset.o)
+ .text.am_hal_reset_interrupt_enable
+                0x0000000000000000       0x28 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_reset.o)
+ .text.am_hal_reset_interrupt_disable
+                0x0000000000000000       0x28 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_reset.o)
+ .text.am_hal_reset_interrupt_clear
+                0x0000000000000000        0xc ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_reset.o)
+ .text.am_hal_reset_interrupt_status_get
+                0x0000000000000000       0x14 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_reset.o)
+ .text          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_rtc.o)
+ .data          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_rtc.o)
+ .bss           0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_rtc.o)
+ .text.am_hal_rtc_osc_enable
+                0x0000000000000000       0x14 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_rtc.o)
+ .text.am_hal_rtc_time_12hour
+                0x0000000000000000       0x14 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_rtc.o)
+ .text.am_hal_rtc_int_enable
+                0x0000000000000000       0x14 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_rtc.o)
+ .text.am_hal_rtc_int_enable_get
+                0x0000000000000000        0xc ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_rtc.o)
+ .text.am_hal_rtc_int_disable
+                0x0000000000000000       0x14 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_rtc.o)
+ .text.am_hal_rtc_int_set
+                0x0000000000000000        0xc ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_rtc.o)
+ .text.am_hal_rtc_int_clear
+                0x0000000000000000        0xc ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_rtc.o)
+ .text.am_hal_rtc_int_status_get
+                0x0000000000000000       0x24 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_rtc.o)
+ .text.am_hal_rtc_time_set
+                0x0000000000000000      0x114 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_rtc.o)
+ .text.am_hal_rtc_time_get
+                0x0000000000000000       0xc8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_rtc.o)
+ .text.am_hal_rtc_alarm_interval_set
+                0x0000000000000000       0x40 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_rtc.o)
+ .text.am_hal_rtc_alarm_set
+                0x0000000000000000       0xfc ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_rtc.o)
+ .text.am_hal_rtc_alarm_get
+                0x0000000000000000       0x9c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_rtc.o)
+ .text          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_sysctrl.o)
+ .data          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_sysctrl.o)
+ .bss           0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_sysctrl.o)
+ .text.am_hal_sysctrl_fpu_enable
+                0x0000000000000000       0x10 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_sysctrl.o)
+ .text.am_hal_sysctrl_fpu_disable
+                0x0000000000000000       0x10 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_sysctrl.o)
+ .text.am_hal_sysctrl_fpu_stacking_enable
+                0x0000000000000000       0x34 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_sysctrl.o)
+ .text.am_hal_sysctrl_fpu_stacking_disable
+                0x0000000000000000       0x24 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_sysctrl.o)
+ .text.am_hal_sysctrl_aircr_reset
+                0x0000000000000000       0x24 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_sysctrl.o)
+ .text          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_tpiu.o)
+ .data          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_tpiu.o)
+ .bss           0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_tpiu.o)
+ .text.am_hal_tpiu_clock_enable
+                0x0000000000000000       0x14 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_tpiu.o)
+ .text.am_hal_tpiu_clock_disable
+                0x0000000000000000       0x14 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_tpiu.o)
+ .text.am_hal_tpiu_port_width_set
+                0x0000000000000000       0x14 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_tpiu.o)
+ .text.am_hal_tpiu_supported_port_width_get
+                0x0000000000000000       0x24 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_tpiu.o)
+ .text.am_hal_tpiu_port_width_get
+                0x0000000000000000       0x24 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_tpiu.o)
+ .text.am_hal_tpiu_configure
+                0x0000000000000000       0x38 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_tpiu.o)
+ .text.am_hal_tpiu_enable
+                0x0000000000000000       0xa0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_tpiu.o)
+ .text.am_hal_tpiu_disable
+                0x0000000000000000       0x10 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_tpiu.o)
+ .comment       0x0000000000000000       0x6f ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_tpiu.o)
+ .ARM.attributes
+                0x0000000000000000       0x39 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_tpiu.o)
+ .text          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+ .data          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+ .bss           0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+ .text.am_hal_uart_flags_get
+                0x0000000000000000       0x24 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+ .text.am_hal_uart_interrupt_service
+                0x0000000000000000      0x11c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+ .text.am_hal_uart_interrupt_enable
+                0x0000000000000000       0x28 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+ .text.am_hal_uart_interrupt_disable
+                0x0000000000000000       0x2c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+ .text.am_hal_uart_interrupt_clear
+                0x0000000000000000       0x24 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+ .text.am_hal_uart_interrupt_status_get
+                0x0000000000000000       0x38 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+ .text          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cmdq.o)
+ .data          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cmdq.o)
+ .bss           0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cmdq.o)
+ .text.am_hal_cmdq_init
+                0x0000000000000000       0xc8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cmdq.o)
+ .text.am_hal_cmdq_enable
+                0x0000000000000000       0x40 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cmdq.o)
+ .text.am_hal_cmdq_disable
+                0x0000000000000000       0x38 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cmdq.o)
+ .text.am_hal_cmdq_alloc_block
+                0x0000000000000000       0xc8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cmdq.o)
+ .text.am_hal_cmdq_release_block
+                0x0000000000000000       0x30 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cmdq.o)
+ .text.am_hal_cmdq_post_block
+                0x0000000000000000       0x48 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cmdq.o)
+ .text.am_hal_cmdq_get_status
+                0x0000000000000000       0x9c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cmdq.o)
+ .text.am_hal_cmdq_term
+                0x0000000000000000       0x80 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cmdq.o)
+ .text.am_hal_cmdq_error_resume
+                0x0000000000000000       0x60 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cmdq.o)
+ .text.am_hal_cmdq_pause
+                0x0000000000000000       0xe8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cmdq.o)
+ .text.am_hal_cmdq_reset
+                0x0000000000000000       0x5c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cmdq.o)
+ .text.am_hal_cmdq_post_loop_block
+                0x0000000000000000       0x50 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cmdq.o)
+ .bss.gAmHalCmdq
+                0x0000000000000000      0x160 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cmdq.o)
+ .rodata.gAmHalCmdQReg
+                0x0000000000000000      0x140 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cmdq.o)
+ .comment       0x0000000000000000       0x6f ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cmdq.o)
+ .ARM.attributes
+                0x0000000000000000       0x39 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cmdq.o)
+<<<<<<< HEAD
+<<<<<<< HEAD
+ .text          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_queue.o)
+ .data          0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_queue.o)
+ .bss           0x0000000000000000        0x0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_queue.o)
+=======
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memcpy.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memcpy.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x000000000000c000 0x00000000000f0000 xr
+SRAM             0x0000000010000000 0x0000000000060000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+.text           0x000000000000c000     0x63d0
+=======
+.text           0x000000000000c000     0x6484
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+.text           0x000000000000c000     0x6484
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+                0x000000000000c000                . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x000000000000c000       0xd0 bin/startup_gcc.o
+                0x000000000000c000                g_am_pfnVectors
+ *(.patch)
+ .patch         0x000000000000c0d0       0x30 bin/startup_gcc.o
+                0x000000000000c0d0                __Patchable
+ *(.text)
+ .text          0x000000000000c100       0xa0 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_truncdfsf2.o)
+                0x000000000000c100                __aeabi_d2f
+                0x000000000000c100                __truncdfsf2
+ .text          0x000000000000c1a0      0x134 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memcpy.o)
+                0x000000000000c1a0                memcpy
+ *(.text*)
+ .text.initializeNVIC
+                0x000000000000c2d4       0x30 bin/main.o
+                0x000000000000c2d4                initializeNVIC
+ .text.startup.main
+<<<<<<< HEAD
+<<<<<<< HEAD
+                0x000000000000c2d4      0x184 bin/main.o
+                0x000000000000c2d4                main
+ .text.HardFault_Handler
+                0x000000000000c458       0x1c bin/am_util_faultisr.o
+                0x000000000000c458                HardFault_Handler
+ .text.getStackedReg
+                0x000000000000c474        0x8 bin/am_util_faultisr.o
+                0x000000000000c474                getStackedReg
+ .text.am_util_faultisr_collect_data
+                0x000000000000c47c       0xc4 bin/am_util_faultisr.o
+                0x000000000000c47c                am_util_faultisr_collect_data
+ .text.uint64_to_str
+                0x000000000000c540      0x158 bin/am_util_stdio.o
+ .text.am_util_stdio_printf_init
+                0x000000000000c698        0xc bin/am_util_stdio.o
+                0x000000000000c698                am_util_stdio_printf_init
+ .text.am_util_stdio_vsprintf
+                0x000000000000c6a4      0xbc0 bin/am_util_stdio.o
+                0x000000000000c6a4                am_util_stdio_vsprintf
+ .text.am_util_stdio_printf
+                0x000000000000d264       0x38 bin/am_util_stdio.o
+                0x000000000000d264                am_util_stdio_printf
+ .text.am_util_stdio_terminal_clear
+                0x000000000000d29c        0xc bin/am_util_stdio.o
+                0x000000000000d29c                am_util_stdio_terminal_clear
+ .text.NMI_Handler
+                0x000000000000d2a8        0x4 bin/startup_gcc.o
+                0x000000000000d2a8                NMI_Handler
+ .text.am_default_isr
+                0x000000000000d2ac        0x4 bin/startup_gcc.o
+                0x000000000000d2ac                DebugMon_Handler
+                0x000000000000d2ac                am_iomaster4_isr
+                0x000000000000d2ac                SysTick_Handler
+                0x000000000000d2ac                PendSV_Handler
+                0x000000000000d2ac                am_rtc_isr
+                0x000000000000d2ac                am_stimer_cmpr3_isr
+                0x000000000000d2ac                am_iomaster3_isr
+                0x000000000000d2ac                am_clkgen_isr
+                0x000000000000d2ac                am_stimer_isr
+                0x000000000000d2ac                am_software0_isr
+                0x000000000000d2ac                am_stimer_cmpr5_isr
+                0x000000000000d2ac                am_iomaster5_isr
+                0x000000000000d2ac                am_uart_isr
+                0x000000000000d2ac                am_mspi_isr
+                0x000000000000d2ac                am_ioslave_acc_isr
+                0x000000000000d2ac                am_software1_isr
+                0x000000000000d2ac                am_pdm_isr
+                0x000000000000d2ac                am_stimer_cmpr6_isr
+                0x000000000000d2ac                am_iomaster1_isr
+                0x000000000000d2ac                am_brownout_isr
+                0x000000000000d2ac                am_vcomp_isr
+                0x000000000000d2ac                am_stimer_cmpr1_isr
+                0x000000000000d2ac                am_gpio_isr
+                0x000000000000d2ac                am_iomaster2_isr
+                0x000000000000d2ac                SVC_Handler
+                0x000000000000d2ac                am_stimer_cmpr2_isr
+                0x000000000000d2ac                am_ioslave_ios_isr
+                0x000000000000d2ac                am_uart1_isr
+                0x000000000000d2ac                am_stimer_cmpr7_isr
+                0x000000000000d2ac                am_scard_isr
+                0x000000000000d2ac                am_watchdog_isr
+                0x000000000000d2ac                am_stimer_cmpr0_isr
+                0x000000000000d2ac                am_software3_isr
+                0x000000000000d2ac                am_iomaster0_isr
+                0x000000000000d2ac                am_ble_isr
+                0x000000000000d2ac                am_software2_isr
+                0x000000000000d2ac                am_stimer_cmpr4_isr
+                0x000000000000d2ac                am_default_isr
+ .text.Reset_Handler
+                0x000000000000d2b0       0x68 bin/startup_gcc.o
+                0x000000000000d2b0                Reset_Handler
+ .text.am_ctimer_isr
+                0x000000000000d318       0xd0 bin/tf_adc.o
+                0x000000000000d318                am_ctimer_isr
+ .text.am_adc_isr
+                0x000000000000d3e8       0xb4 bin/tf_adc.o
+                0x000000000000d3e8                am_adc_isr
+ .text.am_bsp_uart_string_print
+                0x000000000000d49c       0x48 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+                0x000000000000d49c                am_bsp_uart_string_print
+ .text.am_bsp_low_power_init
+                0x000000000000d4e4       0x64 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+                0x000000000000d4e4                am_bsp_low_power_init
+ .text.am_bsp_debug_printf_disable
+                0x000000000000d548       0x6c ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+                0x000000000000d548                am_bsp_debug_printf_disable
+ .text.am_bsp_uart_printf_enable
+                0x000000000000d5b4       0x5c ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+                0x000000000000d5b4                am_bsp_uart_printf_enable
+ .text.am_hal_adc_initialize
+                0x000000000000d610       0xa0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d610                am_hal_adc_initialize
+ .text.am_hal_adc_deinitialize
+                0x000000000000d6b0       0x40 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d6b0                am_hal_adc_deinitialize
+ .text.am_hal_adc_configure
+                0x000000000000d6f0       0x70 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d6f0                am_hal_adc_configure
+ .text.am_hal_adc_configure_slot
+                0x000000000000d760       0x6c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d760                am_hal_adc_configure_slot
+ .text.am_hal_adc_enable
+                0x000000000000d7cc       0x40 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d7cc                am_hal_adc_enable
+ .text.am_hal_adc_disable
+                0x000000000000d80c       0x30 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d80c                am_hal_adc_disable
+ .text.am_hal_adc_interrupt_enable
+                0x000000000000d83c       0x2c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d83c                am_hal_adc_interrupt_enable
+ .text.am_hal_adc_interrupt_status
+                0x000000000000d868       0x3c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d868                am_hal_adc_interrupt_status
+ .text.am_hal_adc_interrupt_clear
+                0x000000000000d8a4       0x24 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d8a4                am_hal_adc_interrupt_clear
+ .text.am_hal_adc_samples_read
+                0x000000000000d8c8       0xb8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d8c8                am_hal_adc_samples_read
+ .text.am_hal_adc_sw_trigger
+                0x000000000000d980       0x24 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d980                am_hal_adc_sw_trigger
+ .text.am_hal_adc_power_control
+                0x000000000000d9a4       0xc8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d9a4                am_hal_adc_power_control
+ .text.am_hal_ble_blocking_transfer.part.7
+                0x000000000000da6c      0x50c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .text.am_hal_ble_initialize
+                0x000000000000df78       0x78 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000df78                am_hal_ble_initialize
+ .text.am_hal_ble_config
+                0x000000000000dff0      0x110 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000dff0                am_hal_ble_config
+ .text.am_hal_ble_power_control
+                0x000000000000e100      0x180 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e100                am_hal_ble_power_control
+ .text.am_hal_ble_patch_copy_end_apply
+                0x000000000000e280      0x130 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e280                am_hal_ble_patch_copy_end_apply
+ .text.am_hal_ble_blocking_hci_write
+                0x000000000000e3b0       0x60 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e3b0                am_hal_ble_blocking_hci_write
+ .text.am_hal_ble_blocking_transfer
+                0x000000000000e410       0x2c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e410                am_hal_ble_blocking_transfer
+ .text.am_hal_ble_patch_apply
+                0x000000000000e43c      0x360 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e43c                am_hal_ble_patch_apply
+ .text.am_hal_ble_plf_reg_read
+                0x000000000000e79c      0x180 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e79c                am_hal_ble_plf_reg_read
+ .text.am_hal_ble_plf_reg_write
+                0x000000000000e91c      0x170 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e91c                am_hal_ble_plf_reg_write
+ .text.am_hal_ble_transmitter_modex_set
+                0x000000000000ea8c       0xc8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000ea8c                am_hal_ble_transmitter_modex_set
+ .text.am_hal_ble_patch_complete.part.10
+                0x000000000000eb54      0x25c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .text.am_hal_ble_boot
+                0x000000000000edb0      0x1a8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000edb0                am_hal_ble_boot
+ .text.am_hal_ble_tx_power_set
+                0x000000000000ef58       0x88 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000ef58                am_hal_ble_tx_power_set
+ .text.am_hal_cachectrl_config
+                0x000000000000efe0       0x4c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cachectrl.o)
+                0x000000000000efe0                am_hal_cachectrl_config
+ .text.am_hal_cachectrl_enable
+                0x000000000000f02c       0x14 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cachectrl.o)
+                0x000000000000f02c                am_hal_cachectrl_enable
+ .text.am_hal_cachectrl_control
+                0x000000000000f040      0x2e4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cachectrl.o)
+                0x000000000000f040                am_hal_cachectrl_control
+ .text.am_hal_clkgen_control
+                0x000000000000f324      0x118 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_clkgen.o)
+                0x000000000000f324                am_hal_clkgen_control
+ .text.am_hal_ctimer_int_clear
+                0x000000000000f43c       0x20 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+                0x000000000000f43c                am_hal_ctimer_int_clear
+ .text.am_hal_flash_delay
+                0x000000000000f45c       0x20 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+                0x000000000000f45c                am_hal_flash_delay
+ .text.am_hal_flash_delay_status_check
+                0x000000000000f47c       0x74 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+                0x000000000000f47c                am_hal_flash_delay_status_check
+ .text.am_hal_flash_load_ui32
+                0x000000000000f4f0        0x8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+                0x000000000000f4f0                am_hal_flash_load_ui32
+ .text.am_hal_flash_store_ui32
+                0x000000000000f4f8        0xc ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+                0x000000000000f4f8                am_hal_flash_store_ui32
+ .text.am_hal_gpio_pinconfig
+                0x000000000000f504      0x278 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+                0x000000000000f504                am_hal_gpio_pinconfig
+ .text.am_hal_gpio_state_read
+                0x000000000000f77c       0x64 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+                0x000000000000f77c                am_hal_gpio_state_read
+ .text.am_hal_gpio_state_write
+                0x000000000000f7e0       0x88 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+                0x000000000000f7e0                am_hal_gpio_state_write
+ .text.am_hal_interrupt_master_disable
+                0x000000000000f868        0x8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_interrupt.o)
+                0x000000000000f868                am_hal_interrupt_master_disable
+ .text.am_hal_interrupt_master_set
+                0x000000000000f870        0x8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_interrupt.o)
+                0x000000000000f870                am_hal_interrupt_master_set
+ .text.am_hal_itm_disable
+                0x000000000000f878       0xac ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_itm.o)
+                0x000000000000f878                am_hal_itm_disable
+ .text.am_hal_mcuctrl_info_get
+                0x000000000000f924      0x12c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_mcuctrl.o)
+                0x000000000000f924                am_hal_mcuctrl_info_get
+ .text.am_hal_pwrctrl_periph_enable
+                0x000000000000fa50       0x54 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_pwrctrl.o)
+                0x000000000000fa50                am_hal_pwrctrl_periph_enable
+ .text.am_hal_pwrctrl_periph_disable
+                0x000000000000faa4       0x58 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_pwrctrl.o)
+                0x000000000000faa4                am_hal_pwrctrl_periph_disable
+ .text.am_hal_pwrctrl_low_power_init
+                0x000000000000fafc       0xe4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_pwrctrl.o)
+                0x000000000000fafc                am_hal_pwrctrl_low_power_init
+ .text.am_hal_rtc_osc_select
+                0x000000000000fbe0       0x10 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_rtc.o)
+                0x000000000000fbe0                am_hal_rtc_osc_select
+ .text.am_hal_rtc_osc_disable
+                0x000000000000fbf0       0x14 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_rtc.o)
+                0x000000000000fbf0                am_hal_rtc_osc_disable
+ .text.am_hal_sysctrl_sleep
+                0x000000000000fc04       0x70 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_sysctrl.o)
+                0x000000000000fc04                am_hal_sysctrl_sleep
+ .text.am_hal_uart_initialize
+                0x000000000000fc74       0x50 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+                0x000000000000fc74                am_hal_uart_initialize
+ .text.am_hal_uart_deinitialize
+                0x000000000000fcc4       0x28 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+                0x000000000000fcc4                am_hal_uart_deinitialize
+ .text.am_hal_uart_power_control
+                0x000000000000fcec       0xe4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+                0x000000000000fcec                am_hal_uart_power_control
+ .text.am_hal_uart_configure
+                0x000000000000fdd0      0x248 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+                0x000000000000fdd0                am_hal_uart_configure
+ .text.am_hal_uart_transfer
+                0x0000000000010018      0x474 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+                0x0000000000010018                am_hal_uart_transfer
+ .text.am_hal_uart_tx_flush
+                0x000000000001048c       0x50 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+                0x000000000001048c                am_hal_uart_tx_flush
+ .text.am_hal_queue_init
+                0x00000000000104dc       0x18 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_queue.o)
+                0x00000000000104dc                am_hal_queue_init
+ .text.am_hal_queue_item_add
+                0x00000000000104f4       0x70 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_queue.o)
+                0x00000000000104f4                am_hal_queue_item_add
+ .text.am_hal_queue_item_get
+                0x0000000000010564       0x70 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_queue.o)
+                0x0000000000010564                am_hal_queue_item_get
+ *(.rodata)
+ .rodata        0x00000000000105d4       0x1c bin/main.o
+ *(.rodata*)
+ .rodata.main.str1.4
+                0x00000000000105f0       0xe6 bin/main.o
+ *fill*         0x00000000000106d6        0x2 
+ .rodata.am_util_stdio_terminal_clear.str1.4
+                0x00000000000106d8       0x13 bin/am_util_stdio.o
+ *fill*         0x00000000000106eb        0x1 
+ .rodata.am_adc_isr.str1.4
+                0x00000000000106ec       0xf4 bin/tf_adc.o
+ .rodata.am_ctimer_isr.str1.4
+                0x00000000000107e0       0xc0 bin/tf_adc.o
+                                         0xbe (size before relaxing)
+ .rodata.g_sBspUartConfig
+                0x00000000000108a0       0x28 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+ .rodata.g_AM_BSP_GPIO_COM_UART_RX
+                0x00000000000108c8        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+                0x00000000000108c8                g_AM_BSP_GPIO_COM_UART_RX
+ .rodata.g_AM_BSP_GPIO_COM_UART_TX
+                0x00000000000108cc        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+                0x00000000000108cc                g_AM_BSP_GPIO_COM_UART_TX
+ .rodata.ccitt_table
+                0x00000000000108d0      0x200 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .rodata.am_ble_buffer_patch_data
+                0x0000000000010ad0      0xd38 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch.o)
+                0x0000000000010ad0                am_ble_buffer_patch_data
+ .rodata.am_hal_ble_num_default_patches
+                0x0000000000011808        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch.o)
+                0x0000000000011808                am_hal_ble_num_default_patches
+ .rodata.am_ble_performance_copy_patch_data
+                0x000000000001180c      0x914 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch.o)
+                0x000000000001180c                am_ble_performance_copy_patch_data
+ .rodata.am_hal_ble_num_default_patches_b0
+                0x0000000000012120        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch_b0.o)
+                0x0000000000012120                am_hal_ble_num_default_patches_b0
+ .rodata.am_hal_cachectrl_defaults
+                0x0000000000012124        0x3 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cachectrl.o)
+                0x0000000000012124                am_hal_cachectrl_defaults
+ *fill*         0x0000000000012127        0x1 
+ .rodata.g_AM_HAL_GPIO_INPUT
+                0x0000000000012128        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+                0x0000000000012128                g_AM_HAL_GPIO_INPUT
+ .rodata.g_ui8Bit76Capabilities
+                0x000000000001212c       0x32 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ *fill*         0x000000000001215e        0x2 
+ .rodata.g_ui8NCEtable
+                0x0000000000012160       0xc8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ .rodata.g_ui8Inpen
+                0x0000000000012228       0x32 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ *fill*         0x000000000001225a        0x2 
+ .rodata.g_AM_HAL_GPIO_DISABLE
+                0x000000000001225c        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+                0x000000000001225c                g_AM_HAL_GPIO_DISABLE
+ .rodata.g_AM_HAL_GPIO_OUTPUT
+                0x0000000000012260        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+                0x0000000000012260                g_AM_HAL_GPIO_OUTPUT
+ .rodata.g_ui8nCEpins
+                0x0000000000012264       0x32 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ *fill*         0x0000000000012296        0x2 
+ .rodata.g_AM_HAL_GPIO_OUTPUT_12
+                0x0000000000012298        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+                0x0000000000012298                g_AM_HAL_GPIO_OUTPUT_12
+ .rodata.g_am_hal_mcuctrl_flash_size
+                0x000000000001229c       0x40 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_mcuctrl.o)
+                0x000000000001229c                g_am_hal_mcuctrl_flash_size
+ .rodata.g_am_hal_mcuctrl_sram_size
+                0x00000000000122dc       0x40 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_mcuctrl.o)
+                0x00000000000122dc                g_am_hal_mcuctrl_sram_size
+ .rodata.am_hal_pwrctrl_peripheral_control
+                0x000000000001231c       0xb4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_pwrctrl.o)
+                0x000000000001231c                am_hal_pwrctrl_peripheral_control
+                0x00000000000123d0                . = ALIGN (0x4)
+                0x00000000000123d0                _etext = .
+
+.glue_7         0x00000000000123d0        0x0
+ .glue_7        0x00000000000123d0        0x0 linker stubs
+
+.glue_7t        0x00000000000123d0        0x0
+ .glue_7t       0x00000000000123d0        0x0 linker stubs
+
+.vfp11_veneer   0x00000000000123d0        0x0
+ .vfp11_veneer  0x00000000000123d0        0x0 linker stubs
+
+.v4_bx          0x00000000000123d0        0x0
+ .v4_bx         0x00000000000123d0        0x0 linker stubs
+
+.iplt           0x00000000000123d0        0x0
+ .iplt          0x00000000000123d0        0x0 bin/main.o
+
+.rel.dyn        0x00000000000123d0        0x0
+ .rel.iplt      0x00000000000123d0        0x0 bin/main.o
+=======
+                0x000000000000c304      0x198 bin/main.o
+                0x000000000000c304                main
+ .text.HardFault_Handler
+                0x000000000000c49c       0x1c bin/am_util_faultisr.o
+                0x000000000000c49c                HardFault_Handler
+ .text.getStackedReg
+                0x000000000000c4b8        0x8 bin/am_util_faultisr.o
+                0x000000000000c4b8                getStackedReg
+ .text.am_util_faultisr_collect_data
+                0x000000000000c4c0       0xc4 bin/am_util_faultisr.o
+                0x000000000000c4c0                am_util_faultisr_collect_data
+ .text.uint64_to_str
+                0x000000000000c584      0x158 bin/am_util_stdio.o
+ .text.am_util_stdio_printf_init
+                0x000000000000c6dc        0xc bin/am_util_stdio.o
+                0x000000000000c6dc                am_util_stdio_printf_init
+ .text.am_util_stdio_vsprintf
+                0x000000000000c6e8      0xbc0 bin/am_util_stdio.o
+                0x000000000000c6e8                am_util_stdio_vsprintf
+ .text.am_util_stdio_printf
+                0x000000000000d2a8       0x38 bin/am_util_stdio.o
+                0x000000000000d2a8                am_util_stdio_printf
+ .text.am_util_stdio_terminal_clear
+                0x000000000000d2e0        0xc bin/am_util_stdio.o
+                0x000000000000d2e0                am_util_stdio_terminal_clear
+ .text.NMI_Handler
+                0x000000000000d2ec        0x4 bin/startup_gcc.o
+                0x000000000000d2ec                NMI_Handler
+ .text.am_default_isr
+                0x000000000000d2f0        0x4 bin/startup_gcc.o
+                0x000000000000d2f0                DebugMon_Handler
+                0x000000000000d2f0                am_iomaster4_isr
+                0x000000000000d2f0                SysTick_Handler
+                0x000000000000d2f0                PendSV_Handler
+                0x000000000000d2f0                am_rtc_isr
+                0x000000000000d2f0                am_stimer_cmpr3_isr
+                0x000000000000d2f0                am_iomaster3_isr
+                0x000000000000d2f0                am_clkgen_isr
+                0x000000000000d2f0                am_stimer_isr
+                0x000000000000d2f0                am_software0_isr
+                0x000000000000d2f0                am_stimer_cmpr5_isr
+                0x000000000000d2f0                am_iomaster5_isr
+                0x000000000000d2f0                am_uart_isr
+                0x000000000000d2f0                am_mspi_isr
+                0x000000000000d2f0                am_ioslave_acc_isr
+                0x000000000000d2f0                am_software1_isr
+                0x000000000000d2f0                am_pdm_isr
+                0x000000000000d2f0                am_stimer_cmpr6_isr
+                0x000000000000d2f0                am_iomaster1_isr
+                0x000000000000d2f0                am_brownout_isr
+                0x000000000000d2f0                am_vcomp_isr
+                0x000000000000d2f0                am_stimer_cmpr1_isr
+                0x000000000000d2f0                am_gpio_isr
+                0x000000000000d2f0                am_iomaster2_isr
+                0x000000000000d2f0                SVC_Handler
+                0x000000000000d2f0                am_stimer_cmpr2_isr
+                0x000000000000d2f0                am_ioslave_ios_isr
+                0x000000000000d2f0                am_uart1_isr
+                0x000000000000d2f0                am_stimer_cmpr7_isr
+                0x000000000000d2f0                am_scard_isr
+                0x000000000000d2f0                am_watchdog_isr
+                0x000000000000d2f0                am_stimer_cmpr0_isr
+                0x000000000000d2f0                am_software3_isr
+                0x000000000000d2f0                am_iomaster0_isr
+                0x000000000000d2f0                am_ble_isr
+                0x000000000000d2f0                am_software2_isr
+                0x000000000000d2f0                am_stimer_cmpr4_isr
+                0x000000000000d2f0                am_default_isr
+ .text.Reset_Handler
+                0x000000000000d2f4       0x68 bin/startup_gcc.o
+                0x000000000000d2f4                Reset_Handler
+ .text.am_ctimer_isr
+                0x000000000000d35c       0xd0 bin/tf_adc.o
+                0x000000000000d35c                am_ctimer_isr
+ .text.am_adc_isr
+                0x000000000000d42c       0xb4 bin/tf_adc.o
+                0x000000000000d42c                am_adc_isr
+ .text.am_bsp_uart_string_print
+                0x000000000000d4e0       0x48 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+                0x000000000000d4e0                am_bsp_uart_string_print
+ .text.am_bsp_low_power_init
+                0x000000000000d528       0x64 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+                0x000000000000d528                am_bsp_low_power_init
+ .text.am_bsp_debug_printf_disable
+                0x000000000000d58c       0x6c ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+                0x000000000000d58c                am_bsp_debug_printf_disable
+ .text.am_bsp_uart_printf_enable
+                0x000000000000d5f8       0x5c ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+                0x000000000000d5f8                am_bsp_uart_printf_enable
+ .text.am_hal_adc_initialize
+                0x000000000000d654       0xa0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d654                am_hal_adc_initialize
+ .text.am_hal_adc_deinitialize
+                0x000000000000d6f4       0x40 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d6f4                am_hal_adc_deinitialize
+ .text.am_hal_adc_configure
+                0x000000000000d734       0x70 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d734                am_hal_adc_configure
+ .text.am_hal_adc_configure_slot
+                0x000000000000d7a4       0x6c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d7a4                am_hal_adc_configure_slot
+ .text.am_hal_adc_enable
+                0x000000000000d810       0x40 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d810                am_hal_adc_enable
+ .text.am_hal_adc_disable
+                0x000000000000d850       0x30 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d850                am_hal_adc_disable
+ .text.am_hal_adc_interrupt_enable
+                0x000000000000d880       0x2c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d880                am_hal_adc_interrupt_enable
+ .text.am_hal_adc_interrupt_status
+                0x000000000000d8ac       0x3c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d8ac                am_hal_adc_interrupt_status
+ .text.am_hal_adc_interrupt_clear
+                0x000000000000d8e8       0x24 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d8e8                am_hal_adc_interrupt_clear
+ .text.am_hal_adc_samples_read
+                0x000000000000d90c       0xb8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d90c                am_hal_adc_samples_read
+ .text.am_hal_adc_sw_trigger
+                0x000000000000d9c4       0x24 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d9c4                am_hal_adc_sw_trigger
+ .text.am_hal_adc_power_control
+                0x000000000000d9e8       0xc8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d9e8                am_hal_adc_power_control
+ .text.am_hal_ble_blocking_transfer.part.7
+                0x000000000000dab0      0x50c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .text.am_hal_ble_initialize
+                0x000000000000dfbc       0x78 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000dfbc                am_hal_ble_initialize
+ .text.am_hal_ble_config
+                0x000000000000e034      0x110 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e034                am_hal_ble_config
+ .text.am_hal_ble_power_control
+                0x000000000000e144      0x180 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e144                am_hal_ble_power_control
+ .text.am_hal_ble_patch_copy_end_apply
+                0x000000000000e2c4      0x130 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e2c4                am_hal_ble_patch_copy_end_apply
+ .text.am_hal_ble_blocking_hci_write
+                0x000000000000e3f4       0x60 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e3f4                am_hal_ble_blocking_hci_write
+ .text.am_hal_ble_blocking_transfer
+                0x000000000000e454       0x2c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e454                am_hal_ble_blocking_transfer
+ .text.am_hal_ble_patch_apply
+                0x000000000000e480      0x360 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e480                am_hal_ble_patch_apply
+ .text.am_hal_ble_int_enable
+                0x000000000000e7e0       0x40 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e7e0                am_hal_ble_int_enable
+ .text.am_hal_ble_int_clear
+                0x000000000000e820       0x24 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e820                am_hal_ble_int_clear
+ .text.am_hal_ble_plf_reg_read
+                0x000000000000e844      0x180 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e844                am_hal_ble_plf_reg_read
+ .text.am_hal_ble_plf_reg_write
+                0x000000000000e9c4      0x170 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e9c4                am_hal_ble_plf_reg_write
+ .text.am_hal_ble_transmitter_modex_set
+                0x000000000000eb34       0xc8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000eb34                am_hal_ble_transmitter_modex_set
+ .text.am_hal_ble_patch_complete.part.10
+                0x000000000000ebfc      0x25c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .text.am_hal_ble_boot
+                0x000000000000ee58      0x1a8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000ee58                am_hal_ble_boot
+ .text.am_hal_ble_tx_power_set
+                0x000000000000f000       0x88 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000f000                am_hal_ble_tx_power_set
+ .text.am_hal_cachectrl_config
+                0x000000000000f088       0x4c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cachectrl.o)
+                0x000000000000f088                am_hal_cachectrl_config
+ .text.am_hal_cachectrl_enable
+                0x000000000000f0d4       0x14 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cachectrl.o)
+                0x000000000000f0d4                am_hal_cachectrl_enable
+ .text.am_hal_cachectrl_control
+                0x000000000000f0e8      0x2e4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cachectrl.o)
+                0x000000000000f0e8                am_hal_cachectrl_control
+ .text.am_hal_clkgen_control
+                0x000000000000f3cc      0x118 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_clkgen.o)
+                0x000000000000f3cc                am_hal_clkgen_control
+ .text.am_hal_ctimer_int_clear
+                0x000000000000f4e4       0x20 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+                0x000000000000f4e4                am_hal_ctimer_int_clear
+ .text.am_hal_flash_delay
+                0x000000000000f504       0x20 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+                0x000000000000f504                am_hal_flash_delay
+ .text.am_hal_flash_delay_status_check
+                0x000000000000f524       0x74 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+                0x000000000000f524                am_hal_flash_delay_status_check
+ .text.am_hal_flash_load_ui32
+                0x000000000000f598        0x8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+                0x000000000000f598                am_hal_flash_load_ui32
+ .text.am_hal_flash_store_ui32
+                0x000000000000f5a0        0xc ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+                0x000000000000f5a0                am_hal_flash_store_ui32
+ .text.am_hal_gpio_pinconfig
+                0x000000000000f5ac      0x278 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+                0x000000000000f5ac                am_hal_gpio_pinconfig
+ .text.am_hal_gpio_state_read
+                0x000000000000f824       0x64 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+                0x000000000000f824                am_hal_gpio_state_read
+ .text.am_hal_gpio_state_write
+                0x000000000000f888       0x88 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+                0x000000000000f888                am_hal_gpio_state_write
+ .text.am_hal_interrupt_master_enable
+                0x000000000000f910        0x8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_interrupt.o)
+                0x000000000000f910                am_hal_interrupt_master_enable
+ .text.am_hal_interrupt_master_disable
+                0x000000000000f918        0x8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_interrupt.o)
+                0x000000000000f918                am_hal_interrupt_master_disable
+ .text.am_hal_interrupt_master_set
+                0x000000000000f920        0x8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_interrupt.o)
+                0x000000000000f920                am_hal_interrupt_master_set
+ .text.am_hal_itm_disable
+                0x000000000000f928       0xac ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_itm.o)
+                0x000000000000f928                am_hal_itm_disable
+ .text.am_hal_mcuctrl_info_get
+                0x000000000000f9d4      0x12c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_mcuctrl.o)
+                0x000000000000f9d4                am_hal_mcuctrl_info_get
+ .text.am_hal_pwrctrl_periph_enable
+                0x000000000000fb00       0x54 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_pwrctrl.o)
+                0x000000000000fb00                am_hal_pwrctrl_periph_enable
+ .text.am_hal_pwrctrl_periph_disable
+                0x000000000000fb54       0x58 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_pwrctrl.o)
+                0x000000000000fb54                am_hal_pwrctrl_periph_disable
+ .text.am_hal_pwrctrl_low_power_init
+                0x000000000000fbac       0xe4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_pwrctrl.o)
+                0x000000000000fbac                am_hal_pwrctrl_low_power_init
+ .text.am_hal_queue_init
+                0x000000000000fc90       0x18 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_queue.o)
+                0x000000000000fc90                am_hal_queue_init
+ .text.am_hal_queue_item_add
+                0x000000000000fca8       0x70 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_queue.o)
+                0x000000000000fca8                am_hal_queue_item_add
+ .text.am_hal_queue_item_get
+                0x000000000000fd18       0x70 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_queue.o)
+                0x000000000000fd18                am_hal_queue_item_get
+ .text.am_hal_rtc_osc_select
+                0x000000000000fd88       0x10 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_rtc.o)
+                0x000000000000fd88                am_hal_rtc_osc_select
+ .text.am_hal_rtc_osc_disable
+                0x000000000000fd98       0x14 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_rtc.o)
+                0x000000000000fd98                am_hal_rtc_osc_disable
+ .text.am_hal_sysctrl_sleep
+                0x000000000000fdac       0x70 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_sysctrl.o)
+                0x000000000000fdac                am_hal_sysctrl_sleep
+ .text.am_hal_uart_initialize
+                0x000000000000fe1c       0x50 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+                0x000000000000fe1c                am_hal_uart_initialize
+ .text.am_hal_uart_deinitialize
+                0x000000000000fe6c       0x28 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+                0x000000000000fe6c                am_hal_uart_deinitialize
+ .text.am_hal_uart_power_control
+                0x000000000000fe94       0xe4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+                0x000000000000fe94                am_hal_uart_power_control
+ .text.am_hal_uart_configure
+                0x000000000000ff78      0x248 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+                0x000000000000ff78                am_hal_uart_configure
+ .text.am_hal_uart_transfer
+                0x00000000000101c0      0x474 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+                0x00000000000101c0                am_hal_uart_transfer
+ .text.am_hal_uart_tx_flush
+                0x0000000000010634       0x50 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+                0x0000000000010634                am_hal_uart_tx_flush
+ *(.rodata)
+ .rodata        0x0000000000010684       0x1c bin/main.o
+ *(.rodata*)
+ .rodata.main.str1.4
+                0x00000000000106a0       0xea bin/main.o
+ *fill*         0x000000000001078a        0x2 
+ .rodata.am_util_stdio_terminal_clear.str1.4
+                0x000000000001078c       0x13 bin/am_util_stdio.o
+ *fill*         0x000000000001079f        0x1 
+ .rodata.am_adc_isr.str1.4
+                0x00000000000107a0       0xf4 bin/tf_adc.o
+ .rodata.am_ctimer_isr.str1.4
+                0x0000000000010894       0xc0 bin/tf_adc.o
+                                         0xbe (size before relaxing)
+ .rodata.g_sBspUartConfig
+                0x0000000000010954       0x28 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+ .rodata.g_AM_BSP_GPIO_COM_UART_RX
+                0x000000000001097c        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+                0x000000000001097c                g_AM_BSP_GPIO_COM_UART_RX
+ .rodata.g_AM_BSP_GPIO_COM_UART_TX
+                0x0000000000010980        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+                0x0000000000010980                g_AM_BSP_GPIO_COM_UART_TX
+ .rodata.ccitt_table
+                0x0000000000010984      0x200 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .rodata.am_ble_buffer_patch_data
+                0x0000000000010b84      0xd38 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch.o)
+                0x0000000000010b84                am_ble_buffer_patch_data
+ .rodata.am_hal_ble_num_default_patches
+                0x00000000000118bc        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch.o)
+                0x00000000000118bc                am_hal_ble_num_default_patches
+ .rodata.am_ble_performance_copy_patch_data
+                0x00000000000118c0      0x914 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch.o)
+                0x00000000000118c0                am_ble_performance_copy_patch_data
+ .rodata.am_hal_ble_num_default_patches_b0
+                0x00000000000121d4        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch_b0.o)
+                0x00000000000121d4                am_hal_ble_num_default_patches_b0
+ .rodata.am_hal_cachectrl_defaults
+                0x00000000000121d8        0x3 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cachectrl.o)
+                0x00000000000121d8                am_hal_cachectrl_defaults
+ *fill*         0x00000000000121db        0x1 
+ .rodata.g_AM_HAL_GPIO_INPUT
+                0x00000000000121dc        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+                0x00000000000121dc                g_AM_HAL_GPIO_INPUT
+ .rodata.g_ui8Bit76Capabilities
+                0x00000000000121e0       0x32 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ *fill*         0x0000000000012212        0x2 
+ .rodata.g_ui8NCEtable
+                0x0000000000012214       0xc8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ .rodata.g_ui8Inpen
+                0x00000000000122dc       0x32 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ *fill*         0x000000000001230e        0x2 
+ .rodata.g_AM_HAL_GPIO_DISABLE
+                0x0000000000012310        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+                0x0000000000012310                g_AM_HAL_GPIO_DISABLE
+ .rodata.g_AM_HAL_GPIO_OUTPUT
+                0x0000000000012314        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+                0x0000000000012314                g_AM_HAL_GPIO_OUTPUT
+ .rodata.g_ui8nCEpins
+                0x0000000000012318       0x32 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ *fill*         0x000000000001234a        0x2 
+ .rodata.g_AM_HAL_GPIO_OUTPUT_12
+                0x000000000001234c        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+                0x000000000001234c                g_AM_HAL_GPIO_OUTPUT_12
+ .rodata.g_am_hal_mcuctrl_flash_size
+                0x0000000000012350       0x40 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_mcuctrl.o)
+                0x0000000000012350                g_am_hal_mcuctrl_flash_size
+ .rodata.g_am_hal_mcuctrl_sram_size
+                0x0000000000012390       0x40 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_mcuctrl.o)
+                0x0000000000012390                g_am_hal_mcuctrl_sram_size
+ .rodata.am_hal_pwrctrl_peripheral_control
+                0x00000000000123d0       0xb4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_pwrctrl.o)
+                0x00000000000123d0                am_hal_pwrctrl_peripheral_control
+                0x0000000000012484                . = ALIGN (0x4)
+                0x0000000000012484                _etext = .
+
+.glue_7         0x0000000000012484        0x0
+ .glue_7        0x0000000000012484        0x0 linker stubs
+
+.glue_7t        0x0000000000012484        0x0
+ .glue_7t       0x0000000000012484        0x0 linker stubs
+
+.vfp11_veneer   0x0000000000012484        0x0
+ .vfp11_veneer  0x0000000000012484        0x0 linker stubs
+
+.v4_bx          0x0000000000012484        0x0
+ .v4_bx         0x0000000000012484        0x0 linker stubs
+
+.iplt           0x0000000000012484        0x0
+ .iplt          0x0000000000012484        0x0 bin/main.o
+
+.rel.dyn        0x0000000000012484        0x0
+ .rel.iplt      0x0000000000012484        0x0 bin/main.o
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+                0x000000000000c304      0x198 bin/main.o
+                0x000000000000c304                main
+ .text.HardFault_Handler
+                0x000000000000c49c       0x1c bin/am_util_faultisr.o
+                0x000000000000c49c                HardFault_Handler
+ .text.getStackedReg
+                0x000000000000c4b8        0x8 bin/am_util_faultisr.o
+                0x000000000000c4b8                getStackedReg
+ .text.am_util_faultisr_collect_data
+                0x000000000000c4c0       0xc4 bin/am_util_faultisr.o
+                0x000000000000c4c0                am_util_faultisr_collect_data
+ .text.uint64_to_str
+                0x000000000000c584      0x158 bin/am_util_stdio.o
+ .text.am_util_stdio_printf_init
+                0x000000000000c6dc        0xc bin/am_util_stdio.o
+                0x000000000000c6dc                am_util_stdio_printf_init
+ .text.am_util_stdio_vsprintf
+                0x000000000000c6e8      0xbc0 bin/am_util_stdio.o
+                0x000000000000c6e8                am_util_stdio_vsprintf
+ .text.am_util_stdio_printf
+                0x000000000000d2a8       0x38 bin/am_util_stdio.o
+                0x000000000000d2a8                am_util_stdio_printf
+ .text.am_util_stdio_terminal_clear
+                0x000000000000d2e0        0xc bin/am_util_stdio.o
+                0x000000000000d2e0                am_util_stdio_terminal_clear
+ .text.NMI_Handler
+                0x000000000000d2ec        0x4 bin/startup_gcc.o
+                0x000000000000d2ec                NMI_Handler
+ .text.am_default_isr
+                0x000000000000d2f0        0x4 bin/startup_gcc.o
+                0x000000000000d2f0                DebugMon_Handler
+                0x000000000000d2f0                am_iomaster4_isr
+                0x000000000000d2f0                SysTick_Handler
+                0x000000000000d2f0                PendSV_Handler
+                0x000000000000d2f0                am_rtc_isr
+                0x000000000000d2f0                am_stimer_cmpr3_isr
+                0x000000000000d2f0                am_iomaster3_isr
+                0x000000000000d2f0                am_clkgen_isr
+                0x000000000000d2f0                am_stimer_isr
+                0x000000000000d2f0                am_software0_isr
+                0x000000000000d2f0                am_stimer_cmpr5_isr
+                0x000000000000d2f0                am_iomaster5_isr
+                0x000000000000d2f0                am_uart_isr
+                0x000000000000d2f0                am_mspi_isr
+                0x000000000000d2f0                am_ioslave_acc_isr
+                0x000000000000d2f0                am_software1_isr
+                0x000000000000d2f0                am_pdm_isr
+                0x000000000000d2f0                am_stimer_cmpr6_isr
+                0x000000000000d2f0                am_iomaster1_isr
+                0x000000000000d2f0                am_brownout_isr
+                0x000000000000d2f0                am_vcomp_isr
+                0x000000000000d2f0                am_stimer_cmpr1_isr
+                0x000000000000d2f0                am_gpio_isr
+                0x000000000000d2f0                am_iomaster2_isr
+                0x000000000000d2f0                SVC_Handler
+                0x000000000000d2f0                am_stimer_cmpr2_isr
+                0x000000000000d2f0                am_ioslave_ios_isr
+                0x000000000000d2f0                am_uart1_isr
+                0x000000000000d2f0                am_stimer_cmpr7_isr
+                0x000000000000d2f0                am_scard_isr
+                0x000000000000d2f0                am_watchdog_isr
+                0x000000000000d2f0                am_stimer_cmpr0_isr
+                0x000000000000d2f0                am_software3_isr
+                0x000000000000d2f0                am_iomaster0_isr
+                0x000000000000d2f0                am_ble_isr
+                0x000000000000d2f0                am_software2_isr
+                0x000000000000d2f0                am_stimer_cmpr4_isr
+                0x000000000000d2f0                am_default_isr
+ .text.Reset_Handler
+                0x000000000000d2f4       0x68 bin/startup_gcc.o
+                0x000000000000d2f4                Reset_Handler
+ .text.am_ctimer_isr
+                0x000000000000d35c       0xd0 bin/tf_adc.o
+                0x000000000000d35c                am_ctimer_isr
+ .text.am_adc_isr
+                0x000000000000d42c       0xb4 bin/tf_adc.o
+                0x000000000000d42c                am_adc_isr
+ .text.am_bsp_uart_string_print
+                0x000000000000d4e0       0x48 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+                0x000000000000d4e0                am_bsp_uart_string_print
+ .text.am_bsp_low_power_init
+                0x000000000000d528       0x64 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+                0x000000000000d528                am_bsp_low_power_init
+ .text.am_bsp_debug_printf_disable
+                0x000000000000d58c       0x6c ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+                0x000000000000d58c                am_bsp_debug_printf_disable
+ .text.am_bsp_uart_printf_enable
+                0x000000000000d5f8       0x5c ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+                0x000000000000d5f8                am_bsp_uart_printf_enable
+ .text.am_hal_adc_initialize
+                0x000000000000d654       0xa0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d654                am_hal_adc_initialize
+ .text.am_hal_adc_deinitialize
+                0x000000000000d6f4       0x40 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d6f4                am_hal_adc_deinitialize
+ .text.am_hal_adc_configure
+                0x000000000000d734       0x70 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d734                am_hal_adc_configure
+ .text.am_hal_adc_configure_slot
+                0x000000000000d7a4       0x6c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d7a4                am_hal_adc_configure_slot
+ .text.am_hal_adc_enable
+                0x000000000000d810       0x40 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d810                am_hal_adc_enable
+ .text.am_hal_adc_disable
+                0x000000000000d850       0x30 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d850                am_hal_adc_disable
+ .text.am_hal_adc_interrupt_enable
+                0x000000000000d880       0x2c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d880                am_hal_adc_interrupt_enable
+ .text.am_hal_adc_interrupt_status
+                0x000000000000d8ac       0x3c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d8ac                am_hal_adc_interrupt_status
+ .text.am_hal_adc_interrupt_clear
+                0x000000000000d8e8       0x24 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d8e8                am_hal_adc_interrupt_clear
+ .text.am_hal_adc_samples_read
+                0x000000000000d90c       0xb8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d90c                am_hal_adc_samples_read
+ .text.am_hal_adc_sw_trigger
+                0x000000000000d9c4       0x24 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d9c4                am_hal_adc_sw_trigger
+ .text.am_hal_adc_power_control
+                0x000000000000d9e8       0xc8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x000000000000d9e8                am_hal_adc_power_control
+ .text.am_hal_ble_blocking_transfer.part.7
+                0x000000000000dab0      0x50c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .text.am_hal_ble_initialize
+                0x000000000000dfbc       0x78 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000dfbc                am_hal_ble_initialize
+ .text.am_hal_ble_config
+                0x000000000000e034      0x110 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e034                am_hal_ble_config
+ .text.am_hal_ble_power_control
+                0x000000000000e144      0x180 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e144                am_hal_ble_power_control
+ .text.am_hal_ble_patch_copy_end_apply
+                0x000000000000e2c4      0x130 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e2c4                am_hal_ble_patch_copy_end_apply
+ .text.am_hal_ble_blocking_hci_write
+                0x000000000000e3f4       0x60 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e3f4                am_hal_ble_blocking_hci_write
+ .text.am_hal_ble_blocking_transfer
+                0x000000000000e454       0x2c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e454                am_hal_ble_blocking_transfer
+ .text.am_hal_ble_patch_apply
+                0x000000000000e480      0x360 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e480                am_hal_ble_patch_apply
+ .text.am_hal_ble_int_enable
+                0x000000000000e7e0       0x40 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e7e0                am_hal_ble_int_enable
+ .text.am_hal_ble_int_clear
+                0x000000000000e820       0x24 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e820                am_hal_ble_int_clear
+ .text.am_hal_ble_plf_reg_read
+                0x000000000000e844      0x180 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e844                am_hal_ble_plf_reg_read
+ .text.am_hal_ble_plf_reg_write
+                0x000000000000e9c4      0x170 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000e9c4                am_hal_ble_plf_reg_write
+ .text.am_hal_ble_transmitter_modex_set
+                0x000000000000eb34       0xc8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000eb34                am_hal_ble_transmitter_modex_set
+ .text.am_hal_ble_patch_complete.part.10
+                0x000000000000ebfc      0x25c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .text.am_hal_ble_boot
+                0x000000000000ee58      0x1a8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000ee58                am_hal_ble_boot
+ .text.am_hal_ble_tx_power_set
+                0x000000000000f000       0x88 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x000000000000f000                am_hal_ble_tx_power_set
+ .text.am_hal_cachectrl_config
+                0x000000000000f088       0x4c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cachectrl.o)
+                0x000000000000f088                am_hal_cachectrl_config
+ .text.am_hal_cachectrl_enable
+                0x000000000000f0d4       0x14 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cachectrl.o)
+                0x000000000000f0d4                am_hal_cachectrl_enable
+ .text.am_hal_cachectrl_control
+                0x000000000000f0e8      0x2e4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cachectrl.o)
+                0x000000000000f0e8                am_hal_cachectrl_control
+ .text.am_hal_clkgen_control
+                0x000000000000f3cc      0x118 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_clkgen.o)
+                0x000000000000f3cc                am_hal_clkgen_control
+ .text.am_hal_ctimer_int_clear
+                0x000000000000f4e4       0x20 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+                0x000000000000f4e4                am_hal_ctimer_int_clear
+ .text.am_hal_flash_delay
+                0x000000000000f504       0x20 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+                0x000000000000f504                am_hal_flash_delay
+ .text.am_hal_flash_delay_status_check
+                0x000000000000f524       0x74 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+                0x000000000000f524                am_hal_flash_delay_status_check
+ .text.am_hal_flash_load_ui32
+                0x000000000000f598        0x8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+                0x000000000000f598                am_hal_flash_load_ui32
+ .text.am_hal_flash_store_ui32
+                0x000000000000f5a0        0xc ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+                0x000000000000f5a0                am_hal_flash_store_ui32
+ .text.am_hal_gpio_pinconfig
+                0x000000000000f5ac      0x278 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+                0x000000000000f5ac                am_hal_gpio_pinconfig
+ .text.am_hal_gpio_state_read
+                0x000000000000f824       0x64 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+                0x000000000000f824                am_hal_gpio_state_read
+ .text.am_hal_gpio_state_write
+                0x000000000000f888       0x88 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+                0x000000000000f888                am_hal_gpio_state_write
+ .text.am_hal_interrupt_master_enable
+                0x000000000000f910        0x8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_interrupt.o)
+                0x000000000000f910                am_hal_interrupt_master_enable
+ .text.am_hal_interrupt_master_disable
+                0x000000000000f918        0x8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_interrupt.o)
+                0x000000000000f918                am_hal_interrupt_master_disable
+ .text.am_hal_interrupt_master_set
+                0x000000000000f920        0x8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_interrupt.o)
+                0x000000000000f920                am_hal_interrupt_master_set
+ .text.am_hal_itm_disable
+                0x000000000000f928       0xac ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_itm.o)
+                0x000000000000f928                am_hal_itm_disable
+ .text.am_hal_mcuctrl_info_get
+                0x000000000000f9d4      0x12c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_mcuctrl.o)
+                0x000000000000f9d4                am_hal_mcuctrl_info_get
+ .text.am_hal_pwrctrl_periph_enable
+                0x000000000000fb00       0x54 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_pwrctrl.o)
+                0x000000000000fb00                am_hal_pwrctrl_periph_enable
+ .text.am_hal_pwrctrl_periph_disable
+                0x000000000000fb54       0x58 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_pwrctrl.o)
+                0x000000000000fb54                am_hal_pwrctrl_periph_disable
+ .text.am_hal_pwrctrl_low_power_init
+                0x000000000000fbac       0xe4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_pwrctrl.o)
+                0x000000000000fbac                am_hal_pwrctrl_low_power_init
+ .text.am_hal_queue_init
+                0x000000000000fc90       0x18 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_queue.o)
+                0x000000000000fc90                am_hal_queue_init
+ .text.am_hal_queue_item_add
+                0x000000000000fca8       0x70 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_queue.o)
+                0x000000000000fca8                am_hal_queue_item_add
+ .text.am_hal_queue_item_get
+                0x000000000000fd18       0x70 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_queue.o)
+                0x000000000000fd18                am_hal_queue_item_get
+ .text.am_hal_rtc_osc_select
+                0x000000000000fd88       0x10 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_rtc.o)
+                0x000000000000fd88                am_hal_rtc_osc_select
+ .text.am_hal_rtc_osc_disable
+                0x000000000000fd98       0x14 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_rtc.o)
+                0x000000000000fd98                am_hal_rtc_osc_disable
+ .text.am_hal_sysctrl_sleep
+                0x000000000000fdac       0x70 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_sysctrl.o)
+                0x000000000000fdac                am_hal_sysctrl_sleep
+ .text.am_hal_uart_initialize
+                0x000000000000fe1c       0x50 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+                0x000000000000fe1c                am_hal_uart_initialize
+ .text.am_hal_uart_deinitialize
+                0x000000000000fe6c       0x28 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+                0x000000000000fe6c                am_hal_uart_deinitialize
+ .text.am_hal_uart_power_control
+                0x000000000000fe94       0xe4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+                0x000000000000fe94                am_hal_uart_power_control
+ .text.am_hal_uart_configure
+                0x000000000000ff78      0x248 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+                0x000000000000ff78                am_hal_uart_configure
+ .text.am_hal_uart_transfer
+                0x00000000000101c0      0x474 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+                0x00000000000101c0                am_hal_uart_transfer
+ .text.am_hal_uart_tx_flush
+                0x0000000000010634       0x50 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+                0x0000000000010634                am_hal_uart_tx_flush
+ *(.rodata)
+ .rodata        0x0000000000010684       0x1c bin/main.o
+ *(.rodata*)
+ .rodata.main.str1.4
+                0x00000000000106a0       0xea bin/main.o
+ *fill*         0x000000000001078a        0x2 
+ .rodata.am_util_stdio_terminal_clear.str1.4
+                0x000000000001078c       0x13 bin/am_util_stdio.o
+ *fill*         0x000000000001079f        0x1 
+ .rodata.am_adc_isr.str1.4
+                0x00000000000107a0       0xf4 bin/tf_adc.o
+ .rodata.am_ctimer_isr.str1.4
+                0x0000000000010894       0xc0 bin/tf_adc.o
+                                         0xbe (size before relaxing)
+ .rodata.g_sBspUartConfig
+                0x0000000000010954       0x28 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+ .rodata.g_AM_BSP_GPIO_COM_UART_RX
+                0x000000000001097c        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+                0x000000000001097c                g_AM_BSP_GPIO_COM_UART_RX
+ .rodata.g_AM_BSP_GPIO_COM_UART_TX
+                0x0000000000010980        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+                0x0000000000010980                g_AM_BSP_GPIO_COM_UART_TX
+ .rodata.ccitt_table
+                0x0000000000010984      0x200 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .rodata.am_ble_buffer_patch_data
+                0x0000000000010b84      0xd38 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch.o)
+                0x0000000000010b84                am_ble_buffer_patch_data
+ .rodata.am_hal_ble_num_default_patches
+                0x00000000000118bc        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch.o)
+                0x00000000000118bc                am_hal_ble_num_default_patches
+ .rodata.am_ble_performance_copy_patch_data
+                0x00000000000118c0      0x914 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch.o)
+                0x00000000000118c0                am_ble_performance_copy_patch_data
+ .rodata.am_hal_ble_num_default_patches_b0
+                0x00000000000121d4        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch_b0.o)
+                0x00000000000121d4                am_hal_ble_num_default_patches_b0
+ .rodata.am_hal_cachectrl_defaults
+                0x00000000000121d8        0x3 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cachectrl.o)
+                0x00000000000121d8                am_hal_cachectrl_defaults
+ *fill*         0x00000000000121db        0x1 
+ .rodata.g_AM_HAL_GPIO_INPUT
+                0x00000000000121dc        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+                0x00000000000121dc                g_AM_HAL_GPIO_INPUT
+ .rodata.g_ui8Bit76Capabilities
+                0x00000000000121e0       0x32 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ *fill*         0x0000000000012212        0x2 
+ .rodata.g_ui8NCEtable
+                0x0000000000012214       0xc8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ .rodata.g_ui8Inpen
+                0x00000000000122dc       0x32 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ *fill*         0x000000000001230e        0x2 
+ .rodata.g_AM_HAL_GPIO_DISABLE
+                0x0000000000012310        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+                0x0000000000012310                g_AM_HAL_GPIO_DISABLE
+ .rodata.g_AM_HAL_GPIO_OUTPUT
+                0x0000000000012314        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+                0x0000000000012314                g_AM_HAL_GPIO_OUTPUT
+ .rodata.g_ui8nCEpins
+                0x0000000000012318       0x32 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ *fill*         0x000000000001234a        0x2 
+ .rodata.g_AM_HAL_GPIO_OUTPUT_12
+                0x000000000001234c        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+                0x000000000001234c                g_AM_HAL_GPIO_OUTPUT_12
+ .rodata.g_am_hal_mcuctrl_flash_size
+                0x0000000000012350       0x40 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_mcuctrl.o)
+                0x0000000000012350                g_am_hal_mcuctrl_flash_size
+ .rodata.g_am_hal_mcuctrl_sram_size
+                0x0000000000012390       0x40 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_mcuctrl.o)
+                0x0000000000012390                g_am_hal_mcuctrl_sram_size
+ .rodata.am_hal_pwrctrl_peripheral_control
+                0x00000000000123d0       0xb4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_pwrctrl.o)
+                0x00000000000123d0                am_hal_pwrctrl_peripheral_control
+                0x0000000000012484                . = ALIGN (0x4)
+                0x0000000000012484                _etext = .
+
+.glue_7         0x0000000000012484        0x0
+ .glue_7        0x0000000000012484        0x0 linker stubs
+
+.glue_7t        0x0000000000012484        0x0
+ .glue_7t       0x0000000000012484        0x0 linker stubs
+
+.vfp11_veneer   0x0000000000012484        0x0
+ .vfp11_veneer  0x0000000000012484        0x0 linker stubs
+
+.v4_bx          0x0000000000012484        0x0
+ .v4_bx         0x0000000000012484        0x0 linker stubs
+
+.iplt           0x0000000000012484        0x0
+ .iplt          0x0000000000012484        0x0 bin/main.o
+
+.rel.dyn        0x0000000000012484        0x0
+ .rel.iplt      0x0000000000012484        0x0 bin/main.o
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+
+.stack          0x0000000010000000     0x1000
+                0x0000000010000000                . = ALIGN (0x8)
+ *(.stack)
+ .stack         0x0000000010000000     0x1000 bin/startup_gcc.o
+ *(.stack*)
+                0x0000000010001000                . = ALIGN (0x8)
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+.data           0x0000000010001000      0xb10 load address 0x00000000000123d0
+=======
+.data           0x0000000010001000      0xb10 load address 0x0000000000012484
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+.data           0x0000000010001000      0xb10 load address 0x0000000000012484
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+                0x0000000010001000                . = ALIGN (0x4)
+                0x0000000010001000                _sdata = .
+ *(.data)
+ *(.data*)
+ .data.am_bsp_psLEDs
+                0x0000000010001000       0x20 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+                0x0000000010001000                am_bsp_psLEDs
+ .data.am_ble_buffer_patch
+                0x0000000010001020       0x10 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch.o)
+                0x0000000010001020                am_ble_buffer_patch
+ .data.am_hal_ble_default_copy_patches
+                0x0000000010001030        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch.o)
+                0x0000000010001030                am_hal_ble_default_copy_patches
+ .data.am_ble_nvds_patch
+                0x0000000010001034       0x10 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch.o)
+                0x0000000010001034                am_ble_nvds_patch
+ .data.am_ble_performance_patch
+                0x0000000010001044       0x10 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch.o)
+                0x0000000010001044                am_ble_performance_patch
+ .data.am_ble_performance_patch_data
+                0x0000000010001054      0x104 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch.o)
+                0x0000000010001054                am_ble_performance_patch_data
+ .data.am_hal_ble_default_patch_array
+                0x0000000010001158        0xc ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch.o)
+                0x0000000010001158                am_hal_ble_default_patch_array
+ .data.am_hal_ble_default_copy_patch_array
+                0x0000000010001164        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch.o)
+                0x0000000010001164                am_hal_ble_default_copy_patch_array
+ .data.am_hal_ble_default_patches
+                0x0000000010001168        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch.o)
+                0x0000000010001168                am_hal_ble_default_patches
+ .data.am_ble_buffer_nvds_data
+                0x000000001000116c       0xc0 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch.o)
+                0x000000001000116c                am_ble_buffer_nvds_data
+ .data.am_ble_performance_copy_patch
+                0x000000001000122c       0x10 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch.o)
+                0x000000001000122c                am_ble_performance_copy_patch
+ .data.am_ble_buffer_patch_data_b0
+                0x000000001000123c      0x25c ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch_b0.o)
+                0x000000001000123c                am_ble_buffer_patch_data_b0
+ .data.am_ble_performance_patch_data_b0
+                0x0000000010001498      0x568 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch_b0.o)
+                0x0000000010001498                am_ble_performance_patch_data_b0
+ .data.am_hal_ble_default_patch_array_b0
+                0x0000000010001a00        0xc ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch_b0.o)
+                0x0000000010001a00                am_hal_ble_default_patch_array_b0
+ .data.am_ble_buffer_patch_b0
+                0x0000000010001a0c       0x10 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch_b0.o)
+                0x0000000010001a0c                am_ble_buffer_patch_b0
+ .data.am_ble_buffer_nvds_data_b0
+                0x0000000010001a1c       0xc4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch_b0.o)
+                0x0000000010001a1c                am_ble_buffer_nvds_data_b0
+ .data.am_ble_nvds_patch_b0
+                0x0000000010001ae0       0x10 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch_b0.o)
+                0x0000000010001ae0                am_ble_nvds_patch_b0
+ .data.am_hal_ble_default_patches_b0
+                0x0000000010001af0        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch_b0.o)
+                0x0000000010001af0                am_hal_ble_default_patches_b0
+ .data.am_ble_performance_patch_b0
+                0x0000000010001af4       0x10 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch_b0.o)
+                0x0000000010001af4                am_ble_performance_patch_b0
+ .data.SRAM_write_ui32
+                0x0000000010001b04        0xc ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+                0x0000000010001b04                SRAM_write_ui32
+                0x0000000010001b10                . = ALIGN (0x4)
+                0x0000000010001b10                _edata = .
+<<<<<<< HEAD
+<<<<<<< HEAD
+                0x00000000000123d0                _init_data = LOADADDR (.data)
+
+.igot.plt       0x0000000010001b10        0x0 load address 0x0000000000012ee0
+ .igot.plt      0x0000000010001b10        0x0 bin/main.o
+
+.bss            0x0000000010001b10      0x310 load address 0x0000000000012ee0
+=======
+                0x0000000000012484                _init_data = LOADADDR (.data)
+
+.igot.plt       0x0000000010001b10        0x0 load address 0x0000000000012f94
+ .igot.plt      0x0000000010001b10        0x0 bin/main.o
+
+.bss            0x0000000010001b10      0xb48 load address 0x0000000000012f94
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+                0x0000000000012484                _init_data = LOADADDR (.data)
+
+.igot.plt       0x0000000010001b10        0x0 load address 0x0000000000012f94
+ .igot.plt      0x0000000010001b10        0x0 bin/main.o
+
+.bss            0x0000000010001b10      0xb48 load address 0x0000000000012f94
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+                0x0000000010001b10                . = ALIGN (0x4)
+                0x0000000010001b10                _sbss = .
+ *(.bss)
+ *(.bss*)
+ .bss.BLE       0x0000000010001b10        0x4 bin/main.o
+ .bss.interruptCounter
+                0x0000000010001b14        0x4 bin/main.o
+                0x0000000010001b14                interruptCounter
+ .bss.g_bTxtXlate
+                0x0000000010001b18        0x1 bin/am_util_stdio.o
+ *fill*         0x0000000010001b19        0x3 
+ .bss.g_prfbuf  0x0000000010001b1c      0x100 bin/am_util_stdio.o
+ .bss.audioSample
+                0x0000000010001c1c        0x4 bin/tf_adc.o
+                0x0000000010001c1c                audioSample
+ .bss.g_ADCHandle
+                0x0000000010001c20        0x4 bin/tf_adc.o
+ .bss.g_sCOMUART
+                0x0000000010001c24        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+ .bss.g_ui32PrintInterface
+                0x0000000010001c28        0x4 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+ .bss.priv_temp_trims
+                0x0000000010001c2c       0x10 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+ .bss.gAmHalResetStatus
+                0x0000000010001c3c        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_reset.o)
+                0x0000000010001c3c                gAmHalResetStatus
+ .bss.g_ui32BusWriteFlush
+                0x0000000010001c40        0x4 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_sysctrl.o)
+ *(COMMON)
+<<<<<<< HEAD
+<<<<<<< HEAD
+ COMMON         0x0000000010001c44        0x4 bin/am_util_stdio.o
+                0x0000000010001c44                g_pfnCharPrint
+ COMMON         0x0000000010001c48       0x44 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x0000000010001c48                g_ADCSlotsConfigured
+                0x0000000010001c4c                g_ADCState
+ COMMON         0x0000000010001c8c       0xcc ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x0000000010001c8c                g_sBLEState
+                0x0000000010001cd4                g_psPatchBuffer
+ COMMON         0x0000000010001d58       0xc8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+                0x0000000010001d58                g_am_hal_uart_states
+                0x0000000010001e20                . = ALIGN (0x4)
+                0x0000000010001e20                _ebss = .
+=======
+=======
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+ COMMON         0x0000000010001c44      0x838 bin/main.o
+                0x0000000010001c44                writeBuffers
+                0x0000000010002464                writeQueue
+ COMMON         0x000000001000247c        0x4 bin/am_util_stdio.o
+                0x000000001000247c                g_pfnCharPrint
+ COMMON         0x0000000010002480       0x44 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                0x0000000010002480                g_ADCSlotsConfigured
+                0x0000000010002484                g_ADCState
+ COMMON         0x00000000100024c4       0xcc ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+                0x00000000100024c4                g_sBLEState
+                0x000000001000250c                g_psPatchBuffer
+ COMMON         0x0000000010002590       0xc8 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+                0x0000000010002590                g_am_hal_uart_states
+                0x0000000010002658                . = ALIGN (0x4)
+                0x0000000010002658                _ebss = .
+<<<<<<< HEAD
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+
+.ARM.attributes
+                0x0000000000000000       0x37
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x0000000000000000       0x39 bin/main.o
+ .ARM.attributes
+                0x0000000000000039       0x39 bin/am_util_faultisr.o
+ .ARM.attributes
+                0x0000000000000072       0x39 bin/am_util_stdio.o
+ .ARM.attributes
+                0x00000000000000ab       0x39 bin/startup_gcc.o
+ .ARM.attributes
+                0x00000000000000e4       0x39 bin/tf_adc.o
+ .ARM.attributes
+                0x000000000000011d       0x22 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_truncdfsf2.o)
+ .ARM.attributes
+                0x000000000000013f       0x34 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+ .ARM.attributes
+                0x0000000000000173       0x39 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .ARM.attributes
+                0x00000000000001ac       0x39 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+ .ARM.attributes
+                0x00000000000001e5       0x39 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .ARM.attributes
+                0x000000000000021e       0x39 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch.o)
+ .ARM.attributes
+                0x0000000000000257       0x39 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch_b0.o)
+ .ARM.attributes
+                0x0000000000000290       0x39 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cachectrl.o)
+ .ARM.attributes
+                0x00000000000002c9       0x39 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_clkgen.o)
+ .ARM.attributes
+                0x0000000000000302       0x39 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .ARM.attributes
+                0x000000000000033b       0x39 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .ARM.attributes
+                0x0000000000000374       0x39 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ .ARM.attributes
+                0x00000000000003ad       0x39 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_interrupt.o)
+ .ARM.attributes
+                0x00000000000003e6       0x39 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_itm.o)
+ .ARM.attributes
+                0x000000000000041f       0x39 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_mcuctrl.o)
+ .ARM.attributes
+                0x0000000000000458       0x39 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_pwrctrl.o)
+ .ARM.attributes
+                0x0000000000000491       0x39 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_queue.o)
+ .ARM.attributes
+                0x00000000000004ca       0x39 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_reset.o)
+ .ARM.attributes
+                0x0000000000000503       0x39 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_rtc.o)
+ .ARM.attributes
+                0x000000000000053c       0x39 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_sysctrl.o)
+ .ARM.attributes
+<<<<<<< HEAD
+<<<<<<< HEAD
+                0x0000000000000575       0x39 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_queue.o)
+=======
+                0x0000000000000575       0x39 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+                0x0000000000000575       0x39 ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+ .ARM.attributes
+                0x00000000000005ae       0x20 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memcpy.o)
+LOAD bin/main.o
+LOAD bin/am_devices_led.o
+LOAD bin/am_util_delay.o
+LOAD bin/am_util_faultisr.o
+LOAD bin/am_util_stdio.o
+LOAD bin/startup_gcc.o
+LOAD bin/tf_adc.o
+LOAD bin/tf_accelerometer.o
+LOAD bin/lis2dh12_reg.o
+START GROUP
+LOAD /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libm.a
+LOAD /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a
+LOAD /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a
+LOAD ../../../bsp/gcc/bin/libam_bsp.a
+LOAD ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a
+END GROUP
+START GROUP
+LOAD /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a
+LOAD /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a
+END GROUP
+OUTPUT(bin/example1_edge_test.axf elf32-littlearm)
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+.debug_info     0x0000000000000000     0x5cd5
+ .debug_info    0x0000000000000000     0x1f06 bin/main.o
+ .debug_info    0x0000000000001f06      0xa50 bin/am_util_faultisr.o
+ .debug_info    0x0000000000002956      0xe34 bin/am_util_stdio.o
+ .debug_info    0x000000000000378a      0xaa6 bin/startup_gcc.o
+ .debug_info    0x0000000000004230     0x18f5 bin/tf_adc.o
+ .debug_info    0x0000000000005b25       0xd4 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_truncdfsf2.o)
+ .debug_info    0x0000000000005bf9       0xdc /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memcpy.o)
+=======
+=======
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+.debug_info     0x0000000000000000     0x5cc3
+ .debug_info    0x0000000000000000     0x1ef4 bin/main.o
+ .debug_info    0x0000000000001ef4      0xa50 bin/am_util_faultisr.o
+ .debug_info    0x0000000000002944      0xe34 bin/am_util_stdio.o
+ .debug_info    0x0000000000003778      0xaa6 bin/startup_gcc.o
+ .debug_info    0x000000000000421e     0x18f5 bin/tf_adc.o
+ .debug_info    0x0000000000005b13       0xd4 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_truncdfsf2.o)
+ .debug_info    0x0000000000005be7       0xdc /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memcpy.o)
+<<<<<<< HEAD
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+
+.debug_abbrev   0x0000000000000000      0xe45
+ .debug_abbrev  0x0000000000000000      0x3a9 bin/main.o
+ .debug_abbrev  0x00000000000003a9      0x232 bin/am_util_faultisr.o
+ .debug_abbrev  0x00000000000005db      0x340 bin/am_util_stdio.o
+ .debug_abbrev  0x000000000000091b      0x1f1 bin/startup_gcc.o
+ .debug_abbrev  0x0000000000000b0c      0x311 bin/tf_adc.o
+ .debug_abbrev  0x0000000000000e1d       0x14 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_truncdfsf2.o)
+ .debug_abbrev  0x0000000000000e31       0x14 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memcpy.o)
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+.debug_loc      0x0000000000000000     0x2814
+ .debug_loc     0x0000000000000000      0x1c3 bin/main.o
+ .debug_loc     0x00000000000001c3       0x63 bin/am_util_faultisr.o
+ .debug_loc     0x0000000000000226     0x25c6 bin/am_util_stdio.o
+ .debug_loc     0x00000000000027ec       0x28 bin/tf_adc.o
+
+.debug_aranges  0x0000000000000000      0x170
+ .debug_aranges
+                0x0000000000000000       0x30 bin/main.o
+ .debug_aranges
+                0x0000000000000030       0x30 bin/am_util_faultisr.o
+ .debug_aranges
+                0x0000000000000060       0x58 bin/am_util_stdio.o
+ .debug_aranges
+                0x00000000000000b8       0x38 bin/startup_gcc.o
+ .debug_aranges
+                0x00000000000000f0       0x40 bin/tf_adc.o
+ .debug_aranges
+                0x0000000000000130       0x20 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_truncdfsf2.o)
+ .debug_aranges
+                0x0000000000000150       0x20 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memcpy.o)
+
+.debug_ranges   0x0000000000000000      0x4c8
+ .debug_ranges  0x0000000000000000       0x60 bin/main.o
+ .debug_ranges  0x0000000000000060       0x20 bin/am_util_faultisr.o
+ .debug_ranges  0x0000000000000080      0x388 bin/am_util_stdio.o
+ .debug_ranges  0x0000000000000408       0x28 bin/startup_gcc.o
+ .debug_ranges  0x0000000000000430       0x98 bin/tf_adc.o
+
+.debug_line     0x0000000000000000     0x14d2
+ .debug_line    0x0000000000000000      0x418 bin/main.o
+ .debug_line    0x0000000000000418      0x307 bin/am_util_faultisr.o
+ .debug_line    0x000000000000071f      0x680 bin/am_util_stdio.o
+ .debug_line    0x0000000000000d9f      0x21e bin/startup_gcc.o
+ .debug_line    0x0000000000000fbd      0x3c0 bin/tf_adc.o
+ .debug_line    0x000000000000137d       0x94 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_truncdfsf2.o)
+ .debug_line    0x0000000000001411       0xc1 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memcpy.o)
+
+.debug_str      0x0000000000000000     0x349c
+ .debug_str     0x0000000000000000     0x2478 bin/main.o
+                                       0x2527 (size before relaxing)
+ .debug_str     0x0000000000002478      0x1cc bin/am_util_faultisr.o
+                                        0xc0b (size before relaxing)
+ .debug_str     0x0000000000002644      0x315 bin/am_util_stdio.o
+                                        0x58b (size before relaxing)
+ .debug_str     0x0000000000002959       0x81 bin/startup_gcc.o
+                                       0x1231 (size before relaxing)
+ .debug_str     0x00000000000029da      0xac2 bin/tf_adc.o
+=======
+.debug_loc      0x0000000000000000     0x27e9
+ .debug_loc     0x0000000000000000      0x198 bin/main.o
+ .debug_loc     0x0000000000000198       0x63 bin/am_util_faultisr.o
+ .debug_loc     0x00000000000001fb     0x25c6 bin/am_util_stdio.o
+ .debug_loc     0x00000000000027c1       0x28 bin/tf_adc.o
+
+.debug_aranges  0x0000000000000000      0x170
+ .debug_aranges
+                0x0000000000000000       0x30 bin/main.o
+ .debug_aranges
+                0x0000000000000030       0x30 bin/am_util_faultisr.o
+ .debug_aranges
+                0x0000000000000060       0x58 bin/am_util_stdio.o
+ .debug_aranges
+                0x00000000000000b8       0x38 bin/startup_gcc.o
+ .debug_aranges
+                0x00000000000000f0       0x40 bin/tf_adc.o
+ .debug_aranges
+                0x0000000000000130       0x20 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_truncdfsf2.o)
+ .debug_aranges
+=======
+.debug_loc      0x0000000000000000     0x27e9
+ .debug_loc     0x0000000000000000      0x198 bin/main.o
+ .debug_loc     0x0000000000000198       0x63 bin/am_util_faultisr.o
+ .debug_loc     0x00000000000001fb     0x25c6 bin/am_util_stdio.o
+ .debug_loc     0x00000000000027c1       0x28 bin/tf_adc.o
+
+.debug_aranges  0x0000000000000000      0x170
+ .debug_aranges
+                0x0000000000000000       0x30 bin/main.o
+ .debug_aranges
+                0x0000000000000030       0x30 bin/am_util_faultisr.o
+ .debug_aranges
+                0x0000000000000060       0x58 bin/am_util_stdio.o
+ .debug_aranges
+                0x00000000000000b8       0x38 bin/startup_gcc.o
+ .debug_aranges
+                0x00000000000000f0       0x40 bin/tf_adc.o
+ .debug_aranges
+                0x0000000000000130       0x20 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_truncdfsf2.o)
+ .debug_aranges
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+                0x0000000000000150       0x20 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memcpy.o)
+
+.debug_ranges   0x0000000000000000      0x4c0
+ .debug_ranges  0x0000000000000000       0x58 bin/main.o
+ .debug_ranges  0x0000000000000058       0x20 bin/am_util_faultisr.o
+ .debug_ranges  0x0000000000000078      0x388 bin/am_util_stdio.o
+ .debug_ranges  0x0000000000000400       0x28 bin/startup_gcc.o
+ .debug_ranges  0x0000000000000428       0x98 bin/tf_adc.o
+
+.debug_line     0x0000000000000000     0x14cb
+ .debug_line    0x0000000000000000      0x411 bin/main.o
+ .debug_line    0x0000000000000411      0x307 bin/am_util_faultisr.o
+ .debug_line    0x0000000000000718      0x680 bin/am_util_stdio.o
+ .debug_line    0x0000000000000d98      0x21e bin/startup_gcc.o
+ .debug_line    0x0000000000000fb6      0x3c0 bin/tf_adc.o
+ .debug_line    0x0000000000001376       0x94 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_truncdfsf2.o)
+ .debug_line    0x000000000000140a       0xc1 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memcpy.o)
+
+.debug_str      0x0000000000000000     0x348c
+ .debug_str     0x0000000000000000     0x2468 bin/main.o
+                                       0x250b (size before relaxing)
+ .debug_str     0x0000000000002468      0x1cc bin/am_util_faultisr.o
+                                        0xc0b (size before relaxing)
+ .debug_str     0x0000000000002634      0x315 bin/am_util_stdio.o
+                                        0x58b (size before relaxing)
+ .debug_str     0x0000000000002949       0x81 bin/startup_gcc.o
+                                       0x1231 (size before relaxing)
+ .debug_str     0x00000000000029ca      0xac2 bin/tf_adc.o
+<<<<<<< HEAD
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+                                       0x264c (size before relaxing)
+
+.comment        0x0000000000000000      0x114
+ .comment       0x0000000000000000       0x31 bin/main.o
+                                         0x32 (size before relaxing)
+ .comment       0x0000000000000031       0x32 bin/am_util_faultisr.o
+ .comment       0x0000000000000031       0x32 bin/am_util_stdio.o
+ .comment       0x0000000000000031       0x32 bin/startup_gcc.o
+ .comment       0x0000000000000031       0x32 bin/tf_adc.o
+ .comment       0x0000000000000031       0x75 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp.o)
+                                         0x76 (size before relaxing)
+ .comment       0x00000000000000a6       0x76 ../../../bsp/gcc/bin/libam_bsp.a(am_bsp_pins.o)
+ .comment       0x00000000000000a6       0x6e ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_adc.o)
+                                         0x6f (size before relaxing)
+ .comment       0x0000000000000114       0x6f ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble.o)
+ .comment       0x0000000000000114       0x6f ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch.o)
+ .comment       0x0000000000000114       0x6f ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ble_patch_b0.o)
+ .comment       0x0000000000000114       0x6f ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_cachectrl.o)
+ .comment       0x0000000000000114       0x6f ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_clkgen.o)
+ .comment       0x0000000000000114       0x6f ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_ctimer.o)
+ .comment       0x0000000000000114       0x6f ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_flash.o)
+ .comment       0x0000000000000114       0x6f ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_gpio.o)
+ .comment       0x0000000000000114       0x6f ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_interrupt.o)
+ .comment       0x0000000000000114       0x6f ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_itm.o)
+ .comment       0x0000000000000114       0x6f ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_mcuctrl.o)
+ .comment       0x0000000000000114       0x6f ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_pwrctrl.o)
+ .comment       0x0000000000000114       0x6f ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_queue.o)
+ .comment       0x0000000000000114       0x6f ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_reset.o)
+ .comment       0x0000000000000114       0x6f ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_rtc.o)
+ .comment       0x0000000000000114       0x6f ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_sysctrl.o)
+ .comment       0x0000000000000114       0x6f ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_uart.o)
+<<<<<<< HEAD
+<<<<<<< HEAD
+ .comment       0x0000000000000114       0x6f ../../../../../mcu/apollo3/hal/gcc/bin/libam_hal.a(am_hal_queue.o)
+=======
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+=======
+>>>>>>> 1a534b8a25b94207a3a3c5fadf9f679e9ac9783a
+
+.debug_frame    0x0000000000000000      0x2d8
+ .debug_frame   0x0000000000000000       0x68 bin/main.o
+ .debug_frame   0x0000000000000068       0x48 bin/am_util_faultisr.o
+ .debug_frame   0x00000000000000b0      0x124 bin/am_util_stdio.o
+ .debug_frame   0x00000000000001d4       0x50 bin/startup_gcc.o
+ .debug_frame   0x0000000000000224       0x90 bin/tf_adc.o
+ .debug_frame   0x00000000000002b4       0x24 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_truncdfsf2.o)

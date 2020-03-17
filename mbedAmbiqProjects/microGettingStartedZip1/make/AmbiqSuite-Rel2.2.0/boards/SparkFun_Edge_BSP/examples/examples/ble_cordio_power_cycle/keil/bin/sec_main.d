@@ -1,0 +1,16 @@
+.\bin\sec_main.o: ../../../../../third_party/exactle/sw/sec/common/sec_main.c
+.\bin\sec_main.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\string.h
+.\bin\sec_main.o: ../../../../../third_party/exactle/ws-core/sw/wsf/ambiq/wsf_types.h
+.\bin\sec_main.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\bin\sec_main.o: ../../../../../third_party/exactle/ws-core/sw/wsf/include/wsf_queue.h
+.\bin\sec_main.o: ../../../../../third_party/exactle/ws-core/sw/wsf/include/wsf_msg.h
+.\bin\sec_main.o: ../../../../../third_party/exactle/ws-core/sw/wsf/include/wsf_os.h
+.\bin\sec_main.o: ../../../../../third_party/exactle/ws-core/sw/wsf/ambiq/wsf_os_int.h
+.\bin\sec_main.o: ../../../../../third_party/exactle/ws-core/sw/wsf/ambiq/wsf_trace.h
+.\bin\sec_main.o: ../../../../../third_party/exactle/ws-core/sw/wsf/ambiq/wsf_assert.h
+.\bin\sec_main.o: ../../../../../third_party/exactle/sw/sec/include/sec_api.h
+.\bin\sec_main.o: ../../../../../third_party/exactle/sw/sec/common/sec_main.h
+.\bin\sec_main.o: ../../../../../third_party/exactle/sw/stack/include/hci_api.h
+.\bin\sec_main.o: ../../../../../third_party/exactle/ws-core/include/hci_defs.h
+.\bin\sec_main.o: ../../../../../third_party/exactle/ws-core/sw/util/bda.h
+.\bin\sec_main.o: ../../../../../third_party/exactle/ws-core/sw/util/calc128.h
