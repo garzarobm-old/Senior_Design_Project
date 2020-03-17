@@ -30,8 +30,6 @@ public class BluetoothActivity extends ListActivity  {
     private boolean mScanning;
     private Handler handler;
 
-    /* I think this is the view */
-    private LayoutInflater mInflator;
 
 
     /* bluetooth le Adapter for holding all devices*/
@@ -44,9 +42,12 @@ public class BluetoothActivity extends ListActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bluetooth);
 
-        mInflator = this.getLayoutInflater();
+        //getActionBar().setTitle((R.string.title_devices));
+        handler = new Handler();
+
+
+
 
         final BluetoothManager bluetoothManager =
                 (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
@@ -90,11 +91,12 @@ public class BluetoothActivity extends ListActivity  {
 
 
         private ArrayList<BluetoothDevice> mLeDevices;
+        private LayoutInflater mInflator;
 
         public LeDeviceListAdapter() {
             super();
             mLeDevices = new ArrayList<BluetoothDevice>();
-            mInflator = BluetoothActivity.this.getLayoutInflater();
+
         }
         public void addDevice(BluetoothDevice device) {
             if(!mLeDevices.contains(device)) {
@@ -125,9 +127,12 @@ public class BluetoothActivity extends ListActivity  {
             ViewHolder viewHolder;
             // General ListView optimization code.
             if (view == null) {
-                view = mInflator.inflate(R.layout.activity_bluetooth, null);
+                mInflator =  (LayoutInflater) LayoutInflater.from(BluetoothActivity.this);
+
+                view = mInflator.inflate(R.layout.activity_bluetooth, viewGroup, false);
+
                 viewHolder = new ViewHolder();
-                viewHolder.deviceAddress = (TextView) view.findViewById(R.id.listitem_device);
+                viewHolder.deviceAddress = (TextView) view.findViewById(R.id.device_address);
                 viewHolder.deviceName = (TextView) view.findViewById(R.id.device_name);
                 view.setTag(viewHolder);
             } else {

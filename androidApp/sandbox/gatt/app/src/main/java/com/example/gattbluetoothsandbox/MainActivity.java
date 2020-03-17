@@ -18,6 +18,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.Toast;
 
 /* comments are simple and obvious for the purpose of relearning the java language */
@@ -53,13 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "This is supposed to show the do bluetooth advertising.", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
 
 
 
@@ -125,5 +120,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    /** Called when the user taps the fab button */
+    public void changeToBluetooth(View view) {
+        // Do something in response to button
+        Intent intent = new Intent(this, BluetoothActivity.class);
+        //EditText editText = (EditText) findViewById(R.id.editText);
+        //String message = editText.getText().toString();
+        //intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
     }
 }

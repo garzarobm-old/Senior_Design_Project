@@ -17,6 +17,7 @@
     <string name="ble_not_supported">Sorry! ble devices are not supported</string>
 
     <string name="unknown_device">Not known device!</string>
+    <string name="title_devices">Devices shown</string>
 
 
 </resources>
