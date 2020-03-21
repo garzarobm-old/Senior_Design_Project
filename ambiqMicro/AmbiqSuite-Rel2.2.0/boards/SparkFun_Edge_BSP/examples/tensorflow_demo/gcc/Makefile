@@ -179,7 +179,7 @@ $(CONFIG)/$(TARGET).axf: $(OBJS) $(LIBS)
 	$(CP) $(CPFLAGS) $< $@ ;\
 	$(OD) $(ODFLAGS) $< > $(CONFIG)/$(TARGET).lst
 
-# end of miguel adds
+# end of my adds
 $(CONFIG)/$(TARGET).bin:
 	@echo " copying binary to $@"
 	@cp $(BINARY) $@ ;\

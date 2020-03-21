@@ -1,0 +1,25 @@
+# resource pdf from tensorflow
+
+
+Definitions...
+convolutional neural network for a KWS task: 
+	-Regular network entails
+		input layer: inputs speech, image, etc...
+		output layer: delivers the label
+		hidden layer: does the computation
+	-CNN difference	
+		-they are only connected to neurons next to it
+		-they all have the same weight
+	-how ^^ differences matter
+		-
+
+
+
+Deep learning:
+	-examples: how google converts webpages to different languages
+	-subsets: 	artificial intelligence
+					|----> machine learning
+						|----> deep learning
+	-definition: has to do with how it copies human behavior
+	-Differences:
+		-picks out features by looking at object rather than just being feed certain features.

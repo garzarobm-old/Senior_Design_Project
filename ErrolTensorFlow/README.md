@@ -19,7 +19,7 @@
 2. see if you can load the old code into the ambiq;;;;; DONE
 3. see if you can train some data into model yourself;;;; DOING NOW
 4. look at how micro_speech works in MICRO ;; almost done -> stopped at train your own model 
-5. https://github.com/tensorflow/docs/blob/master/site/en/r1/tutorials/sequences/audio_recognition.md speech_commands ;; almost done -> stopped at Training Finished
+5. https://github.com/tensorflow/docs/blob/master/site/en/r1/tutorials/sequences/audio_recognition.md speech_commands ;; almost done... -> stopped at how does this model work?
 6. research the os  ;; started
 7. decide whether you have to create your own model or use their model	;; decided!
 8. Find out if you can actually start importing you c code onto the project. Tutorial -> stopped at getting Started
@@ -42,6 +42,9 @@
 				b. 10 kB of ram is used.
 			- has already a set of "yes, no" words you can train.
 	2. Speech_commands tutorial for training 7 words
+	3. We could try other options instead of the CNN
+			A. recurrent network
+			B.dilate (atrous) convolutions.
 
 
 
