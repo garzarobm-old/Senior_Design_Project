@@ -1,3 +1,4 @@
+RM =$(shell which rm 2>/dev/null)
 SRCS := \
 tensorflow/lite/experimental/micro/micro_error_reporter.cc tensorflow/lite/experimental/micro/micro_mutable_op_resolver.cc tensorflow/lite/experimental/micro/simple_tensor_allocator.cc tensorflow/lite/experimental/micro/debug_log.cc tensorflow/lite/experimental/micro/debug_log_numbers.cc tensorflow/lite/experimental/micro/micro_interpreter.cc tensorflow/lite/experimental/micro/kernels/depthwise_conv.cc tensorflow/lite/experimental/micro/kernels/softmax.cc tensorflow/lite/experimental/micro/kernels/all_ops_resolver.cc tensorflow/lite/experimental/micro/kernels/fully_connected.cc tensorflow/lite/c/c_api_internal.c tensorflow/lite/core/api/error_reporter.cc tensorflow/lite/core/api/flatbuffer_conversions.cc tensorflow/lite/core/api/op_resolver.cc tensorflow/lite/kernels/kernel_util.cc tensorflow/lite/kernels/internal/quantization_util.cc  tensorflow/lite/experimental/micro/examples/micro_speech/main.cc tensorflow/lite/experimental/micro/examples/micro_speech/model_settings.cc tensorflow/lite/experimental/micro/examples/micro_speech/audio_provider.cc tensorflow/lite/experimental/micro/examples/micro_speech/feature_provider.cc tensorflow/lite/experimental/micro/examples/micro_speech/preprocessor.cc tensorflow/lite/experimental/micro/examples/micro_speech/no_features_data.cc tensorflow/lite/experimental/micro/examples/micro_speech/yes_features_data.cc tensorflow/lite/experimental/micro/examples/micro_speech/tiny_conv_model_data.cc tensorflow/lite/experimental/micro/examples/micro_speech/recognize_commands.cc
 
@@ -24,3 +25,9 @@ micro_speech : $(OBJS)
 	-o $@
 
 all: micro_speech
+
+
+clean: 
+	@echo "Cleaning... ;" \
+	$(RM) -f $(OBJS) \
+	
