@@ -30,6 +30,7 @@ void setup();
 // compatibility.
 void loop();
 
+void call();
 #ifdef __cplusplus
 }
 #endif
