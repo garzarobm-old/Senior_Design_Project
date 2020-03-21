@@ -1,0 +1,326 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AudioProcessor	input_data.py	/^class AudioProcessor(object):$/;"	c
+BACKGROUND_NOISE_DIR_NAME	input_data.py	/^BACKGROUND_NOISE_DIR_NAME = '_background_noise_'$/;"	v
+CalculateAccuracyStats	accuracy_utils.cc	/^void CalculateAccuracyStats($/;"	f	namespace:tensorflow
+DictStruct	train_test.py	/^class DictStruct(object):$/;"	c
+FLAGS	freeze.py	/^FLAGS = None$/;"	v
+FLAGS	generate_streaming_test_wav.py	/^FLAGS = None$/;"	v
+FLAGS	label_wav.py	/^FLAGS = None$/;"	v
+FLAGS	label_wav_dir.py	/^FLAGS = None$/;"	v
+FLAGS	test_streaming_accuracy.py	/^FLAGS = None$/;"	v
+FLAGS	train.py	/^FLAGS = None$/;"	v
+FLAGS	wav_to_features.py	/^FLAGS = None$/;"	v
+FreezeTest	freeze_test.py	/^class FreezeTest(test.TestCase):$/;"	c
+GenerateStreamingTestWavTest	generate_streaming_test_wav_test.py	/^class GenerateStreamingTestWavTest(test.TestCase):$/;"	c
+GetTopLabels	label_wav.cc	/^void GetTopLabels(const std::vector<Tensor>& outputs, int how_many_labels,$/;"	f	namespace:__anon1
+InputDataTest	input_data_test.py	/^class InputDataTest(test.TestCase):$/;"	c
+LabelWavTest	label_wav_test.py	/^class LabelWavTest(test.TestCase):$/;"	c
+LoadGraph	label_wav.cc	/^Status LoadGraph(const string& graph_file_name,$/;"	f	namespace:__anon1
+LoadGraph	test_streaming_accuracy.cc	/^Status LoadGraph(const string& graph_file_name,$/;"	f	namespace:__anon2
+MAX_NUM_WAVS_PER_CLASS	input_data.py	/^MAX_NUM_WAVS_PER_CLASS = 2**27 - 1  # ~134M$/;"	v
+ModelsTest	models_test.py	/^class ModelsTest(test.TestCase):$/;"	c
+PrintAccuracyStats	accuracy_utils.cc	/^void PrintAccuracyStats(const StreamingAccuracyStats& stats) {$/;"	f	namespace:tensorflow
+ProcessLatestResults	recognize_commands.cc	/^Status RecognizeCommands::ProcessLatestResults(const Tensor& latest_results,$/;"	f	class:tensorflow::RecognizeCommands
+RANDOM_SEED	input_data.py	/^RANDOM_SEED = 59185$/;"	v
+ReadGroundTruthFile	accuracy_utils.cc	/^Status ReadGroundTruthFile(const string& file_name,$/;"	f	namespace:tensorflow
+ReadLabelsFile	label_wav.cc	/^Status ReadLabelsFile(const string& file_name, std::vector<string>* result) {$/;"	f	namespace:__anon1
+ReadLabelsFile	test_streaming_accuracy.cc	/^Status ReadLabelsFile(const string& file_name, std::vector<string>* result) {$/;"	f	namespace:__anon2
+RecognizeCommands	recognize_commands.cc	/^RecognizeCommands::RecognizeCommands(const std::vector<string>& labels,$/;"	f	class:tensorflow::RecognizeCommands
+RecognizeCommands	recognize_commands.h	/^class RecognizeCommands {$/;"	c	namespace:tensorflow
+RecognizeCommands	recognize_commands.py	/^class RecognizeCommands(object):$/;"	c
+RecognizeResult	recognize_commands.py	/^class RecognizeResult(object):$/;"	c
+SILENCE_INDEX	input_data.py	/^SILENCE_INDEX = 0$/;"	v
+SILENCE_LABEL	input_data.py	/^SILENCE_LABEL = '_silence_'$/;"	v
+StreamingAccuracyStats	accuracy_utils.h	/^  StreamingAccuracyStats()$/;"	f	struct:tensorflow::StreamingAccuracyStats
+StreamingAccuracyStats	accuracy_utils.h	/^struct StreamingAccuracyStats {$/;"	s	namespace:tensorflow
+StreamingAccuracyStats	accuracy_utils.py	/^class StreamingAccuracyStats(object):$/;"	c
+TENSORFLOW_EXAMPLES_SPEECH_COMMANDS_ACCURACY_UTILS_H_	accuracy_utils.h	17;"	d
+TENSORFLOW_EXAMPLES_SPEECH_COMMANDS_RECOGNIZE_COMMANDS_H_	recognize_commands.h	17;"	d
+TEST	accuracy_utils_test.cc	/^TEST(AccuracyUtilsTest, CalculateAccuracyStats) {$/;"	f	namespace:tensorflow
+TEST	accuracy_utils_test.cc	/^TEST(AccuracyUtilsTest, PrintAccuracyStats) {$/;"	f	namespace:tensorflow
+TEST	accuracy_utils_test.cc	/^TEST(AccuracyUtilsTest, ReadGroundTruthFile) {$/;"	f	namespace:tensorflow
+TEST	recognize_commands_test.cc	/^TEST(RecognizeCommandsTest, BadInputLength) {$/;"	f	namespace:tensorflow
+TEST	recognize_commands_test.cc	/^TEST(RecognizeCommandsTest, BadInputTimes) {$/;"	f	namespace:tensorflow
+TEST	recognize_commands_test.cc	/^TEST(RecognizeCommandsTest, Basic) {$/;"	f	namespace:tensorflow
+TEST	recognize_commands_test.cc	/^TEST(RecognizeCommandsTest, FindCommands) {$/;"	f	namespace:tensorflow
+TrainTest	train_test.py	/^class TrainTest(test.TestCase):$/;"	c
+UNKNOWN_WORD_INDEX	input_data.py	/^UNKNOWN_WORD_INDEX = 1$/;"	v
+UNKNOWN_WORD_LABEL	input_data.py	/^UNKNOWN_WORD_LABEL = '_unknown_'$/;"	v
+WavToFeaturesTest	wav_to_features_test.py	/^class WavToFeaturesTest(test.TestCase):$/;"	c
+__init__	accuracy_utils.py	/^  def __init__(self):$/;"	m	class:StreamingAccuracyStats
+__init__	input_data.py	/^  def __init__(self, data_url, data_dir, silence_percentage, unknown_percentage,$/;"	m	class:AudioProcessor
+__init__	recognize_commands.py	/^  def __init__(self):$/;"	m	class:RecognizeResult
+__init__	recognize_commands.py	/^  def __init__(self, labels, average_window_duration_ms, detection_threshold,$/;"	m	class:RecognizeCommands
+__init__	train_test.py	/^  def __init__(self, **entries):$/;"	m	class:DictStruct
+_getDefaultFlags	train_test.py	/^  def _getDefaultFlags(self):$/;"	m	class:TrainTest
+_getWavData	input_data_test.py	/^  def _getWavData(self):$/;"	m	class:InputDataTest
+_getWavData	label_wav_test.py	/^  def _getWavData(self):$/;"	m	class:LabelWavTest
+_getWavData	train_test.py	/^  def _getWavData(self):$/;"	m	class:TrainTest
+_getWavData	wav_to_features_test.py	/^  def _getWavData(self):$/;"	m	class:WavToFeaturesTest
+_modelSettings	models_test.py	/^  def _modelSettings(self):$/;"	m	class:ModelsTest
+_model_settings	input_data_test.py	/^  def _model_settings(self):$/;"	m	class:InputDataTest
+_next_power_of_two	models.py	/^def _next_power_of_two(x):$/;"	f
+_prepareDummyTrainingData	train_test.py	/^  def _prepareDummyTrainingData(self):$/;"	m	class:TrainTest
+_progress	input_data.py	/^      def _progress(count, block_size, total_size):$/;"	f	function:AudioProcessor.maybe_download_and_extract_dataset
+_runGetDataTest	input_data_test.py	/^  def _runGetDataTest(self, preprocess, window_length_ms):$/;"	m	class:InputDataTest
+_saveTestWavFile	input_data_test.py	/^  def _saveTestWavFile(self, filename, wav_data):$/;"	m	class:InputDataTest
+_saveTestWavFile	label_wav_test.py	/^  def _saveTestWavFile(self, filename, wav_data):$/;"	m	class:LabelWavTest
+_saveTestWavFile	train_test.py	/^  def _saveTestWavFile(self, filename, wav_data):$/;"	m	class:TrainTest
+_saveTestWavFile	wav_to_features_test.py	/^  def _saveTestWavFile(self, filename, wav_data):$/;"	m	class:WavToFeaturesTest
+_saveWavFolders	input_data_test.py	/^  def _saveWavFolders(self, root_dir, labels, how_many):$/;"	m	class:InputDataTest
+_saveWavFolders	train_test.py	/^  def _saveWavFolders(self, root_dir, labels, how_many):$/;"	m	class:TrainTest
+_saveWavFolders	wav_to_features_test.py	/^  def _saveWavFolders(self, root_dir, labels, how_many):$/;"	m	class:WavToFeaturesTest
+action	test_streaming_accuracy.py	/^      action='store_true',$/;"	v
+average_window_duration_ms_	recognize_commands.h	/^  int32 average_window_duration_ms_;$/;"	m	class:tensorflow::RecognizeCommands
+calculate_accuracy_stats	accuracy_utils.py	/^  def calculate_accuracy_stats(self, found_words, up_to_time_ms,$/;"	m	class:StreamingAccuracyStats
+create_conv_model	models.py	/^def create_conv_model(fingerprint_input, model_settings, is_training):$/;"	f
+create_inference_graph	freeze.py	/^def create_inference_graph(wanted_words, sample_rate, clip_duration_ms,$/;"	f
+create_low_latency_conv_model	models.py	/^def create_low_latency_conv_model(fingerprint_input, model_settings,$/;"	f
+create_low_latency_svdf_model	models.py	/^def create_low_latency_svdf_model(fingerprint_input, model_settings,$/;"	f
+create_model	models.py	/^def create_model(fingerprint_input, model_settings, model_architecture,$/;"	f
+create_single_fc_model	models.py	/^def create_single_fc_model(fingerprint_input, model_settings, is_training):$/;"	f
+create_tiny_conv_model	models.py	/^def create_tiny_conv_model(fingerprint_input, model_settings, is_training):$/;"	f
+create_tiny_embedding_conv_model	models.py	/^def create_tiny_embedding_conv_model(fingerprint_input, model_settings,$/;"	f
+default	freeze.py	/^      default='',$/;"	v
+default	freeze.py	/^      default='conv',$/;"	v
+default	freeze.py	/^      default='mfcc',$/;"	v
+default	freeze.py	/^      default='yes,no,up,down,left,right,on,off,stop,go',$/;"	v
+default	freeze.py	/^      default=10.0,$/;"	v
+default	freeze.py	/^      default=1000,$/;"	v
+default	freeze.py	/^      default=16000,$/;"	v
+default	freeze.py	/^      default=30,$/;"	v
+default	freeze.py	/^      default=30.0,$/;"	v
+default	freeze.py	/^      default=40,$/;"	v
+default	freeze.py	/^      default=False,$/;"	v
+default	generate_streaming_test_wav.py	/^      default='',$/;"	v
+default	generate_streaming_test_wav.py	/^      default='\/tmp\/speech_commands_train\/streaming_test.wav',$/;"	v
+default	generate_streaming_test_wav.py	/^      default='\/tmp\/speech_commands_train\/streaming_test_labels.txt',$/;"	v
+default	generate_streaming_test_wav.py	/^      default='\/tmp\/speech_dataset',$/;"	v
+default	generate_streaming_test_wav.py	/^      default='https:\/\/storage.googleapis.com\/download.tensorflow.org\/data\/speech_commands_v0.01.tar.gz',$/;"	v
+default	generate_streaming_test_wav.py	/^      default='yes,no,up,down,left,right,on,off,stop,go',$/;"	v
+default	generate_streaming_test_wav.py	/^      default=0.1,$/;"	v
+default	generate_streaming_test_wav.py	/^      default=0.8,$/;"	v
+default	generate_streaming_test_wav.py	/^      default=10,$/;"	v
+default	generate_streaming_test_wav.py	/^      default=10.0,$/;"	v
+default	generate_streaming_test_wav.py	/^      default=1000,$/;"	v
+default	generate_streaming_test_wav.py	/^      default=16000,$/;"	v
+default	generate_streaming_test_wav.py	/^      default=2000,$/;"	v
+default	generate_streaming_test_wav.py	/^      default=30,$/;"	v
+default	generate_streaming_test_wav.py	/^      default=30.0,$/;"	v
+default	generate_streaming_test_wav.py	/^      default=40,$/;"	v
+default	generate_streaming_test_wav.py	/^      default=600,$/;"	v
+default	test_streaming_accuracy.py	/^      default='',$/;"	v
+default	test_streaming_accuracy.py	/^      default='labels_softmax:0',$/;"	v
+default	test_streaming_accuracy.py	/^      default=0.7,$/;"	v
+default	test_streaming_accuracy.py	/^      default=1000,$/;"	v
+default	test_streaming_accuracy.py	/^      default=1500,$/;"	v
+default	test_streaming_accuracy.py	/^      default=30,$/;"	v
+default	test_streaming_accuracy.py	/^      default=500,$/;"	v
+default	test_streaming_accuracy.py	/^      default=False,$/;"	v
+default	test_streaming_accuracy.py	/^      default=['decoded_sample_data:0', 'decoded_sample_data:1'],$/;"	v
+default	train.py	/^      default='',$/;"	v
+default	train.py	/^      default='0.001,0.0001',$/;"	v
+default	train.py	/^      default='15000,3000',$/;"	v
+default	train.py	/^      default='\/tmp\/retrain_logs',$/;"	v
+default	train.py	/^      default='\/tmp\/speech_commands_train',$/;"	v
+default	train.py	/^      default='\/tmp\/speech_dataset\/',$/;"	v
+default	train.py	/^      default='conv',$/;"	v
+default	train.py	/^      default='https:\/\/storage.googleapis.com\/download.tensorflow.org\/data\/speech_commands_v0.02.tar.gz',$/;"	v
+default	train.py	/^      default='mfcc',$/;"	v
+default	train.py	/^      default='yes,no,up,down,left,right,on,off,stop,go',$/;"	v
+default	train.py	/^      default=0.1,$/;"	v
+default	train.py	/^      default=0.8,$/;"	v
+default	train.py	/^      default=10,$/;"	v
+default	train.py	/^      default=10.0,$/;"	v
+default	train.py	/^      default=100,$/;"	v
+default	train.py	/^      default=100.0,$/;"	v
+default	train.py	/^      default=1000,$/;"	v
+default	train.py	/^      default=16000,$/;"	v
+default	train.py	/^      default=30.0,$/;"	v
+default	train.py	/^      default=40,$/;"	v
+default	train.py	/^      default=400,$/;"	v
+default	train.py	/^      default=False,$/;"	v
+delta	accuracy_utils.py	/^  def delta(self):$/;"	m	class:StreamingAccuracyStats
+detection_threshold_	recognize_commands.h	/^  float detection_threshold_;$/;"	m	class:tensorflow::RecognizeCommands
+founded_command	recognize_commands.py	/^  def founded_command(self):$/;"	m	class:RecognizeResult
+founded_command	recognize_commands.py	/^  def founded_command(self, value):$/;"	m	class:RecognizeResult
+frontend_op	freeze.py	/^  frontend_op = None$/;"	v
+frontend_op	input_data.py	/^  frontend_op = None$/;"	v
+get_data	input_data.py	/^  def get_data(self, how_many, offset, model_settings, background_frequency,$/;"	m	class:AudioProcessor
+get_features_for_wav	input_data.py	/^  def get_features_for_wav(self, wav_filename, model_settings, sess):$/;"	m	class:AudioProcessor
+get_features_range	input_data.py	/^def get_features_range(model_settings):$/;"	f
+get_unprocessed_data	input_data.py	/^  def get_unprocessed_data(self, how_many, model_settings, mode):$/;"	m	class:AudioProcessor
+help	freeze.py	/^      help='Expected duration in milliseconds of the wavs',)$/;"	v
+help	freeze.py	/^      help='Expected sample rate of the wavs',)$/;"	v
+help	freeze.py	/^      help='How long each spectrogram timeslice is',)$/;"	v
+help	freeze.py	/^      help='How long the stride is between spectrogram timeslices',)$/;"	v
+help	freeze.py	/^      help='How many bins to use for the MFCC fingerprint',$/;"	v
+help	freeze.py	/^      help='How often to run recognition. Useful for models with cache.',)$/;"	v
+help	freeze.py	/^      help='If specified, restore this pretrained model before any training.')$/;"	v
+help	freeze.py	/^      help='Spectrogram processing mode. Can be "mfcc" or "average"')$/;"	v
+help	freeze.py	/^      help='What model architecture to use')$/;"	v
+help	freeze.py	/^      help='Whether to train the model for eight-bit deployment')$/;"	v
+help	freeze.py	/^      help='Words to use (others will be added to an unknown label)',)$/;"	v
+help	generate_streaming_test_wav.py	/^      help='Expected duration in milliseconds of the wavs.',)$/;"	v
+help	generate_streaming_test_wav.py	/^      help='Expected sample rate of the wavs.',)$/;"	v
+help	generate_streaming_test_wav.py	/^      help='File to save the generated test audio to.')$/;"	v
+help	generate_streaming_test_wav.py	/^      help='File to save the generated test labels to.')$/;"	v
+help	generate_streaming_test_wav.py	/^      help='How long each spectrogram timeslice is',)$/;"	v
+help	generate_streaming_test_wav.py	/^      help='How long the average gap should be between words.',)$/;"	v
+help	generate_streaming_test_wav.py	/^      help='How long the generated test audio file should be.',)$/;"	v
+help	generate_streaming_test_wav.py	/^      help='How long the stride is between spectrogram timeslices',)$/;"	v
+help	generate_streaming_test_wav.py	/^      help='How many bins to use for the MFCC fingerprint',$/;"	v
+help	generate_streaming_test_wav.py	/^      help='Location of speech training data')$/;"	v
+help	generate_streaming_test_wav.py	/^      help='What percentage of wavs to use as a test set.')$/;"	v
+help	generate_streaming_test_wav.py	/^      help='What percentage of wavs to use as a validation set.')$/;"	v
+help	generate_streaming_test_wav.py	/^      help='What percentage of words should be unknown.')$/;"	v
+help	generate_streaming_test_wav.py	/^      help='Words to use (others will be added to an unknown label)',)$/;"	v
+help	test_streaming_accuracy.py	/^      help='Input name list involved in model graph.')$/;"	v
+help	test_streaming_accuracy.py	/^      help='Length of audio clip stride over main trap.')$/;"	v
+help	test_streaming_accuracy.py	/^      help='Length of average window used for smoothing results.')$/;"	v
+help	test_streaming_accuracy.py	/^      help='Length of each audio clip fed into model.')$/;"	v
+help	test_streaming_accuracy.py	/^      help='Output name involved in model graph.')$/;"	v
+help	test_streaming_accuracy.py	/^      help='The confidence for filtering unreliable commands')$/;"	v
+help	test_streaming_accuracy.py	/^      help='The ground truth file path corresponding to wav file.')$/;"	v
+help	test_streaming_accuracy.py	/^      help='The label file path containing all possible classes.')$/;"	v
+help	test_streaming_accuracy.py	/^      help='The time interval between every two adjacent commands')$/;"	v
+help	test_streaming_accuracy.py	/^      help='Time tolerance before and after the timestamp of this audio clip '$/;"	v
+help	test_streaming_accuracy.py	/^      help='Whether to print streaming accuracy on stdout.')$/;"	v
+help	train.py	/^      help='Directory to write event logs and checkpoint.')$/;"	v
+help	train.py	/^      help='Expected duration in milliseconds of the wavs',)$/;"	v
+help	train.py	/^      help='Expected sample rate of the wavs',)$/;"	v
+help	train.py	/^      help='How far to move in time between spectrogram timeslices.',$/;"	v
+help	train.py	/^      help='How large a learning rate to use when training.')$/;"	v
+help	train.py	/^      help='How long each spectrogram timeslice is.',)$/;"	v
+help	train.py	/^      help='How many bins to use for the MFCC fingerprint',$/;"	v
+help	train.py	/^      help='How many items to train with at once',)$/;"	v
+help	train.py	/^      help='How many training loops to run',)$/;"	v
+help	train.py	/^      help='How often to evaluate the training results.')$/;"	v
+help	train.py	/^      help='If specified, restore this pretrained model before any training.')$/;"	v
+help	train.py	/^      help='Location of speech training data archive on the web.')$/;"	v
+help	train.py	/^      help='Save model checkpoint every save_steps.')$/;"	v
+help	train.py	/^      help='Spectrogram processing mode. Can be "mfcc", "average", or "micro"')$/;"	v
+help	train.py	/^      help='What model architecture to use')$/;"	v
+help	train.py	/^      help='What percentage of wavs to use as a test set.')$/;"	v
+help	train.py	/^      help='What percentage of wavs to use as a validation set.')$/;"	v
+help	train.py	/^      help='Where to save summary logs for TensorBoard.')$/;"	v
+help	train.py	/^      help='Whether to check for invalid numbers during processing')$/;"	v
+help	train.py	/^      help='Whether to train the model for eight-bit deployment')$/;"	v
+help	train.py	/^      help='Words to use (others will be added to an unknown label)',)$/;"	v
+how_many_correct_words	accuracy_utils.h	/^  int32 how_many_correct_words;$/;"	m	struct:tensorflow::StreamingAccuracyStats
+how_many_false_positives	accuracy_utils.h	/^  int32 how_many_false_positives;$/;"	m	struct:tensorflow::StreamingAccuracyStats
+how_many_ground_truth_matched	accuracy_utils.h	/^  int32 how_many_ground_truth_matched;$/;"	m	struct:tensorflow::StreamingAccuracyStats
+how_many_ground_truth_words	accuracy_utils.h	/^  int32 how_many_ground_truth_words;$/;"	m	struct:tensorflow::StreamingAccuracyStats
+how_many_wrong_words	accuracy_utils.h	/^  int32 how_many_wrong_words;$/;"	m	struct:tensorflow::StreamingAccuracyStats
+is_new_command	recognize_commands.py	/^  def is_new_command(self):$/;"	m	class:RecognizeResult
+is_new_command	recognize_commands.py	/^  def is_new_command(self, value):$/;"	m	class:RecognizeResult
+label_wav	label_wav.py	/^def label_wav(wav, labels, graph, input_name, output_name, how_many_labels):$/;"	f
+label_wav	label_wav_dir.py	/^def label_wav(wav_dir, labels, graph, input_name, output_name, how_many_labels):$/;"	f
+labels_	recognize_commands.h	/^  std::vector<string> labels_;$/;"	m	class:tensorflow::RecognizeCommands
+labels_count_	recognize_commands.h	/^  int64 labels_count_;$/;"	m	class:tensorflow::RecognizeCommands
+load_graph	label_wav.py	/^def load_graph(filename):$/;"	f
+load_graph	label_wav_dir.py	/^def load_graph(filename):$/;"	f
+load_graph	test_streaming_accuracy.py	/^def load_graph(mode_file):$/;"	f
+load_labels	label_wav.py	/^def load_labels(filename):$/;"	f
+load_labels	label_wav_dir.py	/^def load_labels(filename):$/;"	f
+load_variables_from_checkpoint	models.py	/^def load_variables_from_checkpoint(sess, start_checkpoint):$/;"	f
+load_wav_file	input_data.py	/^def load_wav_file(filename):$/;"	f
+main	freeze.py	/^def main(_):$/;"	f
+main	generate_streaming_test_wav.py	/^def main(_):$/;"	f
+main	label_wav.cc	/^int main(int argc, char* argv[]) {$/;"	f
+main	label_wav.py	/^def main(_):$/;"	f
+main	label_wav_dir.py	/^def main(_):$/;"	f
+main	test_streaming_accuracy.cc	/^int main(int argc, char* argv[]) {$/;"	f
+main	test_streaming_accuracy.py	/^def main(_):$/;"	f
+main	train.py	/^def main(_):$/;"	f
+main	wav_to_features.py	/^def main(_):$/;"	f
+maybe_download_and_extract_dataset	input_data.py	/^  def maybe_download_and_extract_dataset(self, data_url, dest_directory):$/;"	m	class:AudioProcessor
+minimum_count_	recognize_commands.h	/^  int32 minimum_count_;$/;"	m	class:tensorflow::RecognizeCommands
+mix_in_audio_sample	generate_streaming_test_wav.py	/^def mix_in_audio_sample(track_data, track_offset, sample_data, sample_offset,$/;"	f
+nargs	test_streaming_accuracy.py	/^      nargs='+',$/;"	v
+parser	freeze.py	/^  parser = argparse.ArgumentParser()$/;"	v
+parser	generate_streaming_test_wav.py	/^  parser = argparse.ArgumentParser()$/;"	v
+parser	test_streaming_accuracy.py	/^  parser = argparse.ArgumentParser(description='test_streaming_accuracy')$/;"	v
+parser	train.py	/^  parser = argparse.ArgumentParser()$/;"	v
+prepare_background_data	input_data.py	/^  def prepare_background_data(self):$/;"	m	class:AudioProcessor
+prepare_data_index	input_data.py	/^  def prepare_data_index(self, silence_percentage, unknown_percentage,$/;"	m	class:AudioProcessor
+prepare_model_settings	models.py	/^def prepare_model_settings(label_count, sample_rate, clip_duration_ms,$/;"	f
+prepare_processing_graph	input_data.py	/^  def prepare_processing_graph(self, model_settings, summaries_dir):$/;"	m	class:AudioProcessor
+prepare_words_list	input_data.py	/^def prepare_words_list(wanted_words):$/;"	f
+previous_results_	recognize_commands.h	/^  std::deque<std::pair<int64, Tensor>> previous_results_;$/;"	m	class:tensorflow::RecognizeCommands
+previous_top_label_	recognize_commands.h	/^  string previous_top_label_;$/;"	m	class:tensorflow::RecognizeCommands
+previous_top_label_time_	recognize_commands.h	/^  int64 previous_top_label_time_;$/;"	m	class:tensorflow::RecognizeCommands
+print_accuracy_stats	accuracy_utils.py	/^  def print_accuracy_stats(self):$/;"	m	class:StreamingAccuracyStats
+process_latest_result	recognize_commands.py	/^  def process_latest_result(self, latest_results, current_time_ms,$/;"	m	class:RecognizeCommands
+read_ground_truth_file	accuracy_utils.py	/^  def read_ground_truth_file(self, file_name):$/;"	m	class:StreamingAccuracyStats
+read_label_file	test_streaming_accuracy.py	/^def read_label_file(file_name):$/;"	f
+read_wav_file	test_streaming_accuracy.py	/^def read_wav_file(filename):$/;"	f
+requires_contrib	train_test.py	/^def requires_contrib(test_method):$/;"	f
+run_graph	label_wav.py	/^def run_graph(wav_data, labels, input_layer_name, output_layer_name,$/;"	f
+run_graph	label_wav_dir.py	/^def run_graph(wav_dir, labels, input_layer_name, output_layer_name,$/;"	f
+save_wav_file	input_data.py	/^def save_wav_file(filename, wav_data, sample_rate):$/;"	f
+score	recognize_commands.py	/^  def score(self):$/;"	m	class:RecognizeResult
+score	recognize_commands.py	/^  def score(self, value):$/;"	m	class:RecognizeResult
+set_size	input_data.py	/^  def set_size(self, mode):$/;"	m	class:AudioProcessor
+suppression_ms_	recognize_commands.h	/^  int32 suppression_ms_;$/;"	m	class:tensorflow::RecognizeCommands
+tensorflow	accuracy_utils.cc	/^namespace tensorflow {$/;"	n	file:
+tensorflow	accuracy_utils.h	/^namespace tensorflow {$/;"	n
+tensorflow	accuracy_utils_test.cc	/^namespace tensorflow {$/;"	n	file:
+tensorflow	recognize_commands.cc	/^namespace tensorflow {$/;"	n	file:
+tensorflow	recognize_commands.h	/^namespace tensorflow {$/;"	n
+tensorflow	recognize_commands_test.cc	/^namespace tensorflow {$/;"	n	file:
+testCreateInferenceGraphWithMfcc	freeze_test.py	/^  def testCreateInferenceGraphWithMfcc(self):$/;"	m	class:FreezeTest
+testCreateInferenceGraphWithMicro	freeze_test.py	/^  def testCreateInferenceGraphWithMicro(self):$/;"	m	class:FreezeTest
+testCreateInferenceGraphWithoutMfcc	freeze_test.py	/^  def testCreateInferenceGraphWithoutMfcc(self):$/;"	m	class:FreezeTest
+testCreateModelBadArchitecture	models_test.py	/^  def testCreateModelBadArchitecture(self):$/;"	m	class:ModelsTest
+testCreateModelConvInference	models_test.py	/^  def testCreateModelConvInference(self):$/;"	m	class:ModelsTest
+testCreateModelConvTraining	models_test.py	/^  def testCreateModelConvTraining(self):$/;"	m	class:ModelsTest
+testCreateModelFullyConnectedTraining	models_test.py	/^  def testCreateModelFullyConnectedTraining(self):$/;"	m	class:ModelsTest
+testCreateModelLowLatencyConvTraining	models_test.py	/^  def testCreateModelLowLatencyConvTraining(self):$/;"	m	class:ModelsTest
+testCreateModelTinyConvTraining	models_test.py	/^  def testCreateModelTinyConvTraining(self):$/;"	m	class:ModelsTest
+testFeatureBinCount	freeze_test.py	/^  def testFeatureBinCount(self):$/;"	m	class:FreezeTest
+testGetDataAverage	input_data_test.py	/^  def testGetDataAverage(self):$/;"	m	class:InputDataTest
+testGetDataAverageLongWindow	input_data_test.py	/^  def testGetDataAverageLongWindow(self):$/;"	m	class:InputDataTest
+testGetDataMfcc	input_data_test.py	/^  def testGetDataMfcc(self):$/;"	m	class:InputDataTest
+testGetDataMicro	input_data_test.py	/^  def testGetDataMicro(self):$/;"	m	class:InputDataTest
+testGetFeaturesForWav	input_data_test.py	/^  def testGetFeaturesForWav(self):$/;"	m	class:InputDataTest
+testGetFeaturesRange	input_data_test.py	/^  def testGetFeaturesRange(self):$/;"	m	class:InputDataTest
+testGetMfccFeaturesRange	input_data_test.py	/^  def testGetMfccFeaturesRange(self):$/;"	m	class:InputDataTest
+testGetUnprocessedData	input_data_test.py	/^  def testGetUnprocessedData(self):$/;"	m	class:InputDataTest
+testLabelWav	label_wav_test.py	/^  def testLabelWav(self):$/;"	m	class:LabelWavTest
+testLoadWavFile	input_data_test.py	/^  def testLoadWavFile(self):$/;"	m	class:InputDataTest
+testMixInAudioSample	generate_streaming_test_wav_test.py	/^  def testMixInAudioSample(self):$/;"	m	class:GenerateStreamingTestWavTest
+testPrepareBackgroundData	input_data_test.py	/^  def testPrepareBackgroundData(self):$/;"	m	class:InputDataTest
+testPrepareDataIndex	input_data_test.py	/^  def testPrepareDataIndex(self):$/;"	m	class:InputDataTest
+testPrepareDataIndexEmpty	input_data_test.py	/^  def testPrepareDataIndexEmpty(self):$/;"	m	class:InputDataTest
+testPrepareDataIndexMissing	input_data_test.py	/^  def testPrepareDataIndexMissing(self):$/;"	m	class:InputDataTest
+testPrepareModelSettings	models_test.py	/^  def testPrepareModelSettings(self):$/;"	m	class:ModelsTest
+testPrepareProcessingGraph	input_data_test.py	/^  def testPrepareProcessingGraph(self):$/;"	m	class:InputDataTest
+testPrepareWordsList	input_data_test.py	/^  def testPrepareWordsList(self):$/;"	m	class:InputDataTest
+testSaveWavFile	input_data_test.py	/^  def testSaveWavFile(self):$/;"	m	class:InputDataTest
+testTrain	train_test.py	/^  def testTrain(self):$/;"	m	class:TrainTest
+testWavToFeatures	wav_to_features_test.py	/^  def testWavToFeatures(self):$/;"	m	class:WavToFeaturesTest
+testWavToFeaturesMicro	wav_to_features_test.py	/^  def testWavToFeaturesMicro(self):$/;"	m	class:WavToFeaturesTest
+testWhichSet	input_data_test.py	/^  def testWhichSet(self):$/;"	m	class:InputDataTest
+type	freeze.py	/^      type=bool,$/;"	v
+type	freeze.py	/^      type=float,$/;"	v
+type	freeze.py	/^      type=int,$/;"	v
+type	freeze.py	/^      type=str,$/;"	v
+type	generate_streaming_test_wav.py	/^      type=float,$/;"	v
+type	generate_streaming_test_wav.py	/^      type=int,$/;"	v
+type	generate_streaming_test_wav.py	/^      type=str,$/;"	v
+type	test_streaming_accuracy.py	/^      type=float,$/;"	v
+type	test_streaming_accuracy.py	/^      type=int,$/;"	v
+type	test_streaming_accuracy.py	/^      type=str,$/;"	v
+type	train.py	/^      type=bool,$/;"	v
+type	train.py	/^      type=float,$/;"	v
+type	train.py	/^      type=int,$/;"	v
+type	train.py	/^      type=str,$/;"	v
+verbosity_arg	train.py	/^  def verbosity_arg(value):$/;"	f
+wav_to_features	wav_to_features.py	/^def wav_to_features(sample_rate, clip_duration_ms, window_size_ms,$/;"	f
+which_set	input_data.py	/^def which_set(filename, validation_percentage, testing_percentage):$/;"	f
