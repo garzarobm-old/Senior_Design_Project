@@ -96,13 +96,10 @@ $(wildcard tensorflow/lite/micro/memory_planner/*test.cc)
 MICROLITE_TEST_HDRS := \
 $(wildcard tensorflow/lite/micro/testing/*.h)
 
-<<<<<<< HEAD
 ######miguel starting putting inputs after kernel_util.cc
 
-=======
 
 #miguel added import here
->>>>>>> 2ca68e2e51b460584feca6c2622c19ab02c6b5c9
 MICROLITE_CC_BASE_SRCS := \
 $(wildcard tensorflow/lite/micro/*.cc) \
 $(wildcard tensorflow/lite/micro/kernels/*.cc) \
