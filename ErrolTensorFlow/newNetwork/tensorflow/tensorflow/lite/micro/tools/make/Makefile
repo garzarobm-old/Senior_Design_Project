@@ -96,8 +96,13 @@ $(wildcard tensorflow/lite/micro/memory_planner/*test.cc)
 MICROLITE_TEST_HDRS := \
 $(wildcard tensorflow/lite/micro/testing/*.h)
 
+<<<<<<< HEAD
 ######miguel starting putting inputs after kernel_util.cc
 
+=======
+
+#miguel added import here
+>>>>>>> 2ca68e2e51b460584feca6c2622c19ab02c6b5c9
 MICROLITE_CC_BASE_SRCS := \
 $(wildcard tensorflow/lite/micro/*.cc) \
 $(wildcard tensorflow/lite/micro/kernels/*.cc) \
@@ -110,6 +115,7 @@ tensorflow/lite/core/api/tensor_utils.cc \
 tensorflow/lite/kernels/internal/quantization_util.cc \
 tensorflow/lite/kernels/kernel_util.cc \
 tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/ble_freetos_fit_lp.cc \
+
 
 
 MICROLITE_CC_SRCS := $(filter-out $(MICROLITE_TEST_SRCS), $(MICROLITE_CC_BASE_SRCS))

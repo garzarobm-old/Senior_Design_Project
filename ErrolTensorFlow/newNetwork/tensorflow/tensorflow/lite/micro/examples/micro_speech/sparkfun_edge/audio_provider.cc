@@ -370,8 +370,3 @@ TfLiteStatus GetAudioSamples(tflite::ErrorReporter* error_reporter,
 
 int32_t LatestAudioTimestamp() { return g_latest_audio_timestamp; }
 // Interrupt handler for the ADC.
-extern "C" void call(void) {
-/*start of miguel implement */
-    TF_LITE_REPORT_ERROR(g_adc_dma_error_reporter, "hello");
-/*miguel implement */
-}
