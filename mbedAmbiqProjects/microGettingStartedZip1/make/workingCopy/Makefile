@@ -37,7 +37,7 @@ SRCS += tensorflow/lite/experimental/micro/examples/micro_speech/recognize_comma
 
 
 
-# inlude h files
+# include h files
 INCLUDES := \
 -I. \
 -I./third_party/gemmlowp \

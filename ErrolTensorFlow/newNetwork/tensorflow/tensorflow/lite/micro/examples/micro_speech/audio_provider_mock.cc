@@ -19,13 +19,19 @@ limitations under the License.
 #include "tensorflow/lite/micro/examples/micro_speech/yes_1000ms_sample_data.h"
 
 namespace {
-int16_t g_dummy_audio_data[kMaxAudioSampleSize];
-int32_t g_latest_audio_timestamp = 0;
+	int16_t g_dummy_audio_data[kMaxAudioSampleSize];
+	int32_t g_latest_audio_timestamp = 0;
 }  // namespace
-
+/* Miguel notes:
+the difference between this one and the other way is that it labels
+each number as a certain frequency and takes into account the time that each sample 
+begins (probably if the time it is called is inconsistent
+*/ 
 TfLiteStatus GetAudioSamples(tflite::ErrorReporter* error_reporter,
                              int start_ms, int duration_ms,
                              int* audio_samples_size, int16_t** audio_samples) {
+
+
   const int yes_start = (0 * kAudioSampleFrequency) / 1000;
   const int yes_end = (1000 * kAudioSampleFrequency) / 1000;
   const int no_start = (4000 * kAudioSampleFrequency) / 1000;

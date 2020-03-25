@@ -18,13 +18,20 @@ limitations under the License.
 #include "tensorflow/lite/micro/examples/micro_speech/micro_features/micro_model_settings.h"
 
 namespace {
-int16_t g_dummy_audio_data[kMaxAudioSampleSize];
-int32_t g_latest_audio_timestamp = 0;
+	int16_t g_dummy_audio_data[kMaxAudioSampleSize];
+	int32_t g_latest_audio_timestamp = 0;
 }  // namespace
 
+/* MIGUEL NOTES:
+	when this function gets called it 
+	1. loops through the size and puts all dummy values to zero
+	puts the size to the max (512). 
+OTHER: does a sample frequency of 16000 
+*/
 TfLiteStatus GetAudioSamples(tflite::ErrorReporter* error_reporter,
                              int start_ms, int duration_ms,
                              int* audio_samples_size, int16_t** audio_samples) {
+
   for (int i = 0; i < kMaxAudioSampleSize; ++i) {
     g_dummy_audio_data[i] = 0;
   }

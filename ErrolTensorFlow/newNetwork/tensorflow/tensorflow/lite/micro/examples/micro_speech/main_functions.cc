@@ -28,6 +28,9 @@ limitations under the License.
 #include "tensorflow/lite/schema/schema_generated.h"
 #include "tensorflow/lite/version.h"
 
+//miguel includes
+//#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/ble_freetos_fit_lp.h"
+
 // Globals, used for compatibility with Arduino-style sketches.
 namespace {
 tflite::ErrorReporter* error_reporter = nullptr;
@@ -47,6 +50,13 @@ uint8_t feature_buffer[kFeatureElementCount];
 uint8_t* model_input_buffer = nullptr;
 }  // namespace
 
+
+//possible miguel set up
+void osSetup(){
+
+
+
+}
 // The name of this function is important for Arduino compatibility.
 void setup() {
   // Set up logging. Google style is to avoid globals or statics because of
@@ -54,7 +64,9 @@ void setup() {
   // NOLINTNEXTLINE(runtime-global-variables)
   static tflite::MicroErrorReporter micro_error_reporter;
   error_reporter = &micro_error_reporter;
+	
 
+  //call(error_reporter);
   // Map the model into a usable data structure. This doesn't involve any
   // copying or parsing, it's a very lightweight operation.
   model = tflite::GetModel(g_tiny_conv_micro_features_model_data);
@@ -173,3 +185,4 @@ void loop() {
   RespondToCommand(error_reporter, current_time, found_command, score,
                    is_new_command);
 }
+
