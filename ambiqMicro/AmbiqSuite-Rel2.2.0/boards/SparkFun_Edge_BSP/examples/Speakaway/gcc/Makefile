@@ -260,8 +260,8 @@ OBJS = $(CSRC:%.c=$(CONFIG)/%.o)
 OBJS+= $(ASRC:%.s=$(CONFIG)/%.o)
 OBJS+= $(CXXSRC:%.cc=$(CONFIG)/%.o)
 
-COBJS = $(filter %.c, $(OBJS))
-COBJS+= $(filter %.s, $(OBJS))
+#COBJS = $(filter %.c, $(OBJS))
+#COBJS+= $(filter %.s, $(OBJS))
 
 DEPS = $(CSRC:%.c=$(CONFIG)/%.d)
 DEPS+= $(ASRC:%.s=$(CONFIG)/%.d)
@@ -288,7 +288,7 @@ CXXFLAGS := -std=c++11 -DTF_LITE_STATIC_MEMORY
 CXXFLAGS += -03
 
 LFLAGS = -mthumb -mcpu=$(CPU) -mfpu=$(FPU) -mfloat-abi=$(FABI)
-LFLAGS+= -nostartfiles -static
+LFLAGS+= -nostartfiles -static 
 LFLAGS+= -Wl,--gc-sections,--entry,Reset_Handler,-Map,$(CONFIG)/$(TARGET).map
 LFLAGS+= -Wl,--start-group -lm -lc -lgcc $(LIBS) -Wl,--end-group
 LFLAGS+=  
@@ -320,14 +320,16 @@ $(CONFIG):
 #for C++ files 
 $(CONFIG)/%.o: %.cc $(CONFIG)/%.d
 	@echo " Compiling g++ $<" ;\
-	$(CXX) -c $(CXX_FLAGS) $(CXXINCLUDES) $< -o $@ ; \
+	$(CXX) $(CXX_FLAGS) -c -o $@ $<  ; \
 	mkdir -p $(ADDEDLIBRARY) ;\
-	$(AR) $(ARFLAGS) $(ADDEDLIBRARY)/$(TARGET).a  $(CXXOBJS)
+	$(AR) $(ARFLAGS) $(ADDEDLIBRARY)/$(TARGET).a  $(OBJS)
 #end of c++ files
 
+
+## makes all the .o files for H
 $(CONFIG)/%.o: %.c $(CONFIG)/%.d
 	@echo " Compiling $(COMPILERNAME) $<" ;\
-	$(CC) -c $(CFLAGS) $< -o $@
+	$(CC) -c $(CFLAGS) $< -o $@ 
 
 $(CONFIG)/%.o: %.s $(CONFIG)/%.d
 	@echo " Assembling $(COMPILERNAME) $<" ;\
@@ -340,9 +342,9 @@ $(CONFIG)/%.o: %.s $(CONFIG)/%.d
 	$(AR) $(ARFLAGS) $(ADDEDLIBRARY)/$(TARGET).a $(OBJS)  
 #end of library addition
 
-$(CONFIG)/$(TARGET).axf: $(COBJS) $(LIBS)
+$(CONFIG)/$(TARGET).axf: $(OBJS) $(LIBS)
 	@echo " Linking $(COMPILERNAME) $@" ;\
-	$(CC) -Wl,-T,$(LINKER_FILE) -o $@ $(COBJS) $(LFLAGS)
+	$(CC) -Wl,-T,$(LINKER_FILE) -o $@ $(OBJS) $(LFLAGS) 
 
 $(CONFIG)/$(TARGET).bin: $(CONFIG)/$(TARGET).axf
 	@echo " Copying $(COMPILERNAME) $@..." ;\
