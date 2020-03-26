@@ -1,0 +1,74 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x000000000000c000 0x00000000000f0000 xr
+SRAM             0x0000000010000000 0x0000000000008000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+
+.text           0x000000000000c000        0x0
+                0x000000000000c000                . = ALIGN (0x4)
+ *(.isr_vector)
+ *(.patch)
+ *(.text)
+ *(.text*)
+ *(.rodata)
+ *(.rodata*)
+                0x000000000000c000                . = ALIGN (0x4)
+                0x000000000000c000                _etext = .
+
+.glue_7         0x000000000000c000        0x0
+ .glue_7        0x000000000000c000        0x0 linker stubs
+
+.glue_7t        0x000000000000c000        0x0
+ .glue_7t       0x000000000000c000        0x0 linker stubs
+
+.vfp11_veneer   0x000000000000c000        0x0
+ .vfp11_veneer  0x000000000000c000        0x0 linker stubs
+
+.v4_bx          0x000000000000c000        0x0
+ .v4_bx         0x000000000000c000        0x0 linker stubs
+
+.stack          0x0000000010000000        0x0
+                0x0000000010000000                . = ALIGN (0x8)
+ *(.stack)
+ *(.stack*)
+                0x0000000010000000                . = ALIGN (0x8)
+
+.data           0x0000000010000000        0x0 load address 0x000000000000c000
+                0x0000000010000000                . = ALIGN (0x4)
+                0x0000000010000000                _sdata = .
+ *(.data)
+ *(.data*)
+                0x0000000010000000                . = ALIGN (0x4)
+                0x0000000010000000                _edata = .
+                0x000000000000c000                _init_data = LOADADDR (.data)
+
+.bss            0x0000000010000000        0x0 load address 0x000000000000c000
+                0x0000000010000000                . = ALIGN (0x4)
+                0x0000000010000000                _sbss = .
+ *(.bss)
+ *(.bss*)
+ *(COMMON)
+                0x0000000010000000                . = ALIGN (0x4)
+                0x0000000010000000                _ebss = .
+
+.ARM.attributes
+ *(.ARM.attributes)
+START GROUP
+LOAD /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libm.a
+LOAD /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a
+LOAD /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a
+LOAD ../src/third_party/exactle/projects/generic/stacklib/gcc/bin-cortex-m4/libstacklib.a
+LOAD ../src/mcu/apollo3/hal/gcc/bin/libam_hal.a
+LOAD ../../../bsp/gcc/bin/libam_bsp.a
+LOAD ../src/third_party/uecc/gcc/bin/lib_uecc.a
+END GROUP
+START GROUP
+LOAD /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a
+LOAD /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a
+END GROUP
+OUTPUT(bin/seniorFit.axf elf32-littlearm)

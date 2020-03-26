@@ -14,11 +14,8 @@ limitations under the License.
 ==============================================================================*/
 
 #include "tensorflow/lite/micro/examples/micro_speech/main_functions.h"
-<<<<<<< HEAD
 
-=======
 #include "tensorflow/lite/micro/examples/micro_speech/miguelimport.h"
->>>>>>> 2ca68e2e51b460584feca6c2622c19ab02c6b5c9
 // This is the default main used on systems that have the standard C entry
 // point. Other devices (for example FreeRTOS or ESP32) that have different
 // requirements for entry code (like an app_main function) should specialize
@@ -26,17 +23,10 @@ limitations under the License.
 int main(int argc, char* argv[]) {
 	osSetup(); // Miguel initialization
 	setup();
-<<<<<<< HEAD
-
-	while(1){
-		loop();
-}
 
 
-=======
-	call(); //miguel define
+//	call(); //miguel define
   while (true) {
     loop();
   }
->>>>>>> 2ca68e2e51b460584feca6c2622c19ab02c6b5c9
 }

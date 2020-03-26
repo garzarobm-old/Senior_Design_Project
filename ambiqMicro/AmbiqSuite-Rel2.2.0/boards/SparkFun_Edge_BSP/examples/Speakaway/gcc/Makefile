@@ -127,7 +127,6 @@ INCLUDES+= -I../src/third_party/exactle/apollo-host/projects/common
 INCLUDES+= -I../src/third_party/exactle/ws-core/sw/wsf/include
 INCLUDES+= -I../src/third_party/exactle/ws-core/sw/wsf/ambiq
 INCLUDES+= -I../src/CC/include
-
 CXXINCLUDES= -I../src/CC/include
 
 
@@ -243,11 +242,10 @@ SRC += app_server.c
 SRC += app_slave.c
 SRC += app_slave_leg.c
 SRC += app_terminal.c
-SRC += practiceCall.cc
 SRC += startup_gcc.c
 
 #start of Miguel cc sources
-#CCSRC = practiceCall.cc
+SRC += practiceCall.cc
 
 
 #end of Miguel cc sources
@@ -262,6 +260,9 @@ OBJS = $(CSRC:%.c=$(CONFIG)/%.o)
 OBJS+= $(ASRC:%.s=$(CONFIG)/%.o)
 OBJS+= $(CXXSRC:%.cc=$(CONFIG)/%.o)
 
+COBJS = $(filter %.c, $(OBJS))
+COBJS+= $(filter %.s, $(OBJS))
+
 DEPS = $(CSRC:%.c=$(CONFIG)/%.d)
 DEPS+= $(ASRC:%.s=$(CONFIG)/%.d)
 DEPS+= $(CXXSRC:%.cc=$(CONFIG)/%.d)
@@ -270,6 +271,10 @@ LIBS = ../src/third_party/exactle/projects/generic/stacklib/gcc/bin-cortex-m4/li
 LIBS += ../src/mcu/apollo3/hal/gcc/bin/libam_hal.a
 LIBS += ../../../bsp/gcc/bin/libam_bsp.a
 LIBS += ../src/third_party/uecc/gcc/bin/lib_uecc.a
+
+#MIGUEL ADDED LIBRARY
+ADDEDLIBRARY = $(CONFIG)/lib
+#END OF MIGUEL ADDED LIBRARY
 
 CFLAGS = -mthumb -mcpu=$(CPU) -mfpu=$(FPU) -mfloat-abi=$(FABI)
 CFLAGS+= -ffunction-sections -fdata-sections
@@ -286,9 +291,9 @@ LFLAGS = -mthumb -mcpu=$(CPU) -mfpu=$(FPU) -mfloat-abi=$(FABI)
 LFLAGS+= -nostartfiles -static
 LFLAGS+= -Wl,--gc-sections,--entry,Reset_Handler,-Map,$(CONFIG)/$(TARGET).map
 LFLAGS+= -Wl,--start-group -lm -lc -lgcc $(LIBS) -Wl,--end-group
-LFLAGS+= j 
+LFLAGS+=  
 
-
+ARFLAGS = -rcs
 #MIGUEL DEFINE OF A FILE
 #MICROLITE_LIB_NAME := lib-microlite.a
 
@@ -302,6 +307,11 @@ ODFLAGS = -S
 #### Rules ####
 all: directories $(CONFIG)/$(TARGET).bin
 
+
+#build: directories $(ADDEDLIBRARY)/$(TARGET).a
+
+#link: build $(CONFIG)/$(TARGET).bin
+
 directories: $(CONFIG)
 
 $(CONFIG):
@@ -310,7 +320,9 @@ $(CONFIG):
 #for C++ files 
 $(CONFIG)/%.o: %.cc $(CONFIG)/%.d
 	@echo " Compiling g++ $<" ;\
-	$(CXX) -c $(CXX_FLAGS) $(CXXINCLUDES) $< -o $@ 
+	$(CXX) -c $(CXX_FLAGS) $(CXXINCLUDES) $< -o $@ ; \
+	mkdir -p $(ADDEDLIBRARY) ;\
+	$(AR) $(ARFLAGS) $(ADDEDLIBRARY)/$(TARGET).a  $(CXXOBJS)
 #end of c++ files
 
 $(CONFIG)/%.o: %.c $(CONFIG)/%.d
@@ -321,19 +333,24 @@ $(CONFIG)/%.o: %.s $(CONFIG)/%.d
 	@echo " Assembling $(COMPILERNAME) $<" ;\
 	$(CC) -c $(CFLAGS) $< -o $@
 
-#$(CONFIG)/$(TARGET).axf: $(OBJS) $(LIBS)
-#	@echo " Linking $(COMPILERNAME) $@" ;\
-	$(CC) -Wl,-T,$(LINKER_FILE) -o $@ $(OBJS) $(LFLAGS)
-#$(CONFIG)/$(TARGET).axf $(OBJS) $(LIBS)
-#	@echo " Linking files into .a format" ;\
-	$(CXX) -
-	
+#for adding c and C++ library 
+#$(ADDEDLIBRARY)/$(TARGET).a: $(OBJS) $(LIBS)
+	#@echo " making static library for Tensorflow" ;\
+	mkdir -p $(ADDEDLIBRARY) ;\
+	$(AR) $(ARFLAGS) $(ADDEDLIBRARY)/$(TARGET).a $(OBJS)  
+#end of library addition
+
+$(CONFIG)/$(TARGET).axf: $(COBJS) $(LIBS)
+	@echo " Linking $(COMPILERNAME) $@" ;\
+	$(CC) -Wl,-T,$(LINKER_FILE) -o $@ $(COBJS) $(LFLAGS)
+
 $(CONFIG)/$(TARGET).bin: $(CONFIG)/$(TARGET).axf
 	@echo " Copying $(COMPILERNAME) $@..." ;\
 	$(CP) $(CPFLAGS) $< $@ ;\
 	$(OD) $(ODFLAGS) $< > $(CONFIG)/$(TARGET).lst
+	
 
-clean:#
+clean:
 	@echo "Cleaning..." ;\
 	$(RM) -f $(OBJS) $(DEPS) \
 	    $(CONFIG)/$(TARGET).bin $(CONFIG)/$(TARGET).axf \
@@ -349,6 +366,7 @@ $(CONFIG)/%.d: ;
 
 ../src/third_party/uecc/gcc/bin/lib_uecc.a:
 	$(MAKE) -C ../src/third_party/uecc
+
 
 wired_update: all
 	../src/tools/apollo3_scripts/create_cust_image_blob.py --bin $(CONFIG)/$(TARGET).bin --load-address 0xC000 --magic-num 0xCB -o $(CONFIG)/main_nonsecure_ota --version 0x0

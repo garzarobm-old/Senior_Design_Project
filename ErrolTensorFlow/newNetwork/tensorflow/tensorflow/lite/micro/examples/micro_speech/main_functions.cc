@@ -27,11 +27,8 @@ limitations under the License.
 #include "tensorflow/lite/schema/schema_generated.h"
 #include "tensorflow/lite/version.h"
 
-<<<<<<< HEAD
 //miguel includes
 //#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/ble_freetos_fit_lp.h"
-=======
->>>>>>> 2ca68e2e51b460584feca6c2622c19ab02c6b5c9
 
 // Globals, used for compatibility with Arduino-style sketches.
 namespace {
@@ -192,11 +189,8 @@ void loop() {
                    is_new_command);
 }
 
-<<<<<<< HEAD
-=======
 void call(){
 
     TF_LITE_REPORT_ERROR(error_reporter, "starting call!");
 
 }
->>>>>>> 2ca68e2e51b460584feca6c2622c19ab02c6b5c9

@@ -31,12 +31,9 @@ void setup();
 // compatibility.
 void loop();
 
-<<<<<<< HEAD
 
 
-=======
 void call();
->>>>>>> 2ca68e2e51b460584feca6c2622c19ab02c6b5c9
 #ifdef __cplusplus
 }
 #endif

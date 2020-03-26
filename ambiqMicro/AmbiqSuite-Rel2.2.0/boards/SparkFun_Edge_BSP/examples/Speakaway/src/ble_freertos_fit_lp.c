@@ -187,7 +187,7 @@ main(int argc, char** argv)
 
 	/*start of practice call */
 
-	void *FObjectReturned = getF(1);
+	//void *FObjectReturned = getF(1);
 	/* run application */
     run_tasks();
 
