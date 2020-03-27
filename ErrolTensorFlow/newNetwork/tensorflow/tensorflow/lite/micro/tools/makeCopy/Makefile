@@ -88,7 +88,13 @@ MICROLITE_LIB_NAME := libtensorflow-microlite.a
 
 MICRO_LITE_EXAMPLE_TESTS := $(wildcard tensorflow/lite/micro/examples/*/Makefile.inc)
 
+MICROLITE_TEST_SRCS := \
+$(wildcard tensorflow/lite/micro/*test.cc) \
+$(wildcard tensorflow/lite/micro/kernels/*test.cc) \
+$(wildcard tensorflow/lite/micro/memory_planner/*test.cc)
 
+MICROLITE_TEST_HDRS := \
+$(wildcard tensorflow/lite/micro/testing/*.h)
 
 ######miguel starting putting inputs after kernel_util.cc
 
@@ -105,8 +111,7 @@ tensorflow/lite/core/api/op_resolver.cc \
 tensorflow/lite/core/api/tensor_utils.cc \
 tensorflow/lite/kernels/internal/quantization_util.cc \
 tensorflow/lite/kernels/kernel_util.cc \
-tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/sampleFunctions.c \
-tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/hello.cc 
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/ble_freetos_fit_lp.cc \
 
 
 
@@ -174,9 +179,7 @@ tensorflow/lite/schema/schema_generated.h \
 tensorflow/lite/string_type.h \
 tensorflow/lite/string_util.h \
 tensorflow/lite/type_to_tflitetype.h \
-tensorflow/lite/version.h \
-tensorflow/lite/micro/examples/micro_speech/seniorFitSrc/include/hello.h \
-tensorflow/lite/micro/examples/micro_speech/seniorFitSrc/include/samplefunctions.h
+tensorflow/lite/version.h
 
 THIRD_PARTY_CC_HDRS := \
 third_party/gemmlowp/fixedpoint/fixedpoint.h \
@@ -193,7 +196,14 @@ MAKE_PROJECT_FILES := \
   Makefile \
   .vscode/tasks.json
 
+MBED_PROJECT_FILES := \
+  README_MBED.md \
+  mbed-os.lib \
+  mbed_app.json
 
+KEIL_PROJECT_FILES := \
+  README_KEIL.md \
+  keil_project.uvprojx
 
 ARDUINO_PROJECT_FILES := \
   library.properties
