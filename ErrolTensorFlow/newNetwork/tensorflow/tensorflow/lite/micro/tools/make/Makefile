@@ -90,10 +90,9 @@ MICRO_LITE_EXAMPLE_TESTS := $(wildcard tensorflow/lite/micro/examples/*/Makefile
 
 
 
-######miguel starting putting inputs after kernel_util.cc
+######miguel starting putting inputs after kernel_util.cc################
 
 
-#miguel added import here
 MICROLITE_CC_BASE_SRCS := \
 $(wildcard tensorflow/lite/micro/*.cc) \
 $(wildcard tensorflow/lite/micro/kernels/*.cc) \
@@ -105,8 +104,8 @@ tensorflow/lite/core/api/op_resolver.cc \
 tensorflow/lite/core/api/tensor_utils.cc \
 tensorflow/lite/kernels/internal/quantization_util.cc \
 tensorflow/lite/kernels/kernel_util.cc \
-tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/sampleFunctions.c \
-tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/hello.cc 
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/ble_freertos_fit_lp.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/usingC++ClassesExample.cc 
 
 
 
@@ -175,8 +174,12 @@ tensorflow/lite/string_type.h \
 tensorflow/lite/string_util.h \
 tensorflow/lite/type_to_tflitetype.h \
 tensorflow/lite/version.h \
-tensorflow/lite/micro/examples/micro_speech/seniorFitSrc/include/hello.h \
-tensorflow/lite/micro/examples/micro_speech/seniorFitSrc/include/samplefunctions.h
+tensorflow/lite/micro/examples/micro_speech/seniorFitSrc/include/ble_freertos_fit_lp.h \
+tensorflow/lite/micro/examples/micro_speech/seniorFitSrc/include/usingC++ClassesExample.h
+
+
+
+###############end of miguel imports #############################
 
 THIRD_PARTY_CC_HDRS := \
 third_party/gemmlowp/fixedpoint/fixedpoint.h \

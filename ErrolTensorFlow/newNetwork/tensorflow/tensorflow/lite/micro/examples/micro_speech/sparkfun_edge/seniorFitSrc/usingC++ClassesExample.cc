@@ -3,7 +3,7 @@
 
 
 #include <stdint.h>
-#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/include/hello.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/include/usingC++ClassesExample.h"
 
 
 /*function implementation from a class*/

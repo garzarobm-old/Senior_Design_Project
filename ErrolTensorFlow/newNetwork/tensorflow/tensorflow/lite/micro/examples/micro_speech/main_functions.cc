@@ -29,7 +29,7 @@ limitations under the License.
 #include "tensorflow/lite/version.h"
 
 /* Miguel defines */
-#include "sparkfun_edge/seniorFitSrc/include/sampleFunctions.h"
+#include "sparkfun_edge/seniorFitSrc/include/ble_freertos_fit_lp.h"
 /*end of Miguel defines */
 // Globals, used for compatibility with Arduino-style sketches.
 namespace {
@@ -49,6 +49,15 @@ uint8_t tensor_arena[kTensorArenaSize];
 uint8_t feature_buffer[kFeatureElementCount];
 uint8_t* model_input_buffer = nullptr;
 }  // namespace
+
+
+int ble_main_entry(){
+
+	int ble_main_status = ble_main(0);
+
+
+}
+
 
 // The name of this function is important for Arduino compatibility.
 void setup() {
@@ -71,7 +80,11 @@ void setup() {
     return;
   }
 	/* miguel debugging calls */
-	int b =	h(5);
+	int b =	ble_main(5);
+
+	/* end of miguel debugging calls */
+
+
     TF_LITE_REPORT_ERROR(error_reporter,
                          "the b that was returned is  %d.",
                          b);
