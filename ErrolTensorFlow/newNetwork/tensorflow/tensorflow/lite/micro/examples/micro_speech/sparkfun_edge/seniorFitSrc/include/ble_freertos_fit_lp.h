@@ -17,7 +17,7 @@
 
 #ifdef __cplusplus
 
-extern "C" int bleMain(int i);
+extern "C" int ble_main(int argc, char** argv);
 
 #endif
 

@@ -21,6 +21,15 @@ limitations under the License.
 extern "C" {
 #endif
 
+
+
+
+/*miguel defined functions */
+void ble_main_entry(int argc, char** argv);
+
+void tensorflow_cc_entry();
+/* end of miguel defined functions */
+
 // Initializes all data needed for the example. The name is important, and needs
 // to be setup() for Arduino compatibility.
 void setup();

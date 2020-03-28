@@ -31,32 +31,67 @@ limitations under the License.
 /* Miguel defines */
 #include "sparkfun_edge/seniorFitSrc/include/ble_freertos_fit_lp.h"
 /*end of Miguel defines */
+
 // Globals, used for compatibility with Arduino-style sketches.
 namespace {
-tflite::ErrorReporter* error_reporter = nullptr;
-const tflite::Model* model = nullptr;
-tflite::MicroInterpreter* interpreter = nullptr;
-TfLiteTensor* model_input = nullptr;
-FeatureProvider* feature_provider = nullptr;
-RecognizeCommands* recognizer = nullptr;
-int32_t previous_time = 0;
+	tflite::ErrorReporter* error_reporter = nullptr;
+	const tflite::Model* model = nullptr;
+	tflite::MicroInterpreter* interpreter = nullptr;
+	TfLiteTensor* model_input = nullptr;
+	FeatureProvider* feature_provider = nullptr;
+	RecognizeCommands* recognizer = nullptr;
+	int32_t previous_time = 0;
 
 // Create an area of memory to use for input, output, and intermediate arrays.
 // The size of this will depend on the model you're using, and may need to be
 // determined by experimentation.
-constexpr int kTensorArenaSize = 10 * 1024;
-uint8_t tensor_arena[kTensorArenaSize];
-uint8_t feature_buffer[kFeatureElementCount];
-uint8_t* model_input_buffer = nullptr;
+	constexpr int kTensorArenaSize = 10 * 1024;
+	uint8_t tensor_arena[kTensorArenaSize];
+	uint8_t feature_buffer[kFeatureElementCount];
+	uint8_t* model_input_buffer = nullptr;
 }  // namespace
 
+/*miguel functions */
 
-int ble_main_entry(){
+void ble_main_entry(int argc, char** argv){
 
-	int ble_main_status = ble_main(0);
+	int ble_main_status = ble_main( argc,  argv); //change to void entry if argc does not matter, don't need more stuff to go to stack
 
 
 }
+
+/* tensorflow_cc_entry */
+extern "C" void tensorflow_cc_entry(){
+
+
+	/* accesses spectrograms, can adjust slices and size if needed 
+
+		// Prepare to access the audio spectrograms from a microphone or other source  
+		// that will provide the inputs to the neural network.
+		// MIGUEL COMMENT: feature element count = 40 (slices) * 49 (feature count);
+		// 49 times because the process occurs 49 times
+		// 40 slices because idk yet
+	*/
+
+  static FeatureProvider static_feature_provider(kFeatureElementCount,  feature_buffer);
+  feature_provider = &static_feature_provider;
+
+  static RecognizeCommands static_recognizer(error_reporter);
+  recognizer = &static_recognizer;
+
+  previous_time = 0;
+
+	
+
+}
+
+
+
+/* end of miguel functions */
+
+
+
+
 
 
 // The name of this function is important for Arduino compatibility.
@@ -66,52 +101,55 @@ void setup() {
   // Set up logging. Google style is to avoid globals or statics because of
   // lifetime uncertainty, but since this has a trivial destructor it's okay.
   // NOLINTNEXTLINE(runtime-global-variables)
-  static tflite::MicroErrorReporter micro_error_reporter;
-  error_reporter = &micro_error_reporter;
+		static tflite::MicroErrorReporter micro_error_reporter;
+		error_reporter = &micro_error_reporter;
 
-  // Map the model into a usable data structure. This doesn't involve any
-  // copying or parsing, it's a very lightweight operation.
-  model = tflite::GetModel(g_tiny_conv_micro_features_model_data);
-  if (model->version() != TFLITE_SCHEMA_VERSION) {
-    TF_LITE_REPORT_ERROR(error_reporter,
-                         "Model provided is schema version %d not equal "
-                         "to supported version %d.",
-                         model->version(), TFLITE_SCHEMA_VERSION);
-    return;
-  }
-	/* miguel debugging calls */
-	int b =	ble_main(5);
-
-	/* end of miguel debugging calls */
+		// Map the model into a usable data structure. This doesn't involve any
+		// copying or parsing, it's a very lightweight operation.
+		model = tflite::GetModel(g_tiny_conv_micro_features_model_data);
+		if (model->version() != TFLITE_SCHEMA_VERSION) {
+				TF_LITE_REPORT_ERROR(error_reporter,
+								"Model provided is schema version %d not equal "
+								"to supported version %d.",
+								model->version(), TFLITE_SCHEMA_VERSION);
+				return;
+		}
 
 
-    TF_LITE_REPORT_ERROR(error_reporter,
-                         "the b that was returned is  %d.",
-                         b);
-	/* end of miguel debugging calls */
+		// Pull in only the operation implementations we need.
+		// This relies on a complete list of all the ops needed by this graph.
+		// An easier approach is to just use the AllOpsResolver, but this will
+		// incur some penalty in code space for op implementations that are not
+		// needed by this graph.
 
-  // Pull in only the operation implementations we need.
-  // This relies on a complete list of all the ops needed by this graph.
-  // An easier approach is to just use the AllOpsResolver, but this will
-  // incur some penalty in code space for op implementations that are not
-  // needed by this graph.
-  //
+		//MIGUEL COMMENT: this is really good as it will take less space!
+
+  
   // tflite::ops::micro::AllOpsResolver resolver;
   // NOLINTNEXTLINE(runtime-global-variables)
   static tflite::MicroOpResolver<3> micro_op_resolver;
+	//opiton inputted is AddBuiltin(2, pointer to where it connects);
   micro_op_resolver.AddBuiltin(
-      tflite::BuiltinOperator_DEPTHWISE_CONV_2D,
-      tflite::ops::micro::Register_DEPTHWISE_CONV_2D());
+  								    tflite::BuiltinOperator_DEPTHWISE_CONV_2D,
+      								tflite::ops::micro::Register_DEPTHWISE_CONV_2D());
+	//opiton inputted is AddBuiltin(8, pointer to where it connects);
   micro_op_resolver.AddBuiltin(tflite::BuiltinOperator_FULLY_CONNECTED,
                                tflite::ops::micro::Register_FULLY_CONNECTED());
+
+
+	//opiton inputted is AddBuiltin(25, pointer to where it connects);
   micro_op_resolver.AddBuiltin(tflite::BuiltinOperator_SOFTMAX,
                                tflite::ops::micro::Register_SOFTMAX());
+	
 
+	/* building the interpreter */
+
+	//MIGUEL COMMENT: MAKE SURE IF MODEL GETS BIGGER TO ADJUST THE AREA
   // Build an interpreter to run the model with.
-  static tflite::MicroInterpreter static_interpreter(
-      model, micro_op_resolver, tensor_arena, kTensorArenaSize, error_reporter);
+  static tflite::MicroInterpreter static_interpreter(model, micro_op_resolver, tensor_arena, kTensorArenaSize, error_reporter);
   interpreter = &static_interpreter;
 
+	
   // Allocate memory from the tensor_arena for the model's tensors.
   TfLiteStatus allocate_status = interpreter->AllocateTensors();
   if (allocate_status != kTfLiteOk) {
@@ -131,23 +169,21 @@ void setup() {
   }
   model_input_buffer = model_input->data.uint8;
 
-  // Prepare to access the audio spectrograms from a microphone or other source
-  // that will provide the inputs to the neural network.
-  // NOLINTNEXTLINE(runtime-global-variables)
-  static FeatureProvider static_feature_provider(kFeatureElementCount,
-                                                 feature_buffer);
-  feature_provider = &static_feature_provider;
+	/*end of building the interpreter */
 
-  static RecognizeCommands static_recognizer(error_reporter);
-  recognizer = &static_recognizer;
-
-  previous_time = 0;
 }
 
 // The name of this function is important for Arduino compatibility.
 void loop() {
   // Fetch the spectrogram for the current time.
   const int32_t current_time = LatestAudioTimestamp();
+
+	/* start of MIGUEL DEBUGGING:  */
+    TF_LITE_REPORT_ERROR(error_reporter, "current_time = %d", current_time);
+	/* end of MIGUEL DEBUGGING */
+
+
+
   int how_many_new_slices = 0;
   TfLiteStatus feature_status = feature_provider->PopulateFeatureData(
       error_reporter, previous_time, current_time, &how_many_new_slices);
@@ -155,7 +191,9 @@ void loop() {
     TF_LITE_REPORT_ERROR(error_reporter, "Feature generation failed");
     return;
   }
+
   previous_time = current_time;
+
   // If no new audio samples have been received since last time, don't bother
   // running the network model.
   if (how_many_new_slices == 0) {
@@ -176,17 +214,20 @@ void loop() {
 
   // Obtain a pointer to the output tensor
   TfLiteTensor* output = interpreter->output(0);
+
   // Determine whether a command was recognized based on the output of inference
   const char* found_command = nullptr;
   uint8_t score = 0;
   bool is_new_command = false;
-  TfLiteStatus process_status = recognizer->ProcessLatestResults(
-      output, current_time, &found_command, &score, &is_new_command);
+  TfLiteStatus process_status = recognizer->ProcessLatestResults( output, current_time, &found_command, &score, &is_new_command);
   if (process_status != kTfLiteOk) {
     TF_LITE_REPORT_ERROR(error_reporter,
                          "RecognizeCommands::ProcessLatestResults() failed");
     return;
   }
+	/*MIGUEL DEBUGGING RESPONSE */
+  	TF_LITE_REPORT_ERROR(error_reporter, "\nHeard %s (%d) @%dms", found_command, score, current_time);
+	/*end of MIGUEL DEBUGGING RESPONSE */
   // Do something based on the recognized command. The default implementation
   // just prints to the error console, but you should replace this with your
   // own function for a real application.

@@ -680,3 +680,13 @@ not forget to remove the instance when training is done:
 ```
 gcloud compute instances delete "${INSTANCE_NAME}" --zone="${ZONE}"
 ```
+
+
+
+
+
+
+
+# miguel has added to his and here as his research facts and comments
+
+ inline const just means that I cannot mess with the function definition (because it is one line) as it will return an object that will be untouched

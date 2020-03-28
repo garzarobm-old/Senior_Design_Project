@@ -53,8 +53,25 @@
 
 #include <stdint.h>
 
+
+
  /* C code: */
-int bleMain(int argc, char** argv)	{
+int ble_main(int argc, char** argv)	{
+
+
+	//should execute ble code here.
+
+
+
+
+
 	
-	return i + 2;
+
+	//call to test c++ entry
+	tensorflow_cc_entry();
+	setup();	
+
+
+
+	return 1;
 }

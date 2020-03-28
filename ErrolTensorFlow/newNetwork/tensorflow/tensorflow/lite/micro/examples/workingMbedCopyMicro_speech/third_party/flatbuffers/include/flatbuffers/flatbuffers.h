@@ -22,21 +22,22 @@
 namespace flatbuffers {
 // Wrapper for uoffset_t to allow safe template specialization.
 // Value is allowed to be 0 to indicate a null object (see e.g. AddOffset).
-template<typename T> struct Offset {
-  uoffset_t o;
-  Offset() : o(0) {}
-  Offset(uoffset_t _o) : o(_o) {}
-  Offset<void> Union() const { return Offset<void>(o); }
-  bool IsNull() const { return !o; }
-};
+	template<typename T> struct Offset {
+  		uoffset_t o;
+  		Offset() : o(0) {}
+  		Offset(uoffset_t _o) : o(_o) {}
+  		Offset<void> Union() const { return Offset<void>(o); }
+  		bool IsNull() const { return !o; }
+	};
 
-inline void EndianCheck() {
-  int endiantest = 1;
-  // If this fails, see FLATBUFFERS_LITTLEENDIAN above.
-  FLATBUFFERS_ASSERT(*reinterpret_cast<char *>(&endiantest) ==
+	inline void EndianCheck() {
+  		int endiantest = 1;
+  	// If this fails, see FLATBUFFERS_LITTLEENDIAN above.
+  		FLATBUFFERS_ASSERT(*reinterpret_cast<char *>(&endiantest) ==
                      FLATBUFFERS_LITTLEENDIAN);
-  (void)endiantest;
-}
+  		(void)endiantest;
+
+	}
 
 template<typename T> FLATBUFFERS_CONSTEXPR size_t AlignOf() {
   // clang-format off
@@ -67,7 +68,10 @@ template<typename T> struct IndirectHelper {
   static return_type Read(const uint8_t *p, uoffset_t i) {
     return EndianScalar((reinterpret_cast<const T *>(p))[i]);
   }
+
 };
+
+
 template<typename T> struct IndirectHelper<Offset<T>> {
   typedef const T *return_type;
   typedef T *mutable_return_type;
@@ -1678,9 +1682,8 @@ class FlatBufferBuilder {
 // Helpers to get a typed pointer to the root object contained in the buffer.
 template<typename T> T *GetMutableRoot(void *buf) {
   EndianCheck();
-  return reinterpret_cast<T *>(
-      reinterpret_cast<uint8_t *>(buf) +
-      EndianScalar(*reinterpret_cast<uoffset_t *>(buf)));
+  return reinterpret_cast<T *>(   reinterpret_cast<uint8_t *>(buf) +
+      EndianScalar(*reinterpret_cast<uoffset_t *>(buf) ) );
 }
 
 template<typename T> const T *GetRoot(const void *buf) {
