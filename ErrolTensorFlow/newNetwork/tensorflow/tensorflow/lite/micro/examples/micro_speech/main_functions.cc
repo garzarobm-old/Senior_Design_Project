@@ -29,7 +29,7 @@ limitations under the License.
 #include "tensorflow/lite/version.h"
 
 /* Miguel defines */
-#include "sparkfun_edge/seniorFitSrc/include/ble_freertos_fit_lp.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/main/include/ble_freertos_fit_lp.h"
 /*end of Miguel defines */
 
 // Globals, used for compatibility with Arduino-style sketches.

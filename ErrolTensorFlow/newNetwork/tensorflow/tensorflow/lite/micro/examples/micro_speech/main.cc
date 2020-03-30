@@ -17,7 +17,7 @@ limitations under the License.
 
 
 /* Miguel defines */
-#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/include/ble_freertos_fit_lp.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/main/include/ble_freertos_fit_lp.h"
 /*end of Miguel defines */
 
 // This is the default main used on systems that have the standard C entry
