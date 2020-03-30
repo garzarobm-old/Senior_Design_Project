@@ -44,52 +44,67 @@
 //
 //*****************************************************************************
 
+#include <stdbool.h>
+/* end of seniorFit includes */
 //*****************************************************************************
 //
 // Global includes for this project.
 //
 //*****************************************************************************
-#include "ble_freertos_fit_lp.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/main/include/ble_freertos_fit_lp.h"
+//#include "ble_freertos_fit_lp.h"
 
 //*****************************************************************************
 //
 // WSF standard includes.
 //
 //*****************************************************************************
-#include "wsf_types.h"
-#include "wsf_trace.h"
-#include "wsf_buf.h"
-#include "wsf_timer.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/wsf_types.h"
+//#include "wsf_types.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/wsf_trace.h"
+//#include "wsf_trace.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/wsf_buf.h"
+//#include "wsf_buf.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/wsf_timer.h"
+//#include "wsf_timer.h"
 
 //*****************************************************************************
 //
 // Includes for operating the ExactLE stack.
 //
 //*****************************************************************************
-#include "hci_handler.h"
-#include "dm_handler.h"
-#include "l2c_handler.h"
-#include "att_handler.h"
-#include "smp_handler.h"
-#include "l2c_api.h"
-#include "att_api.h"
-#include "smp_api.h"
-#include "app_api.h"
-#include "hci_core.h"
-#include "hci_drv.h"
-#include "hci_drv_apollo.h"
-#include "hci_drv_apollo3.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/hci/include/hci_handler.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/dm_handler.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/l2c_handler.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/att_handler.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/smp_handler.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/l2c_api.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/att_api.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/smp_api.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/app_api.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/hci/include/hci_core.h"
+//#include "hci_core.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/hci/include/hci_drv.h"
+//#include "hci_drv.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/hci/include/hci_drv_apollo.h"
+//#include "hci_drv_apollo.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/hci/include/hci_drv_apollo3.h"
+//#include "hci_drv_apollo3.h"
 
-#include "hci_apollo_config.h"
-#include "wsf_msg.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/hci/include/hci_apollo_config.h"
+//#include "hci_apollo_config.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/wsf_msg.h"
+//#include "wsf_msg.h"
 
 //*****************************************************************************
 //
 // Includes for the ExactLE "fit" profile.
 //
 //*****************************************************************************
-#include "fit_api.h"
-#include "app_ui.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/fit_api.h"
+//#include "fit_api.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/app_ui.h"
+//#include "app_ui.h"
 
 //*****************************************************************************
 //
@@ -726,7 +741,7 @@ RadioTaskSetup(void)
     // Pass event object to WSF scheduler
     wsfOsSetEventObject((void*)xRadioEventHandle);
 
-    NVIC_SetPriority(BLE_IRQn, NVIC_configMAX_SYSCALL_INTERRUPT_PRIORITY);
+    NVIC_SetPriority(BLE_IRQn, 0x4);
 
     //
     // Boot the radio.
@@ -746,7 +761,6 @@ RadioTask(void *pvParameters)
     //
     // Enable ITM
     //
-    am_util_debug_printf("Starting wicentric trace:\n\n");
 #endif
 
     //
@@ -769,7 +783,7 @@ RadioTask(void *pvParameters)
         update_scheduler_timers();
         wsfOsDispatcher();
 		uint32_t pin14Val=1;
-		if (am_hal_gpio_state_read(AM_BSP_GPIO_14,AM_HAL_GPIO_INPUT_READ, &pin14Val))
+		if (am_hal_gpio_state_read(14,AM_HAL_GPIO_INPUT_READ, &pin14Val))
 			{
 				
     			am_hal_gpio_output_clear(AM_BSP_GPIO_LED_YELLOW);

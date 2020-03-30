@@ -181,7 +181,6 @@ vApplicationStackOverflowHook(TaskHandle_t pxTask, char *pcTaskName)
 void
 setup_task(void *pvParameters)
 {
-	/* uncomment when get here 
     //
     // Print a debug message.
     //
@@ -197,14 +196,13 @@ setup_task(void *pvParameters)
     //
     // Create the functional tasks
     //
-    xTaskCreate(RadioTask, "RadioTask", 512, 0, 3, &radio_task_handle);
+    //xTaskCreate(RadioTask, "RadioTask", 512, 0, 3, &radio_task_handle);
     //
     // The setup operations are complete, so suspend the setup task now.
     //
     vTaskSuspend(NULL);
 
     while (1);
-	*/
 }
 
 //*****************************************************************************
@@ -231,6 +229,6 @@ run_tasks(void)
     //
     // Start the scheduler.
     //
-    //vTaskStartScheduler();
+    vTaskStartScheduler();
 }
 

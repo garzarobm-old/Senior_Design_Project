@@ -105,9 +105,33 @@ tensorflow/lite/core/api/tensor_utils.cc \
 tensorflow/lite/kernels/internal/quantization_util.cc \
 tensorflow/lite/kernels/kernel_util.cc \
 tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/main/ble_freertos_fit_lp.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/main/radio_task.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/main/rtos.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/fit_main.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/bas_main.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/hci/hci_cmd.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/hci/hci_core.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/hci/hci_core_ps.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/hci/hci_evt.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/hci/hci_tr.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/hci/hci_vs.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/hci/hci_main.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/hid_main.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/wsf_buf.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/wsf_efs.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/wsf_msg.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/wsf_queue.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/wsf_timer.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/cfg_stack.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/hci/hci_drv_apollo3.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/rscps_main.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/wsf_assert.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/wsf_math.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/wsf_trace.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/wsf_os.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/RTOSEdits/tasks.c \
 tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/RTOSEdits/mpu_wrappers.c \
 tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/RTOSEdits/timers.c \
-tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/RTOSEdits/tasks.c \
 tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/RTOSEdits/event_groups.c \
 tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/RTOSEdits/list.c \
 tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/RTOSEdits/queue.c \
@@ -117,7 +141,8 @@ tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/RTOSEdits
 tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/RTOSEdits/heap_2.c \
 tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/mcu/hal/am_hal_cachectrl.c \
 tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/mcu/hal/am_hal_sysctrl.c \
-tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/main/rtos.c 
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/bda.c \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/hci/app_terminal.c
 
 
 
@@ -187,18 +212,32 @@ tensorflow/lite/string_util.h \
 tensorflow/lite/type_to_tflitetype.h \
 tensorflow/lite/version.h \
 tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/main/include/ble_freertos_fit_lp.h \
-tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/main/include/rtos.h \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/main/include/FreeRTOS.h \
 tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/RTOSEdits/include/task.h \
-tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/RTOSEdits/include/timers.h \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/main/include/radio_task.h \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/main/include/rtos.h \
 tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/RTOSEdits/include/FreeRTOSConfig.h \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/RTOSEdits/include/radio_task.h \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/RTOSEdits/include/timers.h \
 tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/RTOSEdits/include/queue.h \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/RTOSEdits/include/projdefs.h \
 tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/RTOSEdits/include/portable.h \
-tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/RTOSEdits/include/projdefs.h \
-tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/RTOSEdits/include/projdefs.h \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/RTOSEdits/include/portmacro.h \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/RTOSEdits/include/list.h \
 tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/mcu/am_mcu_apollo.h \
 tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/bsp/am_bsp.h \
 tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/utils/am_util.h \
-tensorflow/lite/micro/examples/micro_speech/seniorFitSrc/main/include/FreeRTOS.h \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/sec_api.h \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/wsf_math.h \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/wsf_trace.h \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/wsf_os.h \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/wsf_timer.h \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/wsf_buf.h \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/wsf_msg.h \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/wsf_efs.h \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/wsf_queue.h \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/fit_main.h \
+tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/hci/include/hci_api.h \
 tensorflow/lite/micro/examples/micro_speech/seniorFitSrc/include/usingC++ClassesExample.h
 
 

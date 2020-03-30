@@ -33,7 +33,8 @@
 	#error "include FreeRTOS.h must appear in source files before include task.h"
 #endif
 
-#include "list.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/RTOSEdits/include/list.h"
+//#include "list.h"
 
 #ifdef __cplusplus
 extern "C" {
