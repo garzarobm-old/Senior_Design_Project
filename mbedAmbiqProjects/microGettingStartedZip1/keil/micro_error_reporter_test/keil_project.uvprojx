@@ -3,6 +3,8 @@
 
   <SchemaVersion>2.1</SchemaVersion>
 
+  <Header>### uVision Project, (C) Keil Software</Header>
+
   <Targets>
     <Target>
       <TargetName>micro_error_reporter_test</TargetName>
@@ -131,7 +133,7 @@
             <UseExternalTool>0</UseExternalTool>
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
-            <Capability>1</Capability>
+            <Capability>0</Capability>
             <DriverSelection>-1</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
@@ -660,7 +662,6 @@
               <FileType>5</FileType>
               <FilePath>third_party/gemmlowp/internal/detect_platform.h</FilePath>
             </File>
-
           </Files>
         </Group>
         <Group>
