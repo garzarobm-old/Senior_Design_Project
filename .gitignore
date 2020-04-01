@@ -1,8 +1,8 @@
 etc  
-bluetooth
-audio
-API
-drivers
-hardware
-hardwareTesting
+bluetooth/*
+audio/*
+API/*
+drivers/*
+hardware/*
+hardwareTesting/*
 
