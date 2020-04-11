@@ -22,18 +22,16 @@
 
 #include <string.h>
 #include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/wsf_types.h"
-//#include "wsf_types.h"
 #include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/wsf_msg.h"
 #include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/wsf_trace.h"
 #include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/wsf_assert.h"
-#include "btensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/da.h"
-#include "bstream.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/utils/include/bstream.h"
 #include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/hci/include/hci_core.h"
 #include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/hci/include/hci_tr.h"
 #include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/hci/include/hci_cmd.h"
 #include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/hci/include/hci_api.h"
 #include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/hci/include/hci_main.h"
-#include "l2c_defs.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/l2c_defs.h"
 
 /**************************************************************************************************
   Macros
