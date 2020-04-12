@@ -54,7 +54,7 @@
 #include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/main/include/ble_freertos_fit_lp.h"
 #include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/main/include/rtos.h"
 
-#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/mcu/am_mcu_apollo.h" //don't know if this one works
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/mcu/am_mcu_apollo.h" 
 #include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/utils/am_util.h"
 /* end of seniorFit includes */
 
@@ -156,7 +156,7 @@ int ble_main(int argc, char** argv)	{
     run_tasks();
 	//call to test c++ entry
 	tensorflow_cc_entry();
-	setup();	
+	setup();	 // for tensorflow
 
     //
     // We shouldn't ever get here.

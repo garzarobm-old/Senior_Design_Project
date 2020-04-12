@@ -21,10 +21,13 @@
 /*************************************************************************************************/
 
 #include <string.h>
-#include "wsf_types.h"
-#include "wsf_assert.h"
-#include "wsf_trace.h"
-#include "att_api.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/wsf_types.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/wsf_trace.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/wsf_assert.h"
+
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/att_api.h"
+
+
 #include "svc_hid.h"
 #include "app_api.h"
 #include "hid_api.h"
