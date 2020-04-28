@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Thu Apr 09 16:15:54 CDT 2020
+0.baseType=DIRECTORY
+0.base=/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/BluetoothLeGatt/Application/build/intermediates/dex/debug/mergeDexDebug/out
+0.path=classes.dex
+0.set=DEX
+count=1

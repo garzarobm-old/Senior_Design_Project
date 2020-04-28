@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/BluetoothLeGatt/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v22/values-v22.xml",
+            "map": [
+                {
+                    "source": "/home/miguel/.gradle/caches/transforms-2/files-2.1/73db344ed8fb6726f52be23a5d1dfac3/res/values-v22/values-v22.xml",
+                    "from": {
+                        "startLines": "2,3,4,9",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,130,217,553",
+                        "endLines": "2,3,8,13",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "125,212,548,896"
+                    }
+                }
+            ]
+        }
+    ]
+}

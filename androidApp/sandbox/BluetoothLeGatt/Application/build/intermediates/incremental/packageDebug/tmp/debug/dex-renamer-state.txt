@@ -1,0 +1,4 @@
+#Thu Apr 09 16:15:53 CDT 2020
+base.0=/home/miguel/Documents/SeniorDesign/seniorDesign/Senior_Design_Project/androidApp/sandbox/BluetoothLeGatt/Application/build/intermediates/dex/debug/mergeDexDebug/out
+path.0=classes.dex
+renamed.0=classes.dex

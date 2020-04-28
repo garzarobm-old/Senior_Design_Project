@@ -1,0 +1,14 @@
+if you look into micro_speech_test.cc, it ...
+	1. creates an interpreter
+	2. gets a handle to a model that has been compiled a
+	3. invokes the interpreter with the model and sample inputs
+
+
+
+model takes in 
+	1. takes slices of frequency information from a different time window
+	2. uses spectrograms that have been pre-calculated
+
+tensorflow README has more details.
+
+
