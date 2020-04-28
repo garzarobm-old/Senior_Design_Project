@@ -146,6 +146,7 @@ void adc_config0(tflite::ErrorReporter* error_reporter) {
 
 // Initialize the ADC repetitive sample timer A3.
 void init_timerA3_for_ADC() {
+
   // Start a timer to trigger the ADC periodically (1 second).
   am_hal_ctimer_config_single(3, AM_HAL_CTIMER_TIMERA,
                               AM_HAL_CTIMER_HFRC_12MHZ |
@@ -168,7 +169,6 @@ void init_timerA3_for_ADC() {
 void enable_burst_mode(tflite::ErrorReporter* error_reporter) {
   am_hal_burst_avail_e eBurstModeAvailable;
   am_hal_burst_mode_e eBurstMode;
-
   // Check that the Burst Feature is available.
   if (AM_HAL_STATUS_SUCCESS ==
       am_hal_burst_mode_initialize(&eBurstModeAvailable)) {
@@ -193,6 +193,7 @@ void enable_burst_mode(tflite::ErrorReporter* error_reporter) {
     TF_LITE_REPORT_ERROR(error_reporter,
                          "Failed to Enable Burst Mode operation\n");
   }
+
 }
 
 }  // namespace
@@ -254,7 +255,10 @@ extern "C" void am_adc_isr(void) {
   }
 }
 
+
 TfLiteStatus InitAudioRecording(tflite::ErrorReporter* error_reporter) {
+
+
   // Set the clock frequency.
   if (AM_HAL_STATUS_SUCCESS !=
       am_hal_clkgen_control(AM_HAL_CLKGEN_CONTROL_SYSCLK_MAX, 0)) {
@@ -262,7 +266,6 @@ TfLiteStatus InitAudioRecording(tflite::ErrorReporter* error_reporter) {
                          "Error - configuring the system clock failed.");
     return kTfLiteError;
   }
-
   // Set the default cache configuration and enable it.
   if (AM_HAL_STATUS_SUCCESS !=
       am_hal_cachectrl_config(&am_hal_cachectrl_defaults)) {

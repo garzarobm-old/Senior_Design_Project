@@ -1,5 +1,4 @@
-//*****************************************************************************
-//
+//*****************************************************************************//
 //! @file hci_drv_apollo3.c
 //!
 //! @brief HCI driver interface.
@@ -714,7 +713,6 @@ HciDrvIntService(void)
     am_hal_gpio_state_write(11, AM_HAL_GPIO_OUTPUT_SET);
 #endif
 
-   	am_util_stdio_printf("hciDrvIntService()\r\n");//miguel call 2
     //
     // Read and clear the interrupt status.
     //
@@ -734,14 +732,12 @@ HciDrvIntService(void)
     if (ui32Status & AM_HAL_BLE_INT_BLECIRQ)
     {
         CRITICAL_PRINT("INFO: IRQ INTERRUPT\n");
-   		am_util_stdio_printf("IRQ INTERRUPT STATUS =  \n", ui32Status);//miguel call 2
 
         //
         // Lower WAKE
         //
         //WsfTimerStop(&g_WakeTimer);
         CRITICAL_PRINT("IRQ Drop\n");
-   		am_util_stdio_printf("IRQ Drop \r\n");//miguel call 2
         am_hal_ble_wakeup_set(BLE, 0);
 
         //
@@ -752,7 +748,6 @@ HciDrvIntService(void)
     else if (ui32Status & AM_HAL_BLE_INT_BLECSSTAT)
     {
         CRITICAL_PRINT("INFO: STATUS INTERRUPT\n");
-   		am_util_stdio_printf("STATUS INTERRUPT =  \n", ui32Status);//miguel call 2
 
         //
         // Check the queue and send the first message we have.
@@ -778,12 +773,10 @@ HciDrvIntService(void)
             {
                 BLE_HEARTBEAT_RESTART();
                 CRITICAL_PRINT("INFO: HCI write sent.\n");
-   				am_util_stdio_printf("hci write sent   \n");//miguel call 2
             }
             else
             {
                 CRITICAL_PRINT("INFO: HCI write failed: %d\n", ui32WriteStatus);
-   				am_util_stdio_printf("hci write failed \n");//miguel call 2
             }
         }
     }
@@ -795,7 +788,6 @@ HciDrvIntService(void)
     //
     g_ui32InterruptsSeen++;
 
-   	am_util_stdio_printf("interrupts seen %d \n", g_ui32InterruptsSeen);//miguel call 2
     //
     // Send an event to get processed in the HCI handler.
     //

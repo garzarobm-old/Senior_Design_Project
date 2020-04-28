@@ -348,10 +348,8 @@ void wsfOsDispatcher(void)
 
   pTask = &wsfOs.task;
 
-   	am_util_stdio_printf("8 bit number = %d\r\n", pTask->taskEventMask);//miguel call 2
   while (pTask->taskEventMask)
   {
-   	am_util_stdio_printf("clear event mask()\r\n");//miguel call 2
     /* get and then clear task event mask */
     WSF_CS_ENTER(cs);
     taskEventMask = pTask->taskEventMask;
@@ -360,7 +358,6 @@ void wsfOsDispatcher(void)
 
     if (taskEventMask & WSF_MSG_QUEUE_EVENT)
     {
-   	am_util_stdio_printf("handle messagequeue()\r\n");//miguel call 2
       /* handle msg queue */
       while ((pMsg = WsfMsgDeq(&pTask->msgQueue, &handlerId)) != NULL)
       {
@@ -372,7 +369,6 @@ void wsfOsDispatcher(void)
 
     if (taskEventMask & WSF_TIMER_EVENT)
     {
-   	am_util_stdio_printf("service timers ()\r\n");//miguel call 2
       /* service timers */
       while ((pTimer = WsfTimerServiceExpired(0)) != NULL)
       {
@@ -383,7 +379,6 @@ void wsfOsDispatcher(void)
 
     if (taskEventMask & WSF_HANDLER_EVENT)
     {
-   	am_util_stdio_printf("service handlers()\r\n");//miguel call 2
       /* service handlers */
       for (i = 0; i < WSF_MAX_HANDLERS; i++)
       {

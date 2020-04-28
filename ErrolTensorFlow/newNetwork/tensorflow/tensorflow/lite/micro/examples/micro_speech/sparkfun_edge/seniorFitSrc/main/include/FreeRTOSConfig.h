@@ -143,15 +143,15 @@ extern void am_freertos_wakeup(uint32_t);
 #define configPOST_SLEEP_PROCESSING(time)    am_freertos_wakeup(time)
 #endif
 /*-----------------------------------------------------------*/
-//#ifndef AM_PART_APOLLO
-//#define AM_FREERTOS_USE_STIMER_FOR_TICK
-//#endif
+#ifndef AM_PART_APOLLO
+#define AM_FREERTOS_USE_STIMER_FOR_TICK
+#endif
 
-//#ifdef AM_FREERTOS_USE_STIMER_FOR_TICK
-//#define configSTIMER_CLOCK_HZ                     32768
-//else // Use CTimer
+#ifdef AM_FREERTOS_USE_STIMER_FOR_TICK
+#define configSTIMER_CLOCK_HZ                     32768
+#else // Use CTimer
 #define configCTIMER_CLOCK_HZ                     32768
-//#endif
+#endif
 
 #ifdef __cplusplus
 }

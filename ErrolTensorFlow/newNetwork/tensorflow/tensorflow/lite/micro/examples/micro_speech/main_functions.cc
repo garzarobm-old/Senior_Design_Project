@@ -41,11 +41,12 @@ namespace {
 	FeatureProvider* feature_provider = nullptr;
 	RecognizeCommands* recognizer = nullptr;
 	int32_t previous_time = 0;
+	static int array[4];
 
 // Create an area of memory to use for input, output, and intermediate arrays.
 // The size of this will depend on the model you're using, and may need to be
 // determined by experimentation.
-	constexpr int kTensorArenaSize = 10 * 1024;
+	constexpr int kTensorArenaSize = 20 * 1024;
 	uint8_t tensor_arena[kTensorArenaSize];
 	uint8_t feature_buffer[kFeatureElementCount];
 	uint8_t* model_input_buffer = nullptr;
@@ -85,7 +86,34 @@ extern "C" void tensorflow_cc_entry(){
 
 }
 
+extern "C" void reset(){
 
+
+	array[0] = 0;
+	array[1] = 0;
+	array[2] = 0;
+	array[3] = 0;
+	
+	return;	
+
+}
+
+extern "C" int grab(){
+
+
+	int min = 0;
+	int typeOfNoise = -1;
+	for(int i = 0; i < 4 ; i++){
+		if(array[i] > min ){
+			typeOfNoise = i;
+			min = array[i];
+		}
+
+	}
+
+	return typeOfNoise;
+
+}
 
 /* end of miguel functions */
 
@@ -173,17 +201,23 @@ void setup() {
 
 }
 
+/* steps 
+	1. loop gets called 
+	2. update time stamp 
+	3. populate feature data
+			-calls GetAudioSamples
+	4. 
+
+*/
+
+
 // The name of this function is important for Arduino compatibility.
 void loop() {
   // Fetch the spectrogram for the current time.
   const int32_t current_time = LatestAudioTimestamp();
 
 	/* start of MIGUEL DEBUGGING:  */
-<<<<<<< HEAD
     //TF_LITE_REPORT_ERROR(error_reporter, "current_time = %d", current_time);
-=======
-    TF_LITE_REPORT_ERROR(error_reporter, "current_time = %d", current_time);
->>>>>>> saveCode
 	/* end of MIGUEL DEBUGGING */
 
 
@@ -201,11 +235,7 @@ void loop() {
   // If no new audio samples have been received since last time, don't bother
   // running the network model.
   if (how_many_new_slices == 0) {
-<<<<<<< HEAD
-    //TF_LITE_REPORT_ERROR(error_reporter, "did not run the model= %d", current_time);
-=======
-    TF_LITE_REPORT_ERROR(error_reporter, "did not run the model= %d", current_time);
->>>>>>> saveCode
+   // TF_LITE_REPORT_ERROR(error_reporter, "did not run the model= %d", current_time);
     return;
   }
 
@@ -235,14 +265,10 @@ void loop() {
     return;
   }
 	/*MIGUEL DEBUGGING RESPONSE */
-<<<<<<< HEAD
   	//TF_LITE_REPORT_ERROR(error_reporter, "\nHeard %s (%d) @%dms", found_command, score, current_time);
-=======
-  	TF_LITE_REPORT_ERROR(error_reporter, "\nHeard %s (%d) @%dms", found_command, score, current_time);
->>>>>>> saveCode
 	/*end of MIGUEL DEBUGGING RESPONSE */
   // Do something based on the recognized command. The default implementation
   // just prints to the error console, but you should replace this with your
   // own function for a real application.
-  //RespondToCommand(error_reporter, current_time, found_command, score, is_new_command);
+ RespondToCommand(error_reporter, current_time, found_command, score, is_new_command, array);
 }

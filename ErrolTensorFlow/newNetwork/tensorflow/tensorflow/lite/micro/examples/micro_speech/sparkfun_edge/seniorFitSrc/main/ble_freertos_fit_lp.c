@@ -59,12 +59,8 @@
 #include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/mcu/am_mcu_apollo.h" 
 #include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/utils/include/am_util.h"
 /* end of seniorFit includes */
-
-<<<<<<< HEAD
-#define WAKE_INTERVAL_IN_MS    64 
-=======
-#define WAKE_INTERVAL_IN_MS     2000
->>>>>>> saveCode
+void enable_print_interface(void);
+void board_setup(void);
 
 
 /* miguel definitions */
@@ -72,55 +68,118 @@
  #define AM_DEBUG_PRINTF  1
  #define WSF_TRACE_ENABLED   1
 
-static uint32_t g_ui32Count = 0;
+
+//#define USE_XTAL    1
+
+
+#if USE_XTAL
+#define BC_CLKSRC   "XTAL"
+#else
+#define BC_CLKSRC   "LFRC"
+#endif
+
+#ifdef AM_BSP_NUM_LEDS
+#define NUM_LEDS    AM_BSP_NUM_LEDS
+#else
+#define NUM_LEDS    5       // Make up an arbitrary number of LEDs
+#endif
+
+//*****************************************************************************
+//
+// Globals
+//
+//*****************************************************************************
+volatile uint32_t g_ui32TimerCount = 0;
+
+//**************************************
+// Timer configuration.
+//**************************************
+am_hal_ctimer_config_t g_sTimer0 =
+{
+    // Don't link timers.
+    0,
+
+    // Set up Timer0A.
+    (AM_HAL_CTIMER_FN_REPEAT    |
+     AM_HAL_CTIMER_INT_ENABLE   |
+     AM_HAL_CTIMER_LFRC_1HZ),
+
+    // No configuration for Timer0B.
+    0,
+};
+
+//*****************************************************************************
+//
+// Function to initialize Timer A0 to interrupt every 1/4 second.
+//
+//*****************************************************************************
+void
+timerA0_init(void)
+{
+    uint32_t ui32Period;
+
+    //
+    // Enable the LFRC.
+    //
+
+    //
+    // Set up timer A0.
+    //
+    am_hal_ctimer_clear(0, AM_HAL_CTIMER_TIMERA);
+    am_hal_ctimer_config(0, &g_sTimer0);
+
+    //
+    // Set up timerA0 to 32Hz from LFRC divided to 1 second period.
+    //
+
+
+    am_hal_ctimer_period_set(0, AM_HAL_CTIMER_TIMERA, 1,   0);
+
+    //
+    // Clear the timer Interrupt
+    //
+    am_hal_ctimer_int_clear(AM_HAL_CTIMER_INT_TIMERA0);
+}
+
 //*****************************************************************************
 //
 // Timer Interrupt Service Routine (ISR)
 //
 //*****************************************************************************
+/*
 void
-am_stimer_cmpr0_isr(void)
+am_ctimer_isr(void)
 {
+	//loop();
     //
-    // Check the timer interrupt status.
+    // Increment count and set limit based on the number of LEDs available.
     //
-    am_hal_stimer_int_clear(AM_HAL_STIMER_INT_COMPAREA);
-    am_hal_stimer_compare_delta_set(0, WAKE_INTERVAL_IN_MS);
-<<<<<<< HEAD
-	am_hal_interrupt_master_disable();
-	loop();
-	am_hal_interrupt_master_enable();
-=======
-
-	loop();
->>>>>>> saveCode
-    g_ui32Count++;
+    g_ui32TimerCount++;
     //
-    // Do a linefeed after 32 prints.
+    // Clear TimerA0 Interrupt (write to clear).
     //
-    if ( (g_ui32Count & 0x1F) == 0 )
-    {
-        am_util_stdio_printf("\n");
-    }
+    am_hal_ctimer_int_clear(AM_HAL_CTIMER_INT_TIMERA0);
 }
+*/
 //*****************************************************************************
 //
 // Enable printing to the console.
 //
 //*****************************************************************************
-void
-enable_print_interface(void)
-{
-    //
-    // Initialize a debug printing interface.
-    //
-    am_bsp_itm_printf_enable();
-}
 
 /* C code: */
 int ble_main(int argc, char** argv)	{
 
+	tensorflow_cc_entry();
+	setup();
+//one second
+	for (int i = 0 ; i < 1000; i++){
 
+
+	loop();
+	
+
+}
 	/*clk, memory, lazy loading cache configurtation */	
 	//NOTE: may not need since clock already seems enabled here 
 	am_hal_clkgen_control(AM_HAL_CLKGEN_CONTROL_SYSCLK_MAX, 0); //uncomment if needed
@@ -154,39 +213,57 @@ int ble_main(int argc, char** argv)	{
 
 	
 	boardSetup();  //miguel call 1
+
+
+
    	am_util_stdio_printf("debugging setup!\r\n");//miguel call 2
+
+
+
     //
-    // Run the application.
-    //	
-	/* write os here or call run_tasks() */
-	// os_setup(); //miguel defined
-    //run_tasks();
-	am_hal_stimer_int_enable(AM_HAL_STIMER_INT_COMPAREA);
-	NVIC_EnableIRQ(STIMER_CMPR0_IRQn);
-	am_hal_stimer_config(AM_HAL_STIMER_CFG_CLEAR | AM_HAL_STIMER_CFG_FREEZE);
-	am_hal_stimer_compare_delta_set(0, WAKE_INTERVAL_IN_MS    ); 
-	am_hal_stimer_config(AM_HAL_STIMER_XTAL_32KHZ | AM_HAL_STIMER_CFG_COMPARE_A_ENABLE);
+    // TimerA0 init.
+    //
+    //timerA0_init();
 
-	am_hal_interrupt_master_enable();
+    //
+    // Enable the timer Interrupt.
+    //
+    //am_hal_ctimer_int_enable(AM_HAL_CTIMER_INT_TIMERA0);
+
+    //
+    // Enable the timer interrupt in the NVIC.
+    //
+    //NVIC_EnableIRQ(CTIMER_IRQn);
+    
+	//am_hal_interrupt_master_enable();
+
+    //
+    // Start timer A0
+    //
+
+	for (int i = 0 ; i < 100; i++){
 
 
-	tensorflow_cc_entry();
-	setup();
-	//call to test c++ entry
+	loop();
+	
 
-	run_tasks();
-   	//am_util_stdio_printf("got past run_tasks!\r\n");//miguel call 2
+}
+	//loop();
 
+    //
+    // Start the timer.
+    //
 
-
+    run_tasks();
 
 
     while (1)
     {
+//        am_hal_sysctrl_sleep(AM_HAL_SYSCTRL_SLEEP_DEEP);
     //
     // We shouldn't ever get here.
     //
-        am_hal_sysctrl_sleep(AM_HAL_SYSCTRL_SLEEP_DEEP);
+     //   am_hal_sysctrl_sleep(AM_HAL_SYSCTRL_SLEEP_DEEP);
 
     }
 	
@@ -194,7 +271,6 @@ int ble_main(int argc, char** argv)	{
 
 
 
-	return 1;
 }
 
 int boardSetup(void)
@@ -204,20 +280,14 @@ int boardSetup(void)
     am_bsp_uart_printf_enable(); // Enable UART - will set debug output to UART
     //am_bsp_itm_printf_enable(); // Redirect debug output to SWO
 
-    // Setup LED's as outputs
-    am_hal_gpio_pinconfig(AM_BSP_GPIO_LED_RED, g_AM_HAL_GPIO_OUTPUT_12);
-    am_hal_gpio_pinconfig(AM_BSP_GPIO_LED_BLUE, g_AM_HAL_GPIO_OUTPUT_12);
-    am_hal_gpio_pinconfig(AM_BSP_GPIO_LED_GREEN, g_AM_HAL_GPIO_OUTPUT_12);
-    am_hal_gpio_pinconfig(AM_BSP_GPIO_LED_YELLOW, g_AM_HAL_GPIO_OUTPUT_12);
-
-    // Set up button 14 as input (has pullup resistor on hardware)
-    am_hal_gpio_pinconfig( 14, g_AM_HAL_GPIO_INPUT);
-
-    // Turn on the LEDs
-    am_hal_gpio_output_set(AM_BSP_GPIO_LED_RED);
-    am_hal_gpio_output_set(AM_BSP_GPIO_LED_BLUE);
-    am_hal_gpio_output_set(AM_BSP_GPIO_LED_GREEN);
-    am_hal_gpio_output_set(AM_BSP_GPIO_LED_YELLOW);
 
     return 0;
+}
+void
+enable_print_interface(void)
+{
+    //
+    // Initialize a debug printing interface.
+    //
+    am_bsp_itm_printf_enable();
 }

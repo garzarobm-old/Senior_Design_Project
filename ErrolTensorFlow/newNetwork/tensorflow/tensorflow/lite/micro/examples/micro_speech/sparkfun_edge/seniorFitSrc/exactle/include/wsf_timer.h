@@ -22,11 +22,13 @@
 #ifndef WSF_TIMER_H
 #define WSF_TIMER_H
 
-#include "wsf_os.h"
+#include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/exactle/include/wsf_os.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+
 
 /**************************************************************************************************
   Macros

@@ -321,7 +321,7 @@ EventBits_t uxReturn, uxControlBits = 0;
 BaseType_t xWaitConditionMet, xAlreadyYielded;
 BaseType_t xTimeoutOccurred = pdFALSE;
 
-   		am_util_stdio_printf("Group wait bits = \r\n");//miguel call 2
+   		//am_util_stdio_printf("Group wait bits = \r\n");//miguel call 2
 	/* Check the user is not attempting to wait on the bits used by the kernel
 	itself, and that at least one bit is being requested. */
 	configASSERT( xEventGroup );
@@ -329,14 +329,14 @@ BaseType_t xTimeoutOccurred = pdFALSE;
 	configASSERT( uxBitsToWaitFor != 0 );
 	#if ( ( INCLUDE_xTaskGetSchedulerState == 1 ) || ( configUSE_TIMERS == 1 ) )
 	{
-   		am_util_stdio_printf("getScheduler state\r\n");//miguel call 2
+   		//am_util_stdio_printf("getScheduler state\r\n");//miguel call 2
 		configASSERT( !( ( xTaskGetSchedulerState() == taskSCHEDULER_SUSPENDED ) && ( xTicksToWait != 0 ) ) );
 	}
 	#endif
 
 	vTaskSuspendAll();
 	{
-   		am_util_stdio_printf("event bits state = %d\r\n",pxEventBits->uxEventBits);//miguel call 2
+   		//am_util_stdio_printf("event bits state = %d\r\n",pxEventBits->uxEventBits);//miguel call 2
 		const EventBits_t uxCurrentEventBits = pxEventBits->uxEventBits;
 
 		/* Check to see if the wait condition is already met or not. */
@@ -344,7 +344,7 @@ BaseType_t xTimeoutOccurred = pdFALSE;
 
 		if( xWaitConditionMet != pdFALSE )
 		{
-   			am_util_stdio_printf("wait conditon meet= %d\r\n",pxEventBits->uxEventBits);//miguel call 2
+   			//am_util_stdio_printf("wait conditon meet= %d\r\n",pxEventBits->uxEventBits);//miguel call 2
 			/* The wait condition has already been met so there is no need to
 			block. */
 			uxReturn = uxCurrentEventBits;
@@ -353,7 +353,7 @@ BaseType_t xTimeoutOccurred = pdFALSE;
 			/* Clear the wait bits if requested to do so. */
 			if( xClearOnExit != pdFALSE )
 			{
-   				am_util_stdio_printf("clear bits= %d\r\n",pxEventBits->uxEventBits);//miguel call 2
+   				//am_util_stdio_printf("clear bits= %d\r\n",pxEventBits->uxEventBits);//miguel call 2
 				pxEventBits->uxEventBits &= ~uxBitsToWaitFor;
 			}
 			else
@@ -370,7 +370,7 @@ BaseType_t xTimeoutOccurred = pdFALSE;
 		}
 		else
 		{
-   			am_util_stdio_printf("block to wait= %d\r\n",pxEventBits->uxEventBits);//miguel call 2
+   			//am_util_stdio_printf("block to wait= %d\r\n",pxEventBits->uxEventBits);//miguel call 2
 			/* The task is going to block to wait for its required bits to be
 			set.  uxControlBits are used to remember the specified behaviour of
 			this call to xEventGroupWaitBits() - for use when the event bits
@@ -412,7 +412,7 @@ BaseType_t xTimeoutOccurred = pdFALSE;
 	{
 		if( xAlreadyYielded == pdFALSE )
 		{
-   			am_util_stdio_printf("port yield= %d\r\n",pxEventBits->uxEventBits);//miguel call 2
+   			//am_util_stdio_printf("port yield= %d\r\n",pxEventBits->uxEventBits);//miguel call 2
 			portYIELD_WITHIN_API();
 		}
 		else
@@ -464,7 +464,7 @@ BaseType_t xTimeoutOccurred = pdFALSE;
 	}
 	traceEVENT_GROUP_WAIT_BITS_END( xEventGroup, uxBitsToWaitFor, xTimeoutOccurred );
 
-   		am_util_stdio_printf("timeout occurred state\r\n");//miguel call 2
+   		////am_util_stdio_printf("timeout occurred state\r\n");//miguel call 2
 	/* Prevent compiler warnings when trace macros are not used. */
 	( void ) xTimeoutOccurred;
 

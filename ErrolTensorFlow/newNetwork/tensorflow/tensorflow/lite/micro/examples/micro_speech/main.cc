@@ -28,8 +28,8 @@ int main(int argc, char* argv[]) {
 	/* start of seniorFit calls */
 
 	ble_main(argc, argv);
-
+//never reach here
   while (true) {
-    loop();
+    //loop();
   }
 }

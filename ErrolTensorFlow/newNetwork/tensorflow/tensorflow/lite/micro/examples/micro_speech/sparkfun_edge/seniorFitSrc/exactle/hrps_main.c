@@ -292,12 +292,19 @@ void hrpsMeasTimerExp(wsfMsgHdr_t *pMsg)
  hrpsConn_t  *pConn;
 
 
+	const char* typeOfNoise;
+	int noise = grab();
+	if (noise == 0 ) typeOfNoise = "unknown";//unknown
+	else if (noise == 1 ) typeOfNoise = "speech";//unknown
+	else if (noise == 2 ) typeOfNoise = "music";//unknown
+	else if (noise == 3 ) typeOfNoise = "silence";//unknown
+	else{
+   	am_util_stdio_printf("ERROR \r\n");
 
+	} 
 
-
-
-
-
+   	am_util_stdio_printf("READ NOISE %s \r\n", typeOfNoise);//miguel call 2
+	reset();
 
 
   /* if there are active connections */
@@ -310,7 +317,7 @@ void hrpsMeasTimerExp(wsfMsgHdr_t *pMsg)
 /*end of tensorflow code */
     /* read heart rate measurement sensor data */
     //AppHwHrmRead(&hrpsCb.hrm);
-  	hrpsCb.hrm.heartRate= filipeHW;
+  	hrpsCb.hrm.heartRate= noise;
     /* if ready to send measurements */
     if (hrpsCb.txReady)
     {

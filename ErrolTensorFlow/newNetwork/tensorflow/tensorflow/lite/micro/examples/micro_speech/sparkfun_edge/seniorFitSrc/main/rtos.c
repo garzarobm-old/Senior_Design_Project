@@ -75,40 +75,44 @@
 //#include "portmacro.h"
 //#include "portable.h"		//done
 //#include "ble_freertos_fit_lp.h" //done
-
 //*****************************************************************************
 //
 // Task handle for the initial setup task.
 //
 //*****************************************************************************
-TaskHandle_t xSetupTask; // has the tcb
-StackType_t setupStack[512*10]; // miguel defined a stack for the setupStack
+TaskHandle_t xSetupTask;
 
-StackType_t radioStack[512*10]; // miguel defined a stack for the setupStack
-
-
+TaskHandle_t xloop;
+EventGroupHandle_t xloopEvent;
 //*****************************************************************************
 //
 // Interrupt handler for the CTIMER module.
 //
 //*****************************************************************************
+/*
 void
 am_ctimer_isr(void)
 {
     uint32_t ui32Status;
 
+	//loop();
     //
     // Check the timer interrupt status.
     //
     ui32Status = am_hal_ctimer_int_status_get(false);
     am_hal_ctimer_int_clear(ui32Status);
 
+
+
+
+
     //
     // Run handlers for the various possible timer events.
     //
     am_hal_ctimer_int_service(ui32Status);
+	
 }
-
+*/
 //*****************************************************************************
 //
 // Sleep function called from FreeRTOS IDLE task.
@@ -170,17 +174,49 @@ vApplicationStackOverflowHook(TaskHandle_t pxTask, char *pcTaskName)
         __asm("BKPT #0\n") ; // Break into the debugger
     }
 }
+void
+loopTask(void *pvParameters)
+{
 
-void TenseTask(void *pvParameters){
+    while (1)
+    {
+        //
+        // Calculate the elapsed time from our free-running timer, and update
+        // the software timers in the WSF scheduler.
+        //
+   		//am_util_stdio_printf("update_scheduler_timers\r\n");//miguel call 2
+        update_scheduler_timers();
+        wsfOsDispatcher();
 
 
-//while(1){
-//loop();
-//}
+        //
+        // Enable an interrupt to wake us up next time we have a scheduled
+        // event.
+        //
+        set_next_wakeup();
+
+        //
+        // Check to see if the WSF routines are ready to go to sleep.
+        //
+        if ( wsfOsReadyToSleep() )
+        {
+            //
+            // Attempt to shut down the UART. If we can shut it down
+            // successfully, we can go to deep sleep. Otherwise, we'll need to
+            // stay awake to finish processing the current packet.
+            //
+
+            //
+            // Wait for an event to be posted to the Radio Event Handle.
+            //
+            xEventGroupWaitBits(xloopEvent, 1, pdTRUE,
+                                pdFALSE, portMAX_DELAY);
+        }
+    }
+
 
 }
 
-TaskHandle_t tense_task_handle;
 //*****************************************************************************
 //
 // High priority task to run immediately after the scheduler starts.
@@ -197,7 +233,7 @@ setup_task(void *pvParameters)
     //
     // Print a debug message.
     //
-    //am_util_debug_printf("Running setup tasks...\r\n");
+    am_util_debug_printf("Running setup tasks...\r\n");
 
    	am_util_stdio_printf("before RadioTaskSetup\r\n");//miguel call 2
     //
@@ -206,25 +242,18 @@ setup_task(void *pvParameters)
     RadioTaskSetup();
 
    	am_util_stdio_printf("after RadioTaskSetup()\r\n");//miguel call 2
-
-	
     //
     // Create the functional tasks
     //
-    xTaskCreate(RadioTask, "RadioTask", 512, 0, 3, &radio_task_handle);
-
-	/* miguel wants to make a task!!!! */
-	//setup();	 // for tensorflow
-	//tensorflow_cc_entry();
-
-    //xTaskCreate(TenseTask, "TenseTask", 512, 0, 3, &tense_task_handle);
-	//creating task tensorflow
+    xTaskCreate(RadioTask, "RadioTask", 512, 0, 0, &radio_task_handle);
     //
     // The setup operations are complete, so suspend the setup task now.
+    //xTaskCreate(loopTask, "loop", 512, 0, 3, &xloop);
     //
     vTaskSuspend(NULL);
 
     while (1);
+
 }
 
 //*****************************************************************************
@@ -242,16 +271,23 @@ run_tasks(void)
     // touch it here.
     //
 
-	//setup_task = function
+    //
+    // Create essential tasks.
+    //
+    xTaskCreate(setup_task, "Setup", 512, 0, 3, &xSetupTask);
 
-	//this is add thread
-
-    xTaskCreate(setup_task, "Setup", 512, 0, 3,  &xSetupTask);
 
 
+    //am_hal_ctimer_start(AM_BSP_PWM_LED_TIMER, AM_BSP_PWM_LED_TIMER_SEG);
     //
     // Start the scheduler.
     //
     vTaskStartScheduler();
+    while (1){
+
+   	//am_util_stdio_printf("check while 22222\n");
+	//loop();
+
+	}
 }
 

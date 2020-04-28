@@ -269,7 +269,6 @@ wsfTimerTicks_t WsfTimerNextExpiration(bool_t *pTimerRunning)
 {
   wsfTimerTicks_t ticks;
 
-   	am_util_stdio_printf("wsfTimernextExpiration()\r\n");//miguel call 2
   /* task schedule lock */
   WsfTaskLock();
 
@@ -306,7 +305,6 @@ wsfTimer_t *WsfTimerServiceExpired(wsfTaskId_t taskId)
   wsfTimer_t  *pElem;
   wsfTimer_t  *pPrev = NULL;
 
-   	am_util_stdio_printf("wsfTimerServiceExpired()\r\n");//miguel call 2
   /* task schedule lock */
   WsfTaskLock();
 

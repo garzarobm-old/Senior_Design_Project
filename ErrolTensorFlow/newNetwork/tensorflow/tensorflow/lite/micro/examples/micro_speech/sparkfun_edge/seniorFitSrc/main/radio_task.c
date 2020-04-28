@@ -108,13 +108,14 @@
 //#include "app_ui.h"
 #include "tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc/cmsis/include/apollo3.h"
 
+#define WAKE_INTERVAL_IN_MS 1000 
 //*****************************************************************************
 //
 // Radio task handle.
 //
 //*****************************************************************************
 TaskHandle_t radio_task_handle;
-//miguel defines to allow static
+
 //*****************************************************************************
 //
 // Handle for Radio-related events.
@@ -138,16 +139,17 @@ void set_next_wakeup(void);
 //
 //*****************************************************************************
 // Configure how to driver WSF Scheduler
-#if 1
+//#if 1
 // Preferred mode to use when using FreeRTOS
-#define USE_FREERTOS_TIMER_FOR_WSF
-#else
-#ifdef AM_FREERTOS_USE_STIMER_FOR_TICK
+//#define USE_FREERTOS_TIMER_FOR_WSF
+//#else
+// These are only test modes.
+//#define AM_FREERTOS_USE_STIMER_FOR_TICK
 #define USE_STIMER_FOR_WSF // Reuse FreeRTOS used STimer for WSF
-#else
-#define USE_CTIMER_FOR_WSF
-#endif
-#endif
+//#else
+//#define USE_CTIMER_FOR_WSF
+//#endif
+//#endif
 
 // Use FreeRTOS timer for WSF Ticks
 #ifdef USE_FREERTOS_TIMER_FOR_WSF
@@ -211,147 +213,6 @@ uint32_t g_ui32LastTime = 0;
 void radio_timer_handler(void);
 
 #ifdef USE_CTIMER_FOR_WSF
-//*****************************************************************************
-//
-// Set up a pair of timers to handle the WSF scheduler.
-//
-//*****************************************************************************
-void
-scheduler_timer_init(void)
-{
-   	am_util_stdio_printf("scheduler_timer()\r\n");//miguel call 2
-    // Enable the LFRC
-    am_hal_clkgen_control(AM_HAL_CLKGEN_CONTROL_LFRC_START, 0);
-
-    //
-    // One of the timers will run in one-shot mode and provide interrupts for
-    // scheduled events.
-    //
-    am_hal_ctimer_clear(WSF_CTIMER_NUM, AM_HAL_CTIMER_TIMERA);
-    am_hal_ctimer_config_single(WSF_CTIMER_NUM, AM_HAL_CTIMER_TIMERA,
-                                (AM_HAL_CTIMER_INT_ENABLE |
-                                 AM_HAL_CTIMER_LFRC_512HZ |
-                                 AM_HAL_CTIMER_FN_ONCE));
-
-    //
-    // The other timer will run continuously and provide a constant time-base.
-    //
-    am_hal_ctimer_clear(WSF_CTIMER_NUM, AM_HAL_CTIMER_TIMERB);
-    am_hal_ctimer_config_single(WSF_CTIMER_NUM, AM_HAL_CTIMER_TIMERB,
-                                (AM_HAL_CTIMER_LFRC_512HZ |
-                                 AM_HAL_CTIMER_FN_CONTINUOUS));
-
-    //
-    // Start the continuous timer.
-    //
-    am_hal_ctimer_start(WSF_CTIMER_NUM, AM_HAL_CTIMER_TIMERB);
-
-    //
-    // Enable the timer interrupt.
-    //
-	//MIGUEL LOOKS LIKE THE CTIMER (WHICH COULD BE KERNEL) IS SET TO PRIORITY 7 
-    am_hal_ctimer_int_register(WSF_CTIMER_INT, radio_timer_handler);
-    NVIC_SetPriority(CTIMER_IRQn, NVIC_configKERNEL_INTERRUPT_PRIORITY);
-    am_hal_ctimer_int_enable(WSF_CTIMER_INT);
-    NVIC_EnableIRQ(CTIMER_IRQn);
-}
-
-//*****************************************************************************
-//
-// Calculate the elapsed time, and update the WSF software timers.
-//
-//*****************************************************************************
-void
-update_scheduler_timers(void)
-{
-   	am_util_stdio_printf("currenttime \r\n");//miguel call 2
-    uint32_t ui32CurrentTime, ui32ElapsedTime;
-
-    //
-    // Read the continuous timer.
-    //
-    ui32CurrentTime = am_hal_ctimer_read(WSF_CTIMER_NUM, AM_HAL_CTIMER_TIMERB);
-
-    //
-    // Figure out how long it has been since the last time we've read the
-    // continuous timer. We should be reading often enough that we'll never
-    // have more than one overflow.
-    //
-    ui32ElapsedTime = ui32CurrentTime - g_ui32LastTime;
-
-    //
-    // Check to see if any WSF ticks need to happen.
-    //
-    if ( (ui32ElapsedTime / CLK_TICKS_PER_WSF_TICKS) > 0 )
-    {
-        //
-        // Update the WSF timers and save the current time as our "last
-        // update".
-        //
-        WsfTimerUpdate(ui32ElapsedTime / CLK_TICKS_PER_WSF_TICKS);
-
-        g_ui32LastTime = ui32CurrentTime;
-    }
-   	am_util_stdio_printf("inside next_wakeup()\r\n");//miguel call 2
-}
-
-//*****************************************************************************
-//
-// Set a timer interrupt for the next upcoming scheduler event.
-//
-//*****************************************************************************
-void
-set_next_wakeup(void)
-{
-   	am_util_stdio_printf("inside next_wakeup()\r\n");//miguel call 2
-    bool_t bTimerRunning;
-    wsfTimerTicks_t xNextExpiration;
-
-    //
-    // Stop and clear the scheduling timer.
-    //
-    am_hal_ctimer_stop(WSF_CTIMER_NUM, AM_HAL_CTIMER_TIMERA);
-    am_hal_ctimer_clear(WSF_CTIMER_NUM, AM_HAL_CTIMER_TIMERA);
-
-    //
-    // Check to see when the next timer expiration should happen.
-    //
-    xNextExpiration = WsfTimerNextExpiration(&bTimerRunning);
-
-    //
-    // If there's a pending WSF timer event, set an interrupt to wake us up in
-    // time to service it. Otherwise, set an interrupt to wake us up in time to
-    // prevent a double-overflow of our continuous timer.
-    //
-    if ( xNextExpiration )
-    {
-        am_hal_ctimer_period_set(WSF_CTIMER_NUM, AM_HAL_CTIMER_TIMERA,
-                                 xNextExpiration * CLK_TICKS_PER_WSF_TICKS, 0);
-    }
-    else
-    {
-        am_hal_ctimer_period_set(WSF_CTIMER_NUM, AM_HAL_CTIMER_TIMERA, 0x8000, 0);
-    }
-
-    //
-    // Start the scheduling timer.
-    //
-    am_hal_ctimer_start(WSF_CTIMER_NUM, AM_HAL_CTIMER_TIMERA);
-}
-
-//*****************************************************************************
-//
-// Interrupt handler for the CTIMERs
-//
-//*****************************************************************************
-void
-radio_timer_handler(void)
-{
-    // Signal radio task to run
-
-   	am_util_stdio_printf("radiotimer handler\r\n");//miguel call 2
-    WsfTaskSetReady(0, 0);
-}
 #endif
 #ifdef USE_STIMER_FOR_WSF
 //*****************************************************************************
@@ -391,6 +252,93 @@ scheduler_timer_init(void)
 
 }
 
+//*****************************************************************************
+//
+// Calculate the elapsed time, and update the WSF software timers.
+//
+//*****************************************************************************
+void
+update_scheduler_timers(void)
+{
+    uint32_t ui32CurrentTime, ui32ElapsedTime;
+
+    //
+    // Read the continuous timer.
+    //
+    ui32CurrentTime = am_hal_stimer_counter_get();
+
+    //
+    // Figure out how long it has been since the last time we've read the
+    // continuous timer. We should be reading often enough that we'll never
+    // have more than one overflow.
+    //
+    ui32ElapsedTime = ui32CurrentTime - g_ui32LastTime;
+
+    //
+    // Check to see if any WSF ticks need to happen.
+    //
+    if ( (ui32ElapsedTime / CLK_TICKS_PER_WSF_TICKS) > 0 )
+    {
+        //
+        // Update the WSF timers and save the current time as our "last
+        // update".
+        //
+        WsfTimerUpdate(ui32ElapsedTime / CLK_TICKS_PER_WSF_TICKS);
+
+        g_ui32LastTime = ui32CurrentTime;
+    }
+}
+
+//*****************************************************************************
+//
+// Set a timer interrupt for the next upcoming scheduler event.
+//
+//*****************************************************************************
+void
+set_next_wakeup(void)
+{
+   	//am_util_stdio_printf("radiotimer handler\r\n");//miguel call 2
+    bool_t bTimerRunning;
+    wsfTimerTicks_t xNextExpiration;
+    uint32_t cfgVal;
+    uint32_t ui32Critical;
+
+    //
+    // Check to see when the next timer expiration should happen.
+    //
+    xNextExpiration = WsfTimerNextExpiration(&bTimerRunning);
+
+    //
+    // If there's a pending WSF timer event, set an interrupt to wake us up in
+    // time to service it. Otherwise, set an interrupt to wake us up in time to
+    // prevent a double-overflow of our continuous timer.
+    //
+
+	//loop();
+    /* Enter a critical section */
+    ui32Critical = am_hal_interrupt_master_disable();
+
+    /* Stop the Stimer momentarily.  */
+    cfgVal = am_hal_stimer_config(AM_HAL_STIMER_CFG_FREEZE);
+    //
+    // Configure the STIMER->COMPARE_1
+    //
+    if ( xNextExpiration )
+    {
+        am_hal_stimer_compare_delta_set(1, xNextExpiration * CLK_TICKS_PER_WSF_TICKS);
+    }
+    else
+    {
+        am_hal_stimer_compare_delta_set(1, 0x80000000);
+    }
+
+    /* Exit Critical Section */
+    am_hal_interrupt_master_set(ui32Critical);
+
+    am_hal_stimer_int_enable(AM_HAL_STIMER_INT_COMPAREB);
+    am_hal_stimer_config(cfgVal);
+
+}
 
 //*****************************************************************************
 //
@@ -401,8 +349,8 @@ void
 radio_timer_handler(void)
 {
     // Signal radio task to run
-
-   	am_util_stdio_printf("radio_timer handler() called\r\n");//miguel call 2
+	//loop();
+	
     WsfTaskSetReady(0, 0);
 }
 
@@ -434,8 +382,8 @@ void
 wsf_timer_handler(TimerHandle_t xTimer)
 {
     // Signal radio task to run
-   	am_util_stdio_printf("wsf_timer_handler() called\r\n");//miguel call 2
 
+   	//am_util_stdio_printf("wsf_timer_handler() called\r\n");//miguel call 2
     WsfTaskSetReady(0, 0);
 }
 
@@ -448,24 +396,8 @@ void
 scheduler_timer_init(void)
 {
     // Create a FreeRTOS Timer
-    /*xWsfTimer = xTimerCreate("WSF Timer", pdMS_TO_TICKS(WSF_MS_PER_TICK),
-            pdFALSE, NULL, wsf_timer_handler,
-			&( radioBuffer[0] )
-			);
-	*/
     xWsfTimer = xTimerCreate("WSF Timer", pdMS_TO_TICKS(WSF_MS_PER_TICK),
-            pdFALSE, NULL, wsf_timer_handler			);
-/* comment out because you can't have the ==
-	if ( radioBuffer[0] == NULL ) {
-
-
-
-   		am_util_stdio_printf("the timer was not created\r\n");//miguel call 2
-
-	}
-*/
-
-
+            pdFALSE, NULL, wsf_timer_handler);
     configASSERT(xWsfTimer);
 }
 
@@ -483,7 +415,6 @@ update_scheduler_timers(void)
     // Read the continuous timer.
     //
     ui32CurrentTime = xTaskGetTickCount();
-   	am_util_stdio_printf("continuousTimer = %d\r\n", ui32CurrentTime);//miguel call 2
 
     //
     // Figure out how long it has been since the last time we've read the
@@ -548,7 +479,9 @@ exactle_stack_init(void)
     //
     // Set up timers for the WSF scheduler.
     //
+
     scheduler_timer_init();
+
     WsfTimerInit();
 
     //
@@ -649,9 +582,14 @@ void
 am_ble_isr(void)
 {
 
-   	am_util_stdio_printf("am_ble_isr() called\r\n");//miguel call 2
     HciDrvIntService();
+	for (int i = 0 ; i < 100; i++){
 
+
+	loop();
+	
+
+	}
     // Signal radio task to run
 
     WsfTaskSetReady(0, 0);
@@ -678,22 +616,14 @@ RadioTaskSetup(void)
 
     // Pass event object to WSF scheduler
     wsfOsSetEventObject((void*)xRadioEventHandle);
-	
-   	am_util_stdio_printf("BLE_IRQn = %d\r\n", BLE_IRQn);//miguel call 2
-    NVIC_SetPriority(12, NVIC_configMAX_SYSCALL_INTERRUPT_PRIORITY);
+
+    NVIC_SetPriority(BLE_IRQn, NVIC_configMAX_SYSCALL_INTERRUPT_PRIORITY);
 
     //
     // Boot the radio.
     //
-   	am_util_stdio_printf(" HciDrvRadioBoot(1) \r\n");//miguel call 2
     HciDrvRadioBoot(1);
-
-
-	
-
 }
-
-
 
 //*****************************************************************************
 //
@@ -703,19 +633,12 @@ RadioTaskSetup(void)
 void
 RadioTask(void *pvParameters)
 {
-#if WSF_TRACE_ENABLED == TRUE
-    //
-    // Enable ITM
-    //
-#endif
 
-   	am_util_stdio_printf("before stack\r\n");//miguel call 2
     //
     // Initialize the main ExactLE stack.
     //
     exactle_stack_init();
 
-   	am_util_stdio_printf("FitStart()\r\n");//miguel call 2
     //
     // Start the "Fit" profile.
     //
@@ -727,28 +650,22 @@ RadioTask(void *pvParameters)
         // Calculate the elapsed time from our free-running timer, and update
         // the software timers in the WSF scheduler.
         //
-
-		//skips scheduler
-   		am_util_stdio_printf("update_scheduler_timers\r\n");//miguel call 2
+   		//am_util_stdio_printf("update_scheduler_timers\r\n");//miguel call 2
         update_scheduler_timers();
-
-
-   		am_util_stdio_printf("os_dispatcher\r\n");//miguel call 2
         wsfOsDispatcher();
+
+
         //
         // Enable an interrupt to wake us up next time we have a scheduled
         // event.
         //
         set_next_wakeup();
 
-        
+    	//am_hal_ctimer_start(0, AM_HAL_CTIMER_TIMERA);
+        //
         // Check to see if the WSF routines are ready to go to sleep.
         //
-		bool mybool = wsfOsReadyToSleep();
-
-   		am_util_stdio_printf("checking my bool= %d\r\n", mybool);//miguel call 2
-		
-        if ( mybool )
+        if ( wsfOsReadyToSleep() )
         {
             //
             // Attempt to shut down the UART. If we can shut it down
@@ -756,11 +673,14 @@ RadioTask(void *pvParameters)
             // stay awake to finish processing the current packet.
             //
 
-   			am_util_stdio_printf("trying to shut down the uart= %d\r\n", mybool);//miguel call 2
+  			//NVIC_EnableIRQ(ADC_IRQn);
+			//am_hal_ctimer_int_disable(ADC_IRQn)
+			//am_hal_interrupt_master_disable();
             //
             // Wait for an event to be posted to the Radio Event Handle.
             //
-            xEventGroupWaitBits(xRadioEventHandle, 1, pdTRUE, pdFALSE, portMAX_DELAY);	
+            xEventGroupWaitBits(xRadioEventHandle, 1, pdTRUE,
+                                pdFALSE, portMAX_DELAY);
         }
     }
 }
