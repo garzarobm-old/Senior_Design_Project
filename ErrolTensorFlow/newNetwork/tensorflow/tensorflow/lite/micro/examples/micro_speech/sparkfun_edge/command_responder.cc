@@ -48,8 +48,9 @@ void RespondToCommand(tflite::ErrorReporter* error_reporter,
     TF_LITE_REPORT_ERROR(error_reporter, "Heard %s (%d) @%dms", found_command,
                          score, current_time);
 	
-    if (found_command[0] == 'u') {
-		array[0] = array[0] + 1;	
+    if (found_command[0] == 'u') { //if unknown send to array[INDEX]
+		//array[0] = array[0] + 1;	
+		array[2] = array[2] + 1;	
 	}	
     if (found_command[0] == 's' && found_command[1] == 'p' ) {
 			
@@ -57,7 +58,9 @@ void RespondToCommand(tflite::ErrorReporter* error_reporter,
       am_devices_led_on(am_bsp_psLEDs, AM_BSP_LED_YELLOW);
     }
     if (found_command[0] == 'm') {
-		array[2] = array[2] + 1;	
+		//array[2] = array[2] + 1;	
+		array[0] = array[0] + 1;	
+		
       am_devices_led_on(am_bsp_psLEDs, AM_BSP_LED_RED);
     }
     if (found_command[0] == 's' && found_command[1] == 'i') {

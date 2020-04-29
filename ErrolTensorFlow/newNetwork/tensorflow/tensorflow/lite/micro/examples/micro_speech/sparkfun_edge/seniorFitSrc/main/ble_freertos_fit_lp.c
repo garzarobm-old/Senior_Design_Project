@@ -247,7 +247,7 @@ int ble_main(int argc, char** argv)	{
 	loop();
 	
 
-}
+	}
 	//loop();
 
     //

@@ -3,6 +3,7 @@ ifneq (3.82,$(firstword $(sort $(MAKE_VERSION) 3.82)))
 endif
 
 MAKEFILE_DIR := tensorflow/lite/micro/tools/make
+BLE_BLE_SOURCES = tensorflow/lite/micro/examples/micro_speech/sparkfun_edge/seniorFitSrc
 
 # Pull in some convenience functions.
 include $(MAKEFILE_DIR)/helper_functions.inc
@@ -98,7 +99,6 @@ MICRO_LITE_EXAMPLE_TESTS := $(wildcard tensorflow/lite/micro/examples/*/Makefile
 
 ######miguel starting putting inputs after kernel_util.cc################
 
-BLE_SOURCES = seniorFitSrc
 
 MICROLITE_CC_BASE_SRCS := \
 $(wildcard tensorflow/lite/micro/*.cc) \
@@ -242,6 +242,8 @@ ${BLE_BLE_SOURCES}/objs/smpr_act.o \
 ${BLE_BLE_SOURCES}/objs/smpr_sc_act.o \
 ${BLE_BLE_SOURCES}/objs/smpr_sc_sm.o \
 ${BLE_BLE_SOURCES}/objs/smpr_sm.o
+
+
 # edn of making own obj
 MICROLITE_CC_SRCS := $(filter-out $(MICROLITE_TEST_SRCS), $(MICROLITE_CC_BASE_SRCS))
 

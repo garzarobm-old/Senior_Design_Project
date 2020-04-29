@@ -156,7 +156,7 @@ static const appUpdateCfg_t fitUpdateCfg =
 /*! heart rate measurement configuration */
 static const hrpsCfg_t fitHrpsCfg =
 {
-  100      /*! Measurement timer expiration period in ms */
+  2500 /*! Measurement timer expiration period in ms */
 };
 
 /*! battery measurement configuration */

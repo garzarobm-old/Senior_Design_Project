@@ -294,16 +294,16 @@ void hrpsMeasTimerExp(wsfMsgHdr_t *pMsg)
 
 	const char* typeOfNoise;
 	int noise = grab();
-	if (noise == 0 ) typeOfNoise = "unknown";//unknown
+	if (noise == 0 ) typeOfNoise = "music";//unknown
 	else if (noise == 1 ) typeOfNoise = "speech";//unknown
-	else if (noise == 2 ) typeOfNoise = "music";//unknown
+	else if (noise == 2 ) typeOfNoise = "unknown";//unknown
 	else if (noise == 3 ) typeOfNoise = "silence";//unknown
 	else{
    	am_util_stdio_printf("ERROR \r\n");
 
 	} 
 
-   	am_util_stdio_printf("READ NOISE %s \r\n", typeOfNoise);//miguel call 2
+   	am_util_stdio_printf("READ NOISE %s %d \r\n", typeOfNoise, noise);//miguel call 2
 	reset();
 
 
