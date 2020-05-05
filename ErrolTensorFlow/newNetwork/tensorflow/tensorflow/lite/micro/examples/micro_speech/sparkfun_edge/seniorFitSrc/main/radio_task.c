@@ -590,7 +590,7 @@ am_ble_isr(void)
 
 
 	if(afterAdvertising){
-	for(int i = 0; i< 10; i++){
+	for(int i = 0; i< 25; i++){
     loop();// Signal radio task to run
 
 	}

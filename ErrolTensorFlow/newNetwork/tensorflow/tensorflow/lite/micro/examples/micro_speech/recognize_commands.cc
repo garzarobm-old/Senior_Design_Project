@@ -112,11 +112,11 @@ TfLiteStatus RecognizeCommands::ProcessLatestResults(
   int current_top_index = 0;
   int32_t current_top_score = 0;
   for (int i = 0; i < kCategoryCount; ++i) {
-    if (average_scores[i] > current_top_score && average_scores[i] > 145) {
+    if (average_scores[i] > current_top_score && average_scores[i] > 128) {
 		
       current_top_score = average_scores[i];
 		//checks sensitivity for music	
-		if(average_scores[i] < 175){
+		if(average_scores[i] < 161){
 			current_top_index = 3;
 		}
 		else{
