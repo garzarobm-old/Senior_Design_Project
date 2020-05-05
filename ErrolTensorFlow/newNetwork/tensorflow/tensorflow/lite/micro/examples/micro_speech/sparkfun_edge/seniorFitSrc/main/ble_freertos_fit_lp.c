@@ -170,16 +170,6 @@ am_ctimer_isr(void)
 /* C code: */
 int ble_main(int argc, char** argv)	{
 
-	tensorflow_cc_entry();
-	setup();
-//one second
-	for (int i = 0 ; i < 1000; i++){
-
-
-	loop();
-	
-
-}
 	/*clk, memory, lazy loading cache configurtation */	
 	//NOTE: may not need since clock already seems enabled here 
 	am_hal_clkgen_control(AM_HAL_CLKGEN_CONTROL_SYSCLK_MAX, 0); //uncomment if needed
@@ -203,6 +193,9 @@ int ble_main(int argc, char** argv)	{
 	/* end of cache and fpu configuration */
 
 
+	tensorflow_cc_entry();
+	setup();
+//one second
 
 	/*MIGUEL START OF SRAM SETTINGS */
 
@@ -241,7 +234,7 @@ int ble_main(int argc, char** argv)	{
     // Start timer A0
     //
 
-	for (int i = 0 ; i < 100; i++){
+	for (int i = 0 ; i < 5; i++){
 
 
 	loop();

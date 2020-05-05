@@ -106,14 +106,30 @@ TfLiteStatus RecognizeCommands::ProcessLatestResults(
     average_scores[i] /= how_many_results;
   }
 
+
+	int flag = 0;
   // Find the current highest scoring category.
   int current_top_index = 0;
   int32_t current_top_score = 0;
   for (int i = 0; i < kCategoryCount; ++i) {
-    if (average_scores[i] > current_top_score) {
+    if (average_scores[i] > current_top_score && average_scores[i] > 145) {
+		
       current_top_score = average_scores[i];
+		//checks sensitivity for music	
+		if(average_scores[i] < 175){
+			current_top_index = 3;
+		}
+		else{
       current_top_index = i;
+		}
+		flag = 1;
+	
     }
+	else if (average_scores[i] > current_top_score && flag == 0){
+		current_top_score = average_scores[i];
+		current_top_index = 1; //setting to unknown
+
+	}
   }
   const char* current_top_label = kCategoryLabels[current_top_index];
 

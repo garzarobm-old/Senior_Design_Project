@@ -119,7 +119,7 @@ typedef union
 static const appAdvCfg_t fitAdvCfg =
 {
   {0,     0,     0},                  /*! Advertising durations in ms */
-  {  800,     0,     0}                   /*! Advertising intervals in 0.625 ms units */
+  {  1000,     0,     0}                   /*! Advertising intervals in 0.625 ms units */
 };
 
 /*! configurable parameters for slave */
@@ -568,8 +568,13 @@ static void fitBtnCback(uint8_t btn)
 static void fitProcMsg(fitMsg_t *pMsg)
 {
   uint8_t uiEvent = APP_UI_NONE;
+		if( pMsg->hdr.event== 15){
+		setInference(1);
+		}
+		else if (pMsg->hdr.event == 33){
+			setInference(0);
+		}
 
-   am_util_stdio_printf("fitProcMsg event number = %d\r\n",pMsg->hdr.event );//miguel call 2
   switch(pMsg->hdr.event)
   {
     case FIT_RUNNING_TIMER_IND:
@@ -608,8 +613,8 @@ static void fitProcMsg(fitMsg_t *pMsg)
       break;
 
     case DM_ADV_STOP_IND:
-  	  am_util_stdio_printf("DM_ADV_STOP_IND -->\r\n");//miguel call 2
       uiEvent = APP_UI_ADV_STOP;
+  	  am_util_stdio_printf("DM_ADV_STOP-->\r\n");//miguel call 2
       break;
 
     case DM_CONN_OPEN_IND:

@@ -351,6 +351,7 @@ radio_timer_handler(void)
     // Signal radio task to run
 	//loop();
 	
+	
     WsfTaskSetReady(0, 0);
 }
 
@@ -381,7 +382,6 @@ TimerHandle_t xWsfTimer;
 void
 wsf_timer_handler(TimerHandle_t xTimer)
 {
-    // Signal radio task to run
 
    	//am_util_stdio_printf("wsf_timer_handler() called\r\n");//miguel call 2
     WsfTaskSetReady(0, 0);
@@ -572,7 +572,11 @@ am_uart_isr(void)
 
     WsfTaskSetReady(0, 0);
 }
-
+static int afterAdvertising= 0;
+void setInference(int onOff){
+	afterAdvertising = onOff;
+	
+}
 //*****************************************************************************
 //
 // Interrupt handler for BLE
@@ -585,12 +589,11 @@ am_ble_isr(void)
     HciDrvIntService();
 
 
-	for (int i = 0 ; i < 50; i++){
+	if(afterAdvertising){
+	for(int i = 0; i< 10; i++){
+    loop();// Signal radio task to run
 
-
-	loop();
-	
-
+	}
 	}
     // Signal radio task to run
 
@@ -645,7 +648,7 @@ RadioTask(void *pvParameters)
     // Start the "Fit" profile.
     //
     FitStart();
-
+	
     while (1)
     {
         //
