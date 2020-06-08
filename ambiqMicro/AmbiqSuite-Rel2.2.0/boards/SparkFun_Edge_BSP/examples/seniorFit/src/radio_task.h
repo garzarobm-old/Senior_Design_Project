@@ -62,4 +62,13 @@ extern TaskHandle_t radio_task_handle;
 extern void RadioTaskSetup(void);
 extern void RadioTask(void *pvParameters);
 
+extern TaskHandle_t miguelled_task_handle;
+
+//*****************************************************************************
+//
+// External function definitions.
+//
+//*****************************************************************************
+extern void miguelLEDTaskSetup(void);
+extern void miguelLedTask(void *pvParameters);
 #endif // RADIO_TASK_H

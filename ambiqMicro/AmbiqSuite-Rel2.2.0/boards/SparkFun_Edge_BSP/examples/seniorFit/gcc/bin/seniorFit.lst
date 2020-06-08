@@ -12028,7 +12028,7 @@ scheduler_timer_init(void)
    12d56:	bd80      	pop	{r7, pc}
    12d58:	00012d09 	.word	0x00012d09
    12d5c:	0002342c 	.word	0x0002342c
-   12d60:	100064f4 	.word	0x100064f4
+   12d60:	100064f8 	.word	0x100064f8
 
 00012d64 <update_scheduler_timers>:
 // Calculate the elapsed time, and update the WSF software timers.
@@ -12149,7 +12149,7 @@ set_next_wakeup(void)
    12dea:	3708      	adds	r7, #8
    12dec:	46bd      	mov	sp, r7
    12dee:	bd80      	pop	{r7, pc}
-   12df0:	100064f4 	.word	0x100064f4
+   12df0:	100064f8 	.word	0x100064f8
    12df4:	10624dd3 	.word	0x10624dd3
 
 00012df8 <exactle_stack_init>:
@@ -12441,7 +12441,7 @@ RadioTaskSetup(void)
 }
    12f94:	bf00      	nop
    12f96:	bd80      	pop	{r7, pc}
-   12f98:	100064fc 	.word	0x100064fc
+   12f98:	10006500 	.word	0x10006500
 
 00012f9c <RadioTask>:
 // Short Description.
@@ -12517,7 +12517,7 @@ RadioTask(void *pvParameters)
    12fe8:	4603      	mov	r3, r0
    12fea:	2b00      	cmp	r3, #0
    12fec:	d0e1      	beq.n	12fb2 <RadioTask+0x16>
-            //
+        {
 
             //
             // Wait for an event to be posted to the Radio Event Handle.
@@ -12536,7 +12536,7 @@ RadioTask(void *pvParameters)
    13004:	00023438 	.word	0x00023438
    13008:	00023448 	.word	0x00023448
    1300c:	4001009c 	.word	0x4001009c
-   13010:	100064fc 	.word	0x100064fc
+   13010:	10006500 	.word	0x10006500
 
 00013014 <am_ctimer_isr>:
 // Interrupt handler for the CTIMER module.
@@ -12689,6 +12689,8 @@ setup_task(void *pvParameters)
    1309c:	4805      	ldr	r0, [pc, #20]	; (130b4 <setup_task+0x34>)
    1309e:	f008 fb57 	bl	1b750 <xTaskCreate>
 
+    //miguelLedTaskSetup();
+    //xTaskCreate(miguelLedTask, "miguelLEDTask", 512, 0, 3, &miguelled_task_handle);
 
     // The setup operations are complete, so suspend the setup task now.
     vTaskSuspend(NULL);
@@ -12698,7 +12700,7 @@ setup_task(void *pvParameters)
     while (1);
    130a8:	e7fe      	b.n	130a8 <setup_task+0x28>
    130aa:	bf00      	nop
-   130ac:	100064f8 	.word	0x100064f8
+   130ac:	100064fc 	.word	0x100064fc
    130b0:	00023478 	.word	0x00023478
    130b4:	00012f9d 	.word	0x00012f9d
 
@@ -12739,7 +12741,7 @@ run_tasks(void)
    130da:	46bd      	mov	sp, r7
    130dc:	bd80      	pop	{r7, pc}
    130de:	bf00      	nop
-   130e0:	10006500 	.word	0x10006500
+   130e0:	10006508 	.word	0x10006508
    130e4:	00023484 	.word	0x00023484
    130e8:	00013081 	.word	0x00013081
 
@@ -12791,7 +12793,7 @@ static void fitDmCback(dmEvt_t *pDmEvt)
    1312a:	46bd      	mov	sp, r7
    1312c:	bd80      	pop	{r7, pc}
    1312e:	bf00      	nop
-   13130:	10006514 	.word	0x10006514
+   13130:	1000651c 	.word	0x1000651c
 
 00013134 <fitAttCback>:
  *
@@ -12849,7 +12851,7 @@ static void fitAttCback(attEvt_t *pEvt)
    13186:	3710      	adds	r7, #16
    13188:	46bd      	mov	sp, r7
    1318a:	bd80      	pop	{r7, pc}
-   1318c:	10006514 	.word	0x10006514
+   1318c:	1000651c 	.word	0x1000651c
 
 00013190 <fitCccCback>:
  *
@@ -12921,7 +12923,7 @@ static void fitCccCback(attsCccEvt_t *pEvt)
    131ee:	46bd      	mov	sp, r7
    131f0:	bd80      	pop	{r7, pc}
    131f2:	bf00      	nop
-   131f4:	10006514 	.word	0x10006514
+   131f4:	1000651c 	.word	0x1000651c
 
 000131f8 <fitSendRunningSpeedMeasurement>:
 *
@@ -13015,8 +13017,8 @@ static void fitSendRunningSpeedMeasurement(dmConnId_t connId)
    13278:	bd80      	pop	{r7, pc}
    1327a:	bf00      	nop
    1327c:	10002396 	.word	0x10002396
-   13280:	10006504 	.word	0x10006504
-   13284:	10006514 	.word	0x10006514
+   13280:	1000650c 	.word	0x1000650c
+   13284:	1000651c 	.word	0x1000651c
    13288:	10002394 	.word	0x10002394
 
 0001328c <fitProcCccState>:
@@ -13156,7 +13158,7 @@ static void fitProcCccState(fitMsg_t *pMsg)
    13332:	bf00      	nop
    13334:	0002348c 	.word	0x0002348c
    13338:	000234ac 	.word	0x000234ac
-   1333c:	10006504 	.word	0x10006504
+   1333c:	1000650c 	.word	0x1000650c
    13340:	000234d8 	.word	0x000234d8
 
 00013344 <fitClose>:
@@ -13196,7 +13198,7 @@ static void fitClose(fitMsg_t *pMsg)
    1336e:	46bd      	mov	sp, r7
    13370:	bd80      	pop	{r7, pc}
    13372:	bf00      	nop
-   13374:	10006504 	.word	0x10006504
+   13374:	1000650c 	.word	0x1000650c
 
 00013378 <fitSetup>:
  *
@@ -13799,14 +13801,14 @@ void FitHandlerInit(wsfHandlerId_t handlerId)
    13806:	3708      	adds	r7, #8
    13808:	46bd      	mov	sp, r7
    1380a:	bd80      	pop	{r7, pc}
-   1380c:	10006514 	.word	0x10006514
-   13810:	1000707c 	.word	0x1000707c
+   1380c:	1000651c 	.word	0x1000651c
+   13810:	10007084 	.word	0x10007084
    13814:	00024290 	.word	0x00024290
-   13818:	10007058 	.word	0x10007058
+   13818:	10007060 	.word	0x10007060
    1381c:	0002429c 	.word	0x0002429c
-   13820:	10007070 	.word	0x10007070
+   13820:	10007078 	.word	0x10007078
    13824:	000242a0 	.word	0x000242a0
-   13828:	10007054 	.word	0x10007054
+   13828:	1000705c 	.word	0x1000705c
    1382c:	000242a8 	.word	0x000242a8
    13830:	100023a0 	.word	0x100023a0
    13834:	000242c4 	.word	0x000242c4
@@ -14818,8 +14820,8 @@ void hciCmdSend(uint8_t *pData)
    13de2:	3710      	adds	r7, #16
    13de4:	46bd      	mov	sp, r7
    13de6:	bd80      	pop	{r7, pc}
-   13de8:	10006528 	.word	0x10006528
-   13dec:	10006518 	.word	0x10006518
+   13de8:	10006530 	.word	0x10006530
+   13dec:	10006520 	.word	0x10006520
 
 00013df0 <hciCmdInit>:
  *
@@ -14860,8 +14862,8 @@ void hciCmdInit(void)
    13e18:	f85d 7b04 	ldr.w	r7, [sp], #4
    13e1c:	4770      	bx	lr
    13e1e:	bf00      	nop
-   13e20:	10006518 	.word	0x10006518
-   13e24:	10006648 	.word	0x10006648
+   13e20:	10006520 	.word	0x10006520
+   13e24:	10006650 	.word	0x10006650
 
 00013e28 <hciCmdTimeout>:
  *
@@ -14928,7 +14930,7 @@ void hciCmdRecvCmpl(uint8_t numCmdPkts)
    13e66:	3708      	adds	r7, #8
    13e68:	46bd      	mov	sp, r7
    13e6a:	bd80      	pop	{r7, pc}
-   13e6c:	10006518 	.word	0x10006518
+   13e6c:	10006520 	.word	0x10006520
 
 00013e70 <HciDisconnectCmd>:
  *
@@ -16795,9 +16797,9 @@ void HciResetCmd(void)
    14932:	46bd      	mov	sp, r7
    14934:	bd80      	pop	{r7, pc}
    14936:	bf00      	nop
-   14938:	10006648 	.word	0x10006648
-   1493c:	10006528 	.word	0x10006528
-   14940:	10006518 	.word	0x10006518
+   14938:	10006650 	.word	0x10006650
+   1493c:	10006530 	.word	0x10006530
+   14940:	10006520 	.word	0x10006520
 
 00014944 <HciSetEventMaskCmd>:
  *
@@ -17468,7 +17470,7 @@ static void hciCoreConnAlloc(uint16_t handle)
    14ce4:	f85d 7b04 	ldr.w	r7, [sp], #4
    14ce8:	4770      	bx	lr
    14cea:	bf00      	nop
-   14cec:	10006534 	.word	0x10006534
+   14cec:	1000653c 	.word	0x1000653c
 
 00014cf0 <hciCoreConnFree>:
  *
@@ -17574,7 +17576,7 @@ static void hciCoreConnFree(uint16_t handle)
    14d6a:	3710      	adds	r7, #16
    14d6c:	46bd      	mov	sp, r7
    14d6e:	bd80      	pop	{r7, pc}
-   14d70:	10006534 	.word	0x10006534
+   14d70:	1000653c 	.word	0x1000653c
 
 00014d74 <hciCoreConnByHandle>:
  *
@@ -17631,7 +17633,7 @@ hciCoreConn_t *hciCoreConnByHandle(uint16_t handle)
    14db0:	f85d 7b04 	ldr.w	r7, [sp], #4
    14db4:	4770      	bx	lr
    14db6:	bf00      	nop
-   14db8:	10006534 	.word	0x10006534
+   14db8:	1000653c 	.word	0x1000653c
 
 00014dbc <hciCoreNextConnFragment>:
  *
@@ -17689,7 +17691,7 @@ static hciCoreConn_t *hciCoreNextConnFragment(void)
    14dfc:	46bd      	mov	sp, r7
    14dfe:	f85d 7b04 	ldr.w	r7, [sp], #4
    14e02:	4770      	bx	lr
-   14e04:	10006534 	.word	0x10006534
+   14e04:	1000653c 	.word	0x1000653c
 
 00014e08 <hciCoreConnOpen>:
  *
@@ -17788,7 +17790,7 @@ void hciCoreSendAclData(hciCoreConn_t *pConn, uint8_t *pData)
    14e76:	3708      	adds	r7, #8
    14e78:	46bd      	mov	sp, r7
    14e7a:	bd80      	pop	{r7, pc}
-   14e7c:	10006534 	.word	0x10006534
+   14e7c:	1000653c 	.word	0x1000653c
 
 00014e80 <hciCoreTxReady>:
  *
@@ -17930,8 +17932,8 @@ void hciCoreTxReady(uint8_t bufs)
    14f42:	3718      	adds	r7, #24
    14f44:	46bd      	mov	sp, r7
    14f46:	bd80      	pop	{r7, pc}
-   14f48:	10006534 	.word	0x10006534
-   14f4c:	10006624 	.word	0x10006624
+   14f48:	1000653c 	.word	0x1000653c
+   14f4c:	1000662c 	.word	0x1000662c
 
 00014f50 <hciCoreTxAclStart>:
  *
@@ -18043,7 +18045,7 @@ void hciCoreTxAclStart(hciCoreConn_t *pConn, uint16_t len, uint8_t *pData)
    14fd6:	46bd      	mov	sp, r7
    14fd8:	bd80      	pop	{r7, pc}
    14fda:	bf00      	nop
-   14fdc:	10006534 	.word	0x10006534
+   14fdc:	1000653c 	.word	0x1000653c
 
 00014fe0 <hciCoreTxAclContinue>:
  *
@@ -18564,7 +18566,7 @@ uint8_t *hciCoreAclReassembly(uint8_t *pData)
    152aa:	3720      	adds	r7, #32
    152ac:	46bd      	mov	sp, r7
    152ae:	bd80      	pop	{r7, pc}
-   152b0:	10006534 	.word	0x10006534
+   152b0:	1000653c 	.word	0x1000653c
 
 000152b4 <HciCoreInit>:
  *
@@ -18636,7 +18638,7 @@ void HciCoreInit(void)
    1531a:	46bd      	mov	sp, r7
    1531c:	bd80      	pop	{r7, pc}
    1531e:	bf00      	nop
-   15320:	10006534 	.word	0x10006534
+   15320:	1000653c 	.word	0x1000653c
 
 00015324 <HciResetSequence>:
  *
@@ -18764,8 +18766,8 @@ void HciResetSequence(void)
    153b6:	46bd      	mov	sp, r7
    153b8:	bd80      	pop	{r7, pc}
    153ba:	bf00      	nop
-   153bc:	10006534 	.word	0x10006534
-   153c0:	10006648 	.word	0x10006648
+   153bc:	1000653c 	.word	0x1000653c
+   153c0:	10006650 	.word	0x10006650
 
 000153c4 <HciSetMaxRxAclLen>:
  *
@@ -18790,7 +18792,7 @@ void HciSetMaxRxAclLen(uint16_t len)
    153dc:	f85d 7b04 	ldr.w	r7, [sp], #4
    153e0:	4770      	bx	lr
    153e2:	bf00      	nop
-   153e4:	10006534 	.word	0x10006534
+   153e4:	1000653c 	.word	0x1000653c
 
 000153e8 <HciSendAclData>:
  *
@@ -18931,9 +18933,9 @@ void HciSendAclData(uint8_t *pData)
    154ae:	46bd      	mov	sp, r7
    154b0:	bd90      	pop	{r4, r7, pc}
    154b2:	bf00      	nop
-   154b4:	10006624 	.word	0x10006624
-   154b8:	10006534 	.word	0x10006534
-   154bc:	10006648 	.word	0x10006648
+   154b4:	1000662c 	.word	0x1000662c
+   154b8:	1000653c 	.word	0x1000653c
+   154bc:	10006650 	.word	0x10006650
 
 000154c0 <hciCoreInit>:
  *
@@ -19096,8 +19098,8 @@ void hciCoreNumCmplPkts(uint8_t *pMsg)
    15592:	3718      	adds	r7, #24
    15594:	46bd      	mov	sp, r7
    15596:	bd80      	pop	{r7, pc}
-   15598:	10006534 	.word	0x10006534
-   1559c:	10006648 	.word	0x10006648
+   15598:	1000653c 	.word	0x1000653c
+   1559c:	10006650 	.word	0x10006650
 
 000155a0 <hciCoreRecv>:
  *
@@ -19136,7 +19138,7 @@ void hciCoreRecv(uint8_t msgType, uint8_t *pCoreRecvMsg)
    155c6:	3708      	adds	r7, #8
    155c8:	46bd      	mov	sp, r7
    155ca:	bd80      	pop	{r7, pc}
-   155cc:	10006648 	.word	0x10006648
+   155cc:	10006650 	.word	0x10006650
 
 000155d0 <HciCoreHandler>:
  *
@@ -19230,7 +19232,7 @@ void HciCoreHandler(wsfEventMask_t event, wsfMsgHdr_t *pMsg)
    1564e:	46bd      	mov	sp, r7
    15650:	bd80      	pop	{r7, pc}
    15652:	bf00      	nop
-   15654:	10006648 	.word	0x10006648
+   15654:	10006650 	.word	0x10006650
 
 00015658 <HciGetBdAddr>:
  *
@@ -19248,7 +19250,7 @@ uint8_t *HciGetBdAddr(void)
    15660:	46bd      	mov	sp, r7
    15662:	f85d 7b04 	ldr.w	r7, [sp], #4
    15666:	4770      	bx	lr
-   15668:	1000661c 	.word	0x1000661c
+   15668:	10006624 	.word	0x10006624
 
 0001566c <HciGetBufSize>:
  *
@@ -19267,7 +19269,7 @@ uint16_t HciGetBufSize(void)
    15678:	46bd      	mov	sp, r7
    1567a:	f85d 7b04 	ldr.w	r7, [sp], #4
    1567e:	4770      	bx	lr
-   15680:	10006534 	.word	0x10006534
+   15680:	1000653c 	.word	0x1000653c
 
 00015684 <HciGetLeSupFeat>:
  *
@@ -19291,7 +19293,7 @@ uint16_t HciGetLeSupFeat(void)
    15698:	f85d 7b04 	ldr.w	r7, [sp], #4
    1569c:	4770      	bx	lr
    1569e:	bf00      	nop
-   156a0:	10006534 	.word	0x10006534
+   156a0:	1000653c 	.word	0x1000653c
 
 000156a4 <HciGetMaxRxAclLen>:
  *
@@ -19310,7 +19312,7 @@ uint16_t HciGetMaxRxAclLen(void)
    156b0:	46bd      	mov	sp, r7
    156b2:	f85d 7b04 	ldr.w	r7, [sp], #4
    156b6:	4770      	bx	lr
-   156b8:	10006534 	.word	0x10006534
+   156b8:	1000653c 	.word	0x1000653c
 
 000156bc <HciLlPrivacySupported>:
  *
@@ -19335,7 +19337,7 @@ bool_t HciLlPrivacySupported(void)
    156d4:	f85d 7b04 	ldr.w	r7, [sp], #4
    156d8:	4770      	bx	lr
    156da:	bf00      	nop
-   156dc:	10006534 	.word	0x10006534
+   156dc:	1000653c 	.word	0x1000653c
 
 000156e0 <hciEvtParseLeConnCmpl>:
  *
@@ -22073,7 +22075,7 @@ static void hciEvtProcessLeAdvReport(uint8_t *p, uint8_t len)
    1676a:	46bd      	mov	sp, r7
    1676c:	bd80      	pop	{r7, pc}
    1676e:	bf00      	nop
-   16770:	10006648 	.word	0x10006648
+   16770:	10006650 	.word	0x10006650
 
 00016774 <hciEvtProcessLeExtAdvReport>:
  *
@@ -22372,7 +22374,7 @@ static void hciEvtProcessLeExtAdvReport(uint8_t *p, uint8_t len)
    1691a:	46bd      	mov	sp, r7
    1691c:	bd80      	pop	{r7, pc}
    1691e:	bf00      	nop
-   16920:	10006648 	.word	0x10006648
+   16920:	10006650 	.word	0x10006650
 
 00016924 <hciEvtParseLeScanTimeout>:
  *
@@ -22763,7 +22765,7 @@ static void hciEvtProcessLePerAdvReport(uint8_t *p, uint8_t len)
    16b62:	3710      	adds	r7, #16
    16b64:	46bd      	mov	sp, r7
    16b66:	bd80      	pop	{r7, pc}
-   16b68:	10006648 	.word	0x10006648
+   16b68:	10006650 	.word	0x10006650
 
 00016b6c <hciEvtParseLeCmdCmpl>:
  *
@@ -22978,7 +22980,7 @@ static void hciEvtProcessLeDirectAdvReport(uint8_t *p, uint8_t len)
    16c8a:	46bd      	mov	sp, r7
    16c8c:	bd80      	pop	{r7, pc}
    16c8e:	bf00      	nop
-   16c90:	10006648 	.word	0x10006648
+   16c90:	10006650 	.word	0x10006650
 
 00016c94 <hciEvtCmdStatusFailure>:
  *
@@ -23529,7 +23531,7 @@ void hciEvtProcessCmdCmpl(uint8_t *p, uint8_t len)
    16fa2:	3718      	adds	r7, #24
    16fa4:	46bd      	mov	sp, r7
    16fa6:	bd80      	pop	{r7, pc}
-   16fa8:	10006648 	.word	0x10006648
+   16fa8:	10006650 	.word	0x10006650
    16fac:	000243f8 	.word	0x000243f8
    16fb0:	00024314 	.word	0x00024314
 
@@ -23938,7 +23940,7 @@ void hciEvtProcessMsg(uint8_t *pEvt)
    17244:	77fb      	strb	r3, [r7, #31]
       break;
    17246:	e00c      	b.n	17262 <hciEvtProcessMsg+0x2ae>
-   17248:	10006648 	.word	0x10006648
+   17248:	10006650 	.word	0x10006650
    1724c:	10004344 	.word	0x10004344
       hciEvtStats.numVendorSpecEvt++;
    17250:	4b22      	ldr	r3, [pc, #136]	; (172dc <hciEvtProcessMsg+0x328>)
@@ -24610,7 +24612,7 @@ static void hciCoreReadResolvingListSize(void)
 }
    175b8:	bf00      	nop
    175ba:	bd80      	pop	{r7, pc}
-   175bc:	10006534 	.word	0x10006534
+   175bc:	1000653c 	.word	0x1000653c
    175c0:	10002398 	.word	0x10002398
 
 000175c4 <hciCoreReadMaxDataLen>:
@@ -24651,7 +24653,7 @@ static void hciCoreReadMaxDataLen(void)
 }
    175ec:	bf00      	nop
    175ee:	bd80      	pop	{r7, pc}
-   175f0:	10006534 	.word	0x10006534
+   175f0:	1000653c 	.word	0x1000653c
    175f4:	10002398 	.word	0x10002398
 
 000175f8 <hciCoreResetStart>:
@@ -25054,9 +25056,9 @@ void hciCoreResetSequence(uint8_t *pMsg)
    178b8:	000242fc 	.word	0x000242fc
    178bc:	00024304 	.word	0x00024304
    178c0:	0002430c 	.word	0x0002430c
-   178c4:	1000661c 	.word	0x1000661c
-   178c8:	10006534 	.word	0x10006534
-   178cc:	10006648 	.word	0x10006648
+   178c4:	10006624 	.word	0x10006624
+   178c8:	1000653c 	.word	0x1000653c
+   178cc:	10006650 	.word	0x10006650
 
 000178d0 <hciCoreVsCmdCmplRcvd>:
  *
@@ -25124,7 +25126,7 @@ void HciEvtRegister(hciEvtCback_t evtCback)
    17918:	f85d 7b04 	ldr.w	r7, [sp], #4
    1791c:	4770      	bx	lr
    1791e:	bf00      	nop
-   17920:	10006648 	.word	0x10006648
+   17920:	10006650 	.word	0x10006650
 
 00017924 <HciSecRegister>:
  *
@@ -25148,7 +25150,7 @@ void HciSecRegister(hciSecCback_t secCback)
    17938:	f85d 7b04 	ldr.w	r7, [sp], #4
    1793c:	4770      	bx	lr
    1793e:	bf00      	nop
-   17940:	10006648 	.word	0x10006648
+   17940:	10006650 	.word	0x10006650
 
 00017944 <HciAclRegister>:
  *
@@ -25177,7 +25179,7 @@ void HciAclRegister(hciAclCback_t aclCback, hciFlowCback_t flowCback)
    17960:	f85d 7b04 	ldr.w	r7, [sp], #4
    17964:	4770      	bx	lr
    17966:	bf00      	nop
-   17968:	10006648 	.word	0x10006648
+   17968:	10006650 	.word	0x10006650
 
 0001796c <HciHandlerInit>:
  *
@@ -25214,7 +25216,7 @@ void HciHandlerInit(wsfHandlerId_t handlerId)
    1798e:	3708      	adds	r7, #8
    17990:	46bd      	mov	sp, r7
    17992:	bd80      	pop	{r7, pc}
-   17994:	10006648 	.word	0x10006648
+   17994:	10006650 	.word	0x10006650
 
 00017998 <HciHandler>:
  *
@@ -25499,8 +25501,8 @@ uint16_t WsfBufInit(uint16_t bufMemLen, uint8_t *pBufMem, uint8_t numPools, wsfB
    17afc:	4770      	bx	lr
    17afe:	bf00      	nop
    17b00:	10004374 	.word	0x10004374
-   17b04:	10006666 	.word	0x10006666
-   17b08:	10006664 	.word	0x10006664
+   17b04:	1000666e 	.word	0x1000666e
+   17b08:	1000666c 	.word	0x1000666c
 
 00017b0c <WsfBufAlloc>:
  *
@@ -25609,7 +25611,7 @@ void *WsfBufAlloc(uint16_t len)
    17b74:	bd80      	pop	{r7, pc}
    17b76:	bf00      	nop
    17b78:	10004374 	.word	0x10004374
-   17b7c:	10006666 	.word	0x10006666
+   17b7c:	1000666e 	.word	0x1000666e
 
 00017b80 <WsfBufFree>:
  *
@@ -25714,7 +25716,7 @@ void WsfBufFree(void *pBuf)
    17be4:	bd80      	pop	{r7, pc}
    17be6:	bf00      	nop
    17be8:	10004374 	.word	0x10004374
-   17bec:	10006666 	.word	0x10006666
+   17bec:	1000666e 	.word	0x1000666e
    17bf0:	faabd00d 	.word	0xfaabd00d
 
 00017bf4 <WsfMsgDataAlloc>:
@@ -26436,7 +26438,7 @@ static void wsfTimerRemove(wsfTimer_t *pTimer)
    17ef6:	46bd      	mov	sp, r7
    17ef8:	bd80      	pop	{r7, pc}
    17efa:	bf00      	nop
-   17efc:	10006668 	.word	0x10006668
+   17efc:	10006670 	.word	0x10006670
 
 00017f00 <wsfTimerInsert>:
  *
@@ -26531,7 +26533,7 @@ static void wsfTimerInsert(wsfTimer_t *pTimer, wsfTimerTicks_t ticks)
    17f66:	46bd      	mov	sp, r7
    17f68:	bd80      	pop	{r7, pc}
    17f6a:	bf00      	nop
-   17f6c:	10006668 	.word	0x10006668
+   17f6c:	10006670 	.word	0x10006670
 
 00017f70 <WsfTimerInit>:
  *
@@ -26555,7 +26557,7 @@ void WsfTimerInit(void)
    17f84:	f85d 7b04 	ldr.w	r7, [sp], #4
    17f88:	4770      	bx	lr
    17f8a:	bf00      	nop
-   17f8c:	10006668 	.word	0x10006668
+   17f8c:	10006670 	.word	0x10006670
 
 00017f90 <WsfTimerStartSec>:
  *
@@ -26725,7 +26727,7 @@ void WsfTimerUpdate(wsfTimerTicks_t ticks)
    1804e:	46bd      	mov	sp, r7
    18050:	bd80      	pop	{r7, pc}
    18052:	bf00      	nop
-   18054:	10006668 	.word	0x10006668
+   18054:	10006670 	.word	0x10006670
 
 00018058 <WsfTimerNextExpiration>:
  *
@@ -26783,7 +26785,7 @@ wsfTimerTicks_t WsfTimerNextExpiration(bool_t *pTimerRunning)
    1808e:	3710      	adds	r7, #16
    18090:	46bd      	mov	sp, r7
    18092:	bd80      	pop	{r7, pc}
-   18094:	10006668 	.word	0x10006668
+   18094:	10006670 	.word	0x10006670
 
 00018098 <WsfTimerServiceExpired>:
  *
@@ -26856,7 +26858,7 @@ wsfTimer_t *WsfTimerServiceExpired(wsfTaskId_t taskId)
    180de:	3710      	adds	r7, #16
    180e0:	46bd      	mov	sp, r7
    180e2:	bd80      	pop	{r7, pc}
-   180e4:	10006668 	.word	0x10006668
+   180e4:	10006670 	.word	0x10006670
 
 000180e8 <__NVIC_EnableIRQ>:
 {
@@ -27270,11 +27272,11 @@ HciDrvRadioBoot(bool bColdBoot)
    18336:	bf00      	nop
    18338:	1000437c 	.word	0x1000437c
    1833c:	10004380 	.word	0x10004380
-   18340:	10006fb8 	.word	0x10006fb8
+   18340:	10006fc0 	.word	0x10006fc0
    18344:	0002357c 	.word	0x0002357c
    18348:	0800000b 	.word	0x0800000b
-   1834c:	10006798 	.word	0x10006798
-   18350:	10006670 	.word	0x10006670
+   1834c:	100067a0 	.word	0x100067a0
+   18350:	10006678 	.word	0x10006678
    18354:	10004384 	.word	0x10004384
 
 00018358 <HciDrvRadioShutdown>:
@@ -27344,8 +27346,8 @@ HciDrvRadioShutdown(void)
    183be:	46bd      	mov	sp, r7
    183c0:	bd80      	pop	{r7, pc}
    183c2:	bf00      	nop
-   183c4:	10006688 	.word	0x10006688
-   183c8:	10006fb8 	.word	0x10006fb8
+   183c4:	10006690 	.word	0x10006690
+   183c8:	10006fc0 	.word	0x10006fc0
    183cc:	40021000 	.word	0x40021000
    183d0:	1000437c 	.word	0x1000437c
    183d4:	10004380 	.word	0x10004380
@@ -27490,7 +27492,7 @@ hciDrvWrite(uint8_t type, uint16_t len, uint8_t *pData)
    18476:	46bd      	mov	sp, r7
    18478:	bd80      	pop	{r7, pc}
    1847a:	bf00      	nop
-   1847c:	10006670 	.word	0x10006670
+   1847c:	10006678 	.word	0x10006678
    18480:	09000001 	.word	0x09000001
    18484:	10004378 	.word	0x10004378
 
@@ -27535,8 +27537,8 @@ HciDrvHandlerInit(wsfHandlerId_t handlerId)
    184b6:	f85d 7b04 	ldr.w	r7, [sp], #4
    184ba:	4770      	bx	lr
    184bc:	10004378 	.word	0x10004378
-   184c0:	10006688 	.word	0x10006688
-   184c4:	10006fbc 	.word	0x10006fbc
+   184c0:	10006690 	.word	0x10006690
+   184c4:	10006fc4 	.word	0x10006fc4
 
 000184c8 <HciDrvIntService>:
 //     HciDrvHandler(handlerId);
@@ -27598,7 +27600,7 @@ HciDrvIntService(void)
    18502:	46bd      	mov	sp, r7
    18504:	bd80      	pop	{r7, pc}
    18506:	bf00      	nop
-   18508:	10006fb8 	.word	0x10006fb8
+   18508:	10006fc0 	.word	0x10006fc0
    1850c:	10004384 	.word	0x10004384
    18510:	10004378 	.word	0x10004378
 
@@ -28048,17 +28050,17 @@ HciDrvHandler(wsfEventMask_t event, wsfMsgHdr_t *pMsg)
    1875a:	46bd      	mov	sp, r7
    1875c:	bd80      	pop	{r7, pc}
    1875e:	bf00      	nop
-   18760:	10006688 	.word	0x10006688
+   18760:	10006690 	.word	0x10006690
    18764:	1000437c 	.word	0x1000437c
    18768:	10004380 	.word	0x10004380
    1876c:	100023a4 	.word	0x100023a4
    18770:	10004378 	.word	0x10004378
    18774:	5000c000 	.word	0x5000c000
    18778:	10004384 	.word	0x10004384
-   1877c:	10006fb8 	.word	0x10006fb8
-   18780:	10006698 	.word	0x10006698
+   1877c:	10006fc0 	.word	0x10006fc0
+   18780:	100066a0 	.word	0x100066a0
    18784:	09000002 	.word	0x09000002
-   18788:	10006670 	.word	0x10006670
+   18788:	10006678 	.word	0x10006678
    1878c:	09000006 	.word	0x09000006
 
 00018790 <HciDrvEmptyWriteQueue>:
@@ -28079,8 +28081,8 @@ HciDrvEmptyWriteQueue(void)
 }
    187a4:	bf00      	nop
    187a6:	bd80      	pop	{r7, pc}
-   187a8:	10006798 	.word	0x10006798
-   187ac:	10006670 	.word	0x10006670
+   187a8:	100067a0 	.word	0x100067a0
+   187ac:	10006678 	.word	0x10006678
 
 000187b0 <RscpsSetFeatures>:
 *
@@ -28228,7 +28230,7 @@ void RscpsSetParameter(uint8_t type, uint32_t value)
    18878:	46bd      	mov	sp, r7
    1887a:	f85d 7b04 	ldr.w	r7, [sp], #4
    1887e:	4770      	bx	lr
-   18880:	10006fcc 	.word	0x10006fcc
+   18880:	10006fd4 	.word	0x10006fd4
 
 00018884 <RscpsSendSpeedMeasurement>:
 *
@@ -28403,7 +28405,7 @@ void RscpsSendSpeedMeasurement(dmConnId_t connId)
    18992:	3720      	adds	r7, #32
    18994:	46bd      	mov	sp, r7
    18996:	bd80      	pop	{r7, pc}
-   18998:	10006fcc 	.word	0x10006fcc
+   18998:	10006fd4 	.word	0x10006fd4
 
 0001899c <BdaCpy>:
  *
@@ -28771,7 +28773,7 @@ static uint8_t getNextToken()
    18b94:	f85d 7b04 	ldr.w	r7, [sp], #4
    18b98:	4770      	bx	lr
    18b9a:	bf00      	nop
-   18b9c:	10006fd8 	.word	0x10006fd8
+   18b9c:	10006fe0 	.word	0x10006fe0
 
 00018ba0 <SecAes>:
  *  \return Token value.
@@ -28850,7 +28852,7 @@ uint8_t SecAes(uint8_t *pKey, uint8_t *pPlaintext, wsfHandlerId_t handlerId,
    18c06:	46bd      	mov	sp, r7
    18c08:	bd80      	pop	{r7, pc}
    18c0a:	bf00      	nop
-   18c0c:	10006ff8 	.word	0x10006ff8
+   18c0c:	10007000 	.word	0x10007000
 
 00018c10 <SecAesHciCback>:
  *
@@ -28916,7 +28918,7 @@ void SecAesInit()
    18c5c:	46bd      	mov	sp, r7
    18c5e:	f85d 7b04 	ldr.w	r7, [sp], #4
    18c62:	4770      	bx	lr
-   18c64:	10006fd8 	.word	0x10006fd8
+   18c64:	10006fe0 	.word	0x10006fe0
    18c68:	00018c11 	.word	0x00018c11
 
 00018c6c <secCmacProcessBlock>:
@@ -29058,7 +29060,7 @@ static void secCmacProcessBlock(secQueueBuf_t *pBuf)
    18d52:	3728      	adds	r7, #40	; 0x28
    18d54:	46bd      	mov	sp, r7
    18d56:	bd80      	pop	{r7, pc}
-   18d58:	10006ff8 	.word	0x10006ff8
+   18d58:	10007000 	.word	0x10007000
 
 00018d5c <secCmacGenSubkey1>:
  *
@@ -29104,7 +29106,7 @@ static void secCmacGenSubkey1(secQueueBuf_t *pBuf)
    18d9a:	3720      	adds	r7, #32
    18d9c:	46bd      	mov	sp, r7
    18d9e:	bd80      	pop	{r7, pc}
-   18da0:	10006ff8 	.word	0x10006ff8
+   18da0:	10007000 	.word	0x10007000
 
 00018da4 <secCmacKeyShift>:
  *
@@ -29516,7 +29518,7 @@ bool_t SecCmac(const uint8_t *pKey, uint8_t *pPlainText, uint8_t textLen, wsfHan
    18fee:	46bd      	mov	sp, r7
    18ff0:	bd80      	pop	{r7, pc}
    18ff2:	bf00      	nop
-   18ff4:	10006fd8 	.word	0x10006fd8
+   18ff4:	10006fe0 	.word	0x10006fe0
 
 00018ff8 <SecCmacInit>:
  *
@@ -29536,7 +29538,7 @@ void SecCmacInit()
    19004:	46bd      	mov	sp, r7
    19006:	f85d 7b04 	ldr.w	r7, [sp], #4
    1900a:	4770      	bx	lr
-   1900c:	10006fd8 	.word	0x10006fd8
+   1900c:	10006fe0 	.word	0x10006fe0
    19010:	00018eeb 	.word	0x00018eeb
 
 00019014 <SecEccHciCback>:
@@ -29710,7 +29712,7 @@ bool_t SecEccGenKey(wsfHandlerId_t handlerId, uint16_t param, uint8_t event)
    19102:	3710      	adds	r7, #16
    19104:	46bd      	mov	sp, r7
    19106:	bd80      	pop	{r7, pc}
-   19108:	10006ff8 	.word	0x10006ff8
+   19108:	10007000 	.word	0x10007000
 
 0001910c <SecEccGenSharedSecret>:
  *
@@ -29885,7 +29887,7 @@ bool_t SecEccGenSharedSecret(secEccKey_t *pKey, wsfHandlerId_t handlerId, uint16
    19208:	bd80      	pop	{r7, pc}
    1920a:	bf00      	nop
    1920c:	40020000 	.word	0x40020000
-   19210:	10006ff8 	.word	0x10006ff8
+   19210:	10007000 	.word	0x10007000
 
 00019214 <SecEccInit>:
  *
@@ -29905,7 +29907,7 @@ void SecEccInit()
    19220:	46bd      	mov	sp, r7
    19222:	f85d 7b04 	ldr.w	r7, [sp], #4
    19226:	4770      	bx	lr
-   19228:	10006fd8 	.word	0x10006fd8
+   19228:	10006fe0 	.word	0x10006fe0
    1922c:	00019015 	.word	0x00019015
 
 00019230 <secHciCback>:
@@ -30037,9 +30039,9 @@ static void secHciCback(hciEvt_t *pEvent)
    192ee:	3710      	adds	r7, #16
    192f0:	46bd      	mov	sp, r7
    192f2:	bd80      	pop	{r7, pc}
-   192f4:	10006fd8 	.word	0x10006fd8
-   192f8:	10006fe0 	.word	0x10006fe0
-   192fc:	10006ff8 	.word	0x10006ff8
+   192f4:	10006fe0 	.word	0x10006fe0
+   192f8:	10006fe8 	.word	0x10006fe8
+   192fc:	10007000 	.word	0x10007000
 
 00019300 <SecInit>:
  *
@@ -30070,7 +30072,7 @@ void SecInit(void)
    1931e:	bf00      	nop
    19320:	bd80      	pop	{r7, pc}
    19322:	bf00      	nop
-   19324:	10006fd8 	.word	0x10006fd8
+   19324:	10006fe0 	.word	0x10006fe0
    19328:	00019231 	.word	0x00019231
 
 0001932c <SecRand>:
@@ -30125,7 +30127,7 @@ void SecRand(uint8_t *pRand, uint8_t randLen)
    1936a:	3710      	adds	r7, #16
    1936c:	46bd      	mov	sp, r7
    1936e:	bd80      	pop	{r7, pc}
-   19370:	10006fd8 	.word	0x10006fd8
+   19370:	10006fe0 	.word	0x10006fe0
 
 00019374 <hrpsNoConnActive>:
  *
@@ -33651,7 +33653,7 @@ void WsfSetEvent(wsfHandlerId_t handlerId, wsfEventMask_t event)
    1a646:	46bd      	mov	sp, r7
    1a648:	bd80      	pop	{r7, pc}
    1a64a:	bf00      	nop
-   1a64c:	10007010 	.word	0x10007010
+   1a64c:	10007018 	.word	0x10007018
 
 0001a650 <WsfTaskSetReady>:
  *
@@ -33693,7 +33695,7 @@ void WsfTaskSetReady(wsfHandlerId_t handlerId, wsfTaskEvent_t event)
    1a682:	46bd      	mov	sp, r7
    1a684:	bd80      	pop	{r7, pc}
    1a686:	bf00      	nop
-   1a688:	10007010 	.word	0x10007010
+   1a688:	10007018 	.word	0x10007018
 
 0001a68c <WsfTaskMsgQueue>:
  *
@@ -33715,7 +33717,7 @@ wsfQueue_t *WsfTaskMsgQueue(wsfHandlerId_t handlerId)
    1a69c:	46bd      	mov	sp, r7
    1a69e:	f85d 7b04 	ldr.w	r7, [sp], #4
    1a6a2:	4770      	bx	lr
-   1a6a4:	10007040 	.word	0x10007040
+   1a6a4:	10007048 	.word	0x10007048
 
 0001a6a8 <WsfOsSetNextHandler>:
  *
@@ -33754,7 +33756,7 @@ wsfHandlerId_t WsfOsSetNextHandler(wsfEventHandler_t handler)
    1a6d4:	f85d 7b04 	ldr.w	r7, [sp], #4
    1a6d8:	4770      	bx	lr
    1a6da:	bf00      	nop
-   1a6dc:	10007010 	.word	0x10007010
+   1a6dc:	10007018 	.word	0x10007018
 
 0001a6e0 <wsfOsReadyToSleep>:
  *
@@ -33779,7 +33781,7 @@ bool_t wsfOsReadyToSleep(void)
    1a6f8:	f85d 7b04 	ldr.w	r7, [sp], #4
    1a6fc:	4770      	bx	lr
    1a6fe:	bf00      	nop
-   1a700:	10007010 	.word	0x10007010
+   1a700:	10007018 	.word	0x10007018
 
 0001a704 <wsfOsDispatcher>:
  *
@@ -33974,7 +33976,7 @@ void wsfOsDispatcher(void)
    1a82a:	3718      	adds	r7, #24
    1a82c:	46bd      	mov	sp, r7
    1a82e:	bd80      	pop	{r7, pc}
-   1a830:	10007010 	.word	0x10007010
+   1a830:	10007018 	.word	0x10007018
    1a834:	00023598 	.word	0x00023598
    1a838:	000235b0 	.word	0x000235b0
    1a83c:	000235c4 	.word	0x000235c4
@@ -41264,7 +41266,7 @@ am_util_stdio_printf_init(am_util_stdio_print_char_t pfnCharPrint)
    1cc7c:	f85d 7b04 	ldr.w	r7, [sp], #4
    1cc80:	4770      	bx	lr
    1cc82:	bf00      	nop
-   1cc84:	1000704c 	.word	0x1000704c
+   1cc84:	10007054 	.word	0x10007054
 
 0001cc88 <divu64_10>:
 //  Note: Adapted from Ch10 of Hackers Delight (hackersdelight.org).
@@ -43532,7 +43534,7 @@ am_util_stdio_printf(const char *pcFmt, ...)
    1d9b6:	b004      	add	sp, #16
    1d9b8:	4770      	bx	lr
    1d9ba:	bf00      	nop
-   1d9bc:	1000704c 	.word	0x1000704c
+   1d9bc:	10007054 	.word	0x10007054
    1d9c0:	10006360 	.word	0x10006360
 
 0001d9c4 <appProcMsg>:
@@ -43604,7 +43606,7 @@ bool_t appCheckBonded(dmConnId_t connId)
    1da0c:	46bd      	mov	sp, r7
    1da0e:	f85d 7b04 	ldr.w	r7, [sp], #4
    1da12:	4770      	bx	lr
-   1da14:	10007080 	.word	0x10007080
+   1da14:	10007088 	.word	0x10007088
 
 0001da18 <appCheckBondByLtk>:
  *
@@ -43634,7 +43636,7 @@ bool_t appCheckBondByLtk(dmConnId_t connId)
    1da34:	46bd      	mov	sp, r7
    1da36:	f85d 7b04 	ldr.w	r7, [sp], #4
    1da3a:	4770      	bx	lr
-   1da3c:	10007080 	.word	0x10007080
+   1da3c:	10007088 	.word	0x10007088
 
 0001da40 <appNumConns>:
  *
@@ -43700,7 +43702,7 @@ uint8_t appNumConns(uint8_t role)
    1da92:	46bd      	mov	sp, r7
    1da94:	bd80      	pop	{r7, pc}
    1da96:	bf00      	nop
-   1da98:	10007080 	.word	0x10007080
+   1da98:	10007088 	.word	0x10007088
 
 0001da9c <AppHandlerInit>:
  *
@@ -43726,7 +43728,7 @@ void AppHandlerInit(wsfHandlerId_t handlerId)
    1dab2:	3708      	adds	r7, #8
    1dab4:	46bd      	mov	sp, r7
    1dab6:	bd80      	pop	{r7, pc}
-   1dab8:	1000706c 	.word	0x1000706c
+   1dab8:	10007074 	.word	0x10007074
 
 0001dabc <AppHandler>:
  *
@@ -43796,7 +43798,7 @@ void AppHandler(wsfEventMask_t event, wsfMsgHdr_t *pMsg)
    1db0a:	3708      	adds	r7, #8
    1db0c:	46bd      	mov	sp, r7
    1db0e:	bd80      	pop	{r7, pc}
-   1db10:	1000705c 	.word	0x1000705c
+   1db10:	10007064 	.word	0x10007064
 
 0001db14 <AppHandlePasskey>:
  *
@@ -43997,7 +43999,7 @@ dmConnId_t AppConnIsOpen(void)
    1dc14:	f85d 7b04 	ldr.w	r7, [sp], #4
    1dc18:	4770      	bx	lr
    1dc1a:	bf00      	nop
-   1dc1c:	10007080 	.word	0x10007080
+   1dc1c:	10007088 	.word	0x10007088
 
 0001dc20 <AppDbGetHdl>:
  *
@@ -44025,7 +44027,7 @@ appDbHdl_t AppDbGetHdl(dmConnId_t connId)
    1dc3c:	f85d 7b04 	ldr.w	r7, [sp], #4
    1dc40:	4770      	bx	lr
    1dc42:	bf00      	nop
-   1dc44:	10007080 	.word	0x10007080
+   1dc44:	10007088 	.word	0x10007088
 
 0001dc48 <AppAddDevToResList>:
  *
@@ -44093,7 +44095,7 @@ void AppAddDevToResList(dmEvt_t *pMsg, dmConnId_t connId)
    1dcaa:	46bd      	mov	sp, r7
    1dcac:	bdf0      	pop	{r4, r5, r6, r7, pc}
    1dcae:	bf00      	nop
-   1dcb0:	10007080 	.word	0x10007080
+   1dcb0:	10007088 	.word	0x10007088
 
 0001dcb4 <AppUpdatePrivacyMode>:
  *
@@ -44391,7 +44393,7 @@ static void appSlaveAdvModeInit(void)
    1de74:	f85d 7b04 	ldr.w	r7, [sp], #4
    1de78:	4770      	bx	lr
    1de7a:	bf00      	nop
-   1de7c:	10007180 	.word	0x10007180
+   1de7c:	10007188 	.word	0x10007188
 
 0001de80 <appSlaveConnectableAdv>:
  *
@@ -44477,7 +44479,7 @@ static bool_t appSlaveConnectableAdv(uint8_t numSets, uint8_t *pAdvHandles)
    1dee8:	f85d 7b04 	ldr.w	r7, [sp], #4
    1deec:	4770      	bx	lr
    1deee:	bf00      	nop
-   1def0:	10007180 	.word	0x10007180
+   1def0:	10007188 	.word	0x10007188
 
 0001def4 <appSlaveForceAdvDataSync>:
  *
@@ -44540,7 +44542,7 @@ static void appSlaveForceAdvDataSync(uint8_t advHandle, uint8_t mode)
    1df48:	46bd      	mov	sp, r7
    1df4a:	f85d 7b04 	ldr.w	r7, [sp], #4
    1df4e:	4770      	bx	lr
-   1df50:	10007180 	.word	0x10007180
+   1df50:	10007188 	.word	0x10007188
 
 0001df54 <appSetAdvScanDataFrag>:
  *
@@ -44717,7 +44719,7 @@ static void appSetAdvScanDataFrag(uint8_t advHandle, uint8_t location)
    1e052:	3718      	adds	r7, #24
    1e054:	46bd      	mov	sp, r7
    1e056:	bdb0      	pop	{r4, r5, r7, pc}
-   1e058:	10007180 	.word	0x10007180
+   1e058:	10007188 	.word	0x10007188
 
 0001e05c <appSetAdvScanData>:
  *
@@ -44852,7 +44854,7 @@ static void appSetAdvScanData(uint8_t advHandle, uint8_t mode)
    1e132:	3710      	adds	r7, #16
    1e134:	46bd      	mov	sp, r7
    1e136:	bd80      	pop	{r7, pc}
-   1e138:	10007180 	.word	0x10007180
+   1e138:	10007188 	.word	0x10007188
 
 0001e13c <appConnUpdateTimerStart>:
  *
@@ -44903,9 +44905,9 @@ static void appConnUpdateTimerStart(dmConnId_t connId)
    1e17e:	3710      	adds	r7, #16
    1e180:	46bd      	mov	sp, r7
    1e182:	bd80      	pop	{r7, pc}
-   1e184:	10007080 	.word	0x10007080
-   1e188:	1000706c 	.word	0x1000706c
-   1e18c:	10007054 	.word	0x10007054
+   1e184:	10007088 	.word	0x10007088
+   1e188:	10007074 	.word	0x10007074
+   1e18c:	1000705c 	.word	0x1000705c
 
 0001e190 <appConnUpdateTimerStop>:
  *
@@ -44937,7 +44939,7 @@ void appConnUpdateTimerStop(appConnCb_t *pCb)
    1e1ae:	3708      	adds	r7, #8
    1e1b0:	46bd      	mov	sp, r7
    1e1b2:	bd80      	pop	{r7, pc}
-   1e1b4:	10007054 	.word	0x10007054
+   1e1b4:	1000705c 	.word	0x1000705c
 
 0001e1b8 <appSlaveResolveAddr>:
  *
@@ -45014,7 +45016,7 @@ static void appSlaveResolveAddr(dmEvt_t *pMsg)
    1e216:	3710      	adds	r7, #16
    1e218:	46bd      	mov	sp, r7
    1e21a:	bd80      	pop	{r7, pc}
-   1e21c:	10007180 	.word	0x10007180
+   1e21c:	10007188 	.word	0x10007188
 
 0001e220 <appSecRspLtk>:
  *
@@ -45137,7 +45139,7 @@ static void appSlaveConnOpen(dmEvt_t *pMsg, appConnCb_t *pCb)
    1e2b2:	46bd      	mov	sp, r7
    1e2b4:	bd80      	pop	{r7, pc}
    1e2b6:	bf00      	nop
-   1e2b8:	10007180 	.word	0x10007180
+   1e2b8:	10007188 	.word	0x10007188
 
 0001e2bc <appSlaveConnClose>:
  *
@@ -45212,7 +45214,7 @@ static void appSlaveConnClose(dmEvt_t *pMsg, appConnCb_t *pCb)
    1e312:	3710      	adds	r7, #16
    1e314:	46bd      	mov	sp, r7
    1e316:	bd80      	pop	{r7, pc}
-   1e318:	10007180 	.word	0x10007180
+   1e318:	10007188 	.word	0x10007188
 
 0001e31c <appSlaveProcConnOpen>:
  *
@@ -45297,7 +45299,7 @@ static void appSlaveProcConnOpen(dmEvt_t *pMsg, appConnCb_t *pCb)
    1e38a:	3708      	adds	r7, #8
    1e38c:	46bd      	mov	sp, r7
    1e38e:	bd80      	pop	{r7, pc}
-   1e390:	10007054 	.word	0x10007054
+   1e390:	1000705c 	.word	0x1000705c
 
 0001e394 <appSlaveProcConnClose>:
  *
@@ -45379,7 +45381,7 @@ static void appSlaveProcConnClose(dmEvt_t *pMsg, appConnCb_t *pCb)
    1e3ee:	46bd      	mov	sp, r7
    1e3f0:	bd80      	pop	{r7, pc}
    1e3f2:	bf00      	nop
-   1e3f4:	10007180 	.word	0x10007180
+   1e3f4:	10007188 	.word	0x10007188
 
 0001e3f8 <appSlaveConnUpdate>:
  *
@@ -45467,7 +45469,7 @@ static void appSlaveConnUpdate(dmEvt_t *pMsg, appConnCb_t *pCb)
    1e466:	3708      	adds	r7, #8
    1e468:	46bd      	mov	sp, r7
    1e46a:	bd80      	pop	{r7, pc}
-   1e46c:	10007054 	.word	0x10007054
+   1e46c:	1000705c 	.word	0x1000705c
 
 0001e470 <appSlaveResolvedAddrInd>:
  *
@@ -45597,7 +45599,7 @@ static void appSlaveResolvedAddrInd(dmEvt_t *pMsg, appConnCb_t *pCb)
    1e512:	46bd      	mov	sp, r7
    1e514:	bd80      	pop	{r7, pc}
    1e516:	bf00      	nop
-   1e518:	10007180 	.word	0x10007180
+   1e518:	10007188 	.word	0x10007188
 
 0001e51c <appSlaveRemoteConnParamReq>:
  *
@@ -45765,7 +45767,7 @@ void appSlaveSecConnOpen(dmEvt_t *pMsg, appConnCb_t *pCb)
    1e5fe:	46bd      	mov	sp, r7
    1e600:	bd80      	pop	{r7, pc}
    1e602:	bf00      	nop
-   1e604:	10007070 	.word	0x10007070
+   1e604:	10007078 	.word	0x10007078
 
 0001e608 <appSecConnClose>:
  *
@@ -45974,8 +45976,8 @@ static void appSecPairInd(dmEvt_t *pMsg, appConnCb_t *pCb)
    1e72e:	46bd      	mov	sp, r7
    1e730:	bd90      	pop	{r4, r7, pc}
    1e732:	bf00      	nop
-   1e734:	10007180 	.word	0x10007180
-   1e738:	10007070 	.word	0x10007070
+   1e734:	10007188 	.word	0x10007188
+   1e738:	10007078 	.word	0x10007078
 
 0001e73c <appSecStoreKey>:
  *
@@ -46108,7 +46110,7 @@ static void appSecPairCmpl(dmEvt_t *pMsg, appConnCb_t *pCb)
    1e7da:	3708      	adds	r7, #8
    1e7dc:	46bd      	mov	sp, r7
    1e7de:	bd80      	pop	{r7, pc}
-   1e7e0:	10007180 	.word	0x10007180
+   1e7e0:	10007188 	.word	0x10007188
 
 0001e7e4 <appSecPairFailed>:
  *
@@ -46260,7 +46262,7 @@ static void appSecFindLtk(dmEvt_t *pMsg, appConnCb_t *pCb)
    1e8a0:	bd80      	pop	{r7, pc}
    1e8a2:	bf00      	nop
    1e8a4:	00024444 	.word	0x00024444
-   1e8a8:	10007180 	.word	0x10007180
+   1e8a8:	10007188 	.word	0x10007188
 
 0001e8ac <appPrivSetAddrResEnableInd>:
 *
@@ -46399,8 +46401,8 @@ static void appPrivRemDevFromResListInd(dmEvt_t *pMsg, appConnCb_t *pCb)
    1e95e:	3708      	adds	r7, #8
    1e960:	46bd      	mov	sp, r7
    1e962:	bd80      	pop	{r7, pc}
-   1e964:	10007180 	.word	0x10007180
-   1e968:	100071b0 	.word	0x100071b0
+   1e964:	10007188 	.word	0x10007188
+   1e968:	100071b8 	.word	0x100071b8
 
 0001e96c <appSlaveConnUpdateTimeout>:
  *
@@ -46509,7 +46511,7 @@ static void appSlaveConnUpdateTimeout(wsfMsgHdr_t *pMsg, appConnCb_t *pCb)
    1e9fe:	46bd      	mov	sp, r7
    1ea00:	bd80      	pop	{r7, pc}
    1ea02:	bf00      	nop
-   1ea04:	10007054 	.word	0x10007054
+   1ea04:	1000705c 	.word	0x1000705c
 
 0001ea08 <appSlaveProcMsg>:
  *
@@ -46574,7 +46576,7 @@ void appSlaveProcMsg(wsfMsgHdr_t *pMsg)
    1ea4e:	3710      	adds	r7, #16
    1ea50:	46bd      	mov	sp, r7
    1ea52:	bd80      	pop	{r7, pc}
-   1ea54:	10007080 	.word	0x10007080
+   1ea54:	10007088 	.word	0x10007088
 
 0001ea58 <AppSlaveInit>:
  *
@@ -46662,10 +46664,10 @@ void AppSlaveInit(void)
    1eac2:	3708      	adds	r7, #8
    1eac4:	46bd      	mov	sp, r7
    1eac6:	bd80      	pop	{r7, pc}
-   1eac8:	10007180 	.word	0x10007180
-   1eacc:	1000705c 	.word	0x1000705c
+   1eac8:	10007188 	.word	0x10007188
+   1eacc:	10007064 	.word	0x10007064
    1ead0:	0001ea09 	.word	0x0001ea09
-   1ead4:	100071b0 	.word	0x100071b0
+   1ead4:	100071b8 	.word	0x100071b8
 
 0001ead8 <AppSlaveProcDmMsg>:
  *
@@ -46872,8 +46874,8 @@ void AppSlaveProcDmMsg(dmEvt_t *pMsg)
    1ec62:	46bd      	mov	sp, r7
    1ec64:	bd80      	pop	{r7, pc}
    1ec66:	bf00      	nop
-   1ec68:	10007080 	.word	0x10007080
-   1ec6c:	10007180 	.word	0x10007180
+   1ec68:	10007088 	.word	0x10007088
+   1ec6c:	10007188 	.word	0x10007188
 
 0001ec70 <appAdvSetData>:
  *  \return None.
@@ -46992,7 +46994,7 @@ void appAdvSetData(uint8_t advHandle, uint8_t location, uint16_t len, uint8_t *p
    1ed1e:	3708      	adds	r7, #8
    1ed20:	46bd      	mov	sp, r7
    1ed22:	bd80      	pop	{r7, pc}
-   1ed24:	10007180 	.word	0x10007180
+   1ed24:	10007188 	.word	0x10007188
 
 0001ed28 <appAdvStart>:
  *  \return None.
@@ -47158,9 +47160,9 @@ void appAdvStart(uint8_t numSets, uint8_t *pAdvHandles, uint16_t *pInterval, uin
    1ee22:	3718      	adds	r7, #24
    1ee24:	46bd      	mov	sp, r7
    1ee26:	bd80      	pop	{r7, pc}
-   1ee28:	10007058 	.word	0x10007058
-   1ee2c:	10007180 	.word	0x10007180
-   1ee30:	100071b0 	.word	0x100071b0
+   1ee28:	10007060 	.word	0x10007060
+   1ee2c:	10007188 	.word	0x10007188
+   1ee30:	100071b8 	.word	0x100071b8
 
 0001ee34 <appSlaveAdvStart>:
  *  \return None.
@@ -47277,7 +47279,7 @@ void appSlaveAdvStart(uint8_t numSets, uint8_t *pAdvHandles, uint16_t *pInterval
    1eed6:	46bd      	mov	sp, r7
    1eed8:	bd80      	pop	{r7, pc}
    1eeda:	bf00      	nop
-   1eedc:	10007180 	.word	0x10007180
+   1eedc:	10007188 	.word	0x10007188
 
 0001eee0 <AppSlaveSecProcDmMsg>:
  *
@@ -47436,7 +47438,7 @@ void AppSlaveSecProcDmMsg(dmEvt_t *pMsg)
    1efda:	46bd      	mov	sp, r7
    1efdc:	bd80      	pop	{r7, pc}
    1efde:	bf00      	nop
-   1efe0:	10007080 	.word	0x10007080
+   1efe0:	10007088 	.word	0x10007088
 
 0001efe4 <AppSetBondable>:
  *
@@ -47461,7 +47463,7 @@ void AppSetBondable(bool_t bondable)
    1effc:	f85d 7b04 	ldr.w	r7, [sp], #4
    1f000:	4770      	bx	lr
    1f002:	bf00      	nop
-   1f004:	10007180 	.word	0x10007180
+   1f004:	10007188 	.word	0x10007188
 
 0001f008 <AppSetAdvPeerAddr>:
  *
@@ -47489,8 +47491,8 @@ void AppSetAdvPeerAddr(uint8_t peerAddrType, uint8_t *pPeerAddr)
    1f026:	3708      	adds	r7, #8
    1f028:	46bd      	mov	sp, r7
    1f02a:	bd80      	pop	{r7, pc}
-   1f02c:	10007180 	.word	0x10007180
-   1f030:	100071b0 	.word	0x100071b0
+   1f02c:	10007188 	.word	0x10007188
+   1f030:	100071b8 	.word	0x100071b8
 
 0001f034 <appSlaveLegAdvStart>:
  *
@@ -47564,8 +47566,8 @@ static void appSlaveLegAdvStart(void)
    1f08a:	46bd      	mov	sp, r7
    1f08c:	bd80      	pop	{r7, pc}
    1f08e:	bf00      	nop
-   1f090:	1000707c 	.word	0x1000707c
-   1f094:	10007180 	.word	0x10007180
+   1f090:	10007084 	.word	0x10007084
+   1f094:	10007188 	.word	0x10007188
 
 0001f098 <appSlaveLegAdvTypeChanged>:
  *
@@ -47598,7 +47600,7 @@ static void appSlaveLegAdvTypeChanged(dmEvt_t *pMsg)
    1f0b6:	3708      	adds	r7, #8
    1f0b8:	46bd      	mov	sp, r7
    1f0ba:	bd80      	pop	{r7, pc}
-   1f0bc:	10007180 	.word	0x10007180
+   1f0bc:	10007188 	.word	0x10007188
 
 0001f0c0 <appSlaveNextLegAdvState>:
  *
@@ -47636,7 +47638,7 @@ static void appSlaveNextLegAdvState(dmEvt_t *pMsg)
    1f0ea:	46bd      	mov	sp, r7
    1f0ec:	bd80      	pop	{r7, pc}
    1f0ee:	bf00      	nop
-   1f0f0:	10007180 	.word	0x10007180
+   1f0f0:	10007188 	.word	0x10007188
 
 0001f0f4 <appSlaveLegAdvStop>:
  *
@@ -47693,7 +47695,7 @@ static void appSlaveLegAdvStop(dmEvt_t *pMsg)
    1f12a:	46bd      	mov	sp, r7
    1f12c:	bd80      	pop	{r7, pc}
    1f12e:	bf00      	nop
-   1f130:	10007180 	.word	0x10007180
+   1f130:	10007188 	.word	0x10007188
 
 0001f134 <appSlaveLegAdvRestart>:
  *
@@ -47742,7 +47744,7 @@ static void appSlaveLegAdvRestart(dmEvt_t *pMsg)
    1f166:	46bd      	mov	sp, r7
    1f168:	bd80      	pop	{r7, pc}
    1f16a:	bf00      	nop
-   1f16c:	10007180 	.word	0x10007180
+   1f16c:	10007188 	.word	0x10007188
 
 0001f170 <appSlaveAdvMode>:
  *
@@ -47798,7 +47800,7 @@ static bool_t appSlaveAdvMode(void)
    1f1a0:	f85d 7b04 	ldr.w	r7, [sp], #4
    1f1a4:	4770      	bx	lr
    1f1a6:	bf00      	nop
-   1f1a8:	10007180 	.word	0x10007180
+   1f1a8:	10007188 	.word	0x10007188
    1f1ac:	0001f0f5 	.word	0x0001f0f5
    1f1b0:	0001f135 	.word	0x0001f135
 
@@ -47914,8 +47916,8 @@ void AppAdvStart(uint8_t mode)
    1f246:	46bd      	mov	sp, r7
    1f248:	bd80      	pop	{r7, pc}
    1f24a:	bf00      	nop
-   1f24c:	10007180 	.word	0x10007180
-   1f250:	1000707c 	.word	0x1000707c
+   1f24c:	10007188 	.word	0x10007188
+   1f250:	10007084 	.word	0x10007084
 
 0001f254 <Reset_Handler>:
 Reset_Handler(void)
@@ -47998,7 +48000,7 @@ Reset_Handler(void)
    1f2ac:	10002300 	.word	0x10002300
    1f2b0:	10002fdc 	.word	0x10002fdc
    1f2b4:	10002fdc 	.word	0x10002fdc
-   1f2b8:	1000735c 	.word	0x1000735c
+   1f2b8:	10007364 	.word	0x10007364
 
 0001f2bc <NMI_Handler>:
 // by a debugger.
@@ -48540,7 +48542,7 @@ am_default_isr(void)
    1f846:	600b      	str	r3, [r1, #0]
    1f848:	e7d4      	b.n	1f7f4 <am_hal_ble_initialize+0x18>
    1f84a:	bf00      	nop
-   1f84c:	100071c8 	.word	0x100071c8
+   1f84c:	100071d0 	.word	0x100071d0
    1f850:	00775230 	.word	0x00775230
 
 0001f854 <am_hal_ble_deinitialize>:
@@ -48669,7 +48671,7 @@ am_default_isr(void)
    1f9a4:	01775230 	.word	0x01775230
    1f9a8:	5000c000 	.word	0x5000c000
    1f9ac:	40020000 	.word	0x40020000
-   1f9b0:	100071c8 	.word	0x100071c8
+   1f9b0:	100071d0 	.word	0x100071d0
    1f9b4:	100024e0 	.word	0x100024e0
    1f9b8:	00024d8c 	.word	0x00024d8c
 
@@ -49314,8 +49316,8 @@ am_default_isr(void)
    20078:	5000c000 	.word	0x5000c000
    2007c:	000f4240 	.word	0x000f4240
    20080:	08000004 	.word	0x08000004
-   20084:	10007214 	.word	0x10007214
-   20088:	10007210 	.word	0x10007210
+   20084:	1000721c 	.word	0x1000721c
+   20088:	10007218 	.word	0x10007218
    2008c:	3d01      	subs	r5, #1
    2008e:	f43f aedf 	beq.w	1fe50 <am_hal_ble_patch_apply+0x9c>
    20092:	2010      	movs	r0, #16
@@ -53773,7 +53775,7 @@ am_default_isr(void)
    22c56:	4628      	mov	r0, r5
    22c58:	600c      	str	r4, [r1, #0]
    22c5a:	bdf0      	pop	{r4, r5, r6, r7, pc}
-   22c5c:	10007294 	.word	0x10007294
+   22c5c:	1000729c 	.word	0x1000729c
    22c60:	00ea9e06 	.word	0x00ea9e06
 
 00022c64 <am_hal_uart_power_control>:

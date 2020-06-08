@@ -108,6 +108,18 @@ EventGroupHandle_t xRadioEventHandle;
 
 //*****************************************************************************
 //
+// LED task handle.
+//
+//*****************************************************************************
+TaskHandle_t miguelled_task_handle;
+//*****************************************************************************
+//
+// Handle for LED-related events.
+//
+//*****************************************************************************
+EventGroupHandle_t miguelxLedEventHandle;
+//*****************************************************************************
+//
 // Function prototypes
 //
 //*****************************************************************************
@@ -485,6 +497,27 @@ RadioTaskSetup(void)
 
 //*****************************************************************************
 //
+// Perform initial setup for the LED task.
+//
+//*****************************************************************************
+void
+miguelLedTaskSetup(void)
+{
+    am_util_debug_printf("MIGUEL LEDTask: setup\r\n");
+
+    //
+    // Create an event handle for our wake-up events.
+    //
+    miguelxLedEventHandle = xEventGroupCreate();
+
+    //
+    // Make sure we actually allocated space for the events we need.
+    //
+    while (miguelxLedEventHandle == NULL);
+
+}
+//*****************************************************************************
+//
 // Short Description.
 //
 //*****************************************************************************
@@ -535,11 +568,6 @@ RadioTask(void *pvParameters)
         //
         if ( wsfOsReadyToSleep() )
         {
-            //
-            // Attempt to shut down the UART. If we can shut it down
-            // successfully, we can go to deep sleep. Otherwise, we'll need to
-            // stay awake to finish processing the current packet.
-            //
 
             //
             // Wait for an event to be posted to the Radio Event Handle.
@@ -549,3 +577,46 @@ RadioTask(void *pvParameters)
         }
     }
 }
+
+//*****************************************************************************
+//
+// Short Description.
+//
+//*****************************************************************************
+void
+miguelLedTask(void *pvParameters)
+{
+    uint32_t bitSet;
+
+    while (1)
+    {
+
+	
+    am_util_debug_printf("before miguel bitset \r\n");
+        //
+        // Wait for an event to be posted to the LED Event Handle.
+        //
+        bitSet = xEventGroupWaitBits(miguelxLedEventHandle, 0x7, pdTRUE,
+                            pdFALSE, portMAX_DELAY);
+    am_util_debug_printf("after miguel bitset \r\n");
+        if (bitSet != 0)
+        {
+            // Button Press Event received
+            // Toggle respective LED(s)
+            if (bitSet & (1 << 0))
+            {
+				am_hal_gpio_pinconfig(AM_BSP_GPIO_LED_BLUE, g_AM_HAL_GPIO_OUTPUT_12);
+				am_hal_gpio_output_set(AM_BSP_GPIO_LED_BLUE);
+            }
+            if (bitSet & (1 << 1))
+            {
+                am_devices_led_toggle(am_bsp_psLEDs, 1);
+            }
+            if (bitSet & (1 << 2))
+            {
+                am_devices_led_toggle(am_bsp_psLEDs, 2);
+            }
+        }
+    }
+}
+

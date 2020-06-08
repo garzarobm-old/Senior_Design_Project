@@ -175,6 +175,8 @@ setup_task(void *pvParameters)
     // Create the functional tasks
     xTaskCreate(RadioTask, "RadioTask", 512, 0, 3, &radio_task_handle);
 
+    //miguelLedTaskSetup();
+    //xTaskCreate(miguelLedTask, "miguelLEDTask", 512, 0, 3, &miguelled_task_handle);
 
     // The setup operations are complete, so suspend the setup task now.
     vTaskSuspend(NULL);
