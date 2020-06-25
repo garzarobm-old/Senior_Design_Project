@@ -5,4 +5,5 @@ drivers/*
 hardware/*
 hardwareTesting/*
 data
+ambiqMicro/ambiqSuite2.2.0/boards/SparkFun_Edge_BSP/*
 
