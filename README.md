@@ -2,10 +2,10 @@
 
 # Senior_Design_Project
 
-	- In this repository, you will find our 2019-2020 Senior Design project. Additionally, there are attached pictures with embedded videos, so, please feel free to explore and enjoy the work done by our team.  
-	- Email garzarobm@utexas.edu for more information on testing, current development and/or anything at all!
+In this repository, you will find our 2019-2020 Senior Design project. Additionally, there are attached pictures with embedded videos, so, please feel free to explore and enjoy the work done by our team. Email garzarobm@utexas.edu for more information on testing, current development and/or anything at all!
 
-	- The structure of this repository is as follows (updated June 24, 2020)
+
+The structure of this repository is as follows (updated June 24, 2020)
 
 ![Filipe gif](etc/images/demo.gif)
 
