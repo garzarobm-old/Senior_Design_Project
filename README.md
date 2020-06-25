@@ -17,16 +17,14 @@ The structure of this repository is as follows (updated June 24, 2020)
 
 
 ###### AndroidApp
-	- In this folder contails the starter android application that the software team used to create at the beggining of the semester. 
+	- This folder contains starter android applications that the software team used to create at the beggining of the semester. 
 	- Now (April 1st, 2020), we hope to make adjustments based off how our microcontroller uses bluetooth
 	- Several android studio projects lie here
 ###### STL
 	- Basic encasings for our wearable watch. 3D printed STL files
 ###### ambiqMicro/AmbiqSuite-Rel2.2.0
 	- This contains the source code of the ambiq Micro with projects from other places.
-###### drivers
-	- Using the source code along with scripts we created from this folder, we can get CH34x drivers onto linux machines. 
-###### ErrolTensorFlow
+###### TensorFlow
 	- Using the source code given from tensorflow, the machine learning team created this folder
 	- Allows interfacing with tensorflow models on embedded systems. 
 
