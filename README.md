@@ -8,7 +8,9 @@ In this repository, you will find our 2019-2020 Senior Design project. Additiona
 
 The structure of this repository is as follows (updated June 24, 2020)
 
-<div style="text-align:center"><img src="etc/images/demo.gif" /></div>
+<p align="center">
+  <img width="460" height="300" src="etc/images/demo.gif">
+</p>
 
 
 
