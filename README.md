@@ -29,7 +29,7 @@ The structure of this repository is as follows (updated June 24, 2020)
 	- Using the source code given from tensorflow, the machine learning team created this folder
 	- Allows interfacing with tensorflow models on embedded systems. 
 
-[![Credits](etc/images/jumping.png)](https://youtu.be/vPEyiVkfSfI "SocialBit Semester 1")
+[![Credits](etc/images/Microboard.png)](https://youtu.be/vPEyiVkfSfI "SocialBit Semester 1")
 
 # Common misconceptions
 	1. As you see the video and think of what we came up with, one of the most common remarks and misconceptions with our device is that it seems very privacy-invading. All inference is done on the board and none of the data is actually stored. Once the inference has been made, the device sends the information through bluetooth, a exceptionally secure protocol, and again, never captured on the board. With this design, we could not keep your information even if we tried!
